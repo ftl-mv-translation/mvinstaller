@@ -1,10 +1,9 @@
 from pathlib import Path
-from flet import (
-    Page, Text, AppBar, Icon, icons, colors, IconButton, TextButton, Container, padding, app as flet_app, theme
-)
+from flet import Page, colors, app as flet_app, theme
 from mvinstaller.config import get_config
 from mvinstaller.localetools import localize as _, set_locale
 from mvinstaller.ui.app import App
+from mvinstaller.ui.appbar import MviAppBar
 from mvinstaller.util import get_embed_dir
 
 def index(page: Page):
@@ -12,35 +11,29 @@ def index(page: Page):
     page.horizontal_alignment = 'center'
     page.vertical_alignment = 'center'
     page.theme_mode = 'dark'
-    page.dark_theme = theme.Theme(color_scheme_seed=colors.BLUE_GREY)
+    page.dark_theme = theme.Theme(color_scheme_seed=colors.BLUE_GREY, visual_density='comfortable')
     page.bgcolor = colors.BLACK
     page.update()
 
     def on_ftl_path_change(ftl_path):
         if ftl_path:
-            page.appbar.title.content.value = ftl_path
-            page.appbar.title.content.color = colors.WHITE
+            appbar.ftl_path = ftl_path
+            appbar.ftl_path_color = colors.WHITE
         else:
-            page.appbar.title.content.value = _('topbar-ftl-not-found-warning')
-            page.appbar.title.content.color = colors.RED_100
+            appbar.ftl_path = _('topbar-ftl-not-found-warning')
+            appbar.ftl_path_color = colors.RED_100
         page.update()
 
         app.ftl_path = ftl_path
 
     app = App(on_ftl_path_change=on_ftl_path_change)
-    hpadded = lambda ctrl: Container(ctrl, padding=padding.Padding(15, 0, 15, 0))
-    page.appbar = AppBar(
-        leading=hpadded(Icon(icons.FOLDER_OPEN)),
-        title=TextButton(
-            content=Text('Path to FTL', style='headlineMedium', overflow='ellipsis'),
-            on_click=lambda e: app.open_ftl_path_finder_dialog()
-        ),
-        center_title=False,
-        bgcolor=colors.SURFACE_VARIANT,
-        actions=[
-            hpadded(IconButton(icons.SETTINGS, on_click=lambda e: app.open_config_dialog())),
-        ],
+    appbar = MviAppBar(
+        on_refresh=lambda: on_ftl_path_change(app.ftl_path),
+        on_ftl_path=app.open_ftl_path_finder_dialog,
+        on_config=app.open_config_dialog,
+        on_about=app.open_about_dialog
     )
+    page.appbar = appbar.appbar()
     page.add(app)
     on_ftl_path_change(None if get_config().last_ftl_path is None else Path(get_config().last_ftl_path))
 

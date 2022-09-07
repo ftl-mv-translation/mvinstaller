@@ -5,6 +5,7 @@ from flet import UserControl, Column, Row, icons, colors, TextButton, Stack, Ima
 from mvinstaller.actions import downgrade_ftl, install_hyperspace, install_mods
 from mvinstaller.config import get_config
 from mvinstaller.ftlpath import get_ftl_installation_state
+from mvinstaller.ui.aboutdialog import AboutDialog
 from mvinstaller.ui.busycontainer import BusyContainer
 from mvinstaller.ui.configdialog import ConfigDialog
 from mvinstaller.localetools import localize as _
@@ -26,6 +27,9 @@ class App(UserControl):
 
     def open_config_dialog(self):
         self._config_dialog.open()
+
+    def open_about_dialog(self):
+        self._about_dialog.open()
 
     @property
     def ftl_path(self):
@@ -49,6 +53,7 @@ class App(UserControl):
             self._error_snackbar,
             on_install=lambda locale: self._do_action(install_mods, locale, self._ftl_path)
         )
+        self._about_dialog = AboutDialog()
 
         # Cards
         self._operation_card_downgrade = OperationCard(_('operation-downgrade'))
@@ -77,6 +82,7 @@ class App(UserControl):
             self._progress_dialog,
             self._config_dialog,
             self._install_mods_dialog,
+            self._about_dialog,
             Column([
                 Stack([
                     Container(Image('/bg.png'), alignment=alignment.center),

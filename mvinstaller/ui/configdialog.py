@@ -1,8 +1,7 @@
 import os
 from flet import UserControl, dropdown, Column, Checkbox, AlertDialog, Text, TextButton, Dropdown
 from mvinstaller.config import get_config
-from mvinstaller.localetools import get_locale_name, supported_app_locales
-from mvinstaller.localetools import localize as _
+from mvinstaller.localetools import get_locale_name, supported_app_locales, localize as _
 
 class ConfigDialog(UserControl):
     def __init__(self, error_snackbar=None):
