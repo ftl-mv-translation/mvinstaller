@@ -86,7 +86,7 @@ dev = ["black", "coveralls", "mypy", "pylint", "pytest (>=5)", "pytest-cov"]
 
 [[package]]
 name = "flet"
-version = "0.1.56"
+version = "0.1.57"
 description = "Flet for Python - easily build interactive multi-platform apps in Python"
 category = "main"
 optional = false
@@ -196,6 +196,7 @@ macholib = {version = ">=1.8", markers = "sys_platform == \"darwin\""}
 pefile = {version = ">=2022.5.30", markers = "sys_platform == \"win32\""}
 pyinstaller-hooks-contrib = ">=2021.4"
 pywin32-ctypes = {version = ">=0.2.0", markers = "sys_platform == \"win32\""}
+setuptools = "*"
 
 [package.extras]
 encryption = ["tinyaes (>=1.0.0)"]
@@ -253,6 +254,19 @@ urllib3 = ">=1.21.1,<1.27"
 [package.extras]
 socks = ["PySocks (>=1.5.6,!=1.5.7)"]
 use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
+
+[[package]]
+name = "setuptools"
+version = "65.3.0"
+description = "Easily download, build, install, upgrade, and uninstall Python packages"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+docs = ["furo", "jaraco.packaging (>=9)", "jaraco.tidelift (>=1.4)", "pygments-github-lexers (==0.0.5)", "rst.linker (>=1.9)", "sphinx", "sphinx-favicon", "sphinx-hoverxref (<2)", "sphinx-inline-tabs", "sphinx-notfound-page (==0.8.3)", "sphinx-reredirects", "sphinxcontrib-towncrier"]
+testing = ["build[virtualenv]", "filelock (>=3.4.0)", "flake8 (<5)", "flake8-2020", "ini2toml[lite] (>=0.9)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "mock", "pip (>=19.1)", "pip-run (>=8.8)", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=1.3)", "pytest-flake8", "pytest-mypy (>=0.9.1)", "pytest-perf", "pytest-xdist", "tomli-w (>=1.0.0)", "virtualenv (>=13.0.0)", "wheel"]
+testing-integration = ["build[virtualenv]", "filelock (>=3.4.0)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "pytest", "pytest-enabler", "pytest-xdist", "tomli", "virtualenv (>=13.0.0)", "wheel"]
 
 [[package]]
 name = "six"
@@ -321,7 +335,7 @@ dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10,<3.11"
-content-hash = "1ee302da52e5f1bd193e07bca99b4f227851c4b03246266fcee68568ab493c0b"
+content-hash = "7092c554f0d0ce34bd97acf03ac5084a5e4f4a4a69109199f3471040637ee0a8"
 
 [metadata.files]
 altgraph = [
@@ -340,8 +354,14 @@ beartype = [
     {file = "beartype-0.10.4-py3-none-any.whl", hash = "sha256:1a65453bc25b39979bf5ad65fe5e73350551282956456d828fb5783468649e3e"},
     {file = "beartype-0.10.4.tar.gz", hash = "sha256:24ec69f6a7f4e6e97af403d08de270def3248518060327095d23b1c4df64bf2a"},
 ]
-certifi = []
-charset-normalizer = []
+certifi = [
+    {file = "certifi-2022.6.15-py3-none-any.whl", hash = "sha256:fe86415d55e84719d75f8b69414f6438ac3547d2078ab91b67e779ef69378412"},
+    {file = "certifi-2022.6.15.tar.gz", hash = "sha256:84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"},
+]
+charset-normalizer = [
+    {file = "charset-normalizer-2.1.1.tar.gz", hash = "sha256:5a3d016c7c547f69d6f81fb0db9449ce888b418b5b9952cc5e6e66843e9dd845"},
+    {file = "charset_normalizer-2.1.1-py3-none-any.whl", hash = "sha256:83e9a75d1911279afd89352c68b45348559d1fc0506b054b346651b5e7fee29f"},
+]
 colorama = [
     {file = "colorama-0.4.5-py2.py3-none-any.whl", hash = "sha256:854bf444933e37f5824ae7bfc1e98d5bce2ebe4160d46b5edf346a89358e99da"},
     {file = "colorama-0.4.5.tar.gz", hash = "sha256:e6c6b4334fc50988a639d9b98aa429a0b57da6e17b9a44f0451f930b6967b7a4"},
@@ -351,16 +371,16 @@ dacite = [
     {file = "dacite-1.6.0.tar.gz", hash = "sha256:d48125ed0a0352d3de9f493bf980038088f45f3f9d7498f090b50a847daaa6df"},
 ]
 flet = [
-    {file = "flet-0.1.56-py3-none-any.whl", hash = "sha256:988198e965af7d053464f8de4907984d6e5da2e65eb56b2f6a9e12f6e5dfcad4"},
-    {file = "flet-0.1.56-py3-none-macosx_10_14_x86_64.whl", hash = "sha256:516a800550f888c3538aceebcba782d2fd90e08c86ca322e420c8ed2cbc1d8da"},
-    {file = "flet-0.1.56-py3-none-macosx_12_0_arm64.whl", hash = "sha256:bc14ab652a0eeae9c250af25330b62a2998748db9ab56845a41a890a09a53a35"},
-    {file = "flet-0.1.56-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8c46f3f88518ac153d7aebb249aa658f69501ff2ee0828a0d9f7a8019808245a"},
-    {file = "flet-0.1.56-py3-none-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:6821e090c8bebc4df50ddb36b7023d845503a7c3912bf21e014c87ab588933b4"},
-    {file = "flet-0.1.56-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:06748405a70455e0888e135fbfc8fe787c8cbbba556d0c36edffb3c4425f8983"},
-    {file = "flet-0.1.56-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:2930cd1d643506d4f1d6438c38c4703b82f3070e5263671bf9189721cca8b288"},
-    {file = "flet-0.1.56-py3-none-win32.whl", hash = "sha256:b2ccc8dd6a5557b9b6ec228defd5674bb0dbeb7d0569ef37a636143a61954560"},
-    {file = "flet-0.1.56-py3-none-win_amd64.whl", hash = "sha256:ecf765672f33c2f4c155368b1529eeee93e45746d319c71c0f103535845df508"},
-    {file = "flet-0.1.56.tar.gz", hash = "sha256:77a7cf65a25bfccf5c6354726a2eb555b16f21bb363672b82cb58bf37a66d99e"},
+    {file = "flet-0.1.57-py3-none-any.whl", hash = "sha256:93bbf57a5b184038b1694f8ce1f07f2ebb173387792d110ce8f7661779cc4403"},
+    {file = "flet-0.1.57-py3-none-macosx_10_14_x86_64.whl", hash = "sha256:97cd9e7e0c823301650e77d8fc40d53aeea5ce442ab453ff53c62dfd11eb8532"},
+    {file = "flet-0.1.57-py3-none-macosx_12_0_arm64.whl", hash = "sha256:731c358ae7cb6e2a421c6cefd129a5ad1896e08172d875d0a7b02110300ef43a"},
+    {file = "flet-0.1.57-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8ac05829f629b19b54f5cad0dbc992d47134f7bbdbd9412f1b35f23cb8887949"},
+    {file = "flet-0.1.57-py3-none-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:d0e027d73066a62c0617ae22f78227d15bef0863c58f9186074b6da85693cb89"},
+    {file = "flet-0.1.57-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ce03c1ea625555631fe6736d14e8f95dc4f7d01630d4e1eec574dfcda2dfcd3b"},
+    {file = "flet-0.1.57-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:31c2fdb54d14954e66774882802f2ab96c80e731be2c4ca7a181ce2635563628"},
+    {file = "flet-0.1.57-py3-none-win32.whl", hash = "sha256:7bd0aa36281c0b77c2f07245830bec69179975e6a1aedb221e4605fa03f838a9"},
+    {file = "flet-0.1.57-py3-none-win_amd64.whl", hash = "sha256:738f2207772f5364c7a2053b8de0ea257cebc7f6b397feafcc81dba4e0495713"},
+    {file = "flet-0.1.57.tar.gz", hash = "sha256:e2109a46072519bed918cb8d5480730b35fdcd1282c5cfc68af9934dd45fe587"},
 ]
 "fluent.runtime" = [
     {file = "fluent.runtime-0.3.1-py2.py3-none-any.whl", hash = "sha256:1da9bf779e6b8cbfb5a71dd59cd7e193f8dc8da318bda7163bc41e9ae15f8574"},
@@ -389,8 +409,22 @@ macholib = [
     {file = "macholib-1.16-py2.py3-none-any.whl", hash = "sha256:5a0742b587e6e57bfade1ab90651d4877185bf66fd4a176a488116de36878229"},
     {file = "macholib-1.16.tar.gz", hash = "sha256:001bf281279b986a66d7821790d734e61150d52f40c080899df8fefae056e9f7"},
 ]
-pefile = []
-pyinstaller = []
+pefile = [
+    {file = "pefile-2022.5.30.tar.gz", hash = "sha256:a5488a3dd1fd021ce33f969780b88fe0f7eebb76eb20996d7318f307612a045b"},
+]
+pyinstaller = [
+    {file = "pyinstaller-5.3-py3-none-macosx_10_13_universal2.whl", hash = "sha256:7591a9e1e2a481f99eb99036d6786e20717bc10f8f0a8ef519958cb3172fac7a"},
+    {file = "pyinstaller-5.3-py3-none-manylinux2014_aarch64.whl", hash = "sha256:d4123992556951ed24e11cf2eec9a4e18e94ee8bd63ca49d9b7fc37387097eb9"},
+    {file = "pyinstaller-5.3-py3-none-manylinux2014_i686.whl", hash = "sha256:066b83a0eae89ad418749e9e29429c152f1ff096230df11a093bbded8344ade0"},
+    {file = "pyinstaller-5.3-py3-none-manylinux2014_ppc64le.whl", hash = "sha256:4c658a762cbbee5c5997c364578804d4c1e91d688de8ed018710c2705bf1474b"},
+    {file = "pyinstaller-5.3-py3-none-manylinux2014_s390x.whl", hash = "sha256:a0e7a80fe04204add3f743101958a3cf62b79e7ccda838388784b1a35bb5b27f"},
+    {file = "pyinstaller-5.3-py3-none-manylinux2014_x86_64.whl", hash = "sha256:aa9d1b8639d2402438c179ae1c8acfd41b65366c803a5a6484a5bb7586e88647"},
+    {file = "pyinstaller-5.3-py3-none-musllinux_1_1_aarch64.whl", hash = "sha256:794e8e143ae73d1acdd2cbc52f02dd34cdfbd954ede34c7067ce68a268d8b7c2"},
+    {file = "pyinstaller-5.3-py3-none-musllinux_1_1_x86_64.whl", hash = "sha256:9efbad718fe29d425336f289871c67bfc6a1876013037fee2ef1f7613fd675a2"},
+    {file = "pyinstaller-5.3-py3-none-win32.whl", hash = "sha256:cae43e01e04f37185d23202aba8cf2837fa24ec3d0aa5ebc42e26f404e6eba95"},
+    {file = "pyinstaller-5.3-py3-none-win_amd64.whl", hash = "sha256:b38505b445cdd64279f04650e0ddfe5ac6cef61996b14f06e3c99da8aac3cfbe"},
+    {file = "pyinstaller-5.3.tar.gz", hash = "sha256:de71d4669806e4d54b23b477cc077e2e8fe9c4d57e79ed32d22b7585137fd7b7"},
+]
 pyinstaller-hooks-contrib = [
     {file = "pyinstaller-hooks-contrib-2022.10.tar.gz", hash = "sha256:e5edd4094175e78c178ef987b61be19efff6caa23d266ade456fc753e847f62e"},
     {file = "pyinstaller_hooks_contrib-2022.10-py2.py3-none-any.whl", hash = "sha256:d1dd6ea059dc30e77813cc12a5efa8b1d228e7da8f5b884fe11775f946db1784"},
@@ -407,12 +441,22 @@ repath = [
     {file = "repath-0.9.0-py3-none-any.whl", hash = "sha256:ee079d6c91faeb843274d22d8f786094ee01316ecfe293a1eb6546312bb6a318"},
     {file = "repath-0.9.0.tar.gz", hash = "sha256:8292139bac6a0e43fd9d70605d4e8daeb25d46672e484ed31a24c7ce0aef0fb7"},
 ]
-requests = []
+requests = [
+    {file = "requests-2.28.1-py3-none-any.whl", hash = "sha256:8fefa2a1a1365bf5520aac41836fbee479da67864514bdb821f31ce07ce65349"},
+    {file = "requests-2.28.1.tar.gz", hash = "sha256:7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"},
+]
+setuptools = [
+    {file = "setuptools-65.3.0-py3-none-any.whl", hash = "sha256:2e24e0bec025f035a2e72cdd1961119f557d78ad331bb00ff82efb2ab8da8e82"},
+    {file = "setuptools-65.3.0.tar.gz", hash = "sha256:7732871f4f7fa58fb6bdcaeadb0161b2bd046c85905dbaa066bdcbcc81953b57"},
+]
 six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
     {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
 ]
-urllib3 = []
+urllib3 = [
+    {file = "urllib3-1.26.12-py2.py3-none-any.whl", hash = "sha256:b930dd878d5a8afb066a637fbb35144fe7901e3b209d1cd4f524bd0e9deee997"},
+    {file = "urllib3-1.26.12.tar.gz", hash = "sha256:3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"},
+]
 vdf = [
     {file = "vdf-3.4-py2.py3-none-any.whl", hash = "sha256:68c1a125cc49e343d535af2dd25074e9cb0908c6607f073947c4a04bbe234534"},
     {file = "vdf-3.4.tar.gz", hash = "sha256:fd5419f41e07a1009e5ffd027c7dcbe43d1f7e8ef453aeaa90d9d04b807de2af"},
