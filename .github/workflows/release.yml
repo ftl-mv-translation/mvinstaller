@@ -31,3 +31,4 @@ jobs:
       with:
         files: dist/*
         token: ${{ secrets.FTLMV_WEBLATE_BOT_TOKEN }}
+        generate_release_notes: true
