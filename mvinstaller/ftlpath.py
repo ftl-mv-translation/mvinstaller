@@ -4,47 +4,7 @@ from hashlib import sha1
 from enum import Enum
 import winreg
 import vdf
-
-FtlExecutableInfo = namedtuple(
-    'FtlExecutableInfo',
-    ('name', 'downgraded', 'downgrader', 'sha1')
-)
-
-HyperspaceInfo = namedtuple(
-    'HyperspaceInfo',
-    ('name', 'outdated', 'latest', 'sha1', 'url', 'filename')
-)
-
-########## Binary metadata
-
-class FtlExecutableType(Enum):
-    STEAM_WINDOWS_1_6_14 = FtlExecutableInfo(
-        'Steam, version 1.6.14 (latest)', False, 'steam',
-        'c58e5283b2c1996fa36158265423f8c94f3a8954',
-    )
-    STEAM_WINDOWS_1_6_9 = FtlExecutableInfo(
-        'Steam, version 1.6.9 (downgraded)', True, None,
-        '8f23c8e704f793fb108d12c489644b5393c8bc2d',
-    )
-
-class HyperspaceType(Enum):
-    HS_1_2_3 = HyperspaceInfo(
-        'HS-1.2.3 6a7ef87', False, True,
-        '99b7fae6ef2df05ad6e9370e7d04987fdaa101ff',
-        'https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.2.3/FTL.Hyperspace.1.2.3.zip',
-        'FTL.Hyperspace.1.2.3.zip'
-    )
-
-_DAT_VANILLA_SHA1 = [
-    'a0ecc84f16302b8851eff98ab3e01e2f376152d7', # Steam 1.6.14
-]
-
-_FIXED_PATHS = [
-    r'C:\Program Files\Steam\steamapps\common\FTL Faster Than Light',
-    r'C:\Program Files (x86)\Steam\steamapps\common\FTL Faster Than Light',
-]
-
-##########
+from mvinstaller.signatures import FtlExecutableType, HyperspaceType, HyperspaceInfo, DAT_VANILLA_SHA1, FIXED_PATHS
 
 _EXE_SHA1_TO_INFO = {
     e.value.sha1: e.value
@@ -83,10 +43,10 @@ def get_ftl_installation_state(path):
 
     hyperspace_info = _HS_SHA1_TO_INFO.get(get_sha1(path / 'Hyperspace.dll'), None) if hyperspace_installed else None
 
-    is_ftldat_vanilla = get_sha1(path / 'ftl.dat') in _DAT_VANILLA_SHA1
+    is_ftldat_vanilla = get_sha1(path / 'ftl.dat') in DAT_VANILLA_SHA1
 
     is_ftldat_backedup = (
-        (path / 'ftl.dat.vanilla').is_file() and (get_sha1(path / 'ftl.dat.vanilla') in _DAT_VANILLA_SHA1)
+        (path / 'ftl.dat.vanilla').is_file() and (get_sha1(path / 'ftl.dat.vanilla') in DAT_VANILLA_SHA1)
     )
     
     return FtlInstallationState(
@@ -147,7 +107,7 @@ def get_ftl_path_candidates(additional_paths=None) -> dict[str: (FtlInstallation
     paths_to_check = []
     if steam_ftl_path:
         paths_to_check.append(steam_ftl_path)
-    paths_to_check += _FIXED_PATHS
+    paths_to_check += FIXED_PATHS
     if additional_paths:
         paths_to_check += additional_paths
 

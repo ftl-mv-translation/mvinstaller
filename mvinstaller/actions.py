@@ -10,6 +10,7 @@ from mvinstaller.webtools import download
 from mvinstaller.util import get_cache_dir, run_checked_subprocess_with_logging_output
 from mvinstaller.ftlpath import get_ftl_installation_state, get_latest_hyperspace
 from mvinstaller.localetools import get_locale_name
+from mvinstaller.signatures import SMM_URL, SMM_FILENAME, SMM_ROOT_DIR
 
 def _extract_without_path(zipf, name, dstdir):
     # Trick from https://stackoverflow.com/a/47632134/3567518
@@ -79,19 +80,13 @@ def install_mods(locale_mv, ftl_path):
             )
     
     def install_slipstream():
-        # Note: A proper distribution comes from Sourceforge (https://sourceforge.net/projects/slipstreammodmanager/).
-        #       Windows distribution for 1.9.1 has been copied the to the ftlmv-weblate-bot GDrive,
-        #       as it's a bit tricky to implement a programmatic downloader for SF.
-        download(
-            'https://drive.google.com/uc?id=194uP5DHmI7bU56soStbv4MfRat2xpXiu&confirm=t',
-            cache_dir / 'SlipstreamModManager_1.9.1-Win.zip',
-            False
-        )
+        logger.info('Downloading Slipstream Mod Manager...')
+        download(SMM_URL, cache_dir / SMM_FILENAME, False)
 
         logger.info('Extracting archive...')
-        with zipfile.ZipFile(cache_dir / 'SlipstreamModManager_1.9.1-Win.zip') as zipf:
+        with zipfile.ZipFile(cache_dir / SMM_FILENAME) as zipf:
             zipf.extractall(cache_dir)
-        smmbase = cache_dir / 'SlipstreamModManager_1.9.1-Win'
+        smmbase = cache_dir / SMM_ROOT_DIR
         
         logger.info('Writing SMM config...')
         with (smmbase / 'modman.cfg').open('w') as f:
