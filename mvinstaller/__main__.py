@@ -1,10 +1,14 @@
 from pathlib import Path
+from threading import Thread
+import requests
 from flet import Page, colors, app as flet_app, theme
 from mvinstaller.config import get_config
 from mvinstaller.localetools import localize as _, set_locale
 from mvinstaller.ui.app import App
 from mvinstaller.ui.appbar import MviAppBar
+from mvinstaller.ui.infoscheme import InfoSchemeType
 from mvinstaller.util import get_embed_dir
+from mvinstaller import __version__ as app_version
 
 def index(page: Page):
     page.title = _('app-title')
@@ -14,6 +18,21 @@ def index(page: Page):
     page.dark_theme = theme.Theme(color_scheme_seed=colors.BLUE_GREY, visual_density='comfortable')
     page.bgcolor = colors.BLACK
     page.update()
+
+    def check_app_update():
+        try:
+            latest = requests.get('https://api.github.com/repos/ftl-mv-translation/mvinstaller/releases/latest').json()
+            latest_version = latest['tag_name']
+            update = (latest_version != f'v{app_version}')
+        except Exception as e:
+            print(f'Update check failed: {e}')
+            return
+        
+        if update:
+            app.snack(InfoSchemeType.Okay, _('app-update-notice', {'version': latest_version}))
+            appbar.show_app_update()
+        else:
+            print(f'App is up-to-date.')
 
     def on_ftl_path_change(ftl_path):
         if ftl_path:
@@ -36,6 +55,8 @@ def index(page: Page):
     page.appbar = appbar.appbar()
     page.add(app)
     on_ftl_path_change(None if get_config().last_ftl_path is None else Path(get_config().last_ftl_path))
+
+    Thread(target=check_app_update, daemon=True).start()
 
 def main():
     set_locale(get_config().app_locale)

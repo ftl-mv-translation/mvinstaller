@@ -31,6 +31,9 @@ class App(UserControl):
     def open_about_dialog(self):
         self._about_dialog.open()
 
+    def snack(self, infoscheme: InfoSchemeType, msg):
+        self._error_snackbar.message(infoscheme, msg)
+
     @property
     def ftl_path(self):
         return self._ftl_path
