@@ -1,7 +1,7 @@
 import os
 from flet import UserControl, Column, AlertDialog, Text, TextButton, TextField, Container
 from mvinstaller.localetools import localize as _
-from mvinstaller import __version__
+from mvinstaller import __version__ as app_version
 
 _ABOUT = '''Created by the FTL: Multiverse translation team.
 Licensed under MIT License; see https://github.com/ftl-mv-translation/mvinstaller/blob/main/LICENSE.
@@ -31,7 +31,7 @@ class AboutDialog(UserControl):
             title=Text(_('about-dialog-title')),
             content=Column(
                 [
-                    Text(_('about-dialog-appname', {'version': __version__}), style='titleMedium'),
+                    Text(_('about-dialog-appname', {'version': app_version}), style='titleMedium'),
                     TextButton(
                         content=Text(_('about-dialog-repository-button')),
                         on_click=lambda e: os.startfile('https://github.com/ftl-mv-translation/mvinstaller')
