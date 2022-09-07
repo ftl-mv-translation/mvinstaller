@@ -12,7 +12,7 @@ def main():
         return
     
     with open('mvinstaller/__init__.py', 'w') as f:
-        f.write(f"__version__ = '{new_version}'")
+        f.write(f"__version__ = '{new_version}'\n")
     subprocess.run(['poetry', 'version', new_version], check=True)
 
     subprocess.run(['git', 'commit', '-a', '-m', f'Bump version to {new_version}'], check=True)
