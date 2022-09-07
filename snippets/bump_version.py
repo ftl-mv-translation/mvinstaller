@@ -17,7 +17,7 @@ def main():
 
     subprocess.run(['git', 'commit', '-a', '-m', f'Bump version to {new_version}'], check=True)
     subprocess.run(['git', 'push', 'origin'], check=True)
-    subprocess.run(['git', 'tag', new_version], check=True)
-    subprocess.run(['git', 'push', 'origin', new_version], check=True)
+    subprocess.run(['git', 'tag', f'v{new_version}'], check=True)
+    subprocess.run(['git', 'push', 'origin', f'v{new_version}'], check=True)
 
 main()
