@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "modded-ftl-executor"
+name = "mvinstaller"
 version = "0.1.2"
 description = "Automatically provides modded environment for the game FTL."
 authors = ["nedsociety <nedsociety@gmail.com>"]

@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(
-    ['execute.py'],
+    ['snippets/execute.py'],
     pathex=[],
     binaries=[],
     datas=[('locale', 'locale'), ('assets', 'assets')],
