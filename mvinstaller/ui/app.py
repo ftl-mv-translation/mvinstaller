@@ -54,7 +54,7 @@ class App(UserControl):
         self._config_dialog = ConfigDialog(self._error_snackbar)
         self._install_mods_dialog = InstallModsDialog(
             self._error_snackbar,
-            on_install=lambda locale: self._do_action(install_mods, locale, self._ftl_path)
+            on_install=lambda locale, addons: self._do_action(install_mods, locale, addons, self._ftl_path)
         )
         self._about_dialog = AboutDialog()
 
