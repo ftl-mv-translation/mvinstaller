@@ -1,0 +1,77 @@
+<metadata>
+  <title><![CDATA[ FTL: MULTIVERSE - EXTRA EQUIPMENT ]]></title>
+  <threadUrl><![CDATA[https://subsetgames.com/forum/viewtopic.php?f=11&t=38203&sid=405a0cd690be2edf1aa26634fd447b12]]></threadUrl>
+  <author><![CDATA[Kix]]></author>
+  <version><![CDATA[ 1.3 ]]></version>
+  <description>
+<![CDATA[ 
+PATCH AFTER MULTIVERSE
+
+An equipment expansion pack meant to be used alongside Multiverse. Includes many various weapon and drone concepts considered, for one reason or another, unfitting for the base mod.
+While attempting to be balanced, due to the nature of the equipment in this pack as well as the fact it is not part of base Multiverse means there may be a higher variation of balance than usual. The new weapons include those that are niche, too conceptually similar to existing weapons, involve "hard-to-balance" gimmicks, or are just conceptually bizare.
+Enemies can also spawn with some of these weapons, blue options are updated to include relevant equipment, and stores + Sylvan will sometimes sell them. Some items also have differing rarities in specific sectors.
+
+Extinguisher drone and Mutant sprite by MoreOrLesser
+Info icon assistance from LocalResources
+
+///////////////////////New Weapons (with descriptions)///////////////////////
+---Heavy Chargegun---
+A 3-shot charge weapon that fires 2-damage heavy lasers
+---Light Burst Laser---
+Though slower charging than the usual light laser, this burst laser fires its 3 projectiles in rapid succession
+---Particle Collider Mk 1---
+A modified particle accelerator that trades its fire chance for hefty crew damage
+---Particle Collider Mk 2---
+An upgraded version of the particle collider with a higher shot count
+---'Bardiche' Beam---
+A special chain beam that also inherits the properties of an anti-hull beam
+---Apshyxiator Ion---
+A partially piercing ion that creates a gaurunteed breach, perfect for accelerating asphyxiation kills
+---Infinity Ion---
+A special adaptive ion that can chain a potentially infinite number of times.
+---Energy Phaser---
+A single shot energy weapon that pierces shields similar to a phase ion
+---'Scorch' Pinpoint---
+A fast charging pinpoint with complete shield piercing that does no damage but starts fires
+---'Poniard' Pinpoint---
+A decent damage but slow charging conservative pinpoint
+---Kagiyari Beam---
+A special conservative yari beam that charges slower but requires no power to run alongside the rest of your build.
+---Particle Bomb---
+A high system damage bomb with a large fire chance
+--Mutagen Bomb--
+A strange bomb that causes crew to mutate, changing them into terrifying mutants.
+---Faucon Mk 2---
+An upgraded RAD beam that can kill crew even more efficiently.
+---Arachno Bomb---
+A bizare utility bomb that spawns 2 temporary hatchling allies but does no direct physical damage
+---'Epimetheus' Missiles---
+A high damage Pre-Emptive missile
+---'Apollo' Missiles---
+A missile that does no crew damage but heals allied crew in the room it hits
+---'Boreas' Missiles---
+A modified frost missile that trades hullbusting for locking down rooms
+---Trifecta---
+A unique yet bizare weapon that fires both flak and a heavy laser at once
+---Frost Flak---
+Similarly to the Frost Lasers, the Frost Flak does both physical damage and locks down rooms
+---Flare Launcher---
+A quick charging, conservative, and cheap utility weapon that blinds enemy crew and distracts defense drones
+--Ultraburn--
+A short but extremely hot fire beam, which damages the hull and makes crew take more damage from fires. It even removes fire resistance from crew like rockmen!
+---Baal Minelauncher---
+A special minelauncher which deals phasing ion damage rather than hull damage nad has a unique delay option
+--Hazard Sentry--
+A new deployment cannon that weakens enemy crew, making them take signifigantly more damage from hazards.
+
+///////////////////////New Drones (with descriptions)///////////////////////
+---Scattershot Defense Drone---
+A flak based defense drone with a quick cooldown but slow projectiles which can target anything
+---Thundershock Combat Drone---
+A bomb-equipped toggle drone that can switch between breach bombs and ion bombs
+---Extinguisher Crew Drone---
+A utility repair drone that extinguishes fires very fast and drains oxygen but is far less efficient at regular repairs
+
+]]>
+  </description>
+</metadata>

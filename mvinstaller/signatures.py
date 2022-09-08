@@ -29,6 +29,14 @@ class MainMod:                          # A main Multiverse mod
     locale: str                         # Locale code
     commitid: Optional[str]             # Commit ID (useful for distinguishing versions between nightly translation)
 
+@dataclass
+class Addon:                            # An addon mod
+    download_targets: dict[str, str]    # List of mod files in {url: filename} form
+    metadata_name: str                  # A path to the metadata.xml in addon_metadata directory
+                                        # with 'addon_metadata/' and '.xml' stripped out
+    locale: Optional[list[str]]         # Available locales. If it is None, every locale of MV can use it.
+
+
 ########## Signatures
 
 class FtlExecutableType(Enum):
@@ -93,3 +101,41 @@ MV_ENGLISH_MAINMOD = MainMod(
 # The listfile for the nightly main mod translations
 LISTFILE_EXPIRE_DURATION = 60 * 60 * 24 # Updated every day
 LISTFILE_URL = 'https://raw.githubusercontent.com/ftl-mv-translation/ftl-mv-translation/installer-metadata/listfile'
+
+class AddonsList(Enum):
+    TRC = Addon(
+        download_targets={
+            'https://drive.google.com/uc?id=12bb_pruvxOcxvzGJnKuGbZQ5mu-uiP2j&confirm=t': 'Multiverse - TRC 1.3.ftl'
+        },
+        metadata_name='TRC',
+        locale=['en']
+    )
+    SlocknogsFlagship = Addon(
+        download_targets={
+            'https://drive.google.com/uc?id=1EC_YG4Gruw6OeNeNyLUPPYeoAAcUBJRe&confirm=t': 'Multiverse - SlockFlag.ftl'
+        },
+        metadata_name='SlocknogsFlagship',
+        locale=['en']
+    )
+    VanillaUI = Addon(
+        download_targets={
+            'https://drive.google.com/uc?id=1aNlS1mI0otQSDW_SACUVDc00RP0vUqGS&confirm=t': 'Multiverse - VanUI 2.0.ftl'
+        },
+        metadata_name='VanillaUI',
+        locale=['en']
+    )
+    TheHolidaySpecial = Addon(
+        download_targets={
+            'https://drive.google.com/uc?id=13ORzkMIjTNNOAPyvXpKvj2gGK7tK-DX-&confirm=t':
+                'Multiverse - Holiday Special.ftl'
+        },
+        metadata_name='TheHolidaySpecial',
+        locale=['en']
+    )
+    GenGibs = Addon(
+        download_targets={
+            'https://drive.google.com/uc?id=11YlBrNHCpyIEwX41IEj2RjWP6haH3--4&confirm=t': 'MV Addon GenGibs v1.1.0.ftl'
+        },
+        metadata_name='GenGibs',
+        locale=None
+    )

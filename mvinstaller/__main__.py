@@ -2,6 +2,7 @@ from pathlib import Path
 from threading import Thread
 import requests
 from flet import Page, colors, app as flet_app, theme
+from mvinstaller.addon_metadata import get_metadata
 from mvinstaller.config import get_config
 from mvinstaller.localetools import localize as _, set_locale
 from mvinstaller.ui.app import App
@@ -60,6 +61,7 @@ def index(page: Page):
 
 def main():
     set_locale(get_config().app_locale)
+    get_metadata() # Load metadata as early as possible
     flet_app(target=index, assets_dir=str(get_embed_dir() / 'assets'))
 
 if __name__ == '__main__':

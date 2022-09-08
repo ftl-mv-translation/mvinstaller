@@ -15,6 +15,7 @@ vdf = "^3.4"
 dacite = "^1.6.0"
 Babel = "^2.10.3"
 loguru = "^0.6.0"
+lxml = "^4.9.1"
 
 [tool.poetry.dev-dependencies]
 pyinstaller = "^5.3"

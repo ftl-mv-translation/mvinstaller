@@ -10,7 +10,7 @@ from mvinstaller.webtools import download
 from mvinstaller.util import get_cache_dir, run_checked_subprocess_with_logging_output
 from mvinstaller.ftlpath import get_ftl_installation_state, get_latest_hyperspace
 from mvinstaller.localetools import get_locale_name
-from mvinstaller.signatures import SMM_URL, SMM_FILENAME, SMM_ROOT_DIR
+from mvinstaller.signatures import SMM_URL, SMM_FILENAME, SMM_ROOT_DIR, AddonsList
 
 def _extract_without_path(zipf, name, dstdir):
     # Trick from https://stackoverflow.com/a/47632134/3567518
@@ -58,7 +58,7 @@ def install_hyperspace(ftl_path):
         for fn in FILES:
             _extract_without_path(zipf, f'Windows - Extract these files into where FTLGame.exe is/{fn}', ftl_path)
 
-def install_mods(locale_mv, ftl_path):
+def install_mods(locale_mv, addons, ftl_path):
     ftl_path = Path(ftl_path)
 
     # Find vanilla dat
@@ -97,7 +97,7 @@ def install_mods(locale_mv, ftl_path):
 
         return smmbase
     
-    def install_multiverse(smmbase):
+    def patch_mods(smmbase):
         clear_expired_mainmods(glob_posix(str(smmbase / 'mods/*')))
 
         mainmods = get_mv_mainmods()
@@ -110,15 +110,24 @@ def install_mods(locale_mv, ftl_path):
         for url, fn in mainmod.download_targets.items():
             download(url, smmbase / 'mods' / fn, False)
 
+        logger.info(f'[Target addons] {", ".join(addons)}')
+        addon_files_to_install = {}
+        for addon in AddonsList:
+            if addon.value.metadata_name in addons:
+                for url, fn in addon.value.download_targets.items():
+                    addon_files_to_install[url] = fn
+        for url, fn in addon_files_to_install.items():
+            download(url, smmbase / 'mods' / fn, False)
+
         if not use_backup:
             logger.info('Creating backup for dat...')
             shutil.copy(ftl_path / 'ftl.dat', ftl_path / 'ftl.dat.vanilla')
         
         logger.info('Running patch...')
         run_checked_subprocess_with_logging_output(
-            [smmbase / 'modman.exe', '--patch', *mainmod.download_targets.values()]
+            [smmbase / 'modman.exe', '--patch', *mainmod.download_targets.values(), *addon_files_to_install.values()]
         )
 
     check_java()
     smmbase = install_slipstream()
-    install_multiverse(smmbase)
+    patch_mods(smmbase)
