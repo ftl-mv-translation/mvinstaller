@@ -8,11 +8,12 @@ from mvinstaller.util import get_embed_dir
 _APP_LOCALE_DIR = get_embed_dir() / 'locale'
 
 def supported_app_locales():
-    supported_app_locales.cached = getattr(
-        supported_app_locales, 'cached', 
-        [str(Path(path).parent) for path in glob('*/main.ftl', root_dir=_APP_LOCALE_DIR)]
-    )
-    return supported_app_locales.cached
+    cached = getattr(supported_app_locales, 'cached', None)
+    if cached is None:
+        cached = supported_app_locales.cached = [
+            str(Path(path).parent) for path in glob('*/main.ftl', root_dir=_APP_LOCALE_DIR)
+        ]
+    return cached
 
 def get_default_app_locale():
     defaultloc = locale.getdefaultlocale()[0]
