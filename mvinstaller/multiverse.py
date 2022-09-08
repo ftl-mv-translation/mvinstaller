@@ -50,7 +50,9 @@ def get_mv_mainmods() -> list[MainMod]:
         download(LISTFILE_URL, listfile_path, True)
         created_time, mainmods = _parse_translation_listfile(listfile_path)
 
-    return [MV_ENGLISH_MAINMOD] + mainmods
+    # Exclude the English version (see #3)
+    # return [MV_ENGLISH_MAINMOD] + mainmods
+    return mainmods
 
 def clear_expired_mainmods(smm_mod_files):
     mainmods = get_mv_mainmods()
