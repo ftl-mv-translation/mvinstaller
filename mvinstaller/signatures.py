@@ -103,11 +103,20 @@ LISTFILE_EXPIRE_DURATION = 60 * 60 * 24 # Updated every day
 LISTFILE_URL = 'https://raw.githubusercontent.com/ftl-mv-translation/ftl-mv-translation/installer-metadata/listfile'
 
 class AddonsList(Enum):
-    # GenGibs = Addon(
-    #     download_targets={
-    #         'https://drive.google.com/uc?id=11YlBrNHCpyIEwX41IEj2RjWP6haH3--4&confirm=t': 'MV Addon GenGibs v1.1.0.ftl'
-    #     },
-    #     metadata_name='GenGibs',
-    #     locale=None
-    # )
-    pass
+    GenGibs = Addon(
+        download_targets={
+            'https://drive.google.com/uc?id=11YlBrNHCpyIEwX41IEj2RjWP6haH3--4&confirm=t':
+                'MV Addon GenGibs v1.1.0.ftl'
+        },
+        metadata_name='GenGibs',
+        locale=None
+    )
+    TRC_ko = Addon(
+        download_targets={
+            'https://drive.google.com/uc?id=15kNTm-_CaHz3XaNCRPSwBAxOvkcvP7qb&confirm=t':
+                'Multiverse - TRC 1.3 - Korean.ftl'
+        },
+        metadata_name='TRC_ko',
+        locale=['ko']
+    )
+    
