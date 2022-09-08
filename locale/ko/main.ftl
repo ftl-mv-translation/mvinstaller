@@ -38,6 +38,7 @@ config-explain-opengl-option-url = https://ftl-hyperspace.github.io/FTL-Hyperspa
 progress-dialog-title = 작업 중...
 install-mods-dialog-title = 멀티버스 설치
 install-mods-language = 언어
+install-mods-addons = 애드온
 install-mods-dialog-action-install = 설치
 about-dialog-title = FTL: 멀티버스 설치에 대하여
 about-dialog-appname = FTL: 멀티버스 설치 앱, 버전 { $version }
