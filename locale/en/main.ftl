@@ -22,6 +22,7 @@ operation-hyperspace-unknown = Hyperspace seems to be installed, but the install
 operation-hyperspace-action-install = Install
 operation-hyperspace-action-update = Update
 operation-modding = Modding the Game
+operation-modding-java-not-installed = Seems like Java is not installed or outdated. JRE 1.6 or higher is required to mod the game.
 operation-modding-success = Mods seem to be installed.
 
     Note: The installer cannot determine if FTL: Multiverse is actually installed.
@@ -29,7 +30,8 @@ operation-modding-success-noreinstall = Mods seem to be installed.
 
     Note: The installer cannot determine if FTL: Multiverse is actually installed. Furthermore, because vanilla backups are not found, the installer cannot reinstall the mods.
 operation-modding-required = It seems the mods are not installed at all.
-operation-modding-action = Install
+operation-modding-action-install = Install
+operation-modding-action-java = Download Java
 config-dialog-title = Configuration
 config-language-label = Installer language (restart required)
 config-use-opengl-option = Use -opengl option when launching FTL

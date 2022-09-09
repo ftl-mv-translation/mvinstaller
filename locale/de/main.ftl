@@ -29,7 +29,7 @@ operation-modding-success-noreinstall = Mods scheinen installiert zu sein.
 
     Notiz: Der Installateur kann nicht erkennen, ob FTL: Multiversum wirklich installiert ist. Außerdem, da Vanilla Speicherstände nicht gefunden werden konnten, kann der Installateur die Mods nicht neu installieren.
 operation-modding-required = Es scheint dass die Mods überhaupt nicht installiert wurden.
-operation-modding-action = Installiere
+operation-modding-action-install = Installiere
 config-dialog-title = Konfiguration
 config-language-label = Installateur Sprache (Neustart benötigt)
 config-use-opengl-option = Nutze die -opengl beim Start von FTL
