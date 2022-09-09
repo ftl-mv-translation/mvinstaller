@@ -65,7 +65,14 @@ class InstallModsDialog(UserControl):
             return
 
         mainmod_locales = [mainmod.locale for mainmod in mainmods]
-        self._locale_picker.options = [dropdown.Option(locale, get_locale_name(locale)) for locale in mainmod_locales]
+        self._locale_picker.options = [
+            dropdown.Option(
+                mainmod.locale,
+                f'{mainmod.version} {get_locale_name(mainmod.locale)}'
+                + (f' +{mainmod.commitid}' if mainmod.commitid else '')
+            )
+            for mainmod in mainmods
+        ]
         if self._locale_picker.value not in mainmod_locales:
             app_locale = get_config().app_locale
             self._locale_picker.value = app_locale if app_locale in mainmod_locales else mainmod_locales[0]
