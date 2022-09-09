@@ -4,7 +4,7 @@ from typing import Optional
 
 ########## Type definitions
 
-@dataclass
+@dataclass(frozen=True)
 class FtlExecutableInfo:                # A signature of FTLGame.exe
     name: str                           # The version displayed in the installer app
     downgraded: bool                    # Whether it's downgraded and can be modded with Hyperspace
@@ -12,7 +12,7 @@ class FtlExecutableInfo:                # A signature of FTLGame.exe
                                         # None can be specified if there's no downgrader available.
     sha1: str                           # SHA1 hash value of FTLGame.exe, in lowercase
 
-@dataclass
+@dataclass(frozen=True)
 class HyperspaceInfo:                   # A signature of Hyperspace.dll
     name: str                           # The version displayed in the installer app
     outdated: bool                      # Whether it's outdated to run the latest Multiverse
@@ -22,14 +22,14 @@ class HyperspaceInfo:                   # A signature of Hyperspace.dll
     url: str                            # URL to the Hyperspace release
     filename: str                       # Filename of the Hyperspace release
 
-@dataclass
+@dataclass(frozen=True)
 class MainMod:                          # A main Multiverse mod
     download_targets: dict[str, str]    # List of mod files in {url: filename} form
     version: str                        # Version string
     locale: str                         # Locale code
     commitid: Optional[str]             # Commit ID (useful for distinguishing versions between nightly translation)
 
-@dataclass
+@dataclass(frozen=True)
 class Addon:                            # An addon mod
     download_targets: dict[str, str]    # List of mod files in {url: filename} form
     metadata_name: str                  # A path to the metadata.xml in addon_metadata directory

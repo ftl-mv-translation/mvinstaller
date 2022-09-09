@@ -2,13 +2,14 @@ from pathlib import Path
 from threading import Thread
 import requests
 from flet import Page, colors, app as flet_app, theme
-from mvinstaller.addon_metadata import get_metadata
+from loguru import logger
+from mvinstaller.addon_metadata import init_metadata
 from mvinstaller.config import get_config
 from mvinstaller.localetools import localize as _, set_locale
 from mvinstaller.ui.app import App
 from mvinstaller.ui.appbar import MviAppBar
 from mvinstaller.ui.infoscheme import InfoSchemeType
-from mvinstaller.util import get_embed_dir
+from mvinstaller.util import get_cache_dir, get_embed_dir
 from mvinstaller import __version__ as app_version
 
 def index(page: Page):
@@ -61,7 +62,9 @@ def index(page: Page):
 
 def main():
     set_locale(get_config().app_locale)
-    get_metadata() # Load metadata as early as possible
+    init_metadata() # Load metadata as early as possible
+    # Setup file logger sink
+    logger.add(open(get_cache_dir() / 'lastlog.txt', 'w', encoding='utf-8'), level='INFO')
     flet_app(target=index, assets_dir=str(get_embed_dir() / 'assets'))
 
 if __name__ == '__main__':

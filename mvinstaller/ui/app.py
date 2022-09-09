@@ -9,7 +9,7 @@ from mvinstaller.ftlpath import get_ftl_installation_state
 from mvinstaller.ui.aboutdialog import AboutDialog
 from mvinstaller.ui.busycontainer import BusyContainer
 from mvinstaller.ui.configdialog import ConfigDialog
-from mvinstaller.localetools import localize as _
+from mvinstaller.localetools import get_locale_name, localize as _
 from mvinstaller.ui.errorsnackbar import ErrorSnackbar
 from mvinstaller.ui.ftlpathfinderdialog import FTLPathFinderDialog
 from mvinstaller.ui.infoscheme import InfoSchemeType
@@ -176,31 +176,61 @@ class App(UserControl):
                 None, None
             )
             status_hyperspace = 2
-        
-        if not is_java_installed():
-            self._operation_card_modding.set(
-                InfoSchemeType.Error, _('operation-modding-java-not-installed'),
-                _('operation-modding-action-java'), lambda e: os.startfile('https://www.java.com/en/download/')
-            )
-            status_mods = 0 if state.is_ftldat_vanilla else 2
-        elif state.is_ftldat_vanilla:
+
+        if state.is_ftldat_vanilla:
             self._operation_card_modding.set(
                 InfoSchemeType.Warning, _('operation-modding-required'),
                 _('operation-modding-action-install'), lambda e: self._install_mods_dialog.open()
             )
             status_mods = 0
-        elif state.is_ftldat_backedup:
-            self._operation_card_modding.set(
-                InfoSchemeType.Okay, _('operation-modding-success'),
-                _('operation-modding-action-install'), lambda e: self._install_mods_dialog.open()
-            )
-            status_mods = 2
+        elif state.last_installed_mods is None:
+            # Unknown mods are installed (possibly Multiverse)
+            if state.is_ftldat_backedup:
+                self._operation_card_modding.set(
+                    InfoSchemeType.Warning, _('operation-modding-unknown'),
+                    _('operation-modding-action-install'), lambda e: self._install_mods_dialog.open()
+                )
+            else:
+                self._operation_card_modding.set(
+                    InfoSchemeType.Warning,
+                    _('operation-modding-unknown') + '\n\n' + _('operation-modding-note-noreinstall'),
+                    None, None
+                )
+            status_mods = 1
         else:
-            self._operation_card_modding.set(
-                InfoSchemeType.Okay, _('operation-modding-success-noreinstall'),
-                None, None
-            )
+            # Multiverse is installed with this app
+            parameters = {
+                'version': state.last_installed_mods.main.version,
+                'locale': get_locale_name(state.last_installed_mods.main.locale),
+            }
+            if state.last_installed_mods.addons:
+                parameters['addons_list'] = '\n'.join(
+                    f' • {metadata.title} ({metadata.version})'
+                    for metadata in state.last_installed_mods.addons.values()
+                )
+                modding_text = modding_text = _('operation-modding-success-addons', parameters)
+            else:
+                modding_text = _('operation-modding-success-noaddons', parameters)
+            
+            if state.is_ftldat_backedup:
+                self._operation_card_modding.set(
+                    InfoSchemeType.Okay, modding_text,
+                    _('operation-modding-action-install'), lambda e: self._install_mods_dialog.open()
+                )
+            else:
+                self._operation_card_modding.set(
+                    InfoSchemeType.Okay,
+                    modding_text + '\n\n' + _('operation-modding-note-noreinstall'),
+                    None, None
+                )
             status_mods = 2
+        
+        # Override the above messages (without altering status_mod) if Java is not installed
+        if not is_java_installed():
+            self._operation_card_modding.set(
+                InfoSchemeType.Error, _('operation-modding-java-not-installed'),
+                _('operation-modding-action-java'), lambda e: os.startfile('https://www.java.com/en/download/')
+            )
         
         if status_downgrade == 0 and status_hyperspace == 0 and status_mods == 0:
             self._status_line.text = _('status-line-vanilla')
