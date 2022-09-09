@@ -1,8 +1,9 @@
 from pathlib import Path
 import subprocess
+import os
 from loguru import logger
 from flet import UserControl, Column, Row, icons, colors, TextButton, Stack, Image, Container, alignment
-from mvinstaller.actions import downgrade_ftl, install_hyperspace, install_mods
+from mvinstaller.actions import downgrade_ftl, install_hyperspace, install_mods, is_java_installed
 from mvinstaller.config import get_config
 from mvinstaller.ftlpath import get_ftl_installation_state
 from mvinstaller.ui.aboutdialog import AboutDialog
@@ -93,7 +94,7 @@ class App(UserControl):
                 ])
             ], alignment='center')
         ]
-    
+
     def _update_state(self):
         self._busycontainer.visible = self._ftl_path is not None
         self._busycontainer.busy = True
@@ -117,7 +118,7 @@ class App(UserControl):
                 raise RuntimeError(f'Cannot fetch the installation state for {self._ftl_path}.')
         except Exception as e:
             self._busycontainer.visible = False
-            self._error_snackbar.message(InfoSchemeType.Error, str(e))
+            self.snack(InfoSchemeType.Error, str(e))
             return
 
         # 0: vanilla, 1: unsure, 2: installed
@@ -176,16 +177,22 @@ class App(UserControl):
             )
             status_hyperspace = 2
         
-        if state.is_ftldat_vanilla:
+        if not is_java_installed():
+            self._operation_card_modding.set(
+                InfoSchemeType.Error, _('operation-modding-java-not-installed'),
+                _('operation-modding-action-java'), lambda e: os.startfile('https://www.java.com/en/download/')
+            )
+            status_mods = 0 if state.is_ftldat_vanilla else 2
+        elif state.is_ftldat_vanilla:
             self._operation_card_modding.set(
                 InfoSchemeType.Warning, _('operation-modding-required'),
-                _('operation-modding-action'), lambda e: self._install_mods_dialog.open()
+                _('operation-modding-action-install'), lambda e: self._install_mods_dialog.open()
             )
             status_mods = 0
         elif state.is_ftldat_backedup:
             self._operation_card_modding.set(
                 InfoSchemeType.Okay, _('operation-modding-success'),
-                _('operation-modding-action'), lambda e: self._install_mods_dialog.open()
+                _('operation-modding-action-install'), lambda e: self._install_mods_dialog.open()
             )
             status_mods = 2
         else:

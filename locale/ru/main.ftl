@@ -29,7 +29,7 @@ operation-modding-success-noreinstall = Моды установлены.
 
     Внимание: Установщик не может определить, действительно ли установлен FTL: Multiverse. Кроме того, так как не найдены резервные копии ванильной версии, установщик не может переустановить моды.
 operation-modding-required = Моды не установлены.
-operation-modding-action = Установить
+operation-modding-action-install = Установить
 config-dialog-title = Настройки
 config-language-label = Язык установщика (нужен перезапуск)
 config-use-opengl-option = Использовать опцию -opengl для запуска FTL

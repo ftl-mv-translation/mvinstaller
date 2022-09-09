@@ -1,6 +1,7 @@
 import zipfile
-import subprocess
 import shutil
+import winreg
+import re
 from pathlib import Path
 import javaproperties
 from loguru import logger
@@ -11,6 +12,28 @@ from mvinstaller.util import get_cache_dir, run_checked_subprocess_with_logging_
 from mvinstaller.ftlpath import get_ftl_installation_state, get_latest_hyperspace
 from mvinstaller.localetools import get_locale_name
 from mvinstaller.signatures import SMM_URL, SMM_FILENAME, SMM_ROOT_DIR, AddonsList
+
+def is_java_installed():
+    def try_check_java_version_from(key_under_hklm):
+        try:
+            with winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, key_under_hklm) as key:
+                v, t = winreg.QueryValueEx(key, 'CurrentVersion')
+                if t != winreg.REG_SZ:
+                    raise FileNotFoundError
+                return str(v)
+        except FileNotFoundError:
+            return None
+    version = (
+        try_check_java_version_from(r'Software\JavaSoft\Java Runtime Environment')
+        or try_check_java_version_from(r'Software\WOW6432Node\JavaSoft\Java Runtime Environment')
+    )
+    if version is None:
+        return False
+    match = re.match(r'^([0-9]+)\.([0-9]+)', version)
+    if match is None:
+        return False
+    major, minor = tuple(int(num) for num in match.groups())
+    return major >= 1 and minor >= 6
 
 def downgrade_ftl(ftl_path, downgrader):
     if downgrader == 'steam':
@@ -54,6 +77,7 @@ def install_hyperspace(ftl_path):
 
 def install_mods(locale_mv, addons, ftl_path):
     ftl_path = Path(ftl_path)
+    cache_dir = get_cache_dir()
 
     # Find vanilla dat
     logger.info('Finding vanilla dat file...')
@@ -62,17 +86,6 @@ def install_mods(locale_mv, addons, ftl_path):
         raise RuntimeError('Cannot find vanilla dat file.')
     use_backup = installation_state.is_ftldat_backedup
 
-    cache_dir = get_cache_dir()
-
-    def check_java():
-        logger.info('Checking if Java is available...')
-        try:
-            subprocess.run(['java', '-version'], check=True)
-        except:
-            raise RuntimeError(
-                'Java does not seem to be installed. JRE is required for running Slipstream Mod Manager.'
-            )
-    
     def install_slipstream():
         logger.info('Downloading Slipstream Mod Manager...')
         download(SMM_URL, cache_dir / SMM_FILENAME, False)
@@ -122,6 +135,5 @@ def install_mods(locale_mv, addons, ftl_path):
             [smmbase / 'modman.exe', '--patch', *mainmod.download_targets.values(), *addon_files_to_install.values()]
         )
 
-    check_java()
     smmbase = install_slipstream()
     patch_mods(smmbase)
