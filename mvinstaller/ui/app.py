@@ -202,6 +202,11 @@ class App(UserControl):
             parameters = {
                 'version': state.last_installed_mods.main.version,
                 'locale': get_locale_name(state.last_installed_mods.main.locale),
+                'commitid': (
+                    f'+{state.last_installed_mods.main.commitid}'
+                    if state.last_installed_mods.main.commitid else
+                    ''
+                )
             }
             if state.last_installed_mods.addons:
                 parameters['addons_list'] = '\n'.join(
