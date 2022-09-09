@@ -34,6 +34,8 @@ class Addon:                            # An addon mod
     download_targets: dict[str, str]    # List of mod files in {url: filename} form
     metadata_name: str                  # A path to the metadata.xml in addon_metadata directory
                                         # with 'addon_metadata/' and '.xml' stripped out
+    custom_metadata: bool               # Controls whether metadata.xml should be updated by the fetch_metadata script.
+                                        # Set to True if it should NOT update the metadata.
     locale: Optional[list[str]]         # Available locales. If it is None, every locale of MV can use it.
 
 
@@ -109,6 +111,7 @@ class AddonsList(Enum):
                 'MV Addon GenGibs v1.1.0.ftl'
         },
         metadata_name='GenGibs',
+        custom_metadata=False,
         locale=None
     )
     TRC_ko = Addon(
@@ -117,6 +120,7 @@ class AddonsList(Enum):
                 'Multiverse - TRC 1.3 - Korean.ftl'
         },
         metadata_name='TRC_ko',
+        custom_metadata=True,
         locale=['ko']
     )
-    
+
