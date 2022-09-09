@@ -23,12 +23,11 @@ operation-hyperspace-action-install = 설치
 operation-hyperspace-action-update = 업데이트
 operation-modding = 게임 모딩
 operation-modding-java-not-installed = Java가 설치되어 있지 않거나 혹은 구버전인 것 같습니다. 게임을 모딩하려면 JRE 1.6 이상이 설치되어 있어야 합니다.
-operation-modding-success = 모드가 설치되어 있는 것 같습니다.
-
-    참고: 본 설치 앱은 실제로 설치된 모드가 FTL: 멀티버스인지는 확인하지 못합니다.
-operation-modding-success-noreinstall = 모드가 설치되어 있는 것 같습니다.
-
-    참고: 본 설치 앱은 실제로 설치된 모드가 FTL: 멀티버스인지는 확인하지 못합니다. 또한 바닐라 버전의 백업을 찾을 수 없기 때문에, 모드를 재설치하는 작업 역시 불가능합니다.
+operation-modding-success-noaddons = FTL: 멀티버스 ({ $version }, { $locale }) 가 설치되었습니다.
+operation-modding-success-addons = FTL: 멀티버스 ({ $version }, { $locale }) 가 다음 애드온과 함께 설치되었습니다:
+    { $addons_list }
+operation-modding-unknown = 모드가 설치되어 있는 것 같지만, 실제로 설치된 모드가 무엇인지 확인할 수 없습니다. 본 설치 앱이 아닌 다른 수단을 통해 모드를 설치한 경우일 수 있습니다.
+operation-modding-note-noreinstall = 참고: 바닐라 버전의 백업을 찾을 수 없기 때문에 모드를 재설치할 수 없습니다.
 operation-modding-required = 모드가 설치되지 않은 것 같습니다.
 operation-modding-action-install = 설치
 operation-modding-action-java = Java 다운로드

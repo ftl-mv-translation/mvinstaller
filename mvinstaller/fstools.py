@@ -1,3 +1,4 @@
+from hashlib import sha1
 from pathlib import Path
 from glob import glob
 from zipfile import ZipFile
@@ -31,4 +32,9 @@ def extract_without_path(zipf: ZipFile, name, dstdir):
     info = zipf.getinfo(name)
     info.filename = Path(info.filename).name
     zipf.extract(info, dstdir)
-    
+
+def get_sha1(path): 
+    hash = sha1()
+    with open(path, 'rb') as f:
+        hash.update(f.read())
+    return hash.hexdigest()

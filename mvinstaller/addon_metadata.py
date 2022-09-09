@@ -1,11 +1,12 @@
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Optional
 from lxml import etree
 from loguru import logger
 from mvinstaller.signatures import AddonsList
 from mvinstaller.util import get_embed_dir
 
-@dataclass
+@dataclass(frozen=True)
 class Metadata:
     title: str
     url: Optional[str]
@@ -13,8 +14,11 @@ class Metadata:
     version: Optional[str]
     description: str
 
-def _read_metadata(metadata_name):
-    tree = etree.parse(get_embed_dir() / 'addon_metadata' / f'{metadata_name}.xml')
+def read_metadata(path, metadata_name=None):
+    path = Path(path)
+    metadata_name = metadata_name or path.stem
+
+    tree = etree.parse(path)
 
     def read(xpath, default):
         q = tree.xpath(xpath)
@@ -32,17 +36,22 @@ def _init_metadata():
     ret = {}
     for addon in AddonsList:
         try:
-            metadata = _read_metadata(addon.value.metadata_name)
+            metadata = read_metadata(get_embed_dir() / 'addon_metadata' / f'{addon.value.metadata_name}.xml')
             ret[addon.value.metadata_name] = metadata
         except Exception as e:
             logger.error(f'Error while reading metadata for {addon.value.metadata_name}: {e}. Skipping...')
     return ret
 
-def get_metadata():
-    cached = getattr(get_metadata, 'cached', None)
-    if cached is None:
-        cached = get_metadata.cached = _init_metadata()
-    return cached
+_CACHED_METADATA = None
+
+def init_metadata():
+    global _CACHED_METADATA
+    if _CACHED_METADATA is None:
+        _CACHED_METADATA = _init_metadata()
+
+def get_metadata(metadata_name):
+    init_metadata()
+    return _CACHED_METADATA.get(metadata_name, Metadata(metadata_name, None, 'Unknown', None, ''))
 
 def metadata_text(metadata):
     ret = metadata.title

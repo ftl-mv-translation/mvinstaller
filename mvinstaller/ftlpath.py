@@ -1,10 +1,10 @@
 from collections import namedtuple
 from pathlib import Path
-from hashlib import sha1
-from enum import Enum
 import winreg
 import vdf
+from mvinstaller.last_installed_mods import load_last_installed_mods
 from mvinstaller.signatures import FtlExecutableType, HyperspaceType, HyperspaceInfo, DAT_VANILLA_SHA1, FIXED_PATHS
+from mvinstaller.fstools import get_sha1
 
 _EXE_SHA1_TO_INFO = {
     e.value.sha1: e.value
@@ -16,16 +16,14 @@ _HS_SHA1_TO_INFO = {
     for e in HyperspaceType
 }
 
-FtlInstallationState = namedtuple(
-    'FtlInstallationState',
-    ('ftl_executable_info', 'hyperspace_installed', 'hyperspace_info', 'is_ftldat_vanilla', 'is_ftldat_backedup')
-)
-
-def get_sha1(path): 
-    hash = sha1()
-    with open(path, 'rb') as f:
-        hash.update(f.read())
-    return hash.hexdigest()
+FtlInstallationState = namedtuple('FtlInstallationState', (
+    'ftl_executable_info',
+    'hyperspace_installed',
+    'hyperspace_info',
+    'is_ftldat_vanilla',
+    'is_ftldat_backedup',
+    'last_installed_mods',
+))
 
 def get_ftl_installation_state(path):
     path = Path(path)
@@ -43,14 +41,22 @@ def get_ftl_installation_state(path):
 
     hyperspace_info = _HS_SHA1_TO_INFO.get(get_sha1(path / 'Hyperspace.dll'), None) if hyperspace_installed else None
 
-    is_ftldat_vanilla = get_sha1(path / 'ftl.dat') in DAT_VANILLA_SHA1
+    ftldat_sha1 = get_sha1(path / 'ftl.dat')
+    is_ftldat_vanilla = ftldat_sha1 in DAT_VANILLA_SHA1
 
     is_ftldat_backedup = (
         (path / 'ftl.dat.vanilla').is_file() and (get_sha1(path / 'ftl.dat.vanilla') in DAT_VANILLA_SHA1)
     )
     
+    last_installed_mods = load_last_installed_mods(path, ftldat_sha1)
+    
     return FtlInstallationState(
-        ftl_executable_info, hyperspace_installed, hyperspace_info, is_ftldat_vanilla, is_ftldat_backedup
+        ftl_executable_info,
+        hyperspace_installed,
+        hyperspace_info,
+        is_ftldat_vanilla,
+        is_ftldat_backedup,
+        last_installed_mods
     )
 
 def find_steam_ftl_path():

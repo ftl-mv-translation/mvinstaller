@@ -5,7 +5,9 @@ import re
 from pathlib import Path
 import javaproperties
 from loguru import logger
+from mvinstaller.addon_metadata import read_metadata
 from mvinstaller.fstools import extract_without_path, glob_posix
+from mvinstaller.last_installed_mods import save_last_installed_mods
 from mvinstaller.multiverse import clear_expired_mainmods, get_mv_mainmods
 from mvinstaller.webtools import download
 from mvinstaller.util import get_cache_dir, run_checked_subprocess_with_logging_output
@@ -75,7 +77,7 @@ def install_hyperspace(ftl_path):
         for fn in FILES:
             extract_without_path(zipf, f'Windows - Extract these files into where FTLGame.exe is/{fn}', ftl_path)
 
-def install_mods(locale_mv, addons, ftl_path):
+def install_mods(locale_mv, addons_name, ftl_path):
     ftl_path = Path(ftl_path)
     cache_dir = get_cache_dir()
 
@@ -117,14 +119,25 @@ def install_mods(locale_mv, addons, ftl_path):
         for url, fn in mainmod.download_targets.items():
             download(url, smmbase / 'mods' / fn, False)
 
-        logger.info(f'[Target addons] {", ".join(addons)}')
+        logger.info(f'[Target addons] {", ".join(addons_name)}')
+        addons = [addon.value for addon in AddonsList if addon.value.metadata_name in addons_name]
+
+        # Download addon files
         addon_files_to_install = {}
-        for addon in AddonsList:
-            if addon.value.metadata_name in addons:
-                for url, fn in addon.value.download_targets.items():
-                    addon_files_to_install[url] = fn
+        for addon in addons:
+            for url, fn in addon.download_targets.items():
+                addon_files_to_install[url] = fn
         for url, fn in addon_files_to_install.items():
             download(url, smmbase / 'mods' / fn, False)
+
+        # Get metadata that were actually installed
+        addon_metadata = {}
+        for addon in addons:
+            # Use the first mod in the file list
+            fn = next(iter(addon.download_targets.values()))
+            with zipfile.ZipFile(smmbase / 'mods' / fn) as zipf:
+                extract_without_path(zipf, 'mod-appendix/metadata.xml', cache_dir)
+            addon_metadata[addon.metadata_name] = read_metadata(cache_dir / 'metadata.xml', addon.metadata_name)
 
         if not use_backup:
             logger.info('Creating backup for dat...')
@@ -134,6 +147,7 @@ def install_mods(locale_mv, addons, ftl_path):
         run_checked_subprocess_with_logging_output(
             [smmbase / 'modman.exe', '--patch', *mainmod.download_targets.values(), *addon_files_to_install.values()]
         )
-
+        return mainmod, addon_metadata
     smmbase = install_slipstream()
-    patch_mods(smmbase)
+    mainmod, addon_metadata = patch_mods(smmbase)
+    save_last_installed_mods(ftl_path, mainmod, addon_metadata)

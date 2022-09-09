@@ -58,6 +58,7 @@ class ProgressDialog(UserControl):
                 except Exception as e:
                     if self._error_snackbar:
                         self._error_snackbar.message(InfoSchemeType.Error, str(e))
+                    logger.exception('Exception details:')
                 
                 logger.remove(sink)
             t.join()

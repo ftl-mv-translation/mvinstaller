@@ -24,7 +24,7 @@ class InstallModsDialog(UserControl):
     def _update_addon_list(self):
         def on_change_from(metadata_name):
             def on_change(e):
-                self._addon_description.value = metadata_text(get_metadata()[metadata_name])
+                self._addon_description.value = metadata_text(get_metadata(metadata_name))
                 self._addon_description.update()
             return on_change
 
@@ -37,7 +37,7 @@ class InstallModsDialog(UserControl):
             ]
             self._addon_list.controls = [
                 Checkbox(
-                    label=get_metadata()[addon.metadata_name].title,
+                    label=get_metadata(addon.metadata_name).title,
                     on_change=on_change_from(addon.metadata_name),
                     data=addon.metadata_name
                 )
