@@ -9,13 +9,13 @@ Send PR that modifies the `locale/` directory.
 ### Dealing with new Hyperspace versions, (unlikely) FTL updates, or MV addons
 
 See [`mvinstaller/signatures.py`](mvinstaller/signatures.py) to update those information.
-The file serves as a self-explanatory database for the installer.
+The file serves as the database for the installer and it's self-explanatory.
 
 Help wanted: If you're playing FTL on the Origin/Xbox/GOG then you may help adding support for those platforms.
 Currently the app supports Steam installation only.
 See [#15](https://github.com/ftl-mv-translation/mvinstaller/issues/15) for the instructions.
 
-#### Adding/updating a new addon
+#### Adding/updating addons
 
 1. Copy your addon's `metadata.xml` to the `addon_metadata` directory.
    Rename the file to have a slug that fits your addon's name.
