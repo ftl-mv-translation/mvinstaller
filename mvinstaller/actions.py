@@ -4,19 +4,13 @@ import shutil
 from pathlib import Path
 import javaproperties
 from loguru import logger
-from mvinstaller.fstools import glob_posix
+from mvinstaller.fstools import extract_without_path, glob_posix
 from mvinstaller.multiverse import clear_expired_mainmods, get_mv_mainmods
 from mvinstaller.webtools import download
 from mvinstaller.util import get_cache_dir, run_checked_subprocess_with_logging_output
 from mvinstaller.ftlpath import get_ftl_installation_state, get_latest_hyperspace
 from mvinstaller.localetools import get_locale_name
 from mvinstaller.signatures import SMM_URL, SMM_FILENAME, SMM_ROOT_DIR, AddonsList
-
-def _extract_without_path(zipf, name, dstdir):
-    # Trick from https://stackoverflow.com/a/47632134/3567518
-    info = zipf.getinfo(name)
-    info.filename = Path(info.filename).name
-    zipf.extract(info, dstdir)
 
 def downgrade_ftl(ftl_path, downgrader):
     if downgrader == 'steam':
@@ -28,10 +22,10 @@ def downgrade_ftl(ftl_path, downgrader):
 
         logger.info('Extracting archive...')
         with zipfile.ZipFile(cache_dir / latest_hyperspace.filename) as zipf:
-            _extract_without_path(
+            extract_without_path(
                 zipf, 'Windows - Extract these files into where FTLGame.exe is/patch/flips.exe', cache_dir
             )
-            _extract_without_path(
+            extract_without_path(
                 zipf, 'Windows - Extract these files into where FTLGame.exe is/patch/patch.bps', cache_dir
             )
         
@@ -56,7 +50,7 @@ def install_hyperspace(ftl_path):
     with zipfile.ZipFile(cache_dir / latest_hyperspace.filename) as zipf:
         FILES = ['Hyperspace.dll', 'lua-5.3.dll', 'xinput1_4.dll']
         for fn in FILES:
-            _extract_without_path(zipf, f'Windows - Extract these files into where FTLGame.exe is/{fn}', ftl_path)
+            extract_without_path(zipf, f'Windows - Extract these files into where FTLGame.exe is/{fn}', ftl_path)
 
 def install_mods(locale_mv, addons, ftl_path):
     ftl_path = Path(ftl_path)

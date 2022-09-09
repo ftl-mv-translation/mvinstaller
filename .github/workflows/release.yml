@@ -24,6 +24,7 @@ jobs:
 
     - name: Package
       run: |
+        python snippets/fetch_metadata.py
         pyinstaller mvinstaller.spec
 
     - name: Release
