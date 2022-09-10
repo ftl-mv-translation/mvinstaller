@@ -2,6 +2,8 @@
 
 Installer application for the localized versions of FTL: Multiverse.
 
+![image](https://user-images.githubusercontent.com/11943013/189501931-0eff4fab-6cc3-47df-8347-6897a941b5d8.png)
+
 ### Localizing the app
 
 Send PR that modifies the `locale/` directory.
