@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mvinstaller"
-version = "0.1.10"
+version = "0.2.0"
 description = "Automatically provides modded environment for the game FTL."
 authors = ["nedsociety <nedsociety@gmail.com>"]
 license = "MIT"
