@@ -19,25 +19,35 @@ operation-hyperspace-success = { $version } ist installiert. Du kannst fortfahre
 operation-hyperspace-not-installed = Hyperspace scheint nicht installiert zu sein. Hyperspace wird benötigt um FTL: Multiversum zu nutzen.
 operation-hyperspace-outdated = { $version } ist installiert. Es scheint dass es für die neuste Version von FTL: Multiversum zu alt ist.
 operation-hyperspace-unknown = Hyperspace scheint installiert zu sein, aber der Installateur kann diese Version nicht erkennen.
-operation-hyperspace-action-install = Installiere
+operation-hyperspace-action-install = Installieren
 operation-hyperspace-action-update = Updaten
-operation-modding = Modde das Spiel.
-operation-modding-success = Mods scheinen installiert zu sein.
-
-    Notiz: Der Installateur kann nicht erkennen, ob FTL: Multiversum wirklich installiert ist.
-operation-modding-success-noreinstall = Mods scheinen installiert zu sein.
-
-    Notiz: Der Installateur kann nicht erkennen, ob FTL: Multiversum wirklich installiert ist. Außerdem, da Vanilla Speicherstände nicht gefunden werden konnten, kann der Installateur die Mods nicht neu installieren.
-operation-modding-required = Es scheint dass die Mods überhaupt nicht installiert wurden.
+operation-modding = Modde das Spiel
+operation-modding-java-not-installed = Es scheint Java ist nicht installiert oder eine zu alte Version. JRE 1.6 oder höher wird benötigt, um das Spiel zu modden.
+operation-modding-success-noaddons = FTL: Multiversum ({ $version } { $locale } { $commitid }) ist installiert.
+operation-modding-success-addons = FTL: Multiversum ({ $version } { $locale } { $commitid }) ist mit den folgenden Addons installiert:
+    { $addons_list }
+operation-modding-unknown = Es scheint ein paar Mods sind installiert, aber der Installateur kann ihre Details nicht erkennen. Das kann passieren, wenn Mods bereits auf einem anderen Weg installiert wurden.
+operation-modding-note-noreinstall = Notiz: Vanilla Spielstände wurden nicht gefunden. Der Installateur kann die Mods nicht wieder installieren.
+operation-modding-required = Es scheint, dass die Mods überhaupt nicht installiert wurden.
 operation-modding-action-install = Installiere
+operation-modding-action-java = Downloade Java
 config-dialog-title = Konfiguration
 config-language-label = Installateur Sprache (Neustart benötigt)
-config-use-opengl-option = Nutze die -opengl beim Start von FTL
-config-explain-opengl-option-button = Lerne wann du -opengl benötigst
-config-explain-opengl-option-url = https://ftl-hyperspace.github.io/FTL-Hyperspace/install-guides/windows/index.html#my-game-crashes-before-loading-multiverse
-progress-dialog-title = Arbeitet...
+config-use-opengl-option = Nutze die -opengl Option beim Start von FTL
+config-explain-opengl-option-button = Lerne wann du die -opengl Option benötigst
+config-explain-opengl-option-url = https://ftl-hyperspace.github.io/FTL-Hyperspace/de/install-guides/windows/#mein-spiel-crasht-bevor-multiverse-l%C3%A4dt
+progress-dialog-title = Arbeite
 install-mods-dialog-title = Installiere Multiversum
-install-mods-language = Language
-install-mods-dialog-action-install = Install
+install-mods-language = FTL: Multiversum Sprache
+install-mods-addons = Addons
+install-mods-dialog-action-install = Installiere
+about-dialog-title = About FTL: Multiversum Installateur
+about-dialog-appname = FTL: Multiverse Installateur, ver. { $version }
+about-dialog-repository-button = Öffne GitHub Seite (Bug Reports, Feature Anfragen)
+appbar-refresh-tooltip = Erneut Laden
+appbar-config-tooltip = Konfiguration
+appbar-about-tooltip = Über den FTL: Multiversum Installateur
+appbar-update-tooltip = Updatete Installateur
+app-update-notice = Neues Update gefunden ({ $version })!
 close = Schließen
 cancel = Abbrechen
