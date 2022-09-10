@@ -22,22 +22,32 @@ operation-hyperspace-unknown = Hyperspace установлен, но устан�
 operation-hyperspace-action-install = Установить
 operation-hyperspace-action-update = Обновить
 operation-modding = Установка модов
-operation-modding-success = Моды установлены.
-
-    Внимание: Установщик не может определить, действительно ли установлен FTL: Multiverse.
-operation-modding-success-noreinstall = Моды установлены.
-
-    Внимание: Установщик не может определить, действительно ли установлен FTL: Multiverse. Кроме того, так как не найдены резервные копии ванильной версии, установщик не может переустановить моды.
+operation-modding-java-not-installed = Java не установлена или устарела. Для установки модов требуется JRE 1.6 или выше.
+operation-modding-success-noaddons = Установлен FTL: Multiverse ({ $version } { $locale } { $commitid }).
+operation-modding-success-addons = Установлен FTL: Multiverse ({ $version } { $locale } { $commitid }) со следующими аддонами:
+    { $addons_list }
+operation-modding-unknown = Установлены моды, но установщик не может их распознать. Это могло случиться, если моды были установлены сторонними средствами.
+operation-modding-note-noreinstall = Внимание: не найдены резервные копии ванильной версии. Установщик не может переустановить моды.
 operation-modding-required = Моды не установлены.
 operation-modding-action-install = Установить
+operation-modding-action-java = Загрузить Java
 config-dialog-title = Настройки
 config-language-label = Язык установщика (нужен перезапуск)
 config-use-opengl-option = Использовать опцию -opengl для запуска FTL
-config-explain-opengl-option-button = Узнать, когда нужно использовать опцию -opengl
+config-explain-opengl-option-button = Узнать, когда нужно использовать опцию -opengl [англ]
 config-explain-opengl-option-url = https://ftl-hyperspace.github.io/FTL-Hyperspace/install-guides/windows/index.html#my-game-crashes-before-loading-multiverse
 progress-dialog-title = В процессе...
 install-mods-dialog-title = Установить Multiverse
-install-mods-language = Язык
+install-mods-language = Язык FTL: Multiverse
+install-mods-addons = Аддоны
 install-mods-dialog-action-install = Установить
+about-dialog-title = Об установщике FTL: Multiverse
+about-dialog-appname = Установщик FTL: Multiverse, версия { $version }
+about-dialog-repository-button = Открыть GitHub (сообщить об ошибке, предложить улучшение) [англ]
+appbar-refresh-tooltip = Обновить
+appbar-config-tooltip = Настройки
+appbar-about-tooltip = Об установщике FTL: Multiverse
+appbar-update-tooltip = Обновить установщик
+app-update-notice = Найдено обновление до версии ({ $version })!
 close = Закрыть
 cancel = Отмена
