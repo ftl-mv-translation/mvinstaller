@@ -1,26 +1,16 @@
-from dataclasses import dataclass
 from pathlib import Path
 from time import time
 import re
 import dacite
+from loguru import logger
 from mvinstaller.webtools import download
 from mvinstaller.util import get_cache_dir
-from loguru import logger
+from mvinstaller.signatures import MainMod, LISTFILE_EXPIRE_DURATION, LISTFILE_URL, MV_ENGLISH_MAINMOD
 
 _TRANSLATION_FN_PATTERN = re.compile(
     r'^FTL-Multiverse-(?P<version>.+)-(?P<locale>[a-zA-Z_]+)\+(?P<commitid>[a-fA-F0-9xX]+)\.ftl$',
     re.IGNORECASE
 )
-
-_LISTFILE_EXPIRE_DURATION = 60 * 60 * 24
-_LISTFILE_URL = 'https://raw.githubusercontent.com/ftl-mv-translation/ftl-mv-translation/installer-metadata/listfile'
-
-@dataclass
-class MainMod:
-    download_targets: dict[str, str] # {url: filename}
-    version: str
-    locale: str
-    commitid: str
 
 def _parse_translation_listfile(path):
     with open(path, 'r', encoding='utf-8') as f:
@@ -51,15 +41,17 @@ def get_mv_mainmods() -> list[MainMod]:
 
     if listfile_path.exists():
         created_time, mainmods = _parse_translation_listfile(listfile_path)
-        if created_time + _LISTFILE_EXPIRE_DURATION < time():
+        if created_time + LISTFILE_EXPIRE_DURATION < time():
             logger.info('Listfile expired. Fetching new one...')
-            download(_LISTFILE_URL, listfile_path, True)
+            download(LISTFILE_URL, listfile_path, True)
             created_time, mainmods = _parse_translation_listfile(listfile_path)
     else:
         logger.info('Listfile not found. Fetching new one...')
-        download(_LISTFILE_URL, listfile_path, True)
+        download(LISTFILE_URL, listfile_path, True)
         created_time, mainmods = _parse_translation_listfile(listfile_path)
 
+    # Exclude the English version (see #3)
+    # return [MV_ENGLISH_MAINMOD] + mainmods
     return mainmods
 
 def clear_expired_mainmods(smm_mod_files):

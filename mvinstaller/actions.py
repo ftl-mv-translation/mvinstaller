@@ -1,21 +1,41 @@
 import zipfile
-import subprocess
 import shutil
+import winreg
+import re
 from pathlib import Path
 import javaproperties
 from loguru import logger
-from mvinstaller.fstools import glob_posix
+from mvinstaller.addon_metadata import read_metadata
+from mvinstaller.fstools import extract_without_path, glob_posix
+from mvinstaller.last_installed_mods import save_last_installed_mods
 from mvinstaller.multiverse import clear_expired_mainmods, get_mv_mainmods
 from mvinstaller.webtools import download
 from mvinstaller.util import get_cache_dir, run_checked_subprocess_with_logging_output
 from mvinstaller.ftlpath import get_ftl_installation_state, get_latest_hyperspace
 from mvinstaller.localetools import get_locale_name
+from mvinstaller.signatures import SMM_URL, SMM_FILENAME, SMM_ROOT_DIR, AddonsList
 
-def _extract_without_path(zipf, name, dstdir):
-    # Trick from https://stackoverflow.com/a/47632134/3567518
-    info = zipf.getinfo(name)
-    info.filename = Path(info.filename).name
-    zipf.extract(info, dstdir)
+def is_java_installed():
+    def try_check_java_version_from(key_under_hklm):
+        try:
+            with winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, key_under_hklm) as key:
+                v, t = winreg.QueryValueEx(key, 'CurrentVersion')
+                if t != winreg.REG_SZ:
+                    raise FileNotFoundError
+                return str(v)
+        except FileNotFoundError:
+            return None
+    version = (
+        try_check_java_version_from(r'Software\JavaSoft\Java Runtime Environment')
+        or try_check_java_version_from(r'Software\WOW6432Node\JavaSoft\Java Runtime Environment')
+    )
+    if version is None:
+        return False
+    match = re.match(r'^([0-9]+)\.([0-9]+)', version)
+    if match is None:
+        return False
+    major, minor = tuple(int(num) for num in match.groups())
+    return major >= 1 and minor >= 6
 
 def downgrade_ftl(ftl_path, downgrader):
     if downgrader == 'steam':
@@ -27,10 +47,10 @@ def downgrade_ftl(ftl_path, downgrader):
 
         logger.info('Extracting archive...')
         with zipfile.ZipFile(cache_dir / latest_hyperspace.filename) as zipf:
-            _extract_without_path(
+            extract_without_path(
                 zipf, 'Windows - Extract these files into where FTLGame.exe is/patch/flips.exe', cache_dir
             )
-            _extract_without_path(
+            extract_without_path(
                 zipf, 'Windows - Extract these files into where FTLGame.exe is/patch/patch.bps', cache_dir
             )
         
@@ -55,10 +75,11 @@ def install_hyperspace(ftl_path):
     with zipfile.ZipFile(cache_dir / latest_hyperspace.filename) as zipf:
         FILES = ['Hyperspace.dll', 'lua-5.3.dll', 'xinput1_4.dll']
         for fn in FILES:
-            _extract_without_path(zipf, f'Windows - Extract these files into where FTLGame.exe is/{fn}', ftl_path)
+            extract_without_path(zipf, f'Windows - Extract these files into where FTLGame.exe is/{fn}', ftl_path)
 
-def install_mods(locale_mv, ftl_path):
+def install_mods(locale_mv, addons_name, ftl_path):
     ftl_path = Path(ftl_path)
+    cache_dir = get_cache_dir()
 
     # Find vanilla dat
     logger.info('Finding vanilla dat file...')
@@ -67,31 +88,14 @@ def install_mods(locale_mv, ftl_path):
         raise RuntimeError('Cannot find vanilla dat file.')
     use_backup = installation_state.is_ftldat_backedup
 
-    cache_dir = get_cache_dir()
-
-    def check_java():
-        logger.info('Checking if Java is available...')
-        try:
-            subprocess.run(['java', '-version'], check=True)
-        except:
-            raise RuntimeError(
-                'Java does not seem to be installed. JRE is required for running Slipstream Mod Manager.'
-            )
-    
     def install_slipstream():
-        # Note: A proper distribution comes from Sourceforge (https://sourceforge.net/projects/slipstreammodmanager/).
-        #       Windows distribution for 1.9.1 has been copied the to the ftlmv-weblate-bot GDrive,
-        #       as it's a bit tricky to implement a programmatic downloader for SF.
-        download(
-            'https://drive.google.com/uc?id=194uP5DHmI7bU56soStbv4MfRat2xpXiu&confirm=t',
-            cache_dir / 'SlipstreamModManager_1.9.1-Win.zip',
-            False
-        )
+        logger.info('Downloading Slipstream Mod Manager...')
+        download(SMM_URL, cache_dir / SMM_FILENAME, False)
 
         logger.info('Extracting archive...')
-        with zipfile.ZipFile(cache_dir / 'SlipstreamModManager_1.9.1-Win.zip') as zipf:
+        with zipfile.ZipFile(cache_dir / SMM_FILENAME) as zipf:
             zipf.extractall(cache_dir)
-        smmbase = cache_dir / 'SlipstreamModManager_1.9.1-Win'
+        smmbase = cache_dir / SMM_ROOT_DIR
         
         logger.info('Writing SMM config...')
         with (smmbase / 'modman.cfg').open('w') as f:
@@ -102,7 +106,7 @@ def install_mods(locale_mv, ftl_path):
 
         return smmbase
     
-    def install_multiverse(smmbase):
+    def patch_mods(smmbase):
         clear_expired_mainmods(glob_posix(str(smmbase / 'mods/*')))
 
         mainmods = get_mv_mainmods()
@@ -115,15 +119,35 @@ def install_mods(locale_mv, ftl_path):
         for url, fn in mainmod.download_targets.items():
             download(url, smmbase / 'mods' / fn, False)
 
+        logger.info(f'[Target addons] {", ".join(addons_name)}')
+        addons = [addon.value for addon in AddonsList if addon.value.metadata_name in addons_name]
+
+        # Download addon files
+        addon_files_to_install = {}
+        for addon in addons:
+            for url, fn in addon.download_targets.items():
+                addon_files_to_install[url] = fn
+        for url, fn in addon_files_to_install.items():
+            download(url, smmbase / 'mods' / fn, False)
+
+        # Get metadata that were actually installed
+        addon_metadata = {}
+        for addon in addons:
+            # Use the first mod in the file list
+            fn = next(iter(addon.download_targets.values()))
+            with zipfile.ZipFile(smmbase / 'mods' / fn) as zipf:
+                extract_without_path(zipf, 'mod-appendix/metadata.xml', cache_dir)
+            addon_metadata[addon.metadata_name] = read_metadata(cache_dir / 'metadata.xml', addon.metadata_name)
+
         if not use_backup:
             logger.info('Creating backup for dat...')
             shutil.copy(ftl_path / 'ftl.dat', ftl_path / 'ftl.dat.vanilla')
         
         logger.info('Running patch...')
         run_checked_subprocess_with_logging_output(
-            [smmbase / 'modman.exe', '--patch', *mainmod.download_targets.values()]
+            [smmbase / 'modman.exe', '--patch', *mainmod.download_targets.values(), *addon_files_to_install.values()]
         )
-
-    check_java()
+        return mainmod, addon_metadata
     smmbase = install_slipstream()
-    install_multiverse(smmbase)
+    mainmod, addon_metadata = patch_mods(smmbase)
+    save_last_installed_mods(ftl_path, mainmod, addon_metadata)

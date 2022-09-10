@@ -86,7 +86,7 @@ dev = ["black", "coveralls", "mypy", "pylint", "pytest (>=5)", "pytest-cov"]
 
 [[package]]
 name = "flet"
-version = "0.1.56"
+version = "0.1.57"
 description = "Flet for Python - easily build interactive multi-platform apps in Python"
 category = "main"
 optional = false
@@ -159,6 +159,20 @@ win32-setctime = {version = ">=1.0.0", markers = "sys_platform == \"win32\""}
 
 [package.extras]
 dev = ["Sphinx (>=4.1.1)", "black (>=19.10b0)", "colorama (>=0.3.4)", "docutils (==0.16)", "flake8 (>=3.7.7)", "isort (>=5.1.1)", "pytest (>=4.6.2)", "pytest-cov (>=2.7.1)", "sphinx-autobuild (>=0.7.1)", "sphinx-rtd-theme (>=0.4.3)", "tox (>=3.9.0)"]
+
+[[package]]
+name = "lxml"
+version = "4.9.1"
+description = "Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, != 3.4.*"
+
+[package.extras]
+cssselect = ["cssselect (>=0.7)"]
+html5 = ["html5lib"]
+htmlsoup = ["beautifulsoup4"]
+source = ["Cython (>=0.29.7)"]
 
 [[package]]
 name = "macholib"
@@ -321,7 +335,7 @@ dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10,<3.11"
-content-hash = "1ee302da52e5f1bd193e07bca99b4f227851c4b03246266fcee68568ab493c0b"
+content-hash = "d8275967723750c317400048f50e08df9a2061b4b5fcb0ef18d739734cf2fe27"
 
 [metadata.files]
 altgraph = [
@@ -351,16 +365,16 @@ dacite = [
     {file = "dacite-1.6.0.tar.gz", hash = "sha256:d48125ed0a0352d3de9f493bf980038088f45f3f9d7498f090b50a847daaa6df"},
 ]
 flet = [
-    {file = "flet-0.1.56-py3-none-any.whl", hash = "sha256:988198e965af7d053464f8de4907984d6e5da2e65eb56b2f6a9e12f6e5dfcad4"},
-    {file = "flet-0.1.56-py3-none-macosx_10_14_x86_64.whl", hash = "sha256:516a800550f888c3538aceebcba782d2fd90e08c86ca322e420c8ed2cbc1d8da"},
-    {file = "flet-0.1.56-py3-none-macosx_12_0_arm64.whl", hash = "sha256:bc14ab652a0eeae9c250af25330b62a2998748db9ab56845a41a890a09a53a35"},
-    {file = "flet-0.1.56-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8c46f3f88518ac153d7aebb249aa658f69501ff2ee0828a0d9f7a8019808245a"},
-    {file = "flet-0.1.56-py3-none-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:6821e090c8bebc4df50ddb36b7023d845503a7c3912bf21e014c87ab588933b4"},
-    {file = "flet-0.1.56-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:06748405a70455e0888e135fbfc8fe787c8cbbba556d0c36edffb3c4425f8983"},
-    {file = "flet-0.1.56-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:2930cd1d643506d4f1d6438c38c4703b82f3070e5263671bf9189721cca8b288"},
-    {file = "flet-0.1.56-py3-none-win32.whl", hash = "sha256:b2ccc8dd6a5557b9b6ec228defd5674bb0dbeb7d0569ef37a636143a61954560"},
-    {file = "flet-0.1.56-py3-none-win_amd64.whl", hash = "sha256:ecf765672f33c2f4c155368b1529eeee93e45746d319c71c0f103535845df508"},
-    {file = "flet-0.1.56.tar.gz", hash = "sha256:77a7cf65a25bfccf5c6354726a2eb555b16f21bb363672b82cb58bf37a66d99e"},
+    {file = "flet-0.1.57-py3-none-any.whl", hash = "sha256:93bbf57a5b184038b1694f8ce1f07f2ebb173387792d110ce8f7661779cc4403"},
+    {file = "flet-0.1.57-py3-none-macosx_10_14_x86_64.whl", hash = "sha256:97cd9e7e0c823301650e77d8fc40d53aeea5ce442ab453ff53c62dfd11eb8532"},
+    {file = "flet-0.1.57-py3-none-macosx_12_0_arm64.whl", hash = "sha256:731c358ae7cb6e2a421c6cefd129a5ad1896e08172d875d0a7b02110300ef43a"},
+    {file = "flet-0.1.57-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8ac05829f629b19b54f5cad0dbc992d47134f7bbdbd9412f1b35f23cb8887949"},
+    {file = "flet-0.1.57-py3-none-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:d0e027d73066a62c0617ae22f78227d15bef0863c58f9186074b6da85693cb89"},
+    {file = "flet-0.1.57-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ce03c1ea625555631fe6736d14e8f95dc4f7d01630d4e1eec574dfcda2dfcd3b"},
+    {file = "flet-0.1.57-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:31c2fdb54d14954e66774882802f2ab96c80e731be2c4ca7a181ce2635563628"},
+    {file = "flet-0.1.57-py3-none-win32.whl", hash = "sha256:7bd0aa36281c0b77c2f07245830bec69179975e6a1aedb221e4605fa03f838a9"},
+    {file = "flet-0.1.57-py3-none-win_amd64.whl", hash = "sha256:738f2207772f5364c7a2053b8de0ea257cebc7f6b397feafcc81dba4e0495713"},
+    {file = "flet-0.1.57.tar.gz", hash = "sha256:e2109a46072519bed918cb8d5480730b35fdcd1282c5cfc68af9934dd45fe587"},
 ]
 "fluent.runtime" = [
     {file = "fluent.runtime-0.3.1-py2.py3-none-any.whl", hash = "sha256:1da9bf779e6b8cbfb5a71dd59cd7e193f8dc8da318bda7163bc41e9ae15f8574"},
@@ -385,6 +399,7 @@ loguru = [
     {file = "loguru-0.6.0-py3-none-any.whl", hash = "sha256:4e2414d534a2ab57573365b3e6d0234dfb1d84b68b7f3b948e6fb743860a77c3"},
     {file = "loguru-0.6.0.tar.gz", hash = "sha256:066bd06758d0a513e9836fd9c6b5a75bfb3fd36841f4b996bc60b547a309d41c"},
 ]
+lxml = []
 macholib = [
     {file = "macholib-1.16-py2.py3-none-any.whl", hash = "sha256:5a0742b587e6e57bfade1ab90651d4877185bf66fd4a176a488116de36878229"},
     {file = "macholib-1.16.tar.gz", hash = "sha256:001bf281279b986a66d7821790d734e61150d52f40c080899df8fefae056e9f7"},

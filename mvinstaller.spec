@@ -1,14 +1,15 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+from mvinstaller import __version__ as version
 
 block_cipher = None
 
 
 a = Analysis(
-    ['execute.py'],
+    ['snippets/execute.py'],
     pathex=[],
     binaries=[],
-    datas=[('locale', 'locale'), ('assets', 'assets')],
+    datas=[('locale', 'locale'), ('assets', 'assets'), ('addon_metadata', 'addon_metadata')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -28,7 +29,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='mvinstaller',
+    name=f'mvinstaller-{version}',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -41,4 +42,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon='assets/icon.ico'
 )

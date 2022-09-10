@@ -1,5 +1,7 @@
+from hashlib import sha1
 from pathlib import Path
 from glob import glob
+from zipfile import ZipFile
 
 def ensureparent(filepath):
     Path(filepath).parent.mkdir(parents=True, exist_ok=True)
@@ -24,3 +26,15 @@ def glob_posix(pattern, *args, **kwargs):
         lambda p: (root_dir / p).is_file(),
         (Path(result).as_posix() for result in results)
     ))
+
+def extract_without_path(zipf: ZipFile, name, dstdir):
+    # Trick from https://stackoverflow.com/a/47632134/3567518
+    info = zipf.getinfo(name)
+    info.filename = Path(info.filename).name
+    zipf.extract(info, dstdir)
+
+def get_sha1(path): 
+    hash = sha1()
+    with open(path, 'rb') as f:
+        hash.update(f.read())
+    return hash.hexdigest()

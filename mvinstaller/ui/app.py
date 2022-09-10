@@ -1,13 +1,15 @@
 from pathlib import Path
 import subprocess
+import os
 from loguru import logger
 from flet import UserControl, Column, Row, icons, colors, TextButton, Stack, Image, Container, alignment
-from mvinstaller.actions import downgrade_ftl, install_hyperspace, install_mods
+from mvinstaller.actions import downgrade_ftl, install_hyperspace, install_mods, is_java_installed
 from mvinstaller.config import get_config
 from mvinstaller.ftlpath import get_ftl_installation_state
+from mvinstaller.ui.aboutdialog import AboutDialog
 from mvinstaller.ui.busycontainer import BusyContainer
 from mvinstaller.ui.configdialog import ConfigDialog
-from mvinstaller.localetools import localize as _
+from mvinstaller.localetools import get_locale_name, localize as _
 from mvinstaller.ui.errorsnackbar import ErrorSnackbar
 from mvinstaller.ui.ftlpathfinderdialog import FTLPathFinderDialog
 from mvinstaller.ui.infoscheme import InfoSchemeType
@@ -26,6 +28,12 @@ class App(UserControl):
 
     def open_config_dialog(self):
         self._config_dialog.open()
+
+    def open_about_dialog(self):
+        self._about_dialog.open()
+
+    def snack(self, infoscheme: InfoSchemeType, msg):
+        self._error_snackbar.message(infoscheme, msg)
 
     @property
     def ftl_path(self):
@@ -47,8 +55,9 @@ class App(UserControl):
         self._config_dialog = ConfigDialog(self._error_snackbar)
         self._install_mods_dialog = InstallModsDialog(
             self._error_snackbar,
-            on_install=lambda locale: self._do_action(install_mods, locale, self._ftl_path)
+            on_install=lambda locale, addons: self._do_action(install_mods, locale, addons, self._ftl_path)
         )
+        self._about_dialog = AboutDialog()
 
         # Cards
         self._operation_card_downgrade = OperationCard(_('operation-downgrade'))
@@ -77,6 +86,7 @@ class App(UserControl):
             self._progress_dialog,
             self._config_dialog,
             self._install_mods_dialog,
+            self._about_dialog,
             Column([
                 Stack([
                     Container(Image('/bg.png'), alignment=alignment.center),
@@ -84,7 +94,7 @@ class App(UserControl):
                 ])
             ], alignment='center')
         ]
-    
+
     def _update_state(self):
         self._busycontainer.visible = self._ftl_path is not None
         self._busycontainer.busy = True
@@ -108,7 +118,7 @@ class App(UserControl):
                 raise RuntimeError(f'Cannot fetch the installation state for {self._ftl_path}.')
         except Exception as e:
             self._busycontainer.visible = False
-            self._error_snackbar.message(InfoSchemeType.Error, str(e))
+            self.snack(InfoSchemeType.Error, str(e))
             return
 
         # 0: vanilla, 1: unsure, 2: installed
@@ -166,25 +176,66 @@ class App(UserControl):
                 None, None
             )
             status_hyperspace = 2
-        
+
         if state.is_ftldat_vanilla:
             self._operation_card_modding.set(
                 InfoSchemeType.Warning, _('operation-modding-required'),
-                _('operation-modding-action'), lambda e: self._install_mods_dialog.open()
+                _('operation-modding-action-install'), lambda e: self._install_mods_dialog.open()
             )
             status_mods = 0
-        elif state.is_ftldat_backedup:
-            self._operation_card_modding.set(
-                InfoSchemeType.Okay, _('operation-modding-success'),
-                _('operation-modding-action'), lambda e: self._install_mods_dialog.open()
-            )
-            status_mods = 2
+        elif state.last_installed_mods is None:
+            # Unknown mods are installed (possibly Multiverse)
+            if state.is_ftldat_backedup:
+                self._operation_card_modding.set(
+                    InfoSchemeType.Warning, _('operation-modding-unknown'),
+                    _('operation-modding-action-install'), lambda e: self._install_mods_dialog.open()
+                )
+            else:
+                self._operation_card_modding.set(
+                    InfoSchemeType.Warning,
+                    _('operation-modding-unknown') + '\n\n' + _('operation-modding-note-noreinstall'),
+                    None, None
+                )
+            status_mods = 1
         else:
-            self._operation_card_modding.set(
-                InfoSchemeType.Okay, _('operation-modding-success-noreinstall'),
-                None, None
-            )
+            # Multiverse is installed with this app
+            parameters = {
+                'version': state.last_installed_mods.main.version,
+                'locale': get_locale_name(state.last_installed_mods.main.locale),
+                'commitid': (
+                    f'+{state.last_installed_mods.main.commitid}'
+                    if state.last_installed_mods.main.commitid else
+                    ''
+                )
+            }
+            if state.last_installed_mods.addons:
+                parameters['addons_list'] = '\n'.join(
+                    f' • {metadata.title} ({metadata.version})'
+                    for metadata in state.last_installed_mods.addons.values()
+                )
+                modding_text = modding_text = _('operation-modding-success-addons', parameters)
+            else:
+                modding_text = _('operation-modding-success-noaddons', parameters)
+            
+            if state.is_ftldat_backedup:
+                self._operation_card_modding.set(
+                    InfoSchemeType.Okay, modding_text,
+                    _('operation-modding-action-install'), lambda e: self._install_mods_dialog.open()
+                )
+            else:
+                self._operation_card_modding.set(
+                    InfoSchemeType.Okay,
+                    modding_text + '\n\n' + _('operation-modding-note-noreinstall'),
+                    None, None
+                )
             status_mods = 2
+        
+        # Override the above messages (without altering status_mod) if Java is not installed
+        if not is_java_installed():
+            self._operation_card_modding.set(
+                InfoSchemeType.Error, _('operation-modding-java-not-installed'),
+                _('operation-modding-action-java'), lambda e: os.startfile('https://www.java.com/en/download/')
+            )
         
         if status_downgrade == 0 and status_hyperspace == 0 and status_mods == 0:
             self._status_line.text = _('status-line-vanilla')
