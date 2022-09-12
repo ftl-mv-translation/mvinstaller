@@ -7,7 +7,7 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.11"
-flet = "^0.1.57"
+flet = "^0.1.58"
 "fluent.runtime" = "^0.3.1"
 requests = "^2.28.1"
 javaproperties = "^0.8.1"
