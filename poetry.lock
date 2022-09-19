@@ -86,7 +86,7 @@ dev = ["black", "coveralls", "mypy", "pylint", "pytest (>=5)", "pytest-cov"]
 
 [[package]]
 name = "flet"
-version = "0.1.58"
+version = "0.1.59"
 description = "Flet for Python - easily build interactive multi-platform apps in Python"
 category = "main"
 optional = false
@@ -349,7 +349,7 @@ dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10,<3.11"
-content-hash = "e88c758aa2f8d42f275918c477e7935bcd1d9c50f1e5fd2e67bed1fc7d52d310"
+content-hash = "9c7006c95309a62d26e7854896c797b0a4a93343811e994613bcb2d780271c84"
 
 [metadata.files]
 altgraph = [
@@ -385,16 +385,16 @@ dacite = [
     {file = "dacite-1.6.0.tar.gz", hash = "sha256:d48125ed0a0352d3de9f493bf980038088f45f3f9d7498f090b50a847daaa6df"},
 ]
 flet = [
-    {file = "flet-0.1.58-py3-none-any.whl", hash = "sha256:9295aa278d8d1abf001cfe6b97b8b6eebb78d16fe7d2da8f679b2f6a0c10bba1"},
-    {file = "flet-0.1.58-py3-none-macosx_10_14_x86_64.whl", hash = "sha256:917697cb43e8511b7599957dcf9e44d3339c25be7ead8b67eefcbcec102f981f"},
-    {file = "flet-0.1.58-py3-none-macosx_12_0_arm64.whl", hash = "sha256:831cdd29c83e5a34bd2574977d921fbb576ba050ee10935589eaca49ce1dbd96"},
-    {file = "flet-0.1.58-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:7ec070e84d923300834caadccb43a1d372b67548e99019ff04251330b79f1992"},
-    {file = "flet-0.1.58-py3-none-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:d90c3278f615accf8decd6b4708c2da5875536cc8cb7020f4e5d555bd47a818a"},
-    {file = "flet-0.1.58-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8dda22b12e7dad4054a4ede2a14dacdfb7918373a122f8ad67615ce611289e34"},
-    {file = "flet-0.1.58-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:b869b6e6caa7ba893808931160a7034081510822f72487e6717f959c1264eb2d"},
-    {file = "flet-0.1.58-py3-none-win32.whl", hash = "sha256:326b816c7a47b956a2bbe5b04187b86b29d42eac51a42a668aa7dbe51c104070"},
-    {file = "flet-0.1.58-py3-none-win_amd64.whl", hash = "sha256:fa63dbb52e304f8c17fe4e76ce9b49310f701de3ca13a500da008b281d56a625"},
-    {file = "flet-0.1.58.tar.gz", hash = "sha256:aba13f79bf416081645f3e9f2065e8b6d465e0e091c1e1aa95c3ab9645d7dc4c"},
+    {file = "flet-0.1.59-py3-none-any.whl", hash = "sha256:2b53ebc5635f8c2134ae35a072cd3c2284b04bc0421cfff0f90271748aacf22c"},
+    {file = "flet-0.1.59-py3-none-macosx_10_14_x86_64.whl", hash = "sha256:ffcbd25b06525eae9b257966c675d09278e4b7f017649d824d800d7b7da072c3"},
+    {file = "flet-0.1.59-py3-none-macosx_12_0_arm64.whl", hash = "sha256:05903aa3ea63355385a4008c39535ccf8682e47e6ebbb9d413f7c1fe72477d7e"},
+    {file = "flet-0.1.59-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c2d5e429db03c1bf49065adb5fb5c46582436070d0be0c356a1d50e168c3dc60"},
+    {file = "flet-0.1.59-py3-none-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:8002dd131961953a4adb63c82fdbb8074e0ff46f39448eafb943d9f3210f8826"},
+    {file = "flet-0.1.59-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fb43b3cea6d1c0d56b6de9acae971f6bd1f4b93826528f4bd7bc876ac887329f"},
+    {file = "flet-0.1.59-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:7a1ebb83e41a4ad6fef0739a2e4f9a0471ac33f20714dc074e48a369e3efb428"},
+    {file = "flet-0.1.59-py3-none-win32.whl", hash = "sha256:7ed0a4d06677132df8ac6bdb85f976234f21babda9023649aa8faba1598eb023"},
+    {file = "flet-0.1.59-py3-none-win_amd64.whl", hash = "sha256:6a8a43ef5c305bf891de6a9d06ade9f2789873d747bc3cbeba773ef509f5a949"},
+    {file = "flet-0.1.59.tar.gz", hash = "sha256:387177aeafd24abf7fee8d75a49baadaac004e85705ceb2126a4c44f895cd8a0"},
 ]
 "fluent.runtime" = [
     {file = "fluent.runtime-0.3.1-py2.py3-none-any.whl", hash = "sha256:1da9bf779e6b8cbfb5a71dd59cd7e193f8dc8da318bda7163bc41e9ae15f8574"},
