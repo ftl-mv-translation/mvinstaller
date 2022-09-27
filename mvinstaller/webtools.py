@@ -14,6 +14,7 @@ def download(url, dst, force):
         logger.info(f'Downloading {url}...')
         chunk_count = 0
         req = requests.get(url, stream=True)
+        req.raise_for_status()
         with tmppath.open('wb') as f:
             for chunk in req.iter_content(chunk_size=1024):
                 f.write(chunk)

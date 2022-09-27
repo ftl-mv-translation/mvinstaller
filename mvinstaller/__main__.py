@@ -23,7 +23,9 @@ def index(page: Page):
 
     def check_app_update():
         try:
-            latest = requests.get('https://api.github.com/repos/ftl-mv-translation/mvinstaller/releases/latest').json()
+            req = requests.get('https://api.github.com/repos/ftl-mv-translation/mvinstaller/releases/latest')
+            req.raise_for_status()
+            latest = req.json()
             latest_version = latest['tag_name']
             update = (latest_version != f'v{app_version}')
         except Exception as e:

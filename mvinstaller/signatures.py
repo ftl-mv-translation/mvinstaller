@@ -108,7 +108,7 @@ class AddonsList(Enum):
     GenGibs = Addon(
         download_targets={
             'https://drive.google.com/uc?id=11YlBrNHCpyIEwX41IEj2RjWP6haH3--4&confirm=t':
-                'MV Addon GenGibs v1.1.0.ftl'
+                'MV Addon GenGibs v1.2.0.ftl'
         },
         metadata_name='GenGibs',
         custom_metadata=False,
