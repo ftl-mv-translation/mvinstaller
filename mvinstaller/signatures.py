@@ -54,6 +54,25 @@ class FtlExecutableType(Enum):
         downgrader=None,
         sha1='8f23c8e704f793fb108d12c489644b5393c8bc2d',
     )
+    GOG_WINDOWS_1_6_13B = FtlExecutableInfo(
+        name='GOG, version 1.6.13b (latest)',
+        downgraded=False,
+        downgrader=None,
+        sha1='0db27c60ae7986cbeb19ffda3eee6470daf984db',
+    )
+    GOG_WINDOWS_1_6_9 = FtlExecutableInfo(
+        name='GOG, version 1.6.9 (downgraded)',
+        downgraded=True,
+        downgrader=None,
+        sha1='609ef1bd507097e2b41bd57b9e81e7f2061aadc2',
+    )
+    HUMBLE_BUNDLE_WINDOWS_1_6_12 = FtlExecutableInfo(
+        name='Humble Bundle, version 1.6.12 (latest)',
+        downgraded=False,
+        downgrader=None,
+        sha1='b4eae8d8690c8bc7b80def6e8224fb17d34a5083',
+    )
+
 
 class HyperspaceType(Enum):
     HS_1_2_3 = HyperspaceInfo(
@@ -68,12 +87,19 @@ class HyperspaceType(Enum):
 # SHA1 hash value of unmodded ftl.dat files
 DAT_VANILLA_SHA1 = [
     'a0ecc84f16302b8851eff98ab3e01e2f376152d7', # Steam 1.6.14
+    '2b81ef942c56fd4025ba11eecfd8ac6100de206f', # GOG 1.6.13b
+    'b7c923866726607d172461454b8904b6d3dfb811', # GOG 1.6.9
+    '42270f1e2ab35b4a69fb6c5141a87196a43f9e63', # Humble Bundle 1.6.12
 ]
 
 # Default locations to search for FTL installation
 FIXED_PATHS = [
+    # Steam
     r'C:\Program Files\Steam\steamapps\common\FTL Faster Than Light',
     r'C:\Program Files (x86)\Steam\steamapps\common\FTL Faster Than Light',
+
+    # Humble Bundle
+    r'C:\Program Files (x86)\FTL',
 ]
 
 ########## Slipstream Mod Manager
