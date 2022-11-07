@@ -13,7 +13,7 @@ requests = "^2.28.1"
 javaproperties = "^0.8.1"
 vdf = "^3.4"
 dacite = "^1.6.0"
-Babel = "^2.10.3"
+Babel = "^2.11.0"
 loguru = "^0.6.0"
 lxml = "^4.9.1"
 
