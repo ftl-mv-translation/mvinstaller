@@ -10,7 +10,7 @@ class OperationCard(UserControl):
 
     def build(self):
         self._ctrl_icon = Icon(icons.WARNING_OUTLINED, color=colors.YELLOW_400, size=36)
-        self._ctrl_title = Text(self._title, color=colors.YELLOW_400, style='headlineSmall', weight='bold')
+        self._ctrl_title = Text(self._title, style='headlineSmall', weight='bold')
         self._ctrl_body = Text('abcde')
         self._ctrl_action = ElevatedButton('Do it')
         return Card(
