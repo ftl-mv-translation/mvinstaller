@@ -105,14 +105,14 @@ files = [
 
 [[package]]
 name = "dacite"
-version = "1.6.0"
+version = "1.7.0"
 description = "Simple creation of data classes from dictionaries."
 category = "main"
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "dacite-1.6.0-py3-none-any.whl", hash = "sha256:4331535f7aabb505c732fa4c3c094313fc0a1d5ea19907bf4726a7819a68b93f"},
-    {file = "dacite-1.6.0.tar.gz", hash = "sha256:d48125ed0a0352d3de9f493bf980038088f45f3f9d7498f090b50a847daaa6df"},
+    {file = "dacite-1.7.0-py3-none-any.whl", hash = "sha256:1cf5f7f548aecaa80c800441f8b9f4d656f7601ccc06c9c8c96ee40016a021af"},
+    {file = "dacite-1.7.0.tar.gz", hash = "sha256:683a1d72c8fa0c0341034ddabc7a5c6f6ddc188033a26784417a9429dd3ffa51"},
 ]
 
 [package.extras]
@@ -601,4 +601,4 @@ dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.11"
-content-hash = "0e6b11e855c0fb7fc6d483eda501922b0a8eb82586f265aae395a297e7b3b4a1"
+content-hash = "de895cb403a41bbc4feaa36c6257f2b66c664e2661b36f7bf5f6a8f747dfc3c9"
