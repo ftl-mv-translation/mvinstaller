@@ -170,6 +170,12 @@ class App(UserControl):
                 _('operation-hyperspace-action-update'), lambda e: self._do_action(install_hyperspace, self._ftl_path)
             )
             status_hyperspace = 1
+        elif not state.hyperspace_info.latest:
+            self._operation_card_hyperspace.set(
+                InfoSchemeType.Okay, _('operation-hyperspace-success', {'version': state.hyperspace_info.name}),
+                _('operation-hyperspace-action-update'), lambda e: self._do_action(install_hyperspace, self._ftl_path)
+            )
+            status_hyperspace = 2
         else:
             self._operation_card_hyperspace.set(
                 InfoSchemeType.Okay, _('operation-hyperspace-success', {'version': state.hyperspace_info.name}),

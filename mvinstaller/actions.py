@@ -73,7 +73,7 @@ def install_hyperspace(ftl_path):
 
     logger.info('Extracting archive...')
     with zipfile.ZipFile(cache_dir / latest_hyperspace.filename) as zipf:
-        FILES = ['Hyperspace.dll', 'lua-5.3.dll', 'xinput1_4.dll']
+        FILES = ['Hyperspace.dll', 'xinput1_4.dll']
         for fn in FILES:
             extract_without_path(zipf, f'Windows - Extract these files into where FTLGame.exe is/{fn}', ftl_path)
 
