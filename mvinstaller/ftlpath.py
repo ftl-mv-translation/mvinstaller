@@ -35,7 +35,6 @@ def get_ftl_installation_state(path):
 
     hyperspace_installed = (
         (path / 'Hyperspace.dll').is_file()
-        and (path / 'lua-5.3.dll').is_file()
         and (path / 'xinput1_4.dll').is_file()
     )
 
