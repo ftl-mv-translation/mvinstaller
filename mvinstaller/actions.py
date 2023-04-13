@@ -13,7 +13,7 @@ from mvinstaller.webtools import download
 from mvinstaller.util import get_cache_dir, run_checked_subprocess_with_logging_output
 from mvinstaller.ftlpath import get_ftl_installation_state, get_latest_hyperspace
 from mvinstaller.localetools import get_locale_name
-from mvinstaller.signatures import SMM_URL, SMM_FILENAME, SMM_ROOT_DIR, AddonsList
+from mvinstaller.signatures import DOWNGRADERS, SMM_URL, SMM_FILENAME, SMM_ROOT_DIR, AddonsList
 
 def is_java_installed():
     def try_check_java_version_from(key_under_hklm):
@@ -38,31 +38,47 @@ def is_java_installed():
     return major >= 1 and minor >= 6
 
 def downgrade_ftl(ftl_path, downgrader):
+    assert downgrader is not None
+
+    ftl_path = Path(ftl_path)
+    cache_dir = get_cache_dir()
+
     if downgrader == 'steam':
-        ftl_path = Path(ftl_path)
-        cache_dir = get_cache_dir()
         latest_hyperspace = get_latest_hyperspace()
 
-        download(latest_hyperspace.url, cache_dir / latest_hyperspace.filename, False)
-
-        logger.info('Extracting archive...')
-        with zipfile.ZipFile(cache_dir / latest_hyperspace.filename) as zipf:
-            extract_without_path(
-                zipf, 'Windows - Extract these files into where FTLGame.exe is/patch/flips.exe', cache_dir
-            )
-            extract_without_path(
-                zipf, 'Windows - Extract these files into where FTLGame.exe is/patch/patch.bps', cache_dir
-            )
-        
-        logger.info('Backing up original EXE in FTLGame_orig.exe...')
-        shutil.copyfile(ftl_path / 'FTLGame.exe', ftl_path / 'FTLGame_orig.exe')
-
-        logger.info('Patching...')
-        run_checked_subprocess_with_logging_output(
-            [str(cache_dir / 'flips.exe'), '-a', str(cache_dir / 'patch.bps'), str(ftl_path / 'FTLGame.exe')]
-        )
+        archive_url = latest_hyperspace.url
+        archive_filename = latest_hyperspace.filename
+        extract_paths = [
+            'Windows - Extract these files into where FTLGame.exe is/patch/flips.exe',
+            'Windows - Extract these files into where FTLGame.exe is/patch/patch.bps'
+        ]
     else:
-        assert False
+        archive_url, archive_filename = DOWNGRADERS[downgrader]
+        extract_paths = [
+            'patch/flips.exe',
+            'patch/patch.bps'
+        ]
+
+    downgrader_extract_dir = cache_dir / 'downgraders' / downgrader
+    download(archive_url, cache_dir / archive_filename, False)
+
+    logger.info('Extracting archive...')
+    with zipfile.ZipFile(cache_dir / archive_filename) as zipf:
+        for path in extract_paths:
+            extract_without_path(zipf, path, downgrader_extract_dir)
+    
+    logger.info('Backing up original EXE in FTLGame_orig.exe...')
+    shutil.copyfile(ftl_path / 'FTLGame.exe', ftl_path / 'FTLGame_orig.exe')
+
+    logger.info('Patching...')
+    run_checked_subprocess_with_logging_output(
+        [
+            str(downgrader_extract_dir / 'flips.exe'),
+            '-a',
+            str(downgrader_extract_dir / 'patch.bps'),
+            str(ftl_path / 'FTLGame.exe')
+        ]
+    )
 
 def install_hyperspace(ftl_path):
     ftl_path = Path(ftl_path)

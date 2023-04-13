@@ -31,6 +31,7 @@ def extract_without_path(zipf: ZipFile, name, dstdir):
     # Trick from https://stackoverflow.com/a/47632134/3567518
     info = zipf.getinfo(name)
     info.filename = Path(info.filename).name
+    ensureparent(dstdir)
     zipf.extract(info, dstdir)
 
 def get_sha1(path): 

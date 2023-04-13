@@ -38,7 +38,6 @@ class Addon:                            # An addon mod
                                         # Set to True if it should NOT update the metadata.
     locale: Optional[list[str]]         # Available locales. If it is None, every locale of MV can use it.
 
-
 ########## Signatures
 
 class FtlExecutableType(Enum):
@@ -71,6 +70,18 @@ class FtlExecutableType(Enum):
         downgraded=False,
         downgrader=None,
         sha1='b4eae8d8690c8bc7b80def6e8224fb17d34a5083',
+    )
+    EPIC_WINDOWS_1_6_12 = FtlExecutableInfo(
+        name='Epic Games Store, version 1.6.12 (latest)',
+        downgraded=False,
+        downgrader='epic',
+        sha1='7b8c4d0657e16edc98b9978bd9a9f851a613573a',
+    )
+    ORIGIN_WINDOWS_1_6_12 = FtlExecutableInfo(
+        name='Origin, version 1.6.12 (latest)',
+        downgraded=False,
+        downgrader='origin',
+        sha1='16c2d7936e9bb5c40672ad7593b5285860b2a5db',
     )
 
 
@@ -118,6 +129,19 @@ FIXED_PATHS = [
     # Humble Bundle
     r'C:\Program Files (x86)\FTL',
 ]
+
+########## Downgraders
+
+DOWNGRADERS = {
+    'epic': (
+        'https://drive.google.com/uc?id=1wM4Lb1ADy3PHay5sNuWpQOTnWbpIOGQ1&confirm=t',
+        'Epic Games Downgrade Patcher (1.6.12 to 1.6.9).zip'
+    ),
+    'origin': (
+        'https://drive.google.com/uc?id=1GTxiidyp0o5D1HBMrT0XprstVmPwvuqo&confirm=t',
+        'Origin Downgrade Patcher (1.6.12 to 1.6.9).zip'
+    )
+}
 
 ########## Slipstream Mod Manager
 
