@@ -13,8 +13,8 @@ Send PR that modifies the `locale/` directory.
 See [`mvinstaller/signatures.py`](mvinstaller/signatures.py) to update those information.
 The file serves as the database for the installer and it's self-explanatory.
 
-Help wanted: If you're playing FTL on the Origin/Xbox/GOG then you may help adding support for those platforms.
-Currently the app supports Steam installation only.
+Help wanted: If you're playing FTL on the Humble Bundle/Origin/Xbox/GOG then you may help adding support for those platforms.
+Currently the app fully supports Steam installation only.
 See [#15](https://github.com/ftl-mv-translation/mvinstaller/issues/15) for the instructions.
 
 #### Adding/updating addons
