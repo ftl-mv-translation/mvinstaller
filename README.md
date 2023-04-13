@@ -14,7 +14,7 @@ See [`mvinstaller/signatures.py`](mvinstaller/signatures.py) to update those inf
 The file serves as the database for the installer and it's self-explanatory.
 
 Help wanted: If you're playing FTL on the Humble Bundle/Origin/Xbox/GOG then you may help adding support for those platforms.
-Currently the app fully supports Steam installation only.
+Currently the app fully supports Steam installation, but the builds from other ESDs are only partially supported with different progress.
 See [#15](https://github.com/ftl-mv-translation/mvinstaller/issues/15) for the instructions.
 
 #### Adding/updating addons
