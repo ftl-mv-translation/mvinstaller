@@ -159,10 +159,10 @@ MV_ENGLISH_MAINMOD = MainMod(
     download_targets={
         'https://drive.google.com/uc?id=1U94fcFtdJQirHvrH4G9gGehA02Q-GHUU&confirm=t':
             'Multiverse 5.3 - Assets (Patch First).zip',
-        'https://drive.google.com/uc?id=1EDY0tX4N-w-bmJ5Qf65GAZ9h5iRiR6ny&confirm=t':
-            'Multiverse 5.3 - Data.zip'
+        'https://drive.google.com/uc?id=1c9aA0kaGeh3loOY7Dx3aGT0z-TxYzy76&confirm=t':
+            'Multiverse 5.3.1 - Data.zip'
     },
-    version='5.3',
+    version='5.3.1',
     locale='en',
     commitid=None
 )
