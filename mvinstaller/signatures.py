@@ -112,7 +112,7 @@ class HyperspaceType(Enum):
     )
     HS_1_3_2 = HyperspaceInfo(
         name='HS-1.3.2 56a6aec',
-        outdated=False,
+        outdated=True,
         latest=False,
         sha1='fd7218b3b16802066e450a23fe48ba9daf43d08b',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.3.2/FTL.Hyperspace.1.3.2.zip',
@@ -120,12 +120,29 @@ class HyperspaceType(Enum):
     )
     HS_1_3_3 = HyperspaceInfo(
         name='HS-1.3.3 9afe729',
-        outdated=False,
-        latest=True,
+        outdated=True,
+        latest=False,
         sha1='8e12408b6a308c98ce362fbf2576f21c0280948c',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.3.3/FTL.Hyperspace.1.3.3.zip',
         filename='FTL.Hyperspace.1.3.3.zip'
     )
+    HS_1_4_0 = HyperspaceInfo(
+        name='HS-1.4.0 34add76',
+        outdated=True,
+        latest=False,
+        sha1='5540277b0513e68d4348b253e75f09c4b6d47f26',
+        url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.4.0/FTL.Hyperspace.1.4.0.zip',
+        filename='FTL.Hyperspace.1.4.0.zip'
+    )
+    HS_1_5_0 = HyperspaceInfo(
+        name='HS-1.5.0 9afe729',
+        outdated=False,
+        latest=True,
+        sha1='4fad1eda06706479c819dd2310ae286f90dd4b74',
+        url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.5.0/FTL.Hyperspace.1.5.0.zip',
+        filename='FTL.Hyperspace.1.5.0.zip'
+    )
+    
     
 
 # SHA1 hash value of unmodded ftl.dat files

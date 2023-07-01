@@ -11,7 +11,6 @@ _CONFIG = None
 @dataclass
 class Config:
     app_locale: str
-    use_opengl: bool
     last_ftl_path: str
 
     @staticmethod
