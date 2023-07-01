@@ -261,6 +261,4 @@ class App(UserControl):
 
     def _run_game(self):
         args = [str(Path(self._ftl_path) / 'FTLGame.exe')]
-        if get_config().use_opengl:
-            args.append('-opengl')
         subprocess.Popen(args, cwd=str(self._ftl_path))
