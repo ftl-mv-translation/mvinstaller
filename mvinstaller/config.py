@@ -25,7 +25,7 @@ class Config:
 
     @staticmethod
     def get_default():
-        return Config(get_default_app_locale(), False, None)
+        return Config(get_default_app_locale(), None)
 
 def get_config():
     global _CONFIG
