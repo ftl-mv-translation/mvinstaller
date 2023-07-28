@@ -19,16 +19,16 @@ def _parse_translation_listfile(path):
 
     created_time = int(lines[0])
     mainmods = []
-    for line in lines[1:]:
+    for url in lines[1:]:
         try:
-            fn, gdrive_id = line.split(';')
+            fn = url.split('/')[-1]
             
             match = _TRANSLATION_FN_PATTERN.match(fn)
             if match is None:
                 continue
             
             mainmod = dacite.from_dict(MainMod, {
-                'download_targets': {f'https://drive.google.com/uc?id={gdrive_id}&confirm=t': fn},
+                'download_targets': {url: fn},
                 **match.groupdict()
             })
             mainmods.append(mainmod)
