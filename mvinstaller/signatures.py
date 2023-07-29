@@ -185,10 +185,10 @@ DOWNGRADERS = {
 
 ########## Slipstream Mod Manager
 
-# A proper distribution comes from Sourceforge (https://sourceforge.net/projects/slipstreammodmanager/).
-# Here the Windows distribution for 1.9.1 has been copied the to the ftlmv-weblate-bot GDrive
-# (the one that houses translated MV packages), as it's a bit tricky to implement a programmatic downloader for SF.
-SMM_URL = 'https://drive.google.com/uc?id=194uP5DHmI7bU56soStbv4MfRat2xpXiu&confirm=t'
+SMM_URL = 'https://sourceforge.net/projects/slipstreammodmanager/files/latest/download'
+# Sourceforge supports direct downloading from URL only if the user agent looks like non-browsers
+# Here we use wget which is known to be one of them
+SMM_REQUEST_HEADERS = {'User-Agent': 'Wget/1.13.4 (linux-gnu)'}
 SMM_FILENAME = 'SlipstreamModManager_1.9.1-Win.zip' # The file name of the archive
 SMM_ROOT_DIR = 'SlipstreamModManager_1.9.1-Win' # The root directory of SMM in the archive
 

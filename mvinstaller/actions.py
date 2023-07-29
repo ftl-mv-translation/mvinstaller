@@ -13,7 +13,7 @@ from mvinstaller.webtools import download
 from mvinstaller.util import get_cache_dir, run_checked_subprocess_with_logging_output
 from mvinstaller.ftlpath import get_ftl_installation_state, get_latest_hyperspace
 from mvinstaller.localetools import get_locale_name
-from mvinstaller.signatures import DOWNGRADERS, SMM_URL, SMM_FILENAME, SMM_ROOT_DIR, AddonsList
+from mvinstaller.signatures import DOWNGRADERS, SMM_URL, SMM_REQUEST_HEADERS, SMM_FILENAME, SMM_ROOT_DIR, AddonsList
 
 def is_java_installed():
     def try_check_java_version_from(key_under_hklm):
@@ -106,7 +106,7 @@ def install_mods(locale_mv, addons_name, ftl_path):
 
     def install_slipstream():
         logger.info('Downloading Slipstream Mod Manager...')
-        download(SMM_URL, cache_dir / SMM_FILENAME, False)
+        download(SMM_URL, cache_dir / SMM_FILENAME, False, headers=SMM_REQUEST_HEADERS)
 
         logger.info('Extracting archive...')
         with zipfile.ZipFile(cache_dir / SMM_FILENAME) as zipf:
