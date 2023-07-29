@@ -20,7 +20,7 @@ def _check_response_content_length(resp):
                 )
             )
 
-def download(url, dst, force):
+def download(url, dst, force, headers=None):
     if Path(dst).is_file() and not force:
         logger.info(f'Using previously downloaded file from {dst}...')
         return
@@ -30,7 +30,7 @@ def download(url, dst, force):
 
         logger.info(f'Downloading {url}...')
         chunk_count = 0
-        resp = requests.get(url, stream=True)
+        resp = requests.get(url, stream=True, headers=headers)
         resp.raise_for_status()
         with tmppath.open('wb') as f:
             for chunk in resp.iter_content(chunk_size=1024):
