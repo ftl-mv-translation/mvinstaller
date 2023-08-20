@@ -31,15 +31,15 @@ class InstallModsDialog(UserControl):
         locale = self._locale_picker.value
         if locale:
             matching_addons = [
-                addon.value
+                addon
                 for addon in FixedAddonsList
-                if (addon.value.locale is None) or (locale in addon.value.locale)
+                if len(addon.value.compatible_mv_locale) == 0 or (locale in addon.value.compatible_mv_locale)
             ]
             self._addon_list.controls = [
                 Checkbox(
-                    label=get_metadata(addon.metadata_name).title,
-                    on_change=on_change_from(addon.metadata_name),
-                    data=addon.metadata_name
+                    label=get_metadata(addon.name).title,
+                    on_change=on_change_from(addon.name),
+                    data=addon.name
                 )
                 for addon in matching_addons
             ]

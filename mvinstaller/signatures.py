@@ -29,16 +29,6 @@ class MainMod:                          # A main Multiverse mod
     version: str                        # Version string
     locale: str                         # Locale code
 
-# TODO: Delete
-@dataclass(frozen=True)
-class Addon:                            # An addon mod
-    download_targets: dict[str, str]    # List of mod files in {url: filename} form
-    metadata_name: str                  # A path to the metadata.xml in addon_metadata directory
-                                        # with 'addon_metadata/' and '.xml' stripped out
-    custom_metadata: bool               # Controls whether metadata.xml should be updated by the fetch_metadata script.
-                                        # Set to True if it should NOT update the metadata.
-    locale: Optional[list[str]]         # Available locales. If it is None, every locale of MV can use it.
-
 @dataclass(frozen=True)
 class Mod:                              # A mod
     download_targets: dict[str, str]    # List of mod files in {url: filename} form
@@ -222,12 +212,13 @@ LISTFILE_EXPIRE_DURATION = 60 * 60 * 24 # Updated every day
 LISTFILE_URL = 'https://raw.githubusercontent.com/ftl-mv-translation/ftl-mv-translation/installer-metadata/listfile'
 
 class FixedAddonsList(Enum):
-    GenGibs = Addon(
+    GenGibs = Mod(
         download_targets={
             'https://drive.google.com/uc?id=11YlBrNHCpyIEwX41IEj2RjWP6haH3--4&confirm=t':
                 'MV Addon GenGibs v1.2.0.ftl'
         },
-        metadata_name='GenGibs',
-        custom_metadata=False,
-        locale=None
+        version='1.2.0',
+        locale='en',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibs.xml',
+        compatible_mv_locale=[]
     )

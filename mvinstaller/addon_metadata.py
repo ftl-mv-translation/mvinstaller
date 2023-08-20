@@ -36,10 +36,10 @@ def _init_metadata():
     ret = {}
     for addon in FixedAddonsList:
         try:
-            metadata = read_metadata(get_embed_dir() / 'addon_metadata' / f'{addon.value.metadata_name}.xml')
-            ret[addon.value.metadata_name] = metadata
+            metadata = read_metadata(get_embed_dir() / 'addon_metadata' / f'{addon.name}.xml')
+            ret[addon.name] = metadata
         except Exception as e:
-            logger.error(f'Error while reading metadata for {addon.value.metadata_name}: {e}. Skipping...')
+            logger.error(f'Error while reading metadata for {addon.name}: {e}. Skipping...')
     return ret
 
 _CACHED_METADATA = None
