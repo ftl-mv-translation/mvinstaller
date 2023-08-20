@@ -195,17 +195,19 @@ SMM_ROOT_DIR = 'SlipstreamModManager_1.9.1-Win' # The root directory of SMM in t
 ########## Mods
 
 # The English main mod
-MV_ENGLISH_MAINMOD = MainMod(
-    download_targets={
-        'https://drive.google.com/uc?id=1U94fcFtdJQirHvrH4G9gGehA02Q-GHUU&confirm=t':
-            'Multiverse 5.3 - Assets (Patch First).zip',
-        'https://drive.google.com/uc?id=17XDwphfmFIWxHy5ReCVR64Lo5XTb1GIL&confirm=t':
-            'Multiverse 5.3.1 - Data (hotfix for extreme).zip'
-    },
-    version='5.3.1',
-    locale='en',
-    commitid=None
-)
+# MV_ENGLISH_MAINMOD = Mod(
+#     download_targets={
+#         'https://drive.google.com/uc?id=1U94fcFtdJQirHvrH4G9gGehA02Q-GHUU&confirm=t':
+#             'Multiverse 5.3 - Assets (Patch First).zip',
+#         'https://drive.google.com/uc?id=17XDwphfmFIWxHy5ReCVR64Lo5XTb1GIL&confirm=t':
+#             'Multiverse 5.3.1 - Data (hotfix for extreme).zip'
+#     },
+#     version='5.3.1',
+#     locale='en',
+#     commitid=None,
+#     metadata_url='',
+#     compatible_mv_locale=['en']
+# )
 
 # The listfile for the nightly main mod translations
 LISTFILE_EXPIRE_DURATION = 60 * 60 * 24 # Updated every day
