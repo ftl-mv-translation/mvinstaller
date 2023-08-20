@@ -221,13 +221,3 @@ class AddonsList(Enum):
         custom_metadata=False,
         locale=None
     )
-    TRC_ko = Addon(
-        download_targets={
-            'https://drive.google.com/uc?id=15kNTm-_CaHz3XaNCRPSwBAxOvkcvP7qb&confirm=t':
-                'Multiverse - TRC 1.3 - Korean.ftl'
-        },
-        metadata_name='TRC_ko',
-        custom_metadata=True,
-        locale=['ko']
-    )
-
