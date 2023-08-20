@@ -28,7 +28,6 @@ class MainMod:                          # A main Multiverse mod
     download_targets: dict[str, str]    # List of mod files in {url: filename} form
     version: str                        # Version string
     locale: str                         # Locale code
-    commitid: Optional[str]             # Commit ID (useful for distinguishing versions between nightly translation)
 
 # TODO: Delete
 @dataclass(frozen=True)
@@ -45,7 +44,6 @@ class Mod:                              # A mod
     download_targets: dict[str, str]    # List of mod files in {url: filename} form
     version: str                        # Version string
     locale: str                         # Locale code
-    commitid: Optional[str]             # Commit ID (useful for distinguishing versions between nightly translation)
     metadata_url: str                   # URL to the metadata.xml
     compatible_mv_locale: list[str]     # Multiverse locale to be used with. If empty, it's compatible with all locales.
 
@@ -215,7 +213,6 @@ SMM_ROOT_DIR = 'SlipstreamModManager_1.9.1-Win' # The root directory of SMM in t
 #     },
 #     version='5.3.1',
 #     locale='en',
-#     commitid=None,
 #     metadata_url='',
 #     compatible_mv_locale=['en']
 # )

@@ -207,12 +207,7 @@ class App(UserControl):
             # Multiverse is installed with this app
             parameters = {
                 'version': state.last_installed_mods.main.version,
-                'locale': get_locale_name(state.last_installed_mods.main.locale),
-                'commitid': (
-                    f'+{state.last_installed_mods.main.commitid}'
-                    if state.last_installed_mods.main.commitid else
-                    ''
-                )
+                'locale': get_locale_name(state.last_installed_mods.main.locale)
             }
             if state.last_installed_mods.addons:
                 parameters['addons_list'] = '\n'.join(

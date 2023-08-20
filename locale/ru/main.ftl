@@ -23,8 +23,8 @@ operation-hyperspace-action-install = Установить
 operation-hyperspace-action-update = Обновить
 operation-modding = Установка модов
 operation-modding-java-not-installed = Java не установлена или устарела. Для установки модов требуется JRE 1.6 или выше.
-operation-modding-success-noaddons = Установлен FTL: Multiverse ({ $version } { $locale } { $commitid }).
-operation-modding-success-addons = Установлен FTL: Multiverse ({ $version } { $locale } { $commitid }) со следующими аддонами:
+operation-modding-success-noaddons = Установлен FTL: Multiverse ({ $version } { $locale }).
+operation-modding-success-addons = Установлен FTL: Multiverse ({ $version } { $locale }) со следующими аддонами:
     { $addons_list }
 operation-modding-unknown = Установлены моды, но установщик не может их распознать. Это могло случиться, если моды были установлены сторонними средствами.
 operation-modding-note-noreinstall = Внимание: не найдены резервные копии ванильной версии. Установщик не может переустановить моды.

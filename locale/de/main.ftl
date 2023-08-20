@@ -23,8 +23,8 @@ operation-hyperspace-action-install = Installieren
 operation-hyperspace-action-update = Updaten
 operation-modding = Modde das Spiel
 operation-modding-java-not-installed = Es scheint Java ist nicht installiert oder eine zu alte Version. JRE 1.6 oder höher wird benötigt, um das Spiel zu modden.
-operation-modding-success-noaddons = FTL: Multiversum ({ $version } { $locale } { $commitid }) ist installiert.
-operation-modding-success-addons = FTL: Multiversum ({ $version } { $locale } { $commitid }) ist mit den folgenden Addons installiert:
+operation-modding-success-noaddons = FTL: Multiversum ({ $version } { $locale }) ist installiert.
+operation-modding-success-addons = FTL: Multiversum ({ $version } { $locale }) ist mit den folgenden Addons installiert:
     { $addons_list }
 operation-modding-unknown = Es scheint ein paar Mods sind installiert, aber der Installateur kann ihre Details nicht erkennen. Das kann passieren, wenn Mods bereits auf einem anderen Weg installiert wurden.
 operation-modding-note-noreinstall = Notiz: Vanilla Spielstände wurden nicht gefunden. Der Installateur kann die Mods nicht wieder installieren.

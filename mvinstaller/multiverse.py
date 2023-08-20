@@ -26,11 +26,13 @@ def _parse_translation_listfile(path):
             match = _TRANSLATION_FN_PATTERN.match(fn)
             if match is None:
                 continue
+            match = match.groupdict()
             
-            mainmod = dacite.from_dict(MainMod, {
-                'download_targets': {url: fn},
-                **match.groupdict()
-            })
+            mainmod = MainMod(
+                download_targets={url: fn},
+                locale=match['locale'],
+                version=f"{match['version']}+{match['commitid']}"
+            )
             mainmods.append(mainmod)
         except Exception:
             continue

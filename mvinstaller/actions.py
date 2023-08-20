@@ -130,7 +130,6 @@ def install_mods(locale_mv, addons_name, ftl_path):
 
         logger.info(
             f'[Target main mod] FTL: Multiverse {mainmod.version}, {get_locale_name(mainmod.locale)}'
-            + (f' at commitid {mainmod.commitid}' if mainmod.commitid else '')
         )
         for url, fn in mainmod.download_targets.items():
             download(url, smmbase / 'mods' / fn, False)

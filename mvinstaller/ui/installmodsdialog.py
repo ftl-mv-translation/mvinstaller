@@ -69,7 +69,6 @@ class InstallModsDialog(UserControl):
             dropdown.Option(
                 mainmod.locale,
                 f'{mainmod.version} {get_locale_name(mainmod.locale)}'
-                + (f' +{mainmod.commitid}' if mainmod.commitid else '')
             )
             for mainmod in mainmods
         ]

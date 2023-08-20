@@ -23,8 +23,8 @@ operation-hyperspace-action-install = Install
 operation-hyperspace-action-update = Update
 operation-modding = Modding the Game
 operation-modding-java-not-installed = Seems like Java is not installed or outdated. JRE 1.6 or higher is required to mod the game.
-operation-modding-success-noaddons = FTL: Multiverse ({ $version } { $locale } { $commitid }) is installed.
-operation-modding-success-addons = FTL: Multiverse ({ $version } { $locale } { $commitid }) is installed with following add-ons:
+operation-modding-success-noaddons = FTL: Multiverse ({ $version } { $locale }) is installed.
+operation-modding-success-addons = FTL: Multiverse ({ $version } { $locale }) is installed with following add-ons:
     { $addons_list }
 operation-modding-unknown = Seems like some mods are installed, but the installer cannot determine their details. This might happen when mods are already patched by other means.
 operation-modding-note-noreinstall = Note: Vanilla backups are not found. The installer cannot reinstall the mods.
