@@ -3,7 +3,7 @@ from pathlib import Path
 from typing import Optional
 from lxml import etree
 from loguru import logger
-from mvinstaller.signatures import AddonsList
+from mvinstaller.signatures import FixedAddonsList
 from mvinstaller.util import get_embed_dir
 
 @dataclass(frozen=True)
@@ -34,7 +34,7 @@ def read_metadata(path, metadata_name=None):
 
 def _init_metadata():
     ret = {}
-    for addon in AddonsList:
+    for addon in FixedAddonsList:
         try:
             metadata = read_metadata(get_embed_dir() / 'addon_metadata' / f'{addon.value.metadata_name}.xml')
             ret[addon.value.metadata_name] = metadata

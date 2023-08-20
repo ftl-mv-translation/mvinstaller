@@ -5,7 +5,7 @@ import dacite
 from loguru import logger
 from mvinstaller.webtools import download
 from mvinstaller.util import get_cache_dir
-from mvinstaller.signatures import MainMod, LISTFILE_EXPIRE_DURATION, LISTFILE_URL, MV_ENGLISH_MAINMOD
+from mvinstaller.signatures import MainMod, LISTFILE_EXPIRE_DURATION, LISTFILE_URL
 
 _TRANSLATION_FN_PATTERN = re.compile(
     r'^FTL-Multiverse-(?P<version>.+)-(?P<locale>[a-zA-Z_]+)\+(?P<commitid>[a-fA-F0-9xX]+)\.ftl$',

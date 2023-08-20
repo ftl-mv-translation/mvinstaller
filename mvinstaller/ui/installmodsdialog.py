@@ -10,7 +10,7 @@ from mvinstaller.localetools import localize as _
 from mvinstaller.ui.busycontainer import BusyContainer
 from mvinstaller.ui.errorsnackbar import ErrorSnackbar
 from mvinstaller.ui.infoscheme import InfoSchemeType
-from mvinstaller.signatures import AddonsList
+from mvinstaller.signatures import FixedAddonsList
 
 class InstallModsDialog(UserControl):
     def __init__(self, error_snackbar: Optional[ErrorSnackbar]=None, on_install=None):
@@ -32,7 +32,7 @@ class InstallModsDialog(UserControl):
         if locale:
             matching_addons = [
                 addon.value
-                for addon in AddonsList
+                for addon in FixedAddonsList
                 if (addon.value.locale is None) or (locale in addon.value.locale)
             ]
             self._addon_list.controls = [

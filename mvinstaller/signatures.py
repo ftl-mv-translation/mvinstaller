@@ -211,7 +211,7 @@ MV_ENGLISH_MAINMOD = MainMod(
 LISTFILE_EXPIRE_DURATION = 60 * 60 * 24 # Updated every day
 LISTFILE_URL = 'https://raw.githubusercontent.com/ftl-mv-translation/ftl-mv-translation/installer-metadata/listfile'
 
-class AddonsList(Enum):
+class FixedAddonsList(Enum):
     GenGibs = Addon(
         download_targets={
             'https://drive.google.com/uc?id=11YlBrNHCpyIEwX41IEj2RjWP6haH3--4&confirm=t':

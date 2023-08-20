@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 from zipfile import ZipFile
 from mvinstaller.fstools import extract_without_path
-from mvinstaller.signatures import AddonsList
+from mvinstaller.signatures import FixedAddonsList
 from mvinstaller.webtools import download
 from loguru import logger
 
@@ -38,7 +38,7 @@ def fetch_metadata(addon):
     
 def main():
     check_mode = (len(sys.argv) >= 2) and (sys.argv[1] == '--check')
-    for addon in AddonsList:
+    for addon in FixedAddonsList:
         addon = addon.value
         if addon.custom_metadata:
             logger.info(f'[{addon.metadata_name}] Skipped, using custom metadata...')
