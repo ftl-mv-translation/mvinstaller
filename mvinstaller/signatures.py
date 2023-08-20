@@ -22,6 +22,7 @@ class HyperspaceInfo:                   # A signature of Hyperspace.dll
     url: str                            # URL to the Hyperspace release
     filename: str                       # Filename of the Hyperspace release
 
+# TODO: Delete
 @dataclass(frozen=True)
 class MainMod:                          # A main Multiverse mod
     download_targets: dict[str, str]    # List of mod files in {url: filename} form
@@ -29,6 +30,7 @@ class MainMod:                          # A main Multiverse mod
     locale: str                         # Locale code
     commitid: Optional[str]             # Commit ID (useful for distinguishing versions between nightly translation)
 
+# TODO: Delete
 @dataclass(frozen=True)
 class Addon:                            # An addon mod
     download_targets: dict[str, str]    # List of mod files in {url: filename} form
@@ -37,6 +39,15 @@ class Addon:                            # An addon mod
     custom_metadata: bool               # Controls whether metadata.xml should be updated by the fetch_metadata script.
                                         # Set to True if it should NOT update the metadata.
     locale: Optional[list[str]]         # Available locales. If it is None, every locale of MV can use it.
+
+@dataclass(frozen=True)
+class Mod:                              # A mod
+    download_targets: dict[str, str]    # List of mod files in {url: filename} form
+    version: str                        # Version string
+    locale: str                         # Locale code
+    commitid: Optional[str]             # Commit ID (useful for distinguishing versions between nightly translation)
+    metadata_url: str                   # URL to the metadata.xml
+    compatible_mv_locale: list[str]     # Multiverse locale to be used with. If empty, it's compatible with all locales.
 
 ########## Signatures
 
