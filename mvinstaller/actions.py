@@ -8,12 +8,14 @@ from loguru import logger
 from mvinstaller.addon_metadata import read_metadata
 from mvinstaller.fstools import extract_without_path, glob_posix
 from mvinstaller.last_installed_mods import save_last_installed_mods
-from mvinstaller.multiverse import clear_expired_mainmods, get_mv_mainmods
+from mvinstaller.multiverse import clear_expired_mods, get_mv_mainmods, get_addons
 from mvinstaller.webtools import download
 from mvinstaller.util import get_cache_dir, run_checked_subprocess_with_logging_output
 from mvinstaller.ftlpath import get_ftl_installation_state, get_latest_hyperspace
 from mvinstaller.localetools import get_locale_name
-from mvinstaller.signatures import DOWNGRADERS, SMM_URL, SMM_REQUEST_HEADERS, SMM_FILENAME, SMM_ROOT_DIR, AddonsList
+from mvinstaller.signatures import (
+    DOWNGRADERS, SMM_URL, SMM_REQUEST_HEADERS, SMM_FILENAME, SMM_ROOT_DIR
+)
 
 def is_java_installed():
     def try_check_java_version_from(key_under_hklm):
@@ -123,20 +125,19 @@ def install_mods(locale_mv, addons_name, ftl_path):
         return smmbase
     
     def patch_mods(smmbase):
-        clear_expired_mainmods(glob_posix(str(smmbase / 'mods/*')))
+        clear_expired_mods(glob_posix(str(smmbase / 'mods/*')))
 
         mainmods = get_mv_mainmods()
         mainmod = next(mainmod for mainmod in mainmods if mainmod.locale == locale_mv)
 
         logger.info(
             f'[Target main mod] FTL: Multiverse {mainmod.version}, {get_locale_name(mainmod.locale)}'
-            + (f' at commitid {mainmod.commitid}' if mainmod.commitid else '')
         )
         for url, fn in mainmod.download_targets.items():
             download(url, smmbase / 'mods' / fn, False)
 
         logger.info(f'[Target addons] {", ".join(addons_name)}')
-        addons = [addon.value for addon in AddonsList if addon.value.metadata_name in addons_name]
+        addons = [addon for addon in get_addons() if addon.id in addons_name]
 
         # Download addon files
         addon_files_to_install = {}
@@ -153,7 +154,7 @@ def install_mods(locale_mv, addons_name, ftl_path):
             fn = next(iter(addon.download_targets.values()))
             with zipfile.ZipFile(smmbase / 'mods' / fn) as zipf:
                 extract_without_path(zipf, 'mod-appendix/metadata.xml', cache_dir)
-            addon_metadata[addon.metadata_name] = read_metadata(cache_dir / 'metadata.xml', addon.metadata_name)
+            addon_metadata[addon.id] = read_metadata(cache_dir / 'metadata.xml', addon.id)
 
         if not use_backup:
             logger.info('Creating backup for dat...')

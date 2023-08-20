@@ -5,15 +5,15 @@ from loguru import logger
 import dacite
 from mvinstaller.fstools import get_sha1
 from mvinstaller.addon_metadata import Metadata
-from mvinstaller.signatures import DAT_VANILLA_SHA1, MainMod
+from mvinstaller.signatures import DAT_VANILLA_SHA1, Mod
 
 @dataclass(frozen=True)
 class LastInstalledMods:
     sha1: str
-    main: MainMod
+    main: Mod
     addons: dict[str, Metadata]
 
-def save_last_installed_mods(ftl_path, main: MainMod, addons: dict[str, Metadata]):
+def save_last_installed_mods(ftl_path, main: Mod, addons: dict[str, Metadata]):
     ftl_path = Path(ftl_path)
     logger.info('Saving the digest of the last installed mods...')
     dat_sha1 = get_sha1(ftl_path / 'ftl.dat')

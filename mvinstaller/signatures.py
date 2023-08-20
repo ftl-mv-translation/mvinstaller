@@ -23,20 +23,13 @@ class HyperspaceInfo:                   # A signature of Hyperspace.dll
     filename: str                       # Filename of the Hyperspace release
 
 @dataclass(frozen=True)
-class MainMod:                          # A main Multiverse mod
+class Mod:                              # A mod
+    id: str                             # ID (slug) of the mod.
     download_targets: dict[str, str]    # List of mod files in {url: filename} form
     version: str                        # Version string
     locale: str                         # Locale code
-    commitid: Optional[str]             # Commit ID (useful for distinguishing versions between nightly translation)
-
-@dataclass(frozen=True)
-class Addon:                            # An addon mod
-    download_targets: dict[str, str]    # List of mod files in {url: filename} form
-    metadata_name: str                  # A path to the metadata.xml in addon_metadata directory
-                                        # with 'addon_metadata/' and '.xml' stripped out
-    custom_metadata: bool               # Controls whether metadata.xml should be updated by the fetch_metadata script.
-                                        # Set to True if it should NOT update the metadata.
-    locale: Optional[list[str]]         # Available locales. If it is None, every locale of MV can use it.
+    metadata_url: str                   # URL to the metadata.xml
+    compatible_mv_locale: list[str]     # Multiverse locale to be used with. If empty, it's compatible with all locales.
 
 ########## Signatures
 
@@ -195,39 +188,35 @@ SMM_ROOT_DIR = 'SlipstreamModManager_1.9.1-Win' # The root directory of SMM in t
 ########## Mods
 
 # The English main mod
-MV_ENGLISH_MAINMOD = MainMod(
-    download_targets={
-        'https://drive.google.com/uc?id=1U94fcFtdJQirHvrH4G9gGehA02Q-GHUU&confirm=t':
-            'Multiverse 5.3 - Assets (Patch First).zip',
-        'https://drive.google.com/uc?id=17XDwphfmFIWxHy5ReCVR64Lo5XTb1GIL&confirm=t':
-            'Multiverse 5.3.1 - Data (hotfix for extreme).zip'
-    },
-    version='5.3.1',
-    locale='en',
-    commitid=None
-)
+# MV_ENGLISH_MAINMOD = Mod(
+#     id='FTL-Multiverse/en',
+#     download_targets={
+#         'https://drive.google.com/uc?id=1U94fcFtdJQirHvrH4G9gGehA02Q-GHUU&confirm=t':
+#             'Multiverse 5.3 - Assets (Patch First).zip',
+#         'https://drive.google.com/uc?id=17XDwphfmFIWxHy5ReCVR64Lo5XTb1GIL&confirm=t':
+#             'Multiverse 5.3.1 - Data (hotfix for extreme).zip'
+#     },
+#     version='5.3.1',
+#     locale='en',
+#     metadata_url='',
+#     compatible_mv_locale=['en']
+# )
 
-# The listfile for the nightly main mod translations
-LISTFILE_EXPIRE_DURATION = 60 * 60 * 24 # Updated every day
-LISTFILE_URL = 'https://raw.githubusercontent.com/ftl-mv-translation/ftl-mv-translation/installer-metadata/listfile'
+RELEASE_EXPIRE_DURATION = 60 * 60 * 24 # Updated every day
+MAINMODS_TRANSLATION_RELEASE = 'https://api.github.com/repos/ftl-mv-translation/ftl-mv-translation/releases/latest'
+ADDONS_TRANSLATION_RELEASE = [
+    'https://api.github.com/repos/ftl-mv-translation/trc/releases/latest'
+]
 
-class AddonsList(Enum):
-    GenGibs = Addon(
+class FixedAddonsList(Enum):
+    GenGibs = Mod(
+        id='GenGibs',
         download_targets={
             'https://drive.google.com/uc?id=11YlBrNHCpyIEwX41IEj2RjWP6haH3--4&confirm=t':
                 'MV Addon GenGibs v1.2.0.ftl'
         },
-        metadata_name='GenGibs',
-        custom_metadata=False,
-        locale=None
+        version='1.2.0',
+        locale='en',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibs.xml',
+        compatible_mv_locale=[]
     )
-    TRC_ko = Addon(
-        download_targets={
-            'https://drive.google.com/uc?id=15kNTm-_CaHz3XaNCRPSwBAxOvkcvP7qb&confirm=t':
-                'Multiverse - TRC 1.3 - Korean.ftl'
-        },
-        metadata_name='TRC_ko',
-        custom_metadata=True,
-        locale=['ko']
-    )
-

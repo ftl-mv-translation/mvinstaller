@@ -19,7 +19,7 @@ See [#15](https://github.com/ftl-mv-translation/mvinstaller/issues/15) for the i
 
 #### Adding/updating addons
 
-1. Add your addon to the `AddonsList` class in `signatures.py`.
+1. Add your addon to the `FixedAddonsList` class in `signatures.py`.
    * Note that it's order-sensitive. Slipstream Mod Manager will install the addons in the order of listing.
    * Adjust the `metadata_name` field to which `metadata.xml` has been renamed in step 1.
    * Adjust the `locale` field to which language your addon supports.
