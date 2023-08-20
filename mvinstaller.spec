@@ -9,7 +9,7 @@ a = Analysis(
     ['snippets/execute.py'],
     pathex=[],
     binaries=[],
-    datas=[('locale', 'locale'), ('assets', 'assets'), ('addon_metadata', 'addon_metadata')],
+    datas=[('locale', 'locale'), ('assets', 'assets')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

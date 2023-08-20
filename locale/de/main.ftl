@@ -45,6 +45,7 @@ about-dialog-title = About FTL: Multiversum Installateur
 about-dialog-appname = FTL: Multiverse Installateur, ver. { $version }
 about-dialog-repository-button = Öffne GitHub Seite (Bug Reports, Feature Anfragen)
 appbar-refresh-tooltip = Erneut Laden
+appbar-open-folder-tooltip = Open Folder
 appbar-config-tooltip = Konfiguration
 appbar-about-tooltip = Über den FTL: Multiversum Installateur
 appbar-update-tooltip = Updatete Installateur

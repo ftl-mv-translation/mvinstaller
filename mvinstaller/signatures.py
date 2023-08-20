@@ -24,6 +24,7 @@ class HyperspaceInfo:                   # A signature of Hyperspace.dll
 
 @dataclass(frozen=True)
 class Mod:                              # A mod
+    id: str                             # ID (slug) of the mod.
     download_targets: dict[str, str]    # List of mod files in {url: filename} form
     version: str                        # Version string
     locale: str                         # Locale code
@@ -188,6 +189,7 @@ SMM_ROOT_DIR = 'SlipstreamModManager_1.9.1-Win' # The root directory of SMM in t
 
 # The English main mod
 # MV_ENGLISH_MAINMOD = Mod(
+#     id='FTL-Multiverse/en',
 #     download_targets={
 #         'https://drive.google.com/uc?id=1U94fcFtdJQirHvrH4G9gGehA02Q-GHUU&confirm=t':
 #             'Multiverse 5.3 - Assets (Patch First).zip',
@@ -200,12 +202,15 @@ SMM_ROOT_DIR = 'SlipstreamModManager_1.9.1-Win' # The root directory of SMM in t
 #     compatible_mv_locale=['en']
 # )
 
-# The listfile for the nightly main mod translations
-LISTFILE_EXPIRE_DURATION = 60 * 60 * 24 # Updated every day
-LISTFILE_URL = 'https://raw.githubusercontent.com/ftl-mv-translation/ftl-mv-translation/installer-metadata/listfile'
+RELEASE_EXPIRE_DURATION = 60 * 60 * 24 # Updated every day
+MAINMODS_TRANSLATION_RELEASE = 'https://api.github.com/repos/ftl-mv-translation/ftl-mv-translation/releases/latest'
+ADDONS_TRANSLATION_RELEASE = [
+    'https://api.github.com/repos/ftl-mv-translation/trc/releases/latest'
+]
 
 class FixedAddonsList(Enum):
     GenGibs = Mod(
+        id='GenGibs',
         download_targets={
             'https://drive.google.com/uc?id=11YlBrNHCpyIEwX41IEj2RjWP6haH3--4&confirm=t':
                 'MV Addon GenGibs v1.2.0.ftl'

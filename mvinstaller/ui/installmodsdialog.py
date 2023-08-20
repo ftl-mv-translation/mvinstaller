@@ -5,12 +5,11 @@ from flet import (
 from mvinstaller.addon_metadata import get_metadata, metadata_text
 from mvinstaller.config import get_config
 from mvinstaller.localetools import get_locale_name
-from mvinstaller.multiverse import get_mv_mainmods
+from mvinstaller.multiverse import get_mv_mainmods, get_addons
 from mvinstaller.localetools import localize as _
 from mvinstaller.ui.busycontainer import BusyContainer
 from mvinstaller.ui.errorsnackbar import ErrorSnackbar
 from mvinstaller.ui.infoscheme import InfoSchemeType
-from mvinstaller.signatures import FixedAddonsList
 
 class InstallModsDialog(UserControl):
     def __init__(self, error_snackbar: Optional[ErrorSnackbar]=None, on_install=None):
@@ -21,25 +20,25 @@ class InstallModsDialog(UserControl):
         self._on_install = on_install
         super().__init__()
 
-    def _update_addon_list(self):
-        def on_change_from(metadata_name):
-            def on_change(e):
-                self._addon_description.value = metadata_text(get_metadata(metadata_name))
-                self._addon_description.update()
-            return on_change
+    def _set_mod_description(self, id):
+        def on_change(e):
+            self._mod_description.value = metadata_text(get_metadata(id))
+            self._mod_description.update()
+        return on_change
 
+    def _update_addon_list(self):
         locale = self._locale_picker.value
         if locale:
             matching_addons = [
                 addon
-                for addon in FixedAddonsList
-                if len(addon.value.compatible_mv_locale) == 0 or (locale in addon.value.compatible_mv_locale)
+                for addon in get_addons()
+                if len(addon.compatible_mv_locale) == 0 or (locale in addon.compatible_mv_locale)
             ]
             self._addon_list.controls = [
                 Checkbox(
-                    label=get_metadata(addon.name).title,
-                    on_change=on_change_from(addon.name),
-                    data=addon.name
+                    label=get_metadata(addon.id).title,
+                    on_change=self._set_mod_description(addon.id),
+                    data=addon.id
                 )
                 for addon in matching_addons
             ]
@@ -47,8 +46,6 @@ class InstallModsDialog(UserControl):
             self._addon_list.controls = []
         
         self._addon_list.update()
-        self._addon_description.value = ''
-        self._addon_description.update()
 
     def _build_content(self):
         self._busycontainer.busy = True
@@ -82,9 +79,21 @@ class InstallModsDialog(UserControl):
         self.update()
 
     def build(self):
-        self._locale_picker = Dropdown(options=[], on_change=lambda e: self._update_addon_list())
+        def locale_picker_on_change(e):
+            self._update_addon_list()
+            try:
+                mainmods = get_mv_mainmods()
+                mainmod = next(mod for mod in mainmods if mod.locale == self._locale_picker.value)
+                self._set_mod_description(mainmod.id)(e)
+            except StopIteration:
+                pass
+        
+        self._locale_picker = Dropdown(
+            options=[],
+            on_change=lambda e: locale_picker_on_change(e)
+        )
         self._addon_list = Column()
-        self._addon_description = TextField(
+        self._mod_description = TextField(
             read_only=True,
             multiline=True,
             min_lines=20,
@@ -105,7 +114,7 @@ class InstallModsDialog(UserControl):
                             ],
                             horizontal_alignment='start'
                         ),
-                        self._addon_description
+                        self._mod_description
                     ],
                     tight=True,
                     vertical_alignment='start',

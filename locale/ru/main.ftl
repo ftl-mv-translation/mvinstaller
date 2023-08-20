@@ -45,6 +45,7 @@ about-dialog-title = Об установщике FTL: Multiverse
 about-dialog-appname = Установщик FTL: Multiverse, версия { $version }
 about-dialog-repository-button = Открыть GitHub (сообщить об ошибке, предложить улучшение) [англ]
 appbar-refresh-tooltip = Обновить
+appbar-open-folder-tooltip = Open Folder
 appbar-config-tooltip = Настройки
 appbar-about-tooltip = Об установщике FTL: Multiverse
 appbar-update-tooltip = Обновить установщик

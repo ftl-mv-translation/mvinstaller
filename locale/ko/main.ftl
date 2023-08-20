@@ -45,6 +45,7 @@ about-dialog-title = FTL: 멀티버스 설치에 대하여
 about-dialog-appname = FTL: 멀티버스 설치 앱, 버전 { $version }
 about-dialog-repository-button = GitHub 사이트 열기 (버그 제보, 기능 요청)
 appbar-refresh-tooltip = 새로고침
+appbar-open-folder-tooltip = 폴더 열기
 appbar-config-tooltip = 설정
 appbar-about-tooltip = FTL: 멀티버스 설치에 대하여
 appbar-update-tooltip = 설치 앱 업데이트

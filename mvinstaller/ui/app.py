@@ -1,6 +1,7 @@
 from pathlib import Path
 import subprocess
 import os
+from time import sleep
 from loguru import logger
 from flet import UserControl, Column, Row, icons, colors, TextButton, Stack, Image, Container, alignment
 from mvinstaller.actions import downgrade_ftl, install_hyperspace, install_mods, is_java_installed
@@ -16,6 +17,7 @@ from mvinstaller.ui.infoscheme import InfoSchemeType
 from mvinstaller.ui.installmodsdialog import InstallModsDialog
 from mvinstaller.ui.operationcard import OperationCard
 from mvinstaller.ui.progressdialog import ProgressDialog
+from mvinstaller.addon_metadata import init_metadata
 
 class App(UserControl):
     def __init__(self, ftl_path=None, on_ftl_path_change=None):
@@ -102,6 +104,7 @@ class App(UserControl):
         if self._ftl_path is None:
             self._ftl_path_finder_dialog.open(self._ftl_path)
         else:
+            sleep(0.1)
             self._progress_dialog.open(self._update_operation_cards)
 
     def _do_action(self, func, *args, **kwargs):
@@ -111,6 +114,7 @@ class App(UserControl):
             self._update_state()
 
     def _update_operation_cards(self):
+        init_metadata()
         logger.info('Checking installation state...')
         try:
             state = get_ftl_installation_state(self._ftl_path)

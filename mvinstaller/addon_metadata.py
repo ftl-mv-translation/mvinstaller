@@ -1,10 +1,13 @@
+from time import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
 from lxml import etree
 from loguru import logger
-from mvinstaller.signatures import FixedAddonsList
-from mvinstaller.util import get_embed_dir
+from mvinstaller.multiverse import get_addons, get_mv_mainmods
+from mvinstaller.signatures import Mod
+from mvinstaller.util import get_cache_dir, sha256
+from mvinstaller.webtools import download
 
 @dataclass(frozen=True)
 class Metadata:
@@ -33,13 +36,19 @@ def read_metadata(path, metadata_name=None):
     )
 
 def _init_metadata():
+    mods = get_mv_mainmods() + get_addons()
     ret = {}
-    for addon in FixedAddonsList:
+
+    for mod in mods:
         try:
-            metadata = read_metadata(get_embed_dir() / 'addon_metadata' / f'{addon.name}.xml')
-            ret[addon.name] = metadata
+            fn = get_cache_dir() / 'metadata' / f'{sha256(mod.id)}.xml'
+            if not fn.exists() or (fn.stat().st_mtime + 3600 < time()):
+                logger.info(f'Downloading metadata for {mod.id}...')
+                download(mod.metadata_url, fn, True)
+            metadata = read_metadata(fn)
+            ret[mod.id] = metadata
         except Exception as e:
-            logger.error(f'Error while reading metadata for {addon.name}: {e}. Skipping...')
+            logger.error(f'Error while reading metadata for {mod.id}: {e}. Skipping...')
     return ret
 
 _CACHED_METADATA = None
@@ -49,9 +58,9 @@ def init_metadata():
     if _CACHED_METADATA is None:
         _CACHED_METADATA = _init_metadata()
 
-def get_metadata(metadata_name):
+def get_metadata(id: str):
     init_metadata()
-    return _CACHED_METADATA.get(metadata_name, Metadata(metadata_name, None, 'Unknown', None, ''))
+    return _CACHED_METADATA.get(id, Metadata(id, None, 'Unknown', None, f'Error while fetching metadata for {id}.'))
 
 def metadata_text(metadata):
     ret = metadata.title

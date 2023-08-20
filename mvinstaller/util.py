@@ -1,5 +1,6 @@
 import functools
 import subprocess
+import hashlib
 from pathlib import Path
 import sys
 from loguru import logger
@@ -28,3 +29,8 @@ def run_checked_subprocess_with_logging_output(*args, **kwargs):
     exitcode = proc.wait()
     if exitcode != 0:
         raise subprocess.CalledProcessError(exitcode, kwargs.get('args', args[0]))
+
+def sha256(smth):
+    if isinstance(smth, str):
+        smth = smth.encode('utf-8')
+    return hashlib.sha256(smth).hexdigest()[:16]
