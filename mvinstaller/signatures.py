@@ -22,13 +22,6 @@ class HyperspaceInfo:                   # A signature of Hyperspace.dll
     url: str                            # URL to the Hyperspace release
     filename: str                       # Filename of the Hyperspace release
 
-# TODO: Delete
-@dataclass(frozen=True)
-class MainMod:                          # A main Multiverse mod
-    download_targets: dict[str, str]    # List of mod files in {url: filename} form
-    version: str                        # Version string
-    locale: str                         # Locale code
-
 @dataclass(frozen=True)
 class Mod:                              # A mod
     download_targets: dict[str, str]    # List of mod files in {url: filename} form

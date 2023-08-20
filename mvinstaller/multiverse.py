@@ -5,7 +5,7 @@ import dacite
 from loguru import logger
 from mvinstaller.webtools import download
 from mvinstaller.util import get_cache_dir
-from mvinstaller.signatures import MainMod, LISTFILE_EXPIRE_DURATION, LISTFILE_URL
+from mvinstaller.signatures import Mod, LISTFILE_EXPIRE_DURATION, LISTFILE_URL
 
 _TRANSLATION_FN_PATTERN = re.compile(
     r'^FTL-Multiverse-(?P<version>.+)-(?P<locale>[a-zA-Z_]+)\+(?P<commitid>[a-fA-F0-9xX]+)\.ftl$',
@@ -27,18 +27,20 @@ def _parse_translation_listfile(path):
             if match is None:
                 continue
             match = match.groupdict()
-            
-            mainmod = MainMod(
+
+            mainmod = Mod(
                 download_targets={url: fn},
                 locale=match['locale'],
-                version=f"{match['version']}+{match['commitid']}"
+                version=f"{match['version']}+{match['commitid']}",
+                metadata_url='', # TODO
+                compatible_mv_locale=[match['locale']]
             )
             mainmods.append(mainmod)
         except Exception:
             continue
     return created_time, mainmods
 
-def get_mv_mainmods() -> list[MainMod]:
+def get_mv_mainmods() -> list[Mod]:
     listfile_path = get_cache_dir() / 'listfile'
 
     if listfile_path.exists():
