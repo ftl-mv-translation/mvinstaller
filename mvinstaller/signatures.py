@@ -30,6 +30,7 @@ class Mod:                              # A mod
     locale: str                         # Locale code
     metadata_url: str                   # URL to the metadata.xml
     compatible_mv_locale: list[str]     # Multiverse locale to be used with. If empty, it's compatible with all locales.
+    priority: int                       # Installtion priority in ascending order. Mainmod is 0, and each official addons are 100, 200, 300, ...
 
 ########## Signatures
 
@@ -224,14 +225,28 @@ ADDONS_TRANSLATION_RELEASE = [
 ]
 
 class FixedAddonsList(Enum):
-    GenGibs = Mod(
-        id='GenGibs',
+    GenGibsMV = Mod(
+        id='GenGibsMV',
         download_targets={
-            'https://drive.google.com/uc?id=11YlBrNHCpyIEwX41IEj2RjWP6haH3--4&confirm=t':
-                'MV Addon GenGibs v1.2.0.ftl'
+            'https://drive.usercontent.google.com/download?id=1fFbszGv7VD2f4LQnrRe3m9QvbyvZ5Cp9&export=download&confirm=xxx':
+                'MV Addon GenGibs v1.3.5.ftl'
         },
         version='1.2.0',
         locale='en',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibs.xml',
-        compatible_mv_locale=[]
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsMV.xml',
+        compatible_mv_locale=[],
+        priority=1
     )
+    GenGibsTRC = Mod(
+        id='GenGibsTRC',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1hM5P2VzRqrhmwHhFxqjbyHPKj6QMjpYW&export=download&confirm=xxx':
+                'MV TRC GenGibs v1.3.5.ftl'
+        },
+        version='1.2.0',
+        locale='en',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsTRC.xml',
+        compatible_mv_locale=[],
+        priority=101
+    )
+

@@ -161,8 +161,17 @@ def install_mods(locale_mv, addons_name, ftl_path):
             shutil.copy(ftl_path / 'ftl.dat', ftl_path / 'ftl.dat.vanilla')
         
         logger.info('Running patch...')
+        mods = sorted([mainmod] + addons, key=lambda mod: mod.priority)
         run_checked_subprocess_with_logging_output(
-            [smmbase / 'modman.exe', '--patch', *mainmod.download_targets.values(), *addon_files_to_install.values()]
+            [
+                smmbase / 'modman.exe',
+                '--patch',
+                *(
+                    download_target
+                    for mod in mods
+                    for download_target in mod.download_targets.values()
+                )
+            ]
         )
         return mainmod, addon_metadata
     smmbase = install_slipstream()

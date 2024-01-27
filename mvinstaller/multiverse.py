@@ -20,7 +20,7 @@ _TRANSLATION_FN_PATTERN = re.compile(
     re.IGNORECASE
 )
 
-def _parse_release(path):
+def _parse_release(path, priority):
     with open(path, 'r', encoding='utf-8') as f:
         listfile = json.load(f)
 
@@ -45,34 +45,39 @@ def _parse_release(path):
                     urllib.parse.quote_plus(fn),
                     urllib.parse.quote_plus(f"metadata-{match['locale']}.xml")
                 ),
-                compatible_mv_locale=[match['locale']]
+                compatible_mv_locale=[match['locale']],
+                priority=priority
             )
             mods.append(mod)
         except Exception:
             continue
     return created_time, mods
 
-def from_github_release(url) -> list[Mod]:
+def from_github_release(url, priority) -> list[Mod]:
     release_cache_path = get_cache_dir() / f'release-{sha256(url)}.json'
 
     if release_cache_path.exists():
-        created_time, mods = _parse_release(release_cache_path)
+        created_time, mods = _parse_release(release_cache_path, priority)
         if created_time + RELEASE_EXPIRE_DURATION < time():
             logger.info('Release file expired. Fetching new one...')
             download(url, release_cache_path, True)
-            created_time, mods = _parse_release(release_cache_path)
+            created_time, mods = _parse_release(release_cache_path, priority)
     else:
         logger.info('Release file not found. Fetching new one...')
         download(url, release_cache_path, True)
-        created_time, mods = _parse_release(release_cache_path)
+        created_time, mods = _parse_release(release_cache_path, priority)
     return mods
 
 def get_mv_mainmods() -> list[Mod]:
-    return from_github_release(MAINMODS_TRANSLATION_RELEASE)
+    return from_github_release(MAINMODS_TRANSLATION_RELEASE, 0)
 
 def get_addons() -> list[Mod]:
     return (
-        [mod for url in ADDONS_TRANSLATION_RELEASE for mod in from_github_release(url)]
+        [
+            mod
+            for i, url in enumerate(ADDONS_TRANSLATION_RELEASE)
+            for mod in from_github_release(url, (i + 1) * 100)
+        ]
         + [e.value for e in FixedAddonsList]
     )
 

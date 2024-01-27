@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-	<title><![CDATA[ Generated Gibs for Multiverse 5.3 ]]></title>
-	<threadUrl><![CDATA[ https://github.com/Epirasque/FTLshipGibGenerator ]]></threadUrl>
+	<title><![CDATA[ Generated Gibs for Multiverse 5.4 ]]></title>
+	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/39/generated-gibs ]]></threadUrl>
 	<author><![CDATA[ Epirasque (developer), Dalvest (artist)]]></author>
-	<version><![CDATA[ 1.2.0 ]]></version>
+	<version><![CDATA[ 1.3.5 ]]></version>
 	<description>
 <![CDATA[
-Provides Gibs (debris pieces that are shown whenever ships are destroyed) wherever they are missing in the Multiverse mod (Version 5.3).
+Provides Gibs (debris pieces that are shown whenever ships are destroyed) wherever they are missing in the Multiverse mod (Version 5.4).
 This currently affects more than a thousand different ships.
 
 Note, that adding these Gibs will increase memory consumption for the game. It will also increase the loading time by roughly 20%.
@@ -16,7 +16,7 @@ Proper physics behaviour for the Gibs is ensured. Weapons are attached to the ma
 
 The intention of this addon is to provide a decent temporary solution until all remaining Gibs are manually drawn for Multiverse.
 
-This addon has to be patched after Multiverse itself and should only be used for Multiverse 5.3.
+This addon has to be patched after Multiverse itself and should only be used for Multiverse 5.4.
 This addon is not fully compatible with other addons that add Gibs for any ships that are currently in Multiverse, it will overwrite them.
 
 Special thanks to marcusian for consulting support.
