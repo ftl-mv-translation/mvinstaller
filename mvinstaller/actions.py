@@ -116,7 +116,7 @@ def install_mods(locale_mv, addons_name, ftl_path):
         smmbase = cache_dir / SMM_ROOT_DIR
         
         logger.info('Writing SMM config...')
-        with (smmbase / 'modman.cfg').open('w') as f:
+        with (smmbase / 'modman.cfg').open('w', encoding='utf-8') as f:
             javaproperties.dump({'ftl_dats_path': str(ftl_path)}, f)
         
         logger.info('Copying vanilla dat file to SMM...')
