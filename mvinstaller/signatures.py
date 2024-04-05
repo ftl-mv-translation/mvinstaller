@@ -154,11 +154,19 @@ class HyperspaceType(Enum):
     )
     HS_1_9_0 = HyperspaceInfo(
         name='HS-1.9.0 b9eeb4a',
-        outdated=False,
-        latest=True,
+        outdated=True,
+        latest=False,
         sha1='acb0c32b82019de6134e3aff8a3052e599fbdeb8',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.9.0/FTL.Hyperspace.1.9.0.zip',
         filename='FTL.Hyperspace.1.9.0.zip'
+    )
+    HS_1_10_2 = HyperspaceInfo(
+        name='HS-1.10.2 bd32359',
+        outdated=False,
+        latest=True,
+        sha1='9029758e467bc7b2a019a516dd62e16afa24549d',
+        url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.10.2/FTL.Hyperspace.1.10.2.zip',
+        filename='FTL.Hyperspace.1.10.2.zip'
     )
 
 # SHA1 hash value of unmodded ftl.dat files
