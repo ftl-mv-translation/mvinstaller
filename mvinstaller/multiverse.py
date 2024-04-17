@@ -16,7 +16,7 @@ from mvinstaller.signatures import (
 )
 
 _TRANSLATION_FN_PATTERN = re.compile(
-    r'^(?P<id>.+)-(?P<version>v?[0-9\.]+(?:-.*)?)-(?P<locale>[a-zA-Z_]+)\+(?P<commitid>[a-fA-F0-9xX]+)\.ftl$',
+    r'^(?P<id>.+)-(?P<version>v?[0-9\.]+(?:-.*)?)-(?P<locale>[a-zA-Z_]+)(?P<machine>\.machine)?\+(?P<commitid>[a-fA-F0-9xX]+)\.ftl$',
     re.IGNORECASE
 )
 
@@ -35,12 +35,14 @@ def _parse_release(path, priority):
             if match is None:
                 continue
             match = match.groupdict()
+            if match['machine'] == None:
+                match['machine'] = ''
 
             mod = Mod(
-                id=f"{match['id']}/{match['locale']}",
+                id=f"{match['id']}/{match['locale']}{match['machine']}",
                 download_targets={url: fn},
                 locale=match['locale'],
-                version=f"{match['version']}+{match['commitid']}",
+                version=f"{match['version']}+{match['commitid']}{match['machine']}",
                 metadata_url=url.replace(
                     urllib.parse.quote_plus(fn),
                     urllib.parse.quote_plus(f"metadata-{match['locale']}.xml")
