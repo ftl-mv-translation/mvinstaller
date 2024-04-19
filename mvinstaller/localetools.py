@@ -32,6 +32,7 @@ def set_locale(locale):
 set_locale('en')
 
 def get_locale_name(locale):
+    locale = locale.replace('.machine', '')
     return babel.Locale(locale).get_display_name(_app_locale)
 
 def localize(*args, **kwargs):

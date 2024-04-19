@@ -29,6 +29,7 @@ class InstallModsDialog(UserControl):
     def _update_addon_list(self):
         locale = self._locale_picker.value
         if locale:
+            locale = locale.replace('.machine', '')
             matching_addons = [
                 addon
                 for addon in get_addons()

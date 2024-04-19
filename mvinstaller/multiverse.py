@@ -41,7 +41,7 @@ def _parse_release(path, priority):
             mod = Mod(
                 id=f"{match['id']}/{match['locale']}{match['machine']}",
                 download_targets={url: fn},
-                locale=match['locale'],
+                locale=match['locale'] + match['machine'],
                 version=f"{match['version']}+{match['commitid']}{match['machine']}",
                 metadata_url=url.replace(
                     urllib.parse.quote_plus(fn),
