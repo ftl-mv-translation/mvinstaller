@@ -273,4 +273,39 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=[],
         priority=101
     )
-
+    BoonSelectorRU = Mod(
+        id='BoonSelectorRU',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1Z4Cbnvasar4Tgd1EdyFhkNxIi3NUBsM5&export=download':
+                'MV Judge Boon Selector v1.4.0.ftl'
+        },
+        version='1.2.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/BoonSelectorRU.xml',
+        compatible_mv_locale=[ru],
+        priority=201
+    )
+    MoreManSysRU = Mod(
+        id='MoreManSysRU',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1A1vAEhd019vigp2giNZjV4Dd4leLKaRn&export=download':
+                'MV More Mannable Systems v1.4.ftl'
+        },
+        version='1.2.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSysRU.xml',
+        compatible_mv_locale=[ru],
+        priority=301
+    )
+    HereBeMarkersRU = Mod(
+        id='HereBeMarkersRU',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=14D8bQGhPdw1AYHde7TMVOq8aQrbKUSXG&export=download':
+                'MV Here be Markers v3.0.8.ftl'
+        },
+        version='1.2.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/HereBeMarkersRU.xml',
+        compatible_mv_locale=[ru],
+        priority=401
+    )
