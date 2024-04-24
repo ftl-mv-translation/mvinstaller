@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <title>Multiverse Judge Boon Selector</title>
+  <threadUrl>
+    <![CDATA[ https://github.com/benediktwerner/FTL-Multiverse-Judge-Boon-Selector-Mod ]]>
+  </threadUrl>
+  <author>1vader</author>
+  <version>1.4.0</version>
+  <description>
+    <![CDATA[ 
+Позволяет выбрать любое благо от судей в начале прохождения, если вы разблокировали/получили их хотя бы раз.
+
+Требуется установка Multiverse, а после Multiverse необходимо установить патч.
+
+Патч устанавливается после Forgotten Races, Forgotten Diamonds, Insurrection+ Selection, Forgemaster и C&C Weapons: Renegade Collection, если вы их используете.
+]]>
+  </description>
+</metadata>
