@@ -296,7 +296,7 @@ class FixedAddonsList(Enum):
     MoreManSysRU = Mod(
         id='MoreManSysRU',
         download_targets={
-            'https://drive.usercontent.google.com/download?id=1A1vAEhd019vigp2giNZjV4Dd4leLKaRn&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/download?id=1ANIrZQ41KWQW_hWRntupZxh-fB0moq_y&export=download&confirm=xxx':
                 'MV More Mannable Systems v1.4.ftl'
         },
         version='1.2.0',
