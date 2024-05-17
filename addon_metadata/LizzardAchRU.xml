@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+
+	<title><![CDATA[ Lizzard's Achievements ]]></title>
+
+	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/94/lizzards-achievements ]]></threadUrl>
+
+	<author><![CDATA[ Lizzard ]]></author>
+
+	<version><![CDATA[ -0.9.9 ]]></version>
+
+
+	<description>
+<![CDATA[
+Этот мод добавляет достижения для всех МВ-крейсеров на первой странице.
+
+Создан для конкурса достижений 2024 года.
+
+Особая благодарность:
+Arc за создание спрайтов балбони
+Gabriel за помощь с Lua
+Chrono за то, что вызвал ко мне офицеров срочной службы
+Kix за то, что раздражался на тех парней, курящих за дверью
+Nauter за организацию убийства Дж. Кеннеди
+И Pepson за то, что его титры не помещаются в стандартный размер окна SlipStream
+]]>
+	</description>
+
+</metadata>

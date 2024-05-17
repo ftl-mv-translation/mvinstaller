@@ -281,39 +281,99 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=[],
         priority=101
     )
+    FishingRU = Mod(
+        id='FishingRU',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1-Okkoj3J_pJyBzNuzMlfIzvyfkGQ9KD5&export=download&confirm=xxx':
+                'MV Fishier Than Light.ftl'
+        },
+        version='1.2.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/FishingRU.xml',
+        compatible_mv_locale=['ru'],
+        priority=201
+    )
+    LizzardAchRU = Mod(
+        id='LizzardAchRU',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1-L3gmm8xyrWVY0Gr3Lej6xgW-zmY6E7X&export=download&confirm=xxx':
+                'MV Lizzard Achievements.ftl'
+        },
+        version='1.2.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/LizzardAchRU.xml',
+        compatible_mv_locale=['ru'],
+        priority=301
+    )
+    SpeedUI_RU = Mod(
+        id='SpeedUI_RU',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1--0slTafbTi_5gsc1jFGjclO-rkbnlot&export=download&confirm=xxx':
+                'MV SpeedUI.ftl'
+        },
+        version='1.2.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/SpeedUI_RU.xml',
+        compatible_mv_locale=['ru'],
+        priority=401
+    )
+    VanUI_RU = Mod(
+        id='VanUI_RU',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1-EW3qiz8jM2QIeqOkNs4PfAxzjRzTPQw&export=download&confirm=xxx':
+                'MV Vanilla UI.ftl'
+        },
+        version='1.2.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanUI_RU.xml',
+        compatible_mv_locale=['ru'],
+        priority=501
+    )
+    NoHardModeScrap = Mod(
+        id='NoHardModeScrap',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1-W5m78H5QESr9rvNpCJ4A11Q1sRKefgU&export=download&confirm=xxx':
+                'MV No Hard Mode Scrap Penalty.ftl'
+        },
+        version='1.2.0',
+        locale='en',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/NoHardModeScrap.xml',
+        compatible_mv_locale=[],
+        priority=601
+    )
     BoonSelectorRU = Mod(
         id='BoonSelectorRU',
         download_targets={
-            'https://drive.usercontent.google.com/download?id=1Z4Cbnvasar4Tgd1EdyFhkNxIi3NUBsM5&export=download&confirm=xxx':
-                'MV Judge Boon Selector v1.4.0.ftl'
+            'https://drive.usercontent.google.com/u/1/uc?id=1--aXLu18JKrncsbbUeZ3HSm2COsQc8Fv&export=download&confirm=xxx':
+                'MV Judge Boon Selector.ftl'
         },
         version='1.2.0',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/BoonSelectorRU.xml',
         compatible_mv_locale=['ru'],
-        priority=201
+        priority=701
     )
     MoreManSysRU = Mod(
         id='MoreManSysRU',
         download_targets={
-            'https://drive.usercontent.google.com/download?id=1ANIrZQ41KWQW_hWRntupZxh-fB0moq_y&export=download&confirm=xxx':
-                'MV More Mannable Systems v1.4.ftl'
+            'https://drive.usercontent.google.com/u/1/uc?id=1-3-MHlG_Xn_Pufhj9zmuxamFfbltz6f6&export=download&confirm=xxx':
+                'MV More Mannable Systems.ftl'
         },
         version='1.2.0',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSysRU.xml',
         compatible_mv_locale=['ru'],
-        priority=301
+        priority=801
     )
     HereBeMarkersRU = Mod(
         id='HereBeMarkersRU',
         download_targets={
-            'https://drive.usercontent.google.com/download?id=14D8bQGhPdw1AYHde7TMVOq8aQrbKUSXG&export=download&confirm=xxx':
-                'MV Here be Markers v3.0.8.ftl'
+            'https://drive.usercontent.google.com/u/1/uc?id=1-4sV0eYHSx1zP551s3xkB0JO5wGVCQGk&export=download&confirm=xxx':
+                'MV Here be Markers.ftl'
         },
         version='1.2.0',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/HereBeMarkersRU.xml',
         compatible_mv_locale=['ru'],
-        priority=401
+        priority=901
     )
