@@ -1,6 +1,6 @@
 from typing import Optional
 from flet import (
-    UserControl, Dropdown, dropdown, Text, AlertDialog, TextButton, Column, Row, TextField, Container, Checkbox
+    UserControl, Dropdown, dropdown, Text, AlertDialog, TextButton, Column, Row, TextField, Container, Checkbox, IconButton, icons
 )
 from mvinstaller.addon_metadata import get_metadata, metadata_text
 from mvinstaller.config import get_config
@@ -25,29 +25,64 @@ class InstallModsDialog(UserControl):
             self._mod_description.value = metadata_text(get_metadata(id))
             self._mod_description.update()
         return on_change
-
-    def _update_addon_list(self):
-        locale = self._locale_picker.value
-        if locale:
-            locale = locale.replace('.machine', '')
-            matching_addons = [
+    
+    def _get_matching_addons(self, locale):
+        locale = locale.replace('.machine', '')
+        return [
                 addon
                 for addon in get_addons()
                 if len(addon.compatible_mv_locale) == 0 or (locale in addon.compatible_mv_locale)
             ]
+
+    def _update_addon_list(self):
+        locale = self._locale_picker.value
+        if locale:
+            matching_addons = self._get_matching_addons(locale)
+            max_page = (len(matching_addons) -1) // 7
+            self._addon_index.data = 0
+            self._addon_index.value = f'1/{max_page + 1}'
+            self._addon_index.update()
             self._addon_list.controls = [
                 Checkbox(
                     label=get_metadata(addon.id).title,
                     on_change=self._set_mod_description(addon.id),
-                    data=addon.id
+                    data=addon.id,
+                    visible = True if i // 7 == 0 else False
                 )
-                for addon in matching_addons
+                for i, addon in enumerate(matching_addons)
             ]
         else:
             self._addon_list.controls = []
         
         self._addon_list.update()
-
+    
+    def _turn_addon_list(self, diff: int):
+        dist = self._addon_index.data + diff
+        if dist < 0:
+            return
+        locale = self._locale_picker.value
+        if not locale:
+            return
+        matching_addons = self._get_matching_addons(locale)
+        max_page = (len(matching_addons) -1) // 7
+        if max_page < dist:
+            return
+        self._addon_index.data = dist
+        self._addon_index.value = f'{dist + 1}/{max_page + 1}'
+        self._addon_index.update()
+        checked_addon_id_list = [addon.data for addon in self._addon_list.controls if addon.value == True]
+        self._addon_list.controls = [
+            Checkbox(
+                label=get_metadata(addon.id).title,
+                on_change=self._set_mod_description(addon.id),
+                data=addon.id,
+                visible = True if i // 7 == dist else False,
+                value = True if addon.id in checked_addon_id_list else False
+            )
+            for i, addon in enumerate(matching_addons)
+        ]
+        self._addon_list.update()
+    
     def _build_content(self):
         self._busycontainer.busy = True
         self.update()
@@ -93,6 +128,7 @@ class InstallModsDialog(UserControl):
             options=[],
             on_change=lambda e: locale_picker_on_change(e)
         )
+        self._addon_index = Text()
         self._addon_list = Column()
         self._mod_description = TextField(
             read_only=True,
@@ -110,7 +146,14 @@ class InstallModsDialog(UserControl):
                             [
                                 Text(_('install-mods-language')),
                                 self._locale_picker,
-                                Text(_('install-mods-addons')),
+                                Row(
+                                    [
+                                        Text(_('install-mods-addons')),
+                                        IconButton(icons.CHEVRON_LEFT, on_click=lambda e: self._turn_addon_list(-1)),
+                                        self._addon_index,
+                                        IconButton(icons.CHEVRON_RIGHT, on_click=lambda e: self._turn_addon_list(1))
+                                    ]
+                                ),
                                 self._addon_list
                             ],
                             horizontal_alignment='start'
