@@ -7,5 +7,6 @@ Redistribution of mods are permitted per following notices:
 - HereBeMarkers, provided by Gabriel Cooper
 - NoHardModeScrap, provided by Gabriel Cooper
 - SpeedUI, provided by Chrono Vortex(fork version) and vertaalfout(original)
-- Fisher Than Light, provided by Arc
-- Judge Boon Selector, provided by its authors under [MIT License](https://github.com/benediktwerner/FTL-Multiverse-Judge-Boon-Selector-Mod/blob/master/LICENSE)
+- FTL: Fishier Than Light, provided by arc
+- Judge Boon Selector Mod, provided by its authors under [MIT License](https://github.com/benediktwerner/FTL-Multiverse-Judge-Boon-Selector-Mod/blob/master/LICENSE)
+- Lizzard's Achievements, provided by Lizzard
