@@ -4,8 +4,8 @@ Redistribution of mods are permitted per following notices:
 - FTL: Multiverse, provided by Multiverse devs (permitted by @kixtheslug)
 - The Renegade's Collections, provided by Kix
 - GenGibs, provided by its authors (permitted by @Epirasque)
-- HereBeMarkers, provided by Gabriel Cooper
-- NoHardModeScrap, provided by Gabriel Cooper
+- Here Be Markers, provided by Gabriel Cooper
+- No Hard Mode Scrap, provided by Gabriel Cooper
 - SpeedUI, provided by Chrono Vortex(fork version) and vertaalfout(original)
 - FTL: Fishier Than Light, provided by arc
 - Judge Boon Selector Mod, provided by its authors under [MIT License](https://github.com/benediktwerner/FTL-Multiverse-Judge-Boon-Selector-Mod/blob/master/LICENSE)
