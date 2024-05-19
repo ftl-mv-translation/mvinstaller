@@ -18,6 +18,7 @@ from mvinstaller.ui.installmodsdialog import InstallModsDialog
 from mvinstaller.ui.operationcard import OperationCard
 from mvinstaller.ui.progressdialog import ProgressDialog
 from mvinstaller.addon_metadata import init_metadata
+from mvinstaller.multiverse import get_addons, get_mv_mainmods
 
 class App(UserControl):
     def __init__(self, ftl_path=None, on_ftl_path_change=None):
@@ -106,6 +107,7 @@ class App(UserControl):
         else:
             sleep(0.1)
             self._progress_dialog.open(self._update_operation_cards)
+            init_metadata(get_mv_mainmods() + get_addons())
 
     def _do_action(self, func, *args, **kwargs):
         try:
@@ -114,7 +116,6 @@ class App(UserControl):
             self._update_state()
 
     def _update_operation_cards(self):
-        init_metadata()
         logger.info('Checking installation state...')
         try:
             state = get_ftl_installation_state(self._ftl_path)

@@ -8,6 +8,7 @@ from mvinstaller.multiverse import get_addons, get_mv_mainmods
 from mvinstaller.signatures import Mod
 from mvinstaller.util import get_cache_dir, sha256
 from mvinstaller.webtools import download
+from mvinstaller.localetools import localize as _
 
 @dataclass(frozen=True)
 class Metadata:
@@ -35,9 +36,10 @@ def read_metadata(path, metadata_name=None):
         description=read('/metadata/description', ''),
     )
 
-def _init_metadata():
-    mods = get_mv_mainmods() + get_addons()
-    ret = {}
+_cached_metadata = dict()
+
+def init_metadata(mods: list[Mod]):
+    global _cached_metadata
 
     for mod in mods:
         try:
@@ -46,21 +48,13 @@ def _init_metadata():
                 logger.info(f'Downloading metadata for {mod.id}...')
                 download(mod.metadata_url, fn, True)
             metadata = read_metadata(fn)
-            ret[mod.id] = metadata
+            _cached_metadata[mod.id] = metadata
         except Exception as e:
             logger.error(f'Error while reading metadata for {mod.id}: {e}. Skipping...')
-    return ret
 
-_CACHED_METADATA = None
-
-def init_metadata():
-    global _CACHED_METADATA
-    if _CACHED_METADATA is None:
-        _CACHED_METADATA = _init_metadata()
 
 def get_metadata(id: str):
-    init_metadata()
-    return _CACHED_METADATA.get(id, Metadata(id, None, 'Unknown', None, f'Error while fetching metadata for {id}.'))
+    return _cached_metadata.get(id, Metadata(id, None, 'Unknown', None, _('progress-dialog-title')))
 
 def metadata_text(metadata):
     ret = metadata.title
