@@ -1,12 +1,13 @@
 # Redistribution Notice
-Redistribution of mods are permitted per following notices:
+Redistribution of mods are permitted per following notice:
+- Slipstream Mod Manager, provided by its authors under [GPL 2.0](https://github.com/Vhati/Slipstream-Mod-Manager/blob/master/LICENSE)
 - Hyperspace, provided by Hyperspace devs under [CC-BY-SA 4.0](https://github.com/FTL-Hyperspace/FTL-Hyperspace/blob/master/LICENSE.md)
 - FTL: Multiverse, provided by Multiverse devs (permitted by @kixtheslug)
 - The Renegade's Collections, provided by Kix
 - GenGibs, provided by its authors (permitted by @Epirasque)
 - Here Be Markers, provided by Gabriel Cooper
 - No Hard Mode Scrap Penalty, provided by Gabriel Cooper
-- SpeedUI, provided by Chrono Vortex(fork version) and vertaalfout(original)
-- FTL: Fishier Than Light, provided by arc
+- SpeedUI, provided by Chrono Vortex(fork version) and Vertaalfout(original)
+- FTL: Fishier Than Light, provided by Arc
 - Judge Boon Selector Mod, provided by its authors under [MIT License](https://github.com/benediktwerner/FTL-Multiverse-Judge-Boon-Selector-Mod/blob/master/LICENSE)
 - Lizzard's Achievements, provided by Lizzard
