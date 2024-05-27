@@ -28,11 +28,23 @@ class InstallModsDialog(UserControl):
     
     def _get_matching_addons(self, locale):
         locale = locale.replace('.machine', '')
-        return [
+        addons = [
                 addon
                 for addon in get_addons()
                 if len(addon.compatible_mv_locale) == 0 or (locale in addon.compatible_mv_locale)
             ]
+        addon_names = [addon.modname for addon in addons]
+        valid_addons = []
+        for addon in addons:
+            if len(addon.dependent_modnames) == 0:
+                valid_addons.append(addon)
+                continue
+            for dependent in addon.dependent_modnames:
+                if not dependent in addon_names:
+                    break
+            else:
+                valid_addons.append(addon)
+        return valid_addons
 
     def _update_addon_list(self):
         locale = self._locale_picker.value

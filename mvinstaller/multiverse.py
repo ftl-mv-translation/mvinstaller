@@ -12,6 +12,7 @@ from mvinstaller.signatures import (
     RELEASE_EXPIRE_DURATION,
     MAINMODS_TRANSLATION_RELEASE,
     ADDONS_TRANSLATION_RELEASE,
+    TRANSLATION_RELEASE_DEPENDENCIES,
     FixedAddonsList
 )
 
@@ -40,6 +41,7 @@ def _parse_release(path, priority):
 
             mod = Mod(
                 id=f"{match['id']}/{match['locale']}{match['machine']}",
+                modname=match['id'],
                 download_targets={url: fn},
                 locale=match['locale'] + match['machine'],
                 version=f"{match['version']}+{match['commitid']}{match['machine']}",
@@ -48,6 +50,7 @@ def _parse_release(path, priority):
                     urllib.parse.quote_plus(f"metadata-{match['locale']}.xml")
                 ),
                 compatible_mv_locale=[match['locale']],
+                dependent_modnames=TRANSLATION_RELEASE_DEPENDENCIES.get(match['id'], []),
                 priority=priority
             )
             mods.append(mod)

@@ -25,11 +25,13 @@ class HyperspaceInfo:                   # A signature of Hyperspace.dll
 @dataclass(frozen=True)
 class Mod:                              # A mod
     id: str                             # ID (slug) of the mod.
+    modname: str                        # Original mod name. Each localized mod(the same mods) must have the same modname, defferent id.
     download_targets: dict[str, str]    # List of mod files in {url: filename} form
     version: str                        # Version string
     locale: str                         # Locale code
     metadata_url: str                   # URL to the metadata.xml
     compatible_mv_locale: list[str]     # Multiverse locale to be used with. If empty, it's compatible with all locales.
+    dependent_modnames: list[str]       # Dependencies of the mod (list of modname). You cannot install the mod without these mods. If empty, it has no dependencies. 
     priority: int                       # Installtion priority in ascending order. Mainmod is 0, and each official addons are 100, 200, 300, ...
 
 ########## Signatures
@@ -253,12 +255,20 @@ SMM_ROOT_DIR = 'SlipstreamModManager_1.9.1-Win' # The root directory of SMM in t
 RELEASE_EXPIRE_DURATION = 60 * 60 * 24 # Updated every day
 MAINMODS_TRANSLATION_RELEASE = 'https://api.github.com/repos/ftl-mv-translation/ftl-mv-translation/releases/latest'
 ADDONS_TRANSLATION_RELEASE = [
-    'https://api.github.com/repos/ftl-mv-translation/trc/releases/latest'
+    'https://api.github.com/repos/ftl-mv-translation/trc/releases/latest',
+    'https://api.github.com/repos/ftl-mv-translation/inferno-core/releases/latest',
+    'https://api.github.com/repos/ftl-mv-translation/forgotten-races/releases/latest'
 ]
+
+TRANSLATION_RELEASE_DEPENDENCIES = {
+    'Forgotten-Races': ['The-Renegade-Collection', 'Inferno-Core'],
+    'Forgotten-Diamonds': ['The-Renegade-Collection', 'Inferno-Core', 'Forgotten-Races']
+}
 
 class FixedAddonsList(Enum):
     GenGibsMV = Mod(
         id='GenGibsMV',
+        modname='GenGibsMV',
         download_targets={
             'https://drive.usercontent.google.com/download?id=1fFbszGv7VD2f4LQnrRe3m9QvbyvZ5Cp9&export=download&confirm=xxx':
                 'MV Addon GenGibs v1.3.5.ftl'
@@ -267,10 +277,12 @@ class FixedAddonsList(Enum):
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsMV.xml',
         compatible_mv_locale=[],
+        dependent_modnames=[],
         priority=1
     )
     GenGibsTRC = Mod(
         id='GenGibsTRC',
+        modname='GenGibsTRC',
         download_targets={
             'https://drive.usercontent.google.com/download?id=1hM5P2VzRqrhmwHhFxqjbyHPKj6QMjpYW&export=download&confirm=xxx':
                 'MV TRC GenGibs v1.3.5.ftl'
@@ -279,10 +291,12 @@ class FixedAddonsList(Enum):
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsTRC.xml',
         compatible_mv_locale=[],
+        dependent_modnames=['The-Renegade-Collection'],
         priority=101
     )
     FishingRU = Mod(
         id='FishingRU',
+        modname='Fishing',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1-Okkoj3J_pJyBzNuzMlfIzvyfkGQ9KD5&export=download&confirm=xxx':
                 'MV Fishier Than Light.ftl'
@@ -291,10 +305,12 @@ class FixedAddonsList(Enum):
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/FishingRU.xml',
         compatible_mv_locale=['ru'],
+        dependent_modnames=[],
         priority=201
     )
     LizzardAchRU = Mod(
         id='LizzardAchRU',
+        modname='LizzardAch',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1-L3gmm8xyrWVY0Gr3Lej6xgW-zmY6E7X&export=download&confirm=xxx':
                 'MV Lizzard Achievements.ftl'
@@ -303,10 +319,12 @@ class FixedAddonsList(Enum):
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/LizzardAchRU.xml',
         compatible_mv_locale=['ru'],
+        dependent_modnames=[],
         priority=301
     )
     SpeedUI_RU = Mod(
         id='SpeedUI_RU',
+        modname='SpeedUI',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1--0slTafbTi_5gsc1jFGjclO-rkbnlot&export=download&confirm=xxx':
                 'MV SpeedUI.ftl'
@@ -315,10 +333,12 @@ class FixedAddonsList(Enum):
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/SpeedUI_RU.xml',
         compatible_mv_locale=['ru'],
+        dependent_modnames=[],
         priority=401
     )
     VanUI_RU = Mod(
         id='VanUI_RU',
+        modname='VanUI',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1-EW3qiz8jM2QIeqOkNs4PfAxzjRzTPQw&export=download&confirm=xxx':
                 'MV Vanilla UI.ftl'
@@ -327,10 +347,12 @@ class FixedAddonsList(Enum):
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanUI_RU.xml',
         compatible_mv_locale=['ru'],
+        dependent_modnames=[],
         priority=501
     )
     NoHardModeScrap = Mod(
         id='NoHardModeScrap',
+        modname='NoHardModeScrap',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1-W5m78H5QESr9rvNpCJ4A11Q1sRKefgU&export=download&confirm=xxx':
                 'MV No Hard Mode Scrap Penalty.ftl'
@@ -339,10 +361,12 @@ class FixedAddonsList(Enum):
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/NoHardModeScrap.xml',
         compatible_mv_locale=[],
+        dependent_modnames=[],
         priority=601
     )
     BoonSelectorRU = Mod(
         id='BoonSelectorRU',
+        modname='BoonSelector',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1--aXLu18JKrncsbbUeZ3HSm2COsQc8Fv&export=download&confirm=xxx':
                 'MV Judge Boon Selector.ftl'
@@ -351,10 +375,12 @@ class FixedAddonsList(Enum):
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/BoonSelectorRU.xml',
         compatible_mv_locale=['ru'],
+        dependent_modnames=[],
         priority=701
     )
     MoreManSysRU = Mod(
         id='MoreManSysRU',
+        modname='MoreManSys',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1-3-MHlG_Xn_Pufhj9zmuxamFfbltz6f6&export=download&confirm=xxx':
                 'MV More Mannable Systems.ftl'
@@ -363,10 +389,12 @@ class FixedAddonsList(Enum):
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSysRU.xml',
         compatible_mv_locale=['ru'],
+        dependent_modnames=[],
         priority=801
     )
     HereBeMarkersRU = Mod(
         id='HereBeMarkersRU',
+        modname='HereBeMarkers',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1-4sV0eYHSx1zP551s3xkB0JO5wGVCQGk&export=download&confirm=xxx':
                 'MV Here be Markers.ftl'
@@ -375,5 +403,6 @@ class FixedAddonsList(Enum):
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/HereBeMarkersRU.xml',
         compatible_mv_locale=['ru'],
+        dependent_modnames=[],
         priority=901
     )
