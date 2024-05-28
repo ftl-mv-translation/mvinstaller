@@ -350,6 +350,20 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=501
     )
+    ItBHUD_RU = Mod(
+        id='ItBHUD_RU',
+        modname='ItBHUD',
+        download_targets={
+            'https://drive.usercontent.google.com/u/0/uc?id=1-a9kHxjUYlVh8_nYINtEBMaHpP_LVJ5D&export=download&confirm=xxx':
+                'MV Into The Breach HUD.ftl'
+        },
+        version='1.2.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/ItBHUD_RU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=601
+    )
     NoHardModeScrap = Mod(
         id='NoHardModeScrap',
         modname='NoHardModeScrap',
@@ -362,7 +376,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/NoHardModeScrap.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=601
+        priority=701
     )
     BoonSelectorRU = Mod(
         id='BoonSelectorRU',
@@ -376,7 +390,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/BoonSelectorRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=701
+        priority=801
     )
     MoreManSysRU = Mod(
         id='MoreManSysRU',
@@ -390,7 +404,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSysRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=801
+        priority=901
     )
     HereBeMarkersRU = Mod(
         id='HereBeMarkersRU',
@@ -404,5 +418,5 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/HereBeMarkersRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=901
+        priority=1001
     )
