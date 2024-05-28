@@ -2,6 +2,8 @@
 
 Installer application for the localized versions of FTL: Multiverse.
 
+[HERE](https://steamcommunity.com/sharedfiles/filedetails/?id=3252627639) is how to use this installer. (steam guide)
+
 ![image](https://user-images.githubusercontent.com/11943013/189501931-0eff4fab-6cc3-47df-8347-6897a941b5d8.png)
 
 ### Localizing the app
