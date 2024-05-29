@@ -255,9 +255,9 @@ SMM_ROOT_DIR = 'SlipstreamModManager_1.9.1-Win' # The root directory of SMM in t
 RELEASE_EXPIRE_DURATION = 60 * 60 * 24 # Updated every day
 MAINMODS_TRANSLATION_RELEASE = 'https://api.github.com/repos/ftl-mv-translation/ftl-mv-translation/releases/latest'
 ADDONS_TRANSLATION_RELEASE = [
-    'https://api.github.com/repos/ftl-mv-translation/trc/releases/latest',
-    'https://api.github.com/repos/ftl-mv-translation/inferno-core/releases/latest',
-    'https://api.github.com/repos/ftl-mv-translation/forgotten-races/releases/latest'
+    'https://api.github.com/repos/ftl-mv-translation/trc/releases/latest', #trc, priority=100
+    'https://api.github.com/repos/ftl-mv-translation/inferno-core/releases/latest', #inferno core, priority=200
+    'https://api.github.com/repos/ftl-mv-translation/forgotten-races/releases/latest', #fr, priority=300
 ]
 
 TRANSLATION_RELEASE_DEPENDENCIES = {

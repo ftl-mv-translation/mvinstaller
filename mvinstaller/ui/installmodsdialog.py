@@ -10,6 +10,8 @@ from mvinstaller.localetools import localize as _
 from mvinstaller.ui.busycontainer import BusyContainer
 from mvinstaller.ui.errorsnackbar import ErrorSnackbar
 from mvinstaller.ui.infoscheme import InfoSchemeType
+from mvinstaller.signatures import Mod
+from loguru import logger
 
 class InstallModsDialog(UserControl):
     def __init__(self, error_snackbar: Optional[ErrorSnackbar]=None, on_install=None):
@@ -18,6 +20,7 @@ class InstallModsDialog(UserControl):
         self._dlg = None
         self._error_snackbar = error_snackbar
         self._on_install = on_install
+        self._selected_addons = set()
         super().__init__()
 
     def _set_mod_description(self, id):
@@ -26,6 +29,24 @@ class InstallModsDialog(UserControl):
             self._mod_description.update()
         return on_change
     
+    def _on_addon_checked(self, mod: Mod):
+        def on_change(e):
+            matching_addons_map = self._get_addons_map(self._get_matching_addons(self._locale_picker.value))
+            self._mod_description.value = metadata_text(get_metadata(mod.id))
+            self._mod_description.update()
+            if mod.modname in self._selected_addons:
+                self._selected_addons.remove(mod.modname)
+                for addonname in self._selected_addons.copy():
+                    if mod.modname in matching_addons_map[addonname].dependent_modnames:
+                        self._selected_addons.remove(addonname)
+            else:
+                self._selected_addons.add(mod.modname)
+                for addonname in mod.dependent_modnames:
+                    self._selected_addons.add(matching_addons_map[addonname].modname)
+            
+            self._update_addon_list(self._addon_index.data)
+        return on_change
+
     def _get_matching_addons(self, locale):
         locale = locale.replace('.machine', '')
         addons = [
@@ -33,33 +54,27 @@ class InstallModsDialog(UserControl):
                 for addon in get_addons()
                 if len(addon.compatible_mv_locale) == 0 or (locale in addon.compatible_mv_locale)
             ]
-        addon_names = [addon.modname for addon in addons]
-        valid_addons = []
-        for addon in addons:
-            if len(addon.dependent_modnames) == 0:
-                valid_addons.append(addon)
-                continue
-            for dependent in addon.dependent_modnames:
-                if not dependent in addon_names:
-                    break
-            else:
-                valid_addons.append(addon)
-        return valid_addons
+        addon_names = {addon.modname for addon in addons}
+        return [addon for addon in addons if set(addon.dependent_modnames) <= addon_names]
+    
+    def _get_addons_map(self, addons: list[Mod]):
+        return {addon.modname: addon for addon in addons}
 
-    def _update_addon_list(self):
+    def _update_addon_list(self, page: int):
         locale = self._locale_picker.value
         if locale:
             matching_addons = self._get_matching_addons(locale)
             max_page = (len(matching_addons) -1) // 7
-            self._addon_index.data = 0
-            self._addon_index.value = f'1/{max_page + 1}'
+            self._addon_index.data = page
+            self._addon_index.value = f'{page + 1}/{max_page + 1}'
             self._addon_index.update()
             self._addon_list.controls = [
                 Checkbox(
                     label=get_metadata(addon.id).title,
-                    on_change=self._set_mod_description(addon.id),
+                    on_change=self._on_addon_checked(addon),
                     data=addon.id,
-                    visible = True if i // 7 == 0 else False
+                    visible = True if i // 7 == page else False,
+                    value=True if addon.modname in self._selected_addons else False
                 )
                 for i, addon in enumerate(matching_addons)
             ]
@@ -79,21 +94,7 @@ class InstallModsDialog(UserControl):
         max_page = (len(matching_addons) -1) // 7
         if max_page < dist:
             return
-        self._addon_index.data = dist
-        self._addon_index.value = f'{dist + 1}/{max_page + 1}'
-        self._addon_index.update()
-        checked_addon_id_list = [addon.data for addon in self._addon_list.controls if addon.value == True]
-        self._addon_list.controls = [
-            Checkbox(
-                label=get_metadata(addon.id).title,
-                on_change=self._set_mod_description(addon.id),
-                data=addon.id,
-                visible = True if i // 7 == dist else False,
-                value = True if addon.id in checked_addon_id_list else False
-            )
-            for i, addon in enumerate(matching_addons)
-        ]
-        self._addon_list.update()
+        self._update_addon_list(dist)
     
     def _build_content(self):
         self._busycontainer.busy = True
@@ -121,14 +122,16 @@ class InstallModsDialog(UserControl):
             app_locale = get_config().app_locale
             self._locale_picker.value = app_locale if app_locale in mainmod_locales else mainmod_locales[0]
 
-        self._update_addon_list()
+        self._selected_addons.clear()
+        self._update_addon_list(0)
 
         self._busycontainer.busy = False
         self.update()
 
     def build(self):
         def locale_picker_on_change(e):
-            self._update_addon_list()
+            self._selected_addons.clear()
+            self._update_addon_list(0)
             try:
                 mainmods = get_mv_mainmods()
                 mainmod = next(mod for mod in mainmods if mod.locale == self._locale_picker.value)
