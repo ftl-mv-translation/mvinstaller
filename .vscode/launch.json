@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Module",
+            "name": "Installer Debug",
             "type": "python",
             "request": "launch",
             "module": "mvinstaller",

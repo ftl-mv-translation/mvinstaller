@@ -253,11 +253,12 @@ SMM_ROOT_DIR = 'SlipstreamModManager_1.9.1-Win' # The root directory of SMM in t
 # )
 
 RELEASE_EXPIRE_DURATION = 60 * 60 * 24 # Updated every day
-MAINMODS_TRANSLATION_RELEASE = 'https://api.github.com/repos/ftl-mv-translation/ftl-mv-translation/releases/latest'
+MAINMODS_TRANSLATION_RELEASE = 'https://api.github.com/repos/ftl-mv-translation/ftl-mv-translation/releases/latest'#mv, priority=0
 ADDONS_TRANSLATION_RELEASE = [
     'https://api.github.com/repos/ftl-mv-translation/trc/releases/latest', #trc, priority=100
     'https://api.github.com/repos/ftl-mv-translation/inferno-core/releases/latest', #inferno core, priority=200
     'https://api.github.com/repos/ftl-mv-translation/forgotten-races/releases/latest', #fr, priority=300
+    'https://api.github.com/repos/ftl-mv-translation/forgotten-diamonds/releases/latest', #fr-diamonds, priority=400
 ]
 
 TRANSLATION_RELEASE_DEPENDENCIES = {
@@ -273,7 +274,7 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/download?id=1fFbszGv7VD2f4LQnrRe3m9QvbyvZ5Cp9&export=download&confirm=xxx':
                 'MV Addon GenGibs v1.3.5.ftl'
         },
-        version='1.2.0',
+        version='1.3.5',
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsMV.xml',
         compatible_mv_locale=[],
@@ -287,7 +288,7 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/download?id=1hM5P2VzRqrhmwHhFxqjbyHPKj6QMjpYW&export=download&confirm=xxx':
                 'MV TRC GenGibs v1.3.5.ftl'
         },
-        version='1.2.0',
+        version='1.3.5',
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsTRC.xml',
         compatible_mv_locale=[],
@@ -322,6 +323,20 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=301
     )
+    GenGibsFR = Mod(
+        id='GenGibsFR',
+        modname='GenGibsFR',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1N3OvTEnuF2SbzDWAZEbI2qGBKe1JQGCZ&export=download&confirm=xxx':
+                'Forgotten Gibs 1.4.zip'
+        },
+        version='1.4',
+        locale='en',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR.xml',
+        compatible_mv_locale=[],
+        dependent_modnames=['The-Renegade-Collection', 'Inferno-Core', 'Forgotten-Races'],
+        priority=401
+    )
     SpeedUI_RU = Mod(
         id='SpeedUI_RU',
         modname='SpeedUI',
@@ -334,7 +349,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/SpeedUI_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=401
+        priority=402
     )
     VanUI_RU = Mod(
         id='VanUI_RU',
