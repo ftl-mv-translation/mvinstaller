@@ -5,6 +5,8 @@ Redistribution of mods are permitted per following notice:
 - FTL: Multiverse, provided by Multiverse devs (permitted by @kixtheslug)
 - The Renegade's Collections, provided by Kix
 - GenGibs, provided by its authors (permitted by @Epirasque)
+- Forgotten Races, provided by Gabriel Cooper
+- Forgotten Diamonds, provided by Gabriel Cooper
 - Here Be Markers, provided by Gabriel Cooper
 - No Hard Mode Scrap Penalty, provided by Gabriel Cooper
 - SpeedUI, provided by Chrono Vortex(fork version) and Vertaalfout(original)
@@ -13,3 +15,4 @@ Redistribution of mods are permitted per following notice:
 - Lizzard's Achievements, provided by Lizzard
 - More Mannable Systems, provided by kokoro
 - Into The Breach HUD for FTL Hyperspace, provided by slow
+- Instant Clone and Heal after Battle, provided by Choosechee
