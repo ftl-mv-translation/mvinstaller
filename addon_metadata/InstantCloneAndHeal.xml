@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<!--
+		CDATA tags mean no need to escape special characters.
+		Don't worry about spaces at the start/end. That gets trimmed.
+	-->
+
+
+	<!-- The title of this mod. -->
+	<title><![CDATA[ Instant Clone and Heal after Battle ]]></title>
+
+
+	<!--
+		This mod's thread on subsetgames.com.
+		If there's no thread yet, create one to announce your upcoming mod in the
+		forum. Then paste the url here.
+	-->
+	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/48/instant-clone-heal-after-battle ]]></threadUrl>
+
+
+	<!-- Your forum user name. -->
+	<author><![CDATA[ Choosechee ]]></author>
+
+
+	<!--
+		The revision/variant of this release, preferably at least a number.
+		Examples:
+			0.3
+			2.1c Ships Only WIP
+			2.4.1 Hi-res Bkgs
+			1.0 for FTL 1.03.1
+	-->
+	<version><![CDATA[ 1.4 ]]></version>
+
+
+	<description>
+<![CDATA[
+This addon makes cloning instant and instantly heals your crew if you have a powered medbay or crew/drone that can heal other crew when you're not in a battle. However, you also won't have instant cloning or healing if the oxygen is broken, there's a fire, or for the instant healing, a breached system. It also takes into account health requirements for abilities, so it won't heal your crew if your Shell Scientist is too damaged after a battle. Finally, only anaerobic crew will be instantly healed in ships with no oxygen system unless they have healing that can counteract suffocation.
+]]>
+	</description>
+
+	<!--
+		Suggestions for the description...
+
+		Write a short paragraph about the mod's effect first (what style ship, how
+		does it affect gameplay). No need to introduce yourself.
+
+		Optionally add a paragraph of background flavor.
+
+		Optionally list important features.
+
+		List any concerns about mod compatibility, preferred order, or requirements.
+
+		Mention "Replaces the XYZ ship." if relevant.
+			Kestrel-A, Engi-A,    Fed-A,     Zoltan-A,
+			Stealth-A, Rock-A,    Slug-A,    Mantis-A,
+			Lanius-A,  Crystal-A
+
+		Above all, keep the description general, so you won't have to edit
+		that again for each new version.
+	-->
+</metadata>

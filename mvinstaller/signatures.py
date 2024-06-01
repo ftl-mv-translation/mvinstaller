@@ -435,3 +435,18 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=1001
     )
+    InstantCloneAndHeal = Mod(
+        id='InstantCloneAndHeal',
+        modname='InstantCloneAndHeal',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1nzlfKGKWkecpJIo6ISvtsbRNPsBqJGYa&export=download&confirm=xxx':
+                'Instant_Clone_and_Heal_after_Battle_v1.4.zip'
+        },
+        version='1.4',
+        locale='en',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/InstantCloneAndHeal.xml',
+        compatible_mv_locale=[],
+        dependent_modnames=[],
+        priority=1002
+    )
+
