@@ -5,6 +5,7 @@ Redistribution of mods are permitted per following notice:
 - FTL: Multiverse, provided by Multiverse devs (permitted by @kixtheslug)
 - The Renegade's Collections, provided by Kix
 - GenGibs, provided by its authors (permitted by @Epirasque)
+- Inferno Core, provided its authors (permitted by Julk)
 - Forgotten Races, provided by Gabriel Cooper
 - Forgotten Diamonds, provided by Gabriel Cooper
 - Here Be Markers, provided by Gabriel Cooper
