@@ -33,25 +33,15 @@ set_locale('en')
 
 def get_locale_name(locale):
     locale = locale.replace('.machine', '')
-
-    target_locale = babel.Locale(locale).get_display_name(_app_locale)
-    if target_locale:
-        return target_locale
-    
     locale_simple = locale.split('_')[0]
-    target_locale = babel.Locale(locale_simple).get_display_name(_app_locale)
-    if target_locale:
-        return target_locale
     
-    target_locale = babel.Locale(locale).get_display_name('en')
-    if target_locale:
-        return target_locale
-    
-    target_locale = babel.Locale(locale_simple).get_display_name('en')
-    if target_locale:
-        return target_locale
-    
-    return locale
+    return (
+        babel.Locale(locale).get_display_name(_app_locale)
+        or babel.Locale(locale_simple).get_display_name(_app_locale)
+        or babel.Locale(locale).get_display_name('en')
+        or babel.Locale(locale_simple).get_display_name('en')
+        or locale
+    )
 
 def localize(*args, **kwargs):
     return _l10n.format_value(*args, **kwargs)
