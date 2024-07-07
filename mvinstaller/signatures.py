@@ -257,11 +257,13 @@ MAINMODS_TRANSLATION_RELEASE = 'https://api.github.com/repos/ftl-mv-translation/
 ADDONS_TRANSLATION_RELEASE = [
     'https://api.github.com/repos/ftl-mv-translation/trc/releases/latest', #trc, priority=100
     'https://api.github.com/repos/ftl-mv-translation/inferno-core/releases/latest', #inferno core, priority=200
-    'https://api.github.com/repos/ftl-mv-translation/forgotten-races/releases/latest', #fr, priority=300
-    'https://api.github.com/repos/ftl-mv-translation/forgotten-diamonds/releases/latest', #fr-diamonds, priority=400
+    'https://api.github.com/repos/ftl-mv-translation/forgemaster/releases/latest', #forgemaster, priority=300
+    'https://api.github.com/repos/ftl-mv-translation/forgotten-races/releases/latest', #fr, priority=400
+    'https://api.github.com/repos/ftl-mv-translation/forgotten-diamonds/releases/latest', #fr-diamonds, priority=500
 ]
 
 TRANSLATION_RELEASE_DEPENDENCIES = {
+    'Forgemaster': ['Inferno-Core'],
     'Forgotten-Races': ['The-Renegade-Collection', 'Inferno-Core'],
     'Forgotten-Diamonds': ['The-Renegade-Collection', 'Inferno-Core', 'Forgotten-Races']
 }
@@ -295,34 +297,6 @@ class FixedAddonsList(Enum):
         dependent_modnames=['The-Renegade-Collection'],
         priority=101
     )
-    FishingRU = Mod(
-        id='FishingRU',
-        modname='Fishing',
-        download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1-Okkoj3J_pJyBzNuzMlfIzvyfkGQ9KD5&export=download&confirm=xxx':
-                'MV Fishier Than Light.ftl'
-        },
-        version='1.2.0',
-        locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/FishingRU.xml',
-        compatible_mv_locale=['ru'],
-        dependent_modnames=[],
-        priority=201
-    )
-    LizzardAchRU = Mod(
-        id='LizzardAchRU',
-        modname='LizzardAch',
-        download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1-L3gmm8xyrWVY0Gr3Lej6xgW-zmY6E7X&export=download&confirm=xxx':
-                'MV Lizzard Achievements.ftl'
-        },
-        version='1.2.0',
-        locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/LizzardAchRU.xml',
-        compatible_mv_locale=['ru'],
-        dependent_modnames=[],
-        priority=301
-    )
     GenGibsFR = Mod(
         id='GenGibsFR',
         modname='GenGibsFR',
@@ -335,49 +309,21 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR.xml',
         compatible_mv_locale=[],
         dependent_modnames=['The-Renegade-Collection', 'Inferno-Core', 'Forgotten-Races'],
-        priority=401
-    )
-    SpeedUI_RU = Mod(
-        id='SpeedUI_RU',
-        modname='SpeedUI',
-        download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1--0slTafbTi_5gsc1jFGjclO-rkbnlot&export=download&confirm=xxx':
-                'MV SpeedUI.ftl'
-        },
-        version='1.2.0',
-        locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/SpeedUI_RU.xml',
-        compatible_mv_locale=['ru'],
-        dependent_modnames=[],
-        priority=402
-    )
-    VanUI_RU = Mod(
-        id='VanUI_RU',
-        modname='VanUI',
-        download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1-EW3qiz8jM2QIeqOkNs4PfAxzjRzTPQw&export=download&confirm=xxx':
-                'MV Vanilla UI.ftl'
-        },
-        version='1.2.0',
-        locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanUI_RU.xml',
-        compatible_mv_locale=['ru'],
-        dependent_modnames=[],
         priority=501
     )
-    ItBHUD_RU = Mod(
-        id='ItBHUD_RU',
-        modname='ItBHUD',
+    FishingRU = Mod(
+        id='FishingRU',
+        modname='Fishing',
         download_targets={
-            'https://drive.usercontent.google.com/u/0/uc?id=1-a9kHxjUYlVh8_nYINtEBMaHpP_LVJ5D&export=download&confirm=xxx':
-                'MV Into The Breach HUD.ftl'
+            'https://drive.usercontent.google.com/u/1/uc?id=1-Okkoj3J_pJyBzNuzMlfIzvyfkGQ9KD5&export=download&confirm=xxx':
+                'MV Fishier Than Light.ftl'
         },
         version='1.2.0',
         locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/ItBHUD_RU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/FishingRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=601
+        priority=502
     )
     NoHardModeScrap = Mod(
         id='NoHardModeScrap',
@@ -391,21 +337,63 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/NoHardModeScrap.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=701
+        priority=503
     )
-    BoonSelectorRU = Mod(
-        id='BoonSelectorRU',
-        modname='BoonSelector',
+    LizzardAchRU = Mod(
+        id='LizzardAchRU',
+        modname='LizzardAch',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1--aXLu18JKrncsbbUeZ3HSm2COsQc8Fv&export=download&confirm=xxx':
-                'MV Judge Boon Selector.ftl'
+            'https://drive.usercontent.google.com/u/1/uc?id=1-L3gmm8xyrWVY0Gr3Lej6xgW-zmY6E7X&export=download&confirm=xxx':
+                'MV Lizzard Achievements.ftl'
         },
         version='1.2.0',
         locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/BoonSelectorRU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/LizzardAchRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=801
+        priority=504
+    )
+    SpeedUI_RU = Mod(
+        id='SpeedUI_RU',
+        modname='SpeedUI',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1--0slTafbTi_5gsc1jFGjclO-rkbnlot&export=download&confirm=xxx':
+                'MV SpeedUI.ftl'
+        },
+        version='1.2.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/SpeedUI_RU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=505
+    )
+    VanUI_RU = Mod(
+        id='VanUI_RU',
+        modname='VanUI',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1-EW3qiz8jM2QIeqOkNs4PfAxzjRzTPQw&export=download&confirm=xxx':
+                'MV Vanilla UI.ftl'
+        },
+        version='1.2.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanUI_RU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=506
+    )
+    ItBHUD_RU = Mod(
+        id='ItBHUD_RU',
+        modname='ItBHUD',
+        download_targets={
+            'https://drive.usercontent.google.com/u/0/uc?id=1-a9kHxjUYlVh8_nYINtEBMaHpP_LVJ5D&export=download&confirm=xxx':
+                'MV Into The Breach HUD.ftl'
+        },
+        version='1.2.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/ItBHUD_RU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=507
     )
     MoreManSysRU = Mod(
         id='MoreManSysRU',
@@ -419,7 +407,21 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSysRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=901
+        priority=508
+    )
+    BoonSelectorRU = Mod(
+        id='BoonSelectorRU',
+        modname='BoonSelector',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1--aXLu18JKrncsbbUeZ3HSm2COsQc8Fv&export=download&confirm=xxx':
+                'MV Judge Boon Selector.ftl'
+        },
+        version='1.2.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/BoonSelectorRU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=509
     )
     HereBeMarkersRU = Mod(
         id='HereBeMarkersRU',
@@ -433,7 +435,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/HereBeMarkersRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1001
+        priority=510
     )
     InstantCloneAndHeal = Mod(
         id='InstantCloneAndHeal',
@@ -447,6 +449,6 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/InstantCloneAndHeal.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=1002
+        priority=511
     )
 
