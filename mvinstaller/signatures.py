@@ -297,6 +297,20 @@ class FixedAddonsList(Enum):
         dependent_modnames=['The-Renegade-Collection'],
         priority=101
     )
+    FishingRU = Mod(
+        id='FishingRU',
+        modname='Fishing',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1-Okkoj3J_pJyBzNuzMlfIzvyfkGQ9KD5&export=download&confirm=xxx':
+                'MV Fishier Than Light.ftl'
+        },
+        version='1.2.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/FishingRU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=301
+    )
     GenGibsFR = Mod(
         id='GenGibsFR',
         modname='GenGibsFR',
@@ -310,20 +324,6 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=[],
         dependent_modnames=['The-Renegade-Collection', 'Inferno-Core', 'Forgotten-Races'],
         priority=501
-    )
-    FishingRU = Mod(
-        id='FishingRU',
-        modname='Fishing',
-        download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1-Okkoj3J_pJyBzNuzMlfIzvyfkGQ9KD5&export=download&confirm=xxx':
-                'MV Fishier Than Light.ftl'
-        },
-        version='1.2.0',
-        locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/FishingRU.xml',
-        compatible_mv_locale=['ru'],
-        dependent_modnames=[],
-        priority=502
     )
     NoHardModeScrap = Mod(
         id='NoHardModeScrap',
