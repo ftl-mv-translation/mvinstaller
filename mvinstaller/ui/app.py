@@ -238,9 +238,11 @@ class App(UserControl):
         
         # Override the above messages (without altering status_mod) if Java is not installed
         if not is_java_installed():
+            java_langMap = {'zh_Hanz': 'zh-CN', 'de': 'de', 'it': 'it', 'fr': 'fr', 'ja': 'ja', 'ko': 'ko', 'pl': 'pl', 'pt_BR': 'pt-BR', 'ru': 'ru', 'es': 'es'}
+            java_lang = java_langMap.get(get_config().app_locale, 'en')
             self._operation_card_modding.set(
                 InfoSchemeType.Error, _('operation-modding-java-not-installed'),
-                _('operation-modding-action-java'), lambda e: os.startfile('https://www.java.com/en/download/')
+                _('operation-modding-action-java'), lambda e: os.startfile(f'https://www.java.com/{java_lang}/download/')
             )
         
         if status_downgrade == 0 and status_hyperspace == 0 and status_mods == 0:
