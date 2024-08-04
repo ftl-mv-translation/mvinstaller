@@ -188,7 +188,7 @@ class HyperspaceType(Enum):
     )
     HS_1_11_2 = HyperspaceInfo(
         name='HS-1.11.2 0c3a7b1',
-        outdated=True,
+        outdated=False,
         latest=False,
         sha1='946f89944bd805ffab60b6c19c579ce2deb429d7',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.11.2/FTL.Hyperspace.1.11.2.zip',
@@ -197,10 +197,18 @@ class HyperspaceType(Enum):
     HS_1_12_0 = HyperspaceInfo(
         name='HS-1.12.0 8fbfc43',
         outdated=False,
-        latest=True,
+        latest=False,
         sha1='67119b8017afcebce031f60a8b3ac924106492cb',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.12.0/FTL.Hyperspace.1.12.0.zip',
         filename='FTL.Hyperspace.1.12.0.zip'
+    )
+    HS_1_13_0 = HyperspaceInfo(
+        name='HS-1.13.0 89c448a',
+        outdated=False,
+        latest=True,
+        sha1='fedc710efcfc0f8761550ce3259d57be1e5cdcaa',
+        url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.13.0/FTL.Hyperspace.1.13.0.zip',
+        filename='FTL.Hyperspace.1.13.0.zip'
     )
 
 
