@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<!--
+		CDATA tags mean no need to escape special characters.
+		Don't worry about spaces at the start/end. That gets trimmed.
+	-->
+
+
+	<!-- The title of this mod. -->
+	<title><![CDATA[ Lizzard's Achievements ]]></title>
+
+
+	<!--
+		This mod's thread on subsetgames.com.
+		If there's no thread yet, create one to announce your upcoming mod in the
+		forum. Then paste the url here.
+	-->
+	<threadUrl><![CDATA[ None :c ]]></threadUrl>
+
+
+	<!-- Your forum user name. -->
+	<author><![CDATA[ Lizzard ]]></author>
+
+
+	<!--
+		The revision/variant of this release, preferably at least a number.
+		Examples:
+			0.3
+			2.1c Ships Only WIP
+			2.4.1 Hi-res Bkgs
+			1.0 for FTL 1.03.1
+	-->
+	<version><![CDATA[ -0.9.9 ]]></version>
+
+
+	<description>
+<![CDATA[
+This mod adds achievements to all page 1 MV cruisers.
+
+Created for the 2024 achievement contest.
+
+Special thanks to:
+Arc for making the balboni sprites
+Gabriel for helping me with Lua
+Chrono for calling the conscription officers on me
+Kix for getting annoyed at those guys smoking outside xir door
+Nauter for orchestrating the JFK assasination
+And Pepson for his credit not fitting in the standard SlipStream window size
+]]>
+	</description>
+
+	<!--
+		Suggestions for the description...
+
+		Write a short paragraph about the mod's effect first (what style ship, how
+		does it affect gameplay). No need to introduce yourself.
+
+		Optionally add a paragraph of background flavor.
+
+		Optionally list important features.
+
+		List any concerns about mod compatibility, preferred order, or requirements.
+
+		Mention "Replaces the XYZ ship." if relevant.
+			Kestrel-A, Engi-A,    Fed-A,     Zoltan-A,
+			Stealth-A, Rock-A,    Slug-A,    Mantis-A,
+			Lanius-A,  Crystal-A
+
+		Above all, keep the description general, so you won't have to edit
+		that again for each new version.
+	-->
+</metadata>

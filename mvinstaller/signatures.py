@@ -371,10 +371,24 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/u/1/uc?id=1-L3gmm8xyrWVY0Gr3Lej6xgW-zmY6E7X&export=download&confirm=xxx':
                 'MV Lizzard Achievements.ftl'
         },
-        version='1.2.0',
+        version='-0.9.9',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/LizzardAchRU.xml',
         compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=504
+    )
+    LizzardAchDE = Mod(
+        id='LizzardAchDE',
+        modname='LizzardAch',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1-L3gmm8xyrWVY0Gr3Lej6xgW-zmY6E7X&export=download&confirm=xxx':
+                'MV Lizzard Achievements.ftl'
+        },
+        version='-0.9.9',
+        locale='de',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/LizzardAchEN.xml',
+        compatible_mv_locale=['de'],
         dependent_modnames=[],
         priority=504
     )
