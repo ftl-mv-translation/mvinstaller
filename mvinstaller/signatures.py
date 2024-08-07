@@ -329,7 +329,7 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/u/1/uc?id=1-Okkoj3J_pJyBzNuzMlfIzvyfkGQ9KD5&export=download&confirm=xxx':
                 'MV Fishier Than Light.ftl'
         },
-        version='1.2.0',
+        version='1.0.7',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/FishingRU.xml',
         compatible_mv_locale=['ru'],
@@ -357,7 +357,7 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/u/1/uc?id=1-W5m78H5QESr9rvNpCJ4A11Q1sRKefgU&export=download&confirm=xxx':
                 'MV No Hard Mode Scrap Penalty.ftl'
         },
-        version='1.2.0',
+        version='3.0',
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/NoHardModeScrap.xml',
         compatible_mv_locale=[],
@@ -399,7 +399,7 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/u/1/uc?id=1--0slTafbTi_5gsc1jFGjclO-rkbnlot&export=download&confirm=xxx':
                 'MV SpeedUI.ftl'
         },
-        version='1.2.0',
+        version='2.0',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/SpeedUI_RU.xml',
         compatible_mv_locale=['ru'],
@@ -413,7 +413,7 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/u/1/uc?id=1-EW3qiz8jM2QIeqOkNs4PfAxzjRzTPQw&export=download&confirm=xxx':
                 'MV Vanilla UI.ftl'
         },
-        version='1.2.0',
+        version='2.0',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanUI_RU.xml',
         compatible_mv_locale=['ru'],
@@ -427,7 +427,7 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/u/0/uc?id=1-a9kHxjUYlVh8_nYINtEBMaHpP_LVJ5D&export=download&confirm=xxx':
                 'MV Into The Breach HUD.ftl'
         },
-        version='1.2.0',
+        version='1.0',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/ItBHUD_RU.xml',
         compatible_mv_locale=['ru'],
@@ -441,7 +441,7 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/u/1/uc?id=1-3-MHlG_Xn_Pufhj9zmuxamFfbltz6f6&export=download&confirm=xxx':
                 'MV More Mannable Systems.ftl'
         },
-        version='1.2.0',
+        version='1.4',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSysRU.xml',
         compatible_mv_locale=['ru'],
@@ -455,7 +455,7 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/u/1/uc?id=1--aXLu18JKrncsbbUeZ3HSm2COsQc8Fv&export=download&confirm=xxx':
                 'MV Judge Boon Selector.ftl'
         },
-        version='1.2.0',
+        version='1.4.0',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/BoonSelectorRU.xml',
         compatible_mv_locale=['ru'],
@@ -469,7 +469,7 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/u/1/uc?id=1-4sV0eYHSx1zP551s3xkB0JO5wGVCQGk&export=download&confirm=xxx':
                 'MV Here be Markers.ftl'
         },
-        version='1.2.0',
+        version='3.0.8',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/HereBeMarkersRU.xml',
         compatible_mv_locale=['ru'],
