@@ -49,13 +49,18 @@ class InstallModsDialog(UserControl):
 
     def _get_matching_addons(self, locale):
         locale = locale.replace('.machine', '')
-        addons = [
-                addon
-                for addon in get_addons()
-                if len(addon.compatible_mv_locale) == 0 or (locale in addon.compatible_mv_locale)
-            ]
-        addon_names = {addon.modname for addon in addons}
-        return [addon for addon in addons if set(addon.dependent_modnames) <= addon_names]
+        addon_map = {}
+        for addon in get_addons():
+            if not (len(addon.compatible_mv_locale) == 0 or (locale in addon.compatible_mv_locale)):
+                continue
+            
+            if addon.modname in addon_map and locale in addon_map[addon.modname].compatible_mv_locale:#if the same modname are given, this prioritizes the one which includes the current locale in compatible_mv_locale.
+                continue
+            
+            addon_map[addon.modname] = addon
+                
+        addon_names = set(addon_map)
+        return [addon for addon in addon_map.values() if set(addon.dependent_modnames) <= addon_names]
     
     def _get_addons_map(self, addons: list[Mod]):
         return {addon.modname: addon for addon in addons}

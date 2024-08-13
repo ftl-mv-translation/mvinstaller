@@ -30,7 +30,7 @@ class Mod:                              # A mod
     version: str                        # Version string
     locale: str                         # Locale code
     metadata_url: str                   # URL to the metadata.xml
-    compatible_mv_locale: list[str]     # Multiverse locale to be used with. If empty, it's compatible with all locales.
+    compatible_mv_locale: list[str]     # Multiverse locale to be used with. If empty, it's compatible with all locales. Locale specific version has higher priority than empty one if both have the same modname and are compatible with current locale.
     dependent_modnames: list[str]       # Dependencies of the mod (list of modname). You cannot install the mod without these mods. If empty, it has no dependencies. 
     priority: int                       # Installtion priority in ascending order. Mainmod is 0, and each official addons are 100, 200, 300, ...
 
