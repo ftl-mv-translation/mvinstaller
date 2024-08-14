@@ -21,4 +21,4 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         main(sys.argv[1])
     else:
-        main(input('enter new version>>>'))
+        main(input(f'enter new version(current version is {old_version})>>>'))
