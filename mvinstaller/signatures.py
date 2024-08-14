@@ -317,7 +317,7 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=1
     )
-        GenGibsMV = Mod(
+    GenGibsMV = Mod(
         id='GenGibsMV_RU',
         modname='GenGibsMV',
         download_targets={
@@ -345,7 +345,7 @@ class FixedAddonsList(Enum):
         dependent_modnames=['The-Renegade-Collection'],
         priority=101
     )
-        GenGibsTRC = Mod(
+    GenGibsTRC = Mod(
         id='GenGibsTRC_RU',
         modname='GenGibsTRC',
         download_targets={
