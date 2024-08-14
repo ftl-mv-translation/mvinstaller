@@ -317,7 +317,7 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=1
     )
-    GenGibsMV = Mod(
+    GenGibsMV_RU = Mod(
         id='GenGibsMV_RU',
         modname='GenGibsMV',
         download_targets={
@@ -345,7 +345,7 @@ class FixedAddonsList(Enum):
         dependent_modnames=['The-Renegade-Collection'],
         priority=101
     )
-    GenGibsTRC = Mod(
+    GenGibsTRC_RU = Mod(
         id='GenGibsTRC_RU',
         modname='GenGibsTRC',
         download_targets={
@@ -387,7 +387,7 @@ class FixedAddonsList(Enum):
         dependent_modnames=['The-Renegade-Collection', 'Inferno-Core', 'Forgotten-Races'],
         priority=501
     )
-    GenGibsFR = Mod(
+    GenGibsFR_RU = Mod(
         id='GenGibsFR_RU',
         modname='GenGibsFR',
         download_targets={
@@ -415,7 +415,7 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=503
     )
-    NoHardModeScrap = Mod(
+    NoHardModeScrapRU = Mod(
         id='NoHardModeScrapRU',
         modname='NoHardModeScrap',
         download_targets={
@@ -555,7 +555,7 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=511
     )
-    InstantCloneAndHeal = Mod(
+    InstantCloneAndHealRU = Mod(
         id='InstantCloneAndHealRU',
         modname='InstantCloneAndHeal',
         download_targets={
