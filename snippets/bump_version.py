@@ -3,10 +3,7 @@ import sys
 from mvinstaller import __version__ as old_version
 from loguru import logger
 
-def main():
-    assert len(sys.argv) > 1
-    new_version = sys.argv[1]
-
+def main(new_version):
     if old_version == new_version:
         logger.info(f'already at {new_version}')
         return
@@ -20,4 +17,8 @@ def main():
     subprocess.run(['git', 'tag', f'v{new_version}'], check=True)
     subprocess.run(['git', 'push', 'origin', f'v{new_version}'], check=True)
 
-main()
+if __name__ == '__main__':
+    if len(sys.argv) > 1:
+        main(sys.argv[1])
+    else:
+        main(input('enter new version>>>'))
