@@ -1,15 +1,13 @@
 <metadata>
   <title><![CDATA[ Into The Breach HUD ]]></title>
   <threadUrl><![CDATA[ http://www.ftlgame.com/forum/viewtopic.php?f=11&t=17187 ]]></threadUrl>
-  <author><![CDATA[ slowriderxcorps and Subset Games ]]></author>
+  <author><![CDATA[ slowriderxcorps и Subset Games ]]></author>
   <version><![CDATA[ 1.0 ]]></version>
   <description>
 <![CDATA[
-Графическая переделка для FTL Hyperspace, которая адаптирует как можно больше ассетов для эмуляции визуального стиля Into The Breach.
+Графическая переделка для FTL Multiverse, которая адаптирует как можно больше ассетов для эмуляции визуального стиля Into The Breach.
 
 Этот HUD-мод был создан специально для использования с фреймворком Hyperspace и, как таковой, не должен использоваться с другими версиями FTL, включая последнюю доступную версию. 
-
-Этот мод должен быть установлен последним, после всех остальных модификаций.
 ]]>
   </description>
 </metadata>

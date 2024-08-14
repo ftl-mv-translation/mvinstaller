@@ -317,6 +317,20 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=1
     )
+        GenGibsMV = Mod(
+        id='GenGibsMV_RU',
+        modname='GenGibsMV',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1-qK4X-aCrWRoshy7i7PHv0e4Tjw9NemA&export=download&confirm=xxx':
+                'MV Addon GenGibs RU v1.3.5.ftl'
+        },
+        version='1.3.5',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsMV_RU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=1
+    )
     GenGibsTRC = Mod(
         id='GenGibsTRC',
         modname='GenGibsTRC',
@@ -328,6 +342,20 @@ class FixedAddonsList(Enum):
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsTRC.xml',
         compatible_mv_locale=[],
+        dependent_modnames=['The-Renegade-Collection'],
+        priority=101
+    )
+        GenGibsTRC = Mod(
+        id='GenGibsTRC_RU',
+        modname='GenGibsTRC',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1hM5P2VzRqrhmwHhFxqjbyHPKj6QMjpYW&export=download&confirm=xxx':
+                'MV TRC GenGibs v1.3.5.ftl'
+        },
+        version='1.3.5',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsTRC_RU.xml',
+        compatible_mv_locale=['ru'],
         dependent_modnames=['The-Renegade-Collection'],
         priority=101
     )
@@ -359,6 +387,20 @@ class FixedAddonsList(Enum):
         dependent_modnames=['The-Renegade-Collection', 'Inferno-Core', 'Forgotten-Races'],
         priority=501
     )
+    GenGibsFR = Mod(
+        id='GenGibsFR_RU',
+        modname='GenGibsFR',
+        download_targets={
+            'https://drive.usercontent.google.com/u/0/uc?id=1-z17ZOp76MXpywU9a3nlCe_Nw0MMPGD9&export=download&confirm=xxx':
+                'Forgotten Gibs 1.4.zip'
+        },
+        version='1.4',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR_RU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=['The-Renegade-Collection', 'Inferno-Core', 'Forgotten-Races'],
+        priority=501
+    )
     NoHardModeScrap = Mod(
         id='NoHardModeScrap',
         modname='NoHardModeScrap',
@@ -370,6 +412,20 @@ class FixedAddonsList(Enum):
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/NoHardModeScrap.xml',
         compatible_mv_locale=[],
+        dependent_modnames=[],
+        priority=503
+    )
+    NoHardModeScrap = Mod(
+        id='NoHardModeScrapRU',
+        modname='NoHardModeScrap',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1-W5m78H5QESr9rvNpCJ4A11Q1sRKefgU&export=download&confirm=xxx':
+                'MV No Hard Mode Scrap Penalty.ftl'
+        },
+        version='3.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/NoHardModeScrapRU.xml',
+        compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=503
     )
@@ -496,6 +552,20 @@ class FixedAddonsList(Enum):
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/InstantCloneAndHeal.xml',
         compatible_mv_locale=[],
+        dependent_modnames=[],
+        priority=511
+    )
+    InstantCloneAndHeal = Mod(
+        id='InstantCloneAndHealRU',
+        modname='InstantCloneAndHeal',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1nzlfKGKWkecpJIo6ISvtsbRNPsBqJGYa&export=download&confirm=xxx':
+                'Instant_Clone_and_Heal_after_Battle_v1.4.zip'
+        },
+        version='1.4',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/InstantCloneAndHealRU.xml',
+        compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=511
     )

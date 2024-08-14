@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<!--
+		CDATA tags mean no need to escape special characters.
+		Don't worry about spaces at the start/end. That gets trimmed.
+	-->
+
+
+	<!-- The title of this mod. -->
+	<title><![CDATA[ Instant Clone and Heal after Battle ]]></title>
+
+
+	<!--
+		This mod's thread on subsetgames.com.
+		If there's no thread yet, create one to announce your upcoming mod in the
+		forum. Then paste the url here.
+	-->
+	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/48/instant-clone-heal-after-battle ]]></threadUrl>
+
+
+	<!-- Your forum user name. -->
+	<author><![CDATA[ Choosechee ]]></author>
+
+
+	<!--
+		The revision/variant of this release, preferably at least a number.
+		Examples:
+			0.3
+			2.1c Ships Only WIP
+			2.4.1 Hi-res Bkgs
+			1.0 for FTL 1.03.1
+	-->
+	<version><![CDATA[ 1.4 ]]></version>
+
+
+	<description>
+<![CDATA[
+Этот аддон делает клонирование мгновенным и мгновенно исцеляет экипаж, если у вас есть медотсек или дрон, который может исцелять других членов экипажа, когда вы не находитесь в бою. Однако вы также не сможете мгновенно клонировать или исцелять экипаж, если кислород сломан, произошел пожар или, для мгновенного исцеления, система с пробоиной. Также учитываются требования к здоровью для способностей, поэтому экипаж не будет исцеляться, если ваш ракушка Ученый сильно ранен после боя. Наконец, на кораблях без кислородной системы мгновенно исцеляются только анаэробные члены экипажа, если только у них нет исцеления, способного противостоять удушью.
+]]>
+	</description>
+
+	<!--
+		Suggestions for the description...
+
+		Write a short paragraph about the mod's effect first (what style ship, how
+		does it affect gameplay). No need to introduce yourself.
+
+		Optionally add a paragraph of background flavor.
+
+		Optionally list important features.
+
+		List any concerns about mod compatibility, preferred order, or requirements.
+
+		Mention "Replaces the XYZ ship." if relevant.
+			Kestrel-A, Engi-A,    Fed-A,     Zoltan-A,
+			Stealth-A, Rock-A,    Slug-A,    Mantis-A,
+			Lanius-A,  Crystal-A
+
+		Above all, keep the description general, so you won't have to edit
+		that again for each new version.
+	-->
+</metadata>
