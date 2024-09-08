@@ -253,6 +253,12 @@ FIXED_PATHS = [
 
     # Humble Bundle
     r'C:\Program Files (x86)\FTL',
+    
+    # GOG
+    r'C:\Program Files (x86)\GOG Galaxy\Games\FTL Advanced Edition',
+    
+    # Epic
+    r'C:\Program Files\Epic Games\FasterThanLight',
 ]
 
 ########## Downgraders
