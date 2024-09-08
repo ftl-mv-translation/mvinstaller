@@ -554,9 +554,9 @@ class FixedAddonsList(Enum):
         modname='InstantCloneAndHeal',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1nzlfKGKWkecpJIo6ISvtsbRNPsBqJGYa&export=download&confirm=xxx':
-                'Instant_Clone_and_Heal_after_Battle_v1.4.zip'
+                'Instant_Clone_and_Heal_after_Battle_v1.5.zip'
         },
-        version='1.4',
+        version='1.5',
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/InstantCloneAndHeal.xml',
         compatible_mv_locale=[],
@@ -568,9 +568,9 @@ class FixedAddonsList(Enum):
         modname='InstantCloneAndHeal',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1nzlfKGKWkecpJIo6ISvtsbRNPsBqJGYa&export=download&confirm=xxx':
-                'Instant_Clone_and_Heal_after_Battle_v1.4.zip'
+                'Instant_Clone_and_Heal_after_Battle_v1.5.zip'
         },
-        version='1.4',
+        version='1.5',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/InstantCloneAndHealRU.xml',
         compatible_mv_locale=['ru'],
