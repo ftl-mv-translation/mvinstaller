@@ -485,17 +485,45 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=505
     )
+    VanUI = Mod(
+        id='VanUI',
+        modname='VanUI',
+        download_targets={
+            'https://drive.usercontent.google.com/u/0/uc?id=1-0KWOigcRZU9gA1qnhkQcAmEgcreo-Ob&export=download&confirm=xxx':
+                'MV Vanilla UI.ftl'
+        },
+        version='3.0',
+        locale='en',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanillaUI.xml',
+        compatible_mv_locale=[],
+        dependent_modnames=[],
+        priority=506
+    )
     VanUI_RU = Mod(
         id='VanUI_RU',
         modname='VanUI',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1-EW3qiz8jM2QIeqOkNs4PfAxzjRzTPQw&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/u/0/uc?id=1-0KWOigcRZU9gA1qnhkQcAmEgcreo-Ob&export=download&confirm=xxx':
                 'MV Vanilla UI.ftl'
         },
-        version='2.0',
+        version='3.0',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanUI_RU.xml',
         compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=506
+    )
+    VanUI_KO = Mod(
+        id='VanUI_KO',
+        modname='VanUI',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=19WN75U22-XWsAInyFaxVVhlVOtM4GtKv&export=download&confirm=xxx':
+                'MV Vanilla UI Korean.ftl'
+        },
+        version='3.0',
+        locale='ko',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanillaUI.xml',
+        compatible_mv_locale=['ko'],
         dependent_modnames=[],
         priority=506
     )
