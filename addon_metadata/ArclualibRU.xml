@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<title><![CDATA[ Arc's Lua Library ]]></title>
+	<threadUrl><![CDATA[ 1 ]]></threadUrl>
+	<author><![CDATA[ Arc ]]></author>
+	<version><![CDATA[ 1.0.0 ]]></version>
+
+
+	<description>
+<![CDATA[
+Библиотека полезных функций и тегов lua, которые дают гораздо больше свободы создателям модов.
+
+Нужен для работы R&D.
+]]>
+	</description>
+</metadata>
