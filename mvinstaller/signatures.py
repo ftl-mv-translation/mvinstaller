@@ -325,16 +325,18 @@ ADDONS_TRANSLATION_RELEASE = [
     'https://api.github.com/repos/ftl-mv-translation/forgemaster/releases/latest', #forgemaster, priority=300
     'https://api.github.com/repos/ftl-mv-translation/forgotten-races/releases/latest', #fr, priority=400
     'https://api.github.com/repos/ftl-mv-translation/forgotten-diamonds/releases/latest', #fr-diamonds, priority=500
+    'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=600
 ]
 
 TRANSLATION_RELEASE_DEPENDENCIES = {
     'Forgemaster': ['Inferno-Core'],
     'Forgotten-Races': ['The-Renegade-Collection', 'Inferno-Core'],
-    'Forgotten-Diamonds': ['The-Renegade-Collection', 'Inferno-Core', 'Forgotten-Races']
+    'Forgotten-Diamonds': ['The-Renegade-Collection', 'Inferno-Core', 'Forgotten-Races'],
+    'RAD': ['ArcLuaLib']
 }
 
 LIBRARY_MODS = [
-    'Inferno-Core'
+    'Inferno-Core', 'ArcLuaLib'
 ]
 
 class FixedAddonsList(Enum):
@@ -394,6 +396,20 @@ class FixedAddonsList(Enum):
         dependent_modnames=['The-Renegade-Collection'],
         priority=101
     )
+    ArcLuaLib = Mod(
+        id='ArcLuaLib',
+        modname='ArcLuaLib',
+        download_targets={
+            'https://github.com/arcburnergit/arclualib/releases/download/v1.0.3/arclualib.ftl':
+                'arclualib.ftl'
+        },
+        version='1.0.3',
+        locale='en',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/Arclualib.xml',
+        compatible_mv_locale=[],
+        dependent_modnames=[],
+        priority=201
+    )
     FishingRU = Mod(
         id='FishingRU',
         modname='Fishing',
@@ -448,7 +464,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/NoHardModeScrap.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=503
+        priority=5003
     )
     NoHardModeScrapRU = Mod(
         id='NoHardModeScrapRU',
@@ -462,7 +478,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/NoHardModeScrapRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=503
+        priority=5003
     )
     LizzardAchRU = Mod(
         id='LizzardAchRU',
@@ -476,7 +492,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/LizzardAchRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=504
+        priority=5004
     )
     LizzardAchDE = Mod(
         id='LizzardAchDE',
@@ -490,7 +506,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/LizzardAchEN.xml',
         compatible_mv_locale=['de'],
         dependent_modnames=[],
-        priority=504
+        priority=5004
     )
     SpeedUI_RU = Mod(
         id='SpeedUI_RU',
@@ -504,7 +520,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/SpeedUI_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=505
+        priority=5005
     )
     VanUI = Mod(
         id='VanUI',
@@ -518,7 +534,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanillaUI.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=506
+        priority=5006
     )
     VanUI_RU = Mod(
         id='VanUI_RU',
@@ -532,7 +548,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanUI_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=506
+        priority=5006
     )
     VanUI_KO = Mod(
         id='VanUI_KO',
@@ -546,7 +562,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanillaUI.xml',
         compatible_mv_locale=['ko'],
         dependent_modnames=[],
-        priority=506
+        priority=5006
     )
     ItBHUD_RU = Mod(
         id='ItBHUD_RU',
@@ -560,7 +576,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/ItBHUD_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=507
+        priority=5007
     )
     MoreManSysRU = Mod(
         id='MoreManSysRU',
@@ -574,7 +590,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSysRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=508
+        priority=5008
     )
     BoonSelectorRU = Mod(
         id='BoonSelectorRU',
@@ -588,7 +604,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/BoonSelectorRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=509
+        priority=5009
     )
     HereBeMarkersRU = Mod(
         id='HereBeMarkersRU',
@@ -602,7 +618,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/HereBeMarkersRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=510
+        priority=5010
     )
     InstantCloneAndHeal = Mod(
         id='InstantCloneAndHeal',
@@ -616,7 +632,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/InstantCloneAndHeal.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=511
+        priority=5011
     )
     InstantCloneAndHealRU = Mod(
         id='InstantCloneAndHealRU',
@@ -630,6 +646,6 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/InstantCloneAndHealRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=511
+        priority=5011
     )
 
