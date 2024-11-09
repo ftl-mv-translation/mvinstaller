@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<title><![CDATA[ Arc's Lua Library ]]></title>
+	<threadUrl><![CDATA[ 1 ]]></threadUrl>
+	<author><![CDATA[ Arc ]]></author>
+	<version><![CDATA[ 1.0.0 ]]></version>
+
+
+	<description>
+<![CDATA[
+A library of useful lua functions and tags that give much more freedom to mod makers.
+]]>
+	</description>
+</metadata>
