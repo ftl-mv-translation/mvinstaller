@@ -10,7 +10,7 @@ from mvinstaller.localetools import localize as _
 from mvinstaller.ui.busycontainer import BusyContainer
 from mvinstaller.ui.errorsnackbar import ErrorSnackbar
 from mvinstaller.ui.infoscheme import InfoSchemeType
-from mvinstaller.signatures import Mod
+from mvinstaller.signatures import Mod, LIBRARY_MODS
 from loguru import logger
 
 class InstallModsDialog(UserControl):
@@ -39,6 +39,13 @@ class InstallModsDialog(UserControl):
                 for addonname in self._selected_addons.copy():
                     if mod.modname in matching_addons_map[addonname].dependent_modnames:
                         self._selected_addons.remove(addonname)
+                dependencies = set()
+                for addonname in self._selected_addons.copy():
+                    for dependency in matching_addons_map[addonname].dependent_modnames:
+                        dependencies.add(dependency)
+                for librarymod in LIBRARY_MODS:
+                    if librarymod in self._selected_addons and librarymod not in dependencies:
+                        self._selected_addons.remove(librarymod)
             else:
                 self._selected_addons.add(mod.modname)
                 for addonname in mod.dependent_modnames:
@@ -78,8 +85,8 @@ class InstallModsDialog(UserControl):
                     label=get_metadata(addon.id).title,
                     on_change=self._on_addon_checked(addon),
                     data=addon.id,
-                    visible = True if i // 7 == page else False,
-                    value=True if addon.modname in self._selected_addons else False
+                    visible = i // 7 == page and addon.modname not in LIBRARY_MODS,
+                    value = addon.modname in self._selected_addons
                 )
                 for i, addon in enumerate(matching_addons)
             ]

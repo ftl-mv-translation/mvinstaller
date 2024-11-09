@@ -325,6 +325,10 @@ TRANSLATION_RELEASE_DEPENDENCIES = {
     'Forgotten-Diamonds': ['The-Renegade-Collection', 'Inferno-Core', 'Forgotten-Races']
 }
 
+LIBRARY_MODS = [
+    'Inferno-Core'
+]
+
 class FixedAddonsList(Enum):
     GenGibsMV = Mod(
         id='GenGibsMV',
