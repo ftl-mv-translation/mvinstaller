@@ -29,7 +29,7 @@ class Mod:                              # A mod
     download_targets: dict[str, str]    # List of mod files in {url: filename} form
     version: str                        # Version string
     locale: str                         # Locale code
-    metadata_url: str                   # URL to the metadata.xml
+    metadata_url: Optional[str]         # URL to the metadata.xml
     compatible_mv_locale: list[str]     # Multiverse locale to be used with. If empty, it's compatible with all locales. Locale specific version has higher priority than empty one if both have the same modname and are compatible with current locale.
     dependent_modnames: list[str]       # Dependencies of the mod (list of modname). You cannot install the mod without these mods. If empty, it has no dependencies. 
     priority: int                       # Installtion priority in ascending order. Mainmod is 0, and each official addons are 100, 200, 300, ...
@@ -321,25 +321,25 @@ RELEASE_EXPIRE_DURATION = 60 * 60 * 24 # Updated every day
 MAINMODS_TRANSLATION_RELEASE = 'https://api.github.com/repos/ftl-mv-translation/ftl-mv-translation/releases/latest'#mv, priority=0
 ADDONS_TRANSLATION_RELEASE = [
     'https://api.github.com/repos/ftl-mv-translation/trc/releases/latest', #trc, priority=100
-    'https://api.github.com/repos/ftl-mv-translation/inferno-core/releases/latest', #inferno core, priority=200
-    'https://api.github.com/repos/ftl-mv-translation/forgemaster/releases/latest', #forgemaster, priority=300
-    'https://api.github.com/repos/ftl-mv-translation/forgotten-races/releases/latest', #fr, priority=400
-    'https://api.github.com/repos/ftl-mv-translation/forgotten-diamonds/releases/latest', #fr-diamonds, priority=500
-    'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=600
+    'https://api.github.com/repos/ftl-mv-translation/forgemaster/releases/latest', #forgemaster, priority=200
+    'https://api.github.com/repos/ftl-mv-translation/forgotten-races/releases/latest', #fr, priority=300
+    'https://api.github.com/repos/ftl-mv-translation/forgotten-diamonds/releases/latest', #fr-diamonds, priority=400
+    'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=500
 ]
 
 TRANSLATION_RELEASE_DEPENDENCIES = {
-    'Forgemaster': ['Inferno-Core'],
-    'Forgotten-Races': ['The-Renegade-Collection', 'Inferno-Core'],
-    'Forgotten-Diamonds': ['The-Renegade-Collection', 'Inferno-Core', 'Forgotten-Races'],
+    'Forgemaster': ['Fusion'],
+    'Forgotten-Races': ['The-Renegade-Collection', 'Fusion'],
+    'Forgotten-Diamonds': ['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
     'RAD': ['ArcLuaLib']
 }
 
 LIBRARY_MODS = [
-    'Inferno-Core', 'ArcLuaLib'
+    'Fusion', 'ArcLuaLib'
 ]
 
 class FixedAddonsList(Enum):
+    #mv, priority=0
     GenGibsMV = Mod(
         id='GenGibsMV',
         modname='GenGibsMV',
@@ -368,6 +368,7 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=1
     )
+    #trc, priority=100
     GenGibsTRC = Mod(
         id='GenGibsTRC',
         modname='GenGibsTRC',
@@ -405,11 +406,26 @@ class FixedAddonsList(Enum):
         },
         version='1.0.3',
         locale='en',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/Arclualib.xml',
+        metadata_url=None,
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=201
+        priority=102
     )
+    Fusion = Mod(
+        id='Fusion',
+        modname='Fusion',
+        download_targets={
+            'https://github.com/MV-Fusion-Team/FTL-Multiverse-Fusion/releases/download/v0.1.2/Fusion.zip':
+                'Fusion.zip'
+        },
+        version='0.1.2',
+        locale='en',
+        metadata_url=None,
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=103
+    )
+    #forgemaster, priority=200
     FishingRU = Mod(
         id='FishingRU',
         modname='Fishing',
@@ -422,8 +438,10 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/FishingRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=301
+        priority=201
     )
+    #fr, priority=300
+    #fr-diamonds, priority=400
     GenGibsFR = Mod(
         id='GenGibsFR',
         modname='GenGibsFR',
@@ -435,8 +453,8 @@ class FixedAddonsList(Enum):
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR.xml',
         compatible_mv_locale=[],
-        dependent_modnames=['The-Renegade-Collection', 'Inferno-Core', 'Forgotten-Races'],
-        priority=501
+        dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
+        priority=401
     )
     GenGibsFR_RU = Mod(
         id='GenGibsFR_RU',
@@ -449,9 +467,10 @@ class FixedAddonsList(Enum):
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR_RU.xml',
         compatible_mv_locale=['ru'],
-        dependent_modnames=['The-Renegade-Collection', 'Inferno-Core', 'Forgotten-Races'],
-        priority=501
+        dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
+        priority=401
     )
+    #R&D, priority=500
     NoHardModeScrap = Mod(
         id='NoHardModeScrap',
         modname='NoHardModeScrap',

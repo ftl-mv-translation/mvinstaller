@@ -42,6 +42,9 @@ def init_metadata(mods: list[Mod]):
     global _cached_metadata
 
     for mod in mods:
+        if mod.metadata_url is None:
+            continue
+        
         try:
             fn = get_cache_dir() / 'metadata' / f'{sha256(mod.id)}.xml'
             if not fn.exists() or (fn.stat().st_mtime + 3600 < time()):
