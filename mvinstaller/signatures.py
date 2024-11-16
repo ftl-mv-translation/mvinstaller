@@ -429,7 +429,7 @@ class FixedAddonsList(Enum):
         modname='GenGibsFR',
         download_targets={
             'https://drive.usercontent.google.com/download?id=1N3OvTEnuF2SbzDWAZEbI2qGBKe1JQGCZ&export=download&confirm=xxx':
-                'Forgotten Gibs 1.4.zip'
+                'Forgotten Gibs 1.5.1.zip'
         },
         version='1.4',
         locale='en',
