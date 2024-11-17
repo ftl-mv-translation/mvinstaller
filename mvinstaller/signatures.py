@@ -449,7 +449,7 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/download?id=1N3OvTEnuF2SbzDWAZEbI2qGBKe1JQGCZ&export=download&confirm=xxx':
                 'Forgotten Gibs 1.5.1.zip'
         },
-        version='1.4',
+        version='1.5.1',
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR.xml',
         compatible_mv_locale=[],
@@ -460,10 +460,10 @@ class FixedAddonsList(Enum):
         id='GenGibsFR_RU',
         modname='GenGibsFR',
         download_targets={
-            'https://drive.usercontent.google.com/u/0/uc?id=1-z17ZOp76MXpywU9a3nlCe_Nw0MMPGD9&export=download&confirm=xxx':
-                'Forgotten Gibs 1.4.zip'
+            'https://drive.usercontent.google.com/download?id=1N3OvTEnuF2SbzDWAZEbI2qGBKe1JQGCZ&export=download&confirm=xxx':
+                'Forgotten Gibs 1.5.1.zip'
         },
-        version='1.4',
+        version='1.5.1',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR_RU.xml',
         compatible_mv_locale=['ru'],
