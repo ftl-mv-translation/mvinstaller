@@ -332,7 +332,8 @@ ADDONS_TRANSLATION_RELEASE = [
     'https://api.github.com/repos/ftl-mv-translation/forgemaster/releases/latest', #forgemaster, priority=200
     'https://api.github.com/repos/ftl-mv-translation/forgotten-races/releases/latest', #fr, priority=300
     'https://api.github.com/repos/ftl-mv-translation/forgotten-diamonds/releases/latest', #fr-diamonds, priority=400
-    'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=500
+    'https://api.github.com/repos/ftl-mv-translation/piracy-is-poggers/releases/latest', #PiP, priority=500
+    'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=600
 ]
 
 TRANSLATION_RELEASE_DEPENDENCIES = {
@@ -478,7 +479,8 @@ class FixedAddonsList(Enum):
         dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
         priority=401
     )
-    #R&D, priority=500
+    #PiP, priority=500
+    #R&D, priority=600
     NoHardModeScrap = Mod(
         id='NoHardModeScrap',
         modname='NoHardModeScrap',
