@@ -31,7 +31,7 @@ class Mod:                              # A mod
     locale: str                         # Locale code
     metadata_url: Optional[str]         # URL to the metadata.xml
     compatible_mv_locale: list[str]     # Multiverse locale to be used with. If empty, it's compatible with all locales. Locale specific version has higher priority than empty one if both have the same modname and are compatible with current locale.
-    dependent_modnames: list[str]       # Dependencies of the mod (list of modname). You cannot install the mod without these mods. If empty, it has no dependencies. 
+    dependent_modnames: list[str]       # Dependencies of the mod (list of modname). You cannot install the mod without these mods. If empty, it has no dependencies.
     priority: int                       # Installtion priority in ascending order. Mainmod is 0, and each official addons are 100, 200, 300, ...
 
 ########## Signatures
@@ -188,7 +188,7 @@ class HyperspaceType(Enum):
     )
     HS_1_11_2 = HyperspaceInfo(
         name='HS-1.11.2 0c3a7b1',
-        outdated=False,
+        outdated=True,
         latest=False,
         sha1='946f89944bd805ffab60b6c19c579ce2deb429d7',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.11.2/FTL.Hyperspace.1.11.2.zip',
@@ -196,7 +196,7 @@ class HyperspaceType(Enum):
     )
     HS_1_12_0 = HyperspaceInfo(
         name='HS-1.12.0 8fbfc43',
-        outdated=False,
+        outdated=True,
         latest=False,
         sha1='67119b8017afcebce031f60a8b3ac924106492cb',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.12.0/FTL.Hyperspace.1.12.0.zip',
@@ -204,7 +204,7 @@ class HyperspaceType(Enum):
     )
     HS_1_13_0 = HyperspaceInfo(
         name='HS-1.13.0 89c448a',
-        outdated=False,
+        outdated=True,
         latest=False,
         sha1='fedc710efcfc0f8761550ce3259d57be1e5cdcaa',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.13.0/FTL.Hyperspace.1.13.0.zip',
@@ -212,7 +212,7 @@ class HyperspaceType(Enum):
     )
     HS_1_13_1 = HyperspaceInfo(
         name='HS-1.13.1 58c7f4b',
-        outdated=False,
+        outdated=True,
         latest=False,
         sha1='e5101872deed78c1f5462d666fd4aa727cb5b5c6',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.13.1/FTL.Hyperspace.1.13.1.zip',
@@ -220,7 +220,7 @@ class HyperspaceType(Enum):
     )
     HS_1_13_3 = HyperspaceInfo(
         name='HS-1.13.3 53b8334',
-        outdated=False,
+        outdated=True,
         latest=False,
         sha1='0c5f544dae9ecbc693b83e85a6a86897a3bf1543',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.13.3/FTL.Hyperspace.1.13.3.zip',
@@ -228,7 +228,7 @@ class HyperspaceType(Enum):
     )
     HS_1_13_4 = HyperspaceInfo(
         name='HS-1.13.4 79da3a4',
-        outdated=False,
+        outdated=True,
         latest=False,
         sha1='8dec29c9f88770d246cffd18264cebfd16f153ed',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.13.4/FTL.Hyperspace.1.13.4.zip',
@@ -236,7 +236,7 @@ class HyperspaceType(Enum):
     )
     HS_1_14_2 = HyperspaceInfo(
         name='HS-1.14.2 1237d68',
-        outdated=False,
+        outdated=True,
         latest=False,
         sha1='6a0b04d06a59ff8bee6b8f423247d96eb4d17a6d',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.14.2/FTL.Hyperspace.1.14.2.zip',
@@ -244,7 +244,7 @@ class HyperspaceType(Enum):
     )
     HS_1_15_0 = HyperspaceInfo(
         name='HS-1.15.0 09a44d5',
-        outdated=False,
+        outdated=True,
         latest=False,
         sha1='a9215f154421788c007821a2cca3ad00b90be671',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.15.0/FTL.Hyperspace.1.15.0.zip',
@@ -252,7 +252,7 @@ class HyperspaceType(Enum):
     )
     HS_1_15_1 = HyperspaceInfo(
         name='HS-1.15.1 2f6256a',
-        outdated=False,
+        outdated=True,
         latest=False,
         sha1='6fc7d6e7ad15e0af0ef3161097c8e17dbe9b73b1',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.15.1/FTL.Hyperspace.1.15.1.zip',
@@ -261,12 +261,19 @@ class HyperspaceType(Enum):
     HS_1_17_0 = HyperspaceInfo(
         name='HS-1.17.0 15942e4',
         outdated=False,
-        latest=True,
+        latest=False,
         sha1='5fd0f28540c31cdffdac6094fcd460fd8de188b5',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.17.0/FTL.Hyperspace.1.17.0.zip',
         filename='FTL.Hyperspace.1.17.0.zip'
     )
-
+    HS_1_17_1 = HyperspaceInfo(
+        name='HS-1.17.0 ffc959e',
+        outdated=False,
+        latest=True,
+        sha1='57a58be2930236a5e5152509bf0d21307116cdb8',
+        url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.17.1/FTL.Hyperspace.1.17.1.zip',
+        filename='FTL.Hyperspace.1.17.1.zip'
+    )
 
 
 # SHA1 hash value of unmodded ftl.dat files
@@ -285,10 +292,10 @@ FIXED_PATHS = [
 
     # Humble Bundle
     r'C:\Program Files (x86)\FTL',
-    
+
     # GOG
     r'C:\Program Files (x86)\GOG Galaxy\Games\FTL Advanced Edition',
-    
+
     # Epic
     r'C:\Program Files\Epic Games\FasterThanLight',
 ]
@@ -684,4 +691,3 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=5011
     )
-
