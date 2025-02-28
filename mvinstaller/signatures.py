@@ -348,6 +348,7 @@ ADDONS_TRANSLATION_RELEASE = [
     'https://api.github.com/repos/ftl-mv-translation/forgotten-diamonds/releases/latest', #fr-diamonds, priority=400
     'https://api.github.com/repos/ftl-mv-translation/piracy-is-poggers/releases/latest', #PiP, priority=500
     'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=600
+    'https://api.github.com/repos/ftl-mv-translation/outer-expansion/releases/latest', #OE, priority=700
 ]
 
 TRANSLATION_RELEASE_DEPENDENCIES = {
@@ -495,6 +496,7 @@ class FixedAddonsList(Enum):
     )
     #PiP, priority=500
     #R&D, priority=600
+    #OE, priority=700
     NoHardModeScrap = Mod(
         id='NoHardModeScrap',
         modname='NoHardModeScrap',
@@ -668,9 +670,9 @@ class FixedAddonsList(Enum):
         modname='InstantCloneAndHeal',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1nzlfKGKWkecpJIo6ISvtsbRNPsBqJGYa&export=download&confirm=xxx':
-                'Instant_Clone_and_Heal_after_Battle_v1.5.zip'
+                'Instant_Clone_and_Heal_after_Battle_v2.0.zip'
         },
-        version='1.5',
+        version='2.0',
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/InstantCloneAndHeal.xml',
         compatible_mv_locale=[],
@@ -682,9 +684,9 @@ class FixedAddonsList(Enum):
         modname='InstantCloneAndHeal',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1nzlfKGKWkecpJIo6ISvtsbRNPsBqJGYa&export=download&confirm=xxx':
-                'Instant_Clone_and_Heal_after_Battle_v1.5.zip'
+                'Instant_Clone_and_Heal_after_Battle_v2.0.zip'
         },
-        version='1.5',
+        version='2.0',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/InstantCloneAndHealRU.xml',
         compatible_mv_locale=['ru'],
