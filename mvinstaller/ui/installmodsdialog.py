@@ -76,6 +76,7 @@ class InstallModsDialog(UserControl):
         locale = self._locale_picker.value
         if locale:
             matching_addons = self._get_matching_addons(locale)
+            matching_addons = [addon for addon in matching_addons if addon.modname not in LIBRARY_MODS]
             max_page = (len(matching_addons) -1) // 7
             self._addon_index.data = page
             self._addon_index.value = f'{page + 1}/{max_page + 1}'
@@ -89,6 +90,16 @@ class InstallModsDialog(UserControl):
                     value = addon.modname in self._selected_addons
                 )
                 for i, addon in enumerate(matching_addons)
+            ]
+            self._addon_list.controls += [
+                Checkbox(
+                    label=None,
+                    on_change=None,
+                    data=addon.id,
+                    visible = False,
+                    value = addon.modname in self._selected_addons
+                )
+                for addon in self._get_matching_addons(locale) if addon.modname in LIBRARY_MODS
             ]
         else:
             self._addon_list.controls = []
