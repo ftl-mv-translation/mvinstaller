@@ -1,4 +1,4 @@
-app-title = Установка FTL: Multiverse
+app-title = Установщик FTL: Multiverse
 ftl-installation-path-dialog-title = Путь к папке FTL
 error-indicator = ОШИБКА
 unknown-version = НЕИЗВЕСТНО
