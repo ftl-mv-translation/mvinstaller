@@ -383,7 +383,7 @@ class FixedAddonsList(Enum):
         modname='GenGibsMV',
         download_targets={
             'https://drive.usercontent.google.com/download?id=1-qK4X-aCrWRoshy7i7PHv0e4Tjw9NemA&export=download&confirm=xxx':
-                'MV Addon GenGibs RU v1.3.5.ftl'
+                'MV Addon GenGibs v1.3.5.ftl'
         },
         version='1.3.5',
         locale='ru',
@@ -455,9 +455,9 @@ class FixedAddonsList(Enum):
         modname='Fishing',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1-Okkoj3J_pJyBzNuzMlfIzvyfkGQ9KD5&export=download&confirm=xxx':
-                'MV Fishier Than Light.ftl'
+                'Fishing_v1.2.2'
         },
-        version='1.0.7',
+        version='1.2.2',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/FishingRU.xml',
         compatible_mv_locale=['ru'],
@@ -516,7 +516,7 @@ class FixedAddonsList(Enum):
         modname='NoHardModeScrap',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1-W5m78H5QESr9rvNpCJ4A11Q1sRKefgU&export=download&confirm=xxx':
-                'MV No Hard Mode Scrap Penalty.ftl'
+                'No Hard Mode Scrap Penalty 3.0.zip'
         },
         version='3.0',
         locale='en',
@@ -530,7 +530,7 @@ class FixedAddonsList(Enum):
         modname='NoHardModeScrap',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1-W5m78H5QESr9rvNpCJ4A11Q1sRKefgU&export=download&confirm=xxx':
-                'MV No Hard Mode Scrap Penalty.ftl'
+                'No Hard Mode Scrap Penalty 3.0.zip'
         },
         version='3.0',
         locale='ru',
@@ -544,7 +544,7 @@ class FixedAddonsList(Enum):
         modname='LizzardAch',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1-L3gmm8xyrWVY0Gr3Lej6xgW-zmY6E7X&export=download&confirm=xxx':
-                'MV Lizzard Achievements.ftl'
+                'Lizzard achievements.zip'
         },
         version='-0.9.9',
         locale='ru',
@@ -558,7 +558,7 @@ class FixedAddonsList(Enum):
         modname='LizzardAch',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1-L3gmm8xyrWVY0Gr3Lej6xgW-zmY6E7X&export=download&confirm=xxx':
-                'MV Lizzard Achievements.ftl'
+                'Lizzard achievements.zip'
         },
         version='-0.9.9',
         locale='de',
@@ -572,7 +572,7 @@ class FixedAddonsList(Enum):
         modname='SpeedUI',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1--0slTafbTi_5gsc1jFGjclO-rkbnlot&export=download&confirm=xxx':
-                'MV SpeedUI.ftl'
+                'Speed-UI.zip'
         },
         version='2.0',
         locale='ru',
@@ -586,7 +586,7 @@ class FixedAddonsList(Enum):
         modname='VanUI',
         download_targets={
             'https://drive.usercontent.google.com/u/0/uc?id=1-0KWOigcRZU9gA1qnhkQcAmEgcreo-Ob&export=download&confirm=xxx':
-                'MV Vanilla UI.ftl'
+                'Multiverse - VanUI 3.0.zip'
         },
         version='3.0',
         locale='en',
@@ -600,7 +600,7 @@ class FixedAddonsList(Enum):
         modname='VanUI',
         download_targets={
             'https://drive.usercontent.google.com/u/0/uc?id=1-0KWOigcRZU9gA1qnhkQcAmEgcreo-Ob&export=download&confirm=xxx':
-                'MV Vanilla UI.ftl'
+                'Multiverse - VanUI 3.0.zip'
         },
         version='3.0',
         locale='ru',
@@ -614,7 +614,7 @@ class FixedAddonsList(Enum):
         modname='VanUI',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=19WN75U22-XWsAInyFaxVVhlVOtM4GtKv&export=download&confirm=xxx':
-                'MV Vanilla UI Korean.ftl'
+                'Multiverse - VanUI Korean 3.0.zip'
         },
         version='3.0',
         locale='ko',
@@ -642,7 +642,7 @@ class FixedAddonsList(Enum):
         modname='MoreManSys',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1-3-MHlG_Xn_Pufhj9zmuxamFfbltz6f6&export=download&confirm=xxx':
-                'MV More Mannable Systems.ftl'
+                'MoreMannableSystems_v1.4.zip'
         },
         version='1.4',
         locale='ru',
@@ -656,7 +656,7 @@ class FixedAddonsList(Enum):
         modname='BoonSelector',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1--aXLu18JKrncsbbUeZ3HSm2COsQc8Fv&export=download&confirm=xxx':
-                'MV Judge Boon Selector.ftl'
+                'Multiverse.Judge.Boon.Selector.ftl'
         },
         version='1.4.0',
         locale='ru',
@@ -670,7 +670,7 @@ class FixedAddonsList(Enum):
         modname='HereBeMarkers',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1-4sV0eYHSx1zP551s3xkB0JO5wGVCQGk&export=download&confirm=xxx':
-                'MV Here be Markers.ftl'
+                'Here be Markers 3.0.8.zip'
         },
         version='3.0.8',
         locale='ru',
