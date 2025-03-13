@@ -466,6 +466,20 @@ class FixedAddonsList(Enum):
     )
     #fr, priority=300
     #fr-diamonds, priority=400
+    JudgeBlueOptionsRU = Mod(
+        id='JudgeBlueOptionsRU',
+        modname='JudgeBlueOptions',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1-88OSmVafL30rYGhRgLB13AEL_v_xems&export=download&confirm=xxx':
+                'Multiverse.-.Judge.Blue.Options.1.4.zip'
+        },
+        version='1.4',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/JBO_RU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=401
+    )
     GenGibsFR = Mod(
         id='GenGibsFR',
         modname='GenGibsFR',
@@ -478,7 +492,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR.xml',
         compatible_mv_locale=[],
         dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
-        priority=401
+        priority=402
     )
     GenGibsFR_RU = Mod(
         id='GenGibsFR_RU',
@@ -492,7 +506,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
-        priority=401
+        priority=402
     )
     #PiP, priority=500
     #R&D, priority=600

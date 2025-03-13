@@ -17,3 +17,4 @@ Redistribution of mods are permitted per following notice:
 - More Mannable Systems, provided by kokoro
 - Into The Breach HUD for FTL Hyperspace, provided by slow
 - Instant Clone and Heal after Battle, provided by Choosechee
+- Judge Blue Options, provided by Duodecimus
