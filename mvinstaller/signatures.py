@@ -439,10 +439,10 @@ class FixedAddonsList(Enum):
         id='Fusion',
         modname='Fusion',
         download_targets={
-            'https://github.com/MV-Fusion-Team/FTL-Multiverse-Fusion/releases/download/v0.1.3/Fusion.zip':
+            'https://github.com/MV-Fusion-Team/FTL-Multiverse-Fusion/releases/download/v0.1.4/Fusion.zip':
                 'Fusion.zip'
         },
-        version='0.1.3',
+        version='0.1.4',
         locale='en',
         metadata_url=None,
         compatible_mv_locale=[],
