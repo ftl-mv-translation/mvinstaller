@@ -321,14 +321,11 @@ DOWNGRADERS = {
     )
 }
 
-########## Slipstream Mod Manager
+########## ftlman (We have migrated from Slipstream Mod Manager)
 
-SMM_URL = 'https://sourceforge.net/projects/slipstreammodmanager/files/latest/download'
-# Sourceforge supports direct downloading from URL only if the user agent looks like non-browsers
-# Here we use wget which is known to be one of them
-SMM_REQUEST_HEADERS = {'User-Agent': 'Wget/1.13.4 (linux-gnu)'}
-SMM_FILENAME = 'SlipstreamModManager_1.9.1-Win.zip' # The file name of the archive
-SMM_ROOT_DIR = 'SlipstreamModManager_1.9.1-Win' # The root directory of SMM in the archive
+SMM_URL = 'https://github.com/afishhh/ftlman/releases/latest/download/ftlman-x86_64-pc-windows-gnu.zip'
+SMM_FILENAME = 'ftlman-x86_64-pc-windows-gnu.zip' # The file name of the archive
+SMM_ROOT_DIR = 'ftlman' # The root directory of ftlman in the archive
 
 ########## Mods
 
