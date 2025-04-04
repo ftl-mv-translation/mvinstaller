@@ -360,11 +360,12 @@ TRANSLATION_RELEASE_DEPENDENCIES = {
     'Forgemaster': ['Fusion'],
     'Forgotten-Races': ['The-Renegade-Collection', 'Fusion'],
     'Forgotten-Diamonds': ['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
-    'RAD': ['ArcLuaLib']
+    'RAD': ['ArcLuaLib'],
+    'Outer-Expansion': ['TOEPatchLast']
 }
 
 LIBRARY_MODS = [
-    'Fusion', 'ArcLuaLib'
+    'Fusion', 'ArcLuaLib', 'TOEPatchLast'
 ]
 
 class FixedAddonsList(Enum):
@@ -711,4 +712,18 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=5011
+    )
+    TOEPatchLast = Mod(
+        id='TOEPatchLast',
+        modname='TOEPatchLast',
+        download_targets={
+            'https://github.com/arcburnergit/FTL-Outer-Expansion/releases/download/v7.0.3/FTL-Outer-Expansion-PATCH_AFTER_ALL_OTHER_ADDONS.ftl':
+                'FTL-Outer-Expansion-PATCH_AFTER_ALL_OTHER_ADDONS.ftl'
+        },
+        version='1.0.0',
+        locale='en',
+        metadata_url=None,
+        compatible_mv_locale=[],
+        dependent_modnames=[],
+        priority=5021
     )
