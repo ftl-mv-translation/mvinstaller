@@ -3,7 +3,7 @@ import shutil
 import winreg
 import re
 from pathlib import Path
-import javaproperties
+import json
 from loguru import logger
 from mvinstaller.addon_metadata import read_metadata
 from mvinstaller.fstools import extract_without_path, glob_posix
@@ -14,7 +14,7 @@ from mvinstaller.util import get_cache_dir, run_checked_subprocess_with_logging_
 from mvinstaller.ftlpath import get_ftl_installation_state, get_latest_hyperspace
 from mvinstaller.localetools import get_locale_name
 from mvinstaller.signatures import (
-    DOWNGRADERS, SMM_URL, SMM_REQUEST_HEADERS, SMM_FILENAME, SMM_ROOT_DIR
+    DOWNGRADERS, SMM_URL, SMM_FILENAME, SMM_ROOT_DIR
 )
 
 def is_java_installed():
@@ -106,22 +106,22 @@ def install_mods(locale_mv, addons_name, ftl_path):
         raise RuntimeError('Cannot find vanilla dat file.')
     use_backup = installation_state.is_ftldat_backedup
 
-    def install_slipstream():
-        logger.info('Downloading Slipstream Mod Manager...')
-        download(SMM_URL, cache_dir / SMM_FILENAME, False, headers=SMM_REQUEST_HEADERS)
+    def install_ftlman():
+        logger.info('Downloading ftlman...')
+        download(SMM_URL, cache_dir / SMM_FILENAME, False)
 
         logger.info('Extracting archive...')
         with zipfile.ZipFile(cache_dir / SMM_FILENAME) as zipf:
             zipf.extractall(cache_dir)
         smmbase = cache_dir / SMM_ROOT_DIR
         
-        logger.info('Writing SMM config...')
-        with (smmbase / 'modman.cfg').open('w', encoding='utf-8') as f:
-            javaproperties.dump({'ftl_dats_path': str(ftl_path)}, f)
+        logger.info('Writing ftlman config...')
+        with (smmbase / 'settings.json').open('w', encoding='utf-8') as f:
+            json.dump({
+                "mod_directory": str(smmbase / 'mods'),
+                'ftl_directory': str(ftl_path)
+                }, f)
         
-        logger.info('Copying vanilla dat file to SMM...')
-        shutil.copy(ftl_path / ('ftl.dat.vanilla' if use_backup else 'ftl.dat'), smmbase / 'backup/ftl.dat.bak')
-
         return smmbase
     
     def patch_mods(smmbase):
@@ -164,8 +164,8 @@ def install_mods(locale_mv, addons_name, ftl_path):
         mods = sorted([mainmod] + addons, key=lambda mod: mod.priority)
         run_checked_subprocess_with_logging_output(
             [
-                smmbase / 'modman.exe',
-                '--patch',
+                smmbase / 'ftlman.exe',
+                'patch',
                 *(
                     download_target
                     for mod in mods
@@ -174,6 +174,6 @@ def install_mods(locale_mv, addons_name, ftl_path):
             ]
         )
         return mainmod, addon_metadata
-    smmbase = install_slipstream()
+    smmbase = install_ftlman()
     mainmod, addon_metadata = patch_mods(smmbase)
     save_last_installed_mods(ftl_path, mainmod, addon_metadata)
