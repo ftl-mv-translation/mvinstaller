@@ -75,8 +75,7 @@ class InstallModsDialog(UserControl):
     def _update_addon_list(self, page: int):
         locale = self._locale_picker.value
         if locale:
-            matching_addons = self._get_matching_addons(locale)
-            matching_addons = [addon for addon in matching_addons if addon.modname not in LIBRARY_MODS]
+            matching_addons = list(filter(lambda addon: addon.modname not in LIBRARY_MODS, self._get_matching_addons(locale)))
             max_page = (len(matching_addons) -1) // 7
             self._addon_index.data = page
             self._addon_index.value = f'{page + 1}/{max_page + 1}'
@@ -113,7 +112,7 @@ class InstallModsDialog(UserControl):
         locale = self._locale_picker.value
         if not locale:
             return
-        matching_addons = self._get_matching_addons(locale)
+        matching_addons = list(filter(lambda addon: addon.modname not in LIBRARY_MODS, self._get_matching_addons(locale)))
         max_page = (len(matching_addons) -1) // 7
         if max_page < dist:
             return
@@ -147,6 +146,12 @@ class InstallModsDialog(UserControl):
 
         self._selected_addons.clear()
         self._update_addon_list(0)
+        try:
+            mainmods = get_mv_mainmods()
+            mainmod = next(mod for mod in mainmods if mod.locale == self._locale_picker.value)
+            self._set_mod_description(mainmod.id)(None)
+        except StopIteration:
+            pass
 
         self._busycontainer.busy = False
         self.update()
