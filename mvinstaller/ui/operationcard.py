@@ -21,7 +21,7 @@ class OperationCard(UserControl):
                         alignment='center'
                     ),
                     Divider(),
-                    Container(self._ctrl_body, expand=True),
+                    Column([self._ctrl_body], expand=True, height=120, scroll="auto"),
                     Container(self._ctrl_action, alignment=alignment.center)
                 ]),
                 padding=10
