@@ -276,11 +276,19 @@ class HyperspaceType(Enum):
     )
     HS_1_18_1 = HyperspaceInfo(
         name='HS-1.18.1 fd6911a',
-        outdated=False,
-        latest=True,
+        outdated=True,
+        latest=False,
         sha1='21d3e20e03e925db536208a975dac2aa58d4a181',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.18.1/FTL.Hyperspace.1.18.1.zip',
         filename='FTL.Hyperspace.1.18.1.zip'
+    )
+    HS_1_19_0 = HyperspaceInfo(
+        name='HS-1.19.0 b52c257',
+        outdated=False,
+        latest=True,
+        sha1='0633427e0a8760fd4219ca74dee8e4ef446f9127',
+        url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.19.0/FTL.Hyperspace.1.19.0.zip',
+        filename='FTL.Hyperspace.1.19.0.zip'
     )
 
 
@@ -348,12 +356,14 @@ RELEASE_EXPIRE_DURATION = 60 * 60 * 24 # Updated every day
 MAINMODS_TRANSLATION_RELEASE = 'https://api.github.com/repos/ftl-mv-translation/ftl-mv-translation/releases/latest'#mv, priority=0
 ADDONS_TRANSLATION_RELEASE = [
     'https://api.github.com/repos/ftl-mv-translation/trc/releases/latest', #trc, priority=100
-    'https://api.github.com/repos/ftl-mv-translation/forgemaster/releases/latest', #forgemaster, priority=200
+    'https://api.github.com/repos/ftl-mv-translation/fishier-than-light/releases/latest', #fishier-than-light, priority=200
     'https://api.github.com/repos/ftl-mv-translation/forgotten-races/releases/latest', #fr, priority=300
     'https://api.github.com/repos/ftl-mv-translation/forgotten-diamonds/releases/latest', #fr-diamonds, priority=400
-    'https://api.github.com/repos/ftl-mv-translation/piracy-is-poggers/releases/latest', #PiP, priority=500
-    'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=600
-    'https://api.github.com/repos/ftl-mv-translation/outer-expansion/releases/latest', #OE, priority=700
+    'https://api.github.com/repos/ftl-mv-translation/outer-expansion/releases/latest', #OE, priority=500
+    'https://api.github.com/repos/ftl-mv-translation/forgemaster/releases/latest', #forgemaster, priority=600
+    'https://api.github.com/repos/ftl-mv-translation/piracy-is-poggers/releases/latest', #PiP, priority=700
+    'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=800
+    'https://api.github.com/repos/ftl-mv-translation/darkest-desire/releases/latest', #DD, priority=900
 ]
 
 TRANSLATION_RELEASE_DEPENDENCIES = {
@@ -455,23 +465,10 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=103
     )
-    #forgemaster, priority=200
-    FishingRU = Mod(
-        id='FishingRU',
-        modname='Fishing',
-        download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1-Okkoj3J_pJyBzNuzMlfIzvyfkGQ9KD5&export=download&confirm=xxx':
-                'Fishing_v1.2.2'
-        },
-        version='1.2.2',
-        locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/FishingRU.xml',
-        compatible_mv_locale=['ru'],
-        dependent_modnames=[],
-        priority=201
-    )
+    #Fishing, priority=200
     #fr, priority=300
     #fr-diamonds, priority=400
+    
     JudgeBlueOptionsRU = Mod(
         id='JudgeBlueOptionsRU',
         modname='JudgeBlueOptions',
@@ -486,6 +483,9 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=401
     )
+    
+    #OE, priority=500
+
     GenGibsFR = Mod(
         id='GenGibsFR',
         modname='GenGibsFR',
@@ -498,7 +498,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR.xml',
         compatible_mv_locale=[],
         dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
-        priority=402
+        priority=501
     )
     GenGibsFR_RU = Mod(
         id='GenGibsFR_RU',
@@ -512,11 +512,13 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
-        priority=402
+        priority=501
     )
-    #PiP, priority=500
-    #R&D, priority=600
-    #OE, priority=700
+    #forgemaster, priority=600
+    #PiP, priority=700
+    #R&D, priority=800
+    #DD, priority=900
+
     NoHardModeScrap = Mod(
         id='NoHardModeScrap',
         modname='NoHardModeScrap',
@@ -549,7 +551,7 @@ class FixedAddonsList(Enum):
         id='LizzardAchRU',
         modname='LizzardAch',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1-L3gmm8xyrWVY0Gr3Lej6xgW-zmY6E7X&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/u/1/uc?id=1hDDoNtNaGCypA1-xib6Xai2vQd3aw7r2&export=download&confirm=xxx':
                 'Lizzard achievements.zip'
         },
         version='-0.9.9',
@@ -563,7 +565,7 @@ class FixedAddonsList(Enum):
         id='LizzardAchDE',
         modname='LizzardAch',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1-L3gmm8xyrWVY0Gr3Lej6xgW-zmY6E7X&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/u/1/uc?id=1hDDoNtNaGCypA1-xib6Xai2vQd3aw7r2&export=download&confirm=xxx':
                 'Lizzard achievements.zip'
         },
         version='-0.9.9',
@@ -685,6 +687,20 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=5010
     )
+    HereBeMarkersPlusRU = Mod(
+        id='HereBeMarkersPlusRU',
+        modname='HereBeMarkersPlus',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1-MpUpRMbnQkBU1-c_OGf933UPv0ThK4d&export=download&confirm=xxx':
+                'Here Be Markers Plus 3.1.zip'
+        },
+        version='3.1',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/HereBeMarkersPlusRU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=5011
+    )
     InstantCloneAndHeal = Mod(
         id='InstantCloneAndHeal',
         modname='InstantCloneAndHeal',
@@ -697,7 +713,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/InstantCloneAndHeal.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=5011
+        priority=5015
     )
     InstantCloneAndHealRU = Mod(
         id='InstantCloneAndHealRU',
@@ -711,13 +727,13 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/InstantCloneAndHealRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=5011
+        priority=5015
     )
     TOEPatchLast = Mod(
         id='TOEPatchLast',
         modname='TOEPatchLast',
         download_targets={
-            'https://github.com/arcburnergit/FTL-Outer-Expansion/releases/download/v7.0.3/FTL-Outer-Expansion-PATCH_AFTER_ALL_OTHER_ADDONS.ftl':
+            'https://github.com/arcburnergit/FTL-Outer-Expansion/releases/download/v7.1.2/FTL-Outer-Expansion-PATCH_AFTER_ALL_OTHER_ADDONS.ftl':
                 'FTL-Outer-Expansion-PATCH_AFTER_ALL_OTHER_ADDONS.ftl'
         },
         version='1.0.0',

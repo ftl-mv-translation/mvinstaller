@@ -9,6 +9,7 @@ Redistribution of mods are permitted per following notice:
 - Forgotten Races, provided by Gabriel Cooper
 - Forgotten Diamonds, provided by Gabriel Cooper
 - Here Be Markers, provided by Gabriel Cooper
+- Here Be Markers Plus, provided by Gabriel Cooper
 - No Hard Mode Scrap Penalty, provided by Gabriel Cooper
 - SpeedUI, provided by Chrono Vortex(fork version) and Vertaalfout(original)
 - FTL: Fishier Than Light, provided by Arc
