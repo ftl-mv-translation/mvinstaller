@@ -370,12 +370,11 @@ TRANSLATION_RELEASE_DEPENDENCIES = {
     'Forgemaster': ['Fusion'],
     'Forgotten-Races': ['The-Renegade-Collection', 'Fusion'],
     'Forgotten-Diamonds': ['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
-    'RAD': ['ArcLuaLib'],
     'Outer-Expansion': ['TOEPatchLast']
 }
 
 LIBRARY_MODS = [
-    'Fusion', 'ArcLuaLib', 'TOEPatchLast'
+    'Fusion', 'TOEPatchLast'
 ]
 
 class FixedAddonsList(Enum):
@@ -384,10 +383,10 @@ class FixedAddonsList(Enum):
         id='GenGibsMV',
         modname='GenGibsMV',
         download_targets={
-            'https://drive.usercontent.google.com/download?id=1fFbszGv7VD2f4LQnrRe3m9QvbyvZ5Cp9&export=download&confirm=xxx':
-                'MV Addon GenGibs v1.3.5.ftl'
+            'https://drive.usercontent.google.com/download?id=1JFSm0418yTVRloTiQLFM5E7Wvwu6w4Gi&export=download&confirm=xxx':
+                'MV Addon GenGibs v1.4.2.ftl'
         },
-        version='1.3.5',
+        version='1.4.2',
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsMV.xml',
         compatible_mv_locale=[],
@@ -398,10 +397,10 @@ class FixedAddonsList(Enum):
         id='GenGibsMV_RU',
         modname='GenGibsMV',
         download_targets={
-            'https://drive.usercontent.google.com/download?id=1-qK4X-aCrWRoshy7i7PHv0e4Tjw9NemA&export=download&confirm=xxx':
-                'MV Addon GenGibs v1.3.5.ftl'
+            'https://drive.usercontent.google.com/download?id=1-N3EAFL_E61NFs2qLFskghvKvThZqaYY&export=download&confirm=xxx':
+                'MV Addon GenGibs v1.4.2.ftl'
         },
-        version='1.3.5',
+        version='1.4.2',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsMV_RU.xml',
         compatible_mv_locale=['ru'],
@@ -413,10 +412,10 @@ class FixedAddonsList(Enum):
         id='GenGibsTRC',
         modname='GenGibsTRC',
         download_targets={
-            'https://drive.usercontent.google.com/download?id=1hM5P2VzRqrhmwHhFxqjbyHPKj6QMjpYW&export=download&confirm=xxx':
-                'MV TRC GenGibs v1.3.5.ftl'
+            'https://drive.usercontent.google.com/download?id=1BoYFKqPQQJ5CE9kSbufSKx9jWdyeiYRl&export=download&confirm=xxx':
+                'MV TRC GenGibs v1.4.2.ftl'
         },
-        version='1.3.5',
+        version='1.4.2',
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsTRC.xml',
         compatible_mv_locale=[],
@@ -427,29 +426,15 @@ class FixedAddonsList(Enum):
         id='GenGibsTRC_RU',
         modname='GenGibsTRC',
         download_targets={
-            'https://drive.usercontent.google.com/download?id=1hM5P2VzRqrhmwHhFxqjbyHPKj6QMjpYW&export=download&confirm=xxx':
-                'MV TRC GenGibs v1.3.5.ftl'
+            'https://drive.usercontent.google.com/download?id=1BoYFKqPQQJ5CE9kSbufSKx9jWdyeiYRl&export=download&confirm=xxx':
+                'MV TRC GenGibs v1.4.2.ftl'
         },
-        version='1.3.5',
+        version='1.4.2',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsTRC_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['The-Renegade-Collection'],
         priority=101
-    )
-    ArcLuaLib = Mod(
-        id='ArcLuaLib',
-        modname='ArcLuaLib',
-        download_targets={
-            'https://github.com/arcburnergit/arclualib/releases/download/v1.0.3/arclualib.ftl':
-                'arclualib.ftl'
-        },
-        version='1.0.3',
-        locale='en',
-        metadata_url=None,
-        compatible_mv_locale=[],
-        dependent_modnames=[],
-        priority=102
     )
     Fusion = Mod(
         id='Fusion',
@@ -575,28 +560,14 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=5004
     )
-    SpeedUI_RU = Mod(
-        id='SpeedUI_RU',
-        modname='SpeedUI',
-        download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1--0slTafbTi_5gsc1jFGjclO-rkbnlot&export=download&confirm=xxx':
-                'Speed-UI.zip'
-        },
-        version='2.0',
-        locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/SpeedUI_RU.xml',
-        compatible_mv_locale=['ru'],
-        dependent_modnames=[],
-        priority=5005
-    )
     VanUI = Mod(
         id='VanUI',
         modname='VanUI',
         download_targets={
-            'https://drive.usercontent.google.com/u/0/uc?id=1-0KWOigcRZU9gA1qnhkQcAmEgcreo-Ob&export=download&confirm=xxx':
-                'Multiverse - VanUI 3.0.zip'
+            'https://drive.usercontent.google.com/u/0/uc?id=1-RSAqQI-2tBxDYy5SGtoctIis_vYD8KO&export=download&confirm=xxx':
+                'Multiverse - VanUI 4.0.zip'
         },
-        version='3.0',
+        version='4.0',
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanillaUI.xml',
         compatible_mv_locale=[],
@@ -607,10 +578,10 @@ class FixedAddonsList(Enum):
         id='VanUI_RU',
         modname='VanUI',
         download_targets={
-            'https://drive.usercontent.google.com/u/0/uc?id=1-0KWOigcRZU9gA1qnhkQcAmEgcreo-Ob&export=download&confirm=xxx':
-                'Multiverse - VanUI 3.0.zip'
+            'https://drive.usercontent.google.com/u/0/uc?id=1-RSAqQI-2tBxDYy5SGtoctIis_vYD8KO&export=download&confirm=xxx':
+                'Multiverse - VanUI 4.0.zip'
         },
-        version='3.0',
+        version='4.0',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanUI_RU.xml',
         compatible_mv_locale=['ru'],
@@ -621,10 +592,10 @@ class FixedAddonsList(Enum):
         id='VanUI_KO',
         modname='VanUI',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=19WN75U22-XWsAInyFaxVVhlVOtM4GtKv&export=download&confirm=xxx':
-                'Multiverse - VanUI Korean 3.0.zip'
+            'https://drive.usercontent.google.com/u/1/uc?id=1-RT9eTadViQLY4Au8-3L6rTWZT3u-0l7&export=download&confirm=xxx':
+                'Multiverse - VanUI 4.0 (Korean).zip'
         },
-        version='3.0',
+        version='4.0',
         locale='ko',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanillaUI.xml',
         compatible_mv_locale=['ko'],
@@ -635,7 +606,7 @@ class FixedAddonsList(Enum):
         id='ItBHUD_RU',
         modname='ItBHUD',
         download_targets={
-            'https://drive.usercontent.google.com/u/0/uc?id=1-a9kHxjUYlVh8_nYINtEBMaHpP_LVJ5D&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/u/0/uc?id=1-VzupAbhge90ULVHjN69dd85Cpu5hReN&export=download&confirm=xxx':
                 'MV Into The Breach HUD.ftl'
         },
         version='1.0',
@@ -678,9 +649,9 @@ class FixedAddonsList(Enum):
         modname='HereBeMarkers',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1-4sV0eYHSx1zP551s3xkB0JO5wGVCQGk&export=download&confirm=xxx':
-                'Here be Markers 3.0.8.zip'
+                'Here be Markers 3.1.zip'
         },
-        version='3.0.8',
+        version='3.1',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/HereBeMarkersRU.xml',
         compatible_mv_locale=['ru'],
@@ -700,34 +671,6 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=5011
-    )
-    InstantCloneAndHeal = Mod(
-        id='InstantCloneAndHeal',
-        modname='InstantCloneAndHeal',
-        download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1nzlfKGKWkecpJIo6ISvtsbRNPsBqJGYa&export=download&confirm=xxx':
-                'Instant_Clone_and_Heal_after_Battle_v2.1.1.zip'
-        },
-        version='2.1.1',
-        locale='en',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/InstantCloneAndHeal.xml',
-        compatible_mv_locale=[],
-        dependent_modnames=[],
-        priority=5015
-    )
-    InstantCloneAndHealRU = Mod(
-        id='InstantCloneAndHealRU',
-        modname='InstantCloneAndHeal',
-        download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1nzlfKGKWkecpJIo6ISvtsbRNPsBqJGYa&export=download&confirm=xxx':
-                'Instant_Clone_and_Heal_after_Battle_v2.1.1.zip'
-        },
-        version='2.1.1',
-        locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/InstantCloneAndHealRU.xml',
-        compatible_mv_locale=['ru'],
-        dependent_modnames=[],
-        priority=5015
     )
     TOEPatchLast = Mod(
         id='TOEPatchLast',

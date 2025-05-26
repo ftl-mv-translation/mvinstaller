@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-	<title><![CDATA[ Generated Gibs for Multiverse 5.4 ]]></title>
+	<title><![CDATA[ Generated Gibs for Multiverse 5.5 ]]></title>
 	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/39/generated-gibs ]]></threadUrl>
 	<author><![CDATA[ Epirasque (developer), Dalvest (artist)]]></author>
-	<version><![CDATA[ 1.3.5 ]]></version>
+	<version><![CDATA[ 1.4.2 ]]></version>
 	<description>
 <![CDATA[
-Provides Gibs (debris pieces that are shown whenever ships are destroyed) wherever they are missing in the Multiverse mod (Version 5.4).
-This currently affects more than a thousand different ships.
+Provides Gibs (debris pieces that are shown whenever ships are destroyed) wherever they are missing in the Multiverse mod (Version 5.5).
+This currently affects roughly a thousand different ships.
 
 Note, that adding these Gibs will increase memory consumption for the game. It will also increase the loading time by roughly 20%.
 
