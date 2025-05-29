@@ -657,9 +657,9 @@ class FixedAddonsList(Enum):
         modname='HereBeMarkers',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1-4sV0eYHSx1zP551s3xkB0JO5wGVCQGk&export=download&confirm=xxx':
-                'Here be Markers 3.1.zip'
+                'Here be Markers 3.1.1.zip'
         },
-        version='3.1',
+        version='3.1.1',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/HereBeMarkersRU.xml',
         compatible_mv_locale=['ru'],
