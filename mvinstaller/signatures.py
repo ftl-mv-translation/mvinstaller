@@ -628,10 +628,10 @@ class FixedAddonsList(Enum):
         id='MoreManSysRU',
         modname='MoreManSys',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1-3-MHlG_Xn_Pufhj9zmuxamFfbltz6f6&export=download&confirm=xxx':
-                'MoreMannableSystems_v1.4.zip'
+            'https://drive.usercontent.google.com/u/1/uc?id=1-bQO7-zH8OXePeOp740Ul9jpEI9dYvTF&export=download&confirm=xxx':
+                'MoreMannableSystems_PATCH_LAST.zip'
         },
-        version='1.4',
+        version='1.5',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSysRU.xml',
         compatible_mv_locale=['ru'],

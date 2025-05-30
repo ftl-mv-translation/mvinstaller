@@ -1,21 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <title><![CDATA[ More Mannable Systems ]]></title>
-  <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/73/mv-more-mannable-systems-v1]]></threadUrl>
-  <author><![CDATA[kokoro]]></author>
-  <version><![CDATA[ 1.4 ]]></version>
-  <description>
-<![CDATA[ 
-Встречайте аддон More Mannable Systems! Вы когда-нибудь замечали, что ваша команда бездействует, когда на борту корабля много членов экипажа? Если да, то этот аддон создан специально для вас! С More Mannable Systems ваша команда теперь может обслуживать дополнительные системы, обеспечивая расширенную функциональность вашего судна. Включив в главном меню опцию "Дополнительное обслуживание", ваша команда сможет контролировать до семи дополнительных систем, что значительно увеличит возможности вашего корабля.
+	<!--
+		CDATA tags mean no need to escape special characters.
+		Don't worry about spaces at the start/end. That gets trimmed.
+	-->
 
-Вот краткий перечень бонусов, которые предоставляет каждая обслуживаемая система:
-Кислород: Удваивает скорость пополнения запасов кислорода.
-Дроны: Увеличивает скорость работы на 25% для пехотных и внешних дронов.
-Артиллерия: Увеличивает скорость перезарядки на 25%.
-Маскировка*: Повышает уклонение на 40%.
-Контроль разума*: Увеличивает длительность контроля на 25%.
-Взлом*: Ускоряет скорость взлома на 25%.
-Временной манипулятор*: Уменьшает время перезарядки системы на 20%.
-Чтобы включить обслуживание систем, отмеченных звездочкой (*), убедитесь, что вы включили опцию "Дополнительное обслуживание" в главном меню.
+
+	<!-- The title of this mod. -->
+	<title><![CDATA[ More Mannable Systems ]]></title>
+
+
+	<!--
+		This mod's thread on subsetgames.com. (haha, not actually)
+		If there's no thread yet, create one to announce your upcoming mod in the
+		forum. Then paste the url here.
+	-->
+	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/73 ]]></threadUrl>
+
+
+	<!-- Your forum user name. -->
+	<author><![CDATA[ kokoro11 ]]></author>
+
+
+	<!--
+		The revision/variant of this release, preferably at least a number.
+		Examples:
+			0.3
+			2.1c Ships Only WIP
+			2.4.1 Hi-res Bkgs
+			1.0 for FTL 1.03.1
+	-->
+	<version><![CDATA[ 1.5 ]]></version>
+
+
+	<description>
+<![CDATA[
+Этот аддон расширяет ваши стратегические возможности, позволяя членам экипажа управлять более широким спектром систем корабля, помимо стандартных шести систем. Прямой контроль над большим количеством систем дает уникальные тактические преимущества и расширяет возможности вашего корабля.
+
+Бонусы обслуживания:
+- Кислород: удваивает скорость пополнения кислорода.
+- Дроны: увеличивает скорость работы дронов на 25% (как пехотных, так и космических дронов).
+- Артиллерия: увеличивает скорость перезарядки на 25%.
+- Маскировка*: увеличивает уклонение на 40% при активной маскировке.
+- Контроль разума*: продлевает время действия контроля разума на 25%.
+- Взломщик*: ускоряет скорость взлома на 25%.
+- Временной манипулятор*: сокращает время перезарядки системы на 20%.
+*Требуется ДОП. ОБСЛУЖИВАНИЕ: чтобы включить обслуживание Маскировки, Контроля разума, Взломщика и Временного манипулятора, активируйте опцию "ДОП. ОБСЛУЖИВАНИЕ" в главном меню.
 ]]>
-  </description>
+	</description>
+
+	<!--
+		Suggestions for the description...
+
+		Write a short paragraph about the mod's effect first (what style ship, how
+		does it affect gameplay). No need to introduce yourself.
+
+		Optionally add a paragraph of background flavor.
+
+		Optionally list important features.
+
+		List any concerns about mod compatibility, preferred order, or requirements.
+
+		Mention "Replaces the XYZ ship." if relevant.
+			Kestrel-A, Engi-A,    Fed-A,     Zoltan-A,
+			Stealth-A, Rock-A,    Slug-A,    Mantis-A,
+			Lanius-A,  Crystal-A
+
+		Above all, keep the description general, so you won't have to edit
+		that again for each new version.
+	-->
 </metadata>
