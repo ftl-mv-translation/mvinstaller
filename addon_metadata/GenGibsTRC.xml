@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-	<title><![CDATA[ Generated Gibs for The Renegade Collection 2.3 ]]></title>
+	<title><![CDATA[ Generated Gibs for The Renegade Collection 2.6 ]]></title>
 	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/39/generated-gibs ]]></threadUrl>
 	<author><![CDATA[ Epirasque (developer), Dalvest (artist)]]></author>
-	<version><![CDATA[ 1.3.5 ]]></version>
+	<version><![CDATA[ 1.4.2 ]]></version>
 	<description>
 <![CDATA[
-Provides Gibs (debris pieces that are shown whenever ships are destroyed) for the Multiverse mod The Renegade Collection 2.3.
-This currently affects more than a thousand different ships.
+Provides Gibs (debris pieces that are shown whenever ships are destroyed) for the Multiverse mod The Renegade Collection 2.6.
 
-This addon has to be patched after The Renegade Collection itself and should only be used for 2.3.
+This addon has to be patched after The Renegade Collection itself and should only be used for 2.6.
 
 Special thanks to marcusian for consulting support.
 ]]>

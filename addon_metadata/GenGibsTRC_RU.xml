@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-	<title><![CDATA[ Generated Gibs for The Renegade Collection 2.3 ]]></title>
+	<title><![CDATA[ Generated Gibs for The Renegade Collection 2.6 ]]></title>
 	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/39/generated-gibs ]]></threadUrl>
 	<author><![CDATA[ Epirasque (разработчик), Dalvest (художник)]]></author>
-	<version><![CDATA[ 1.3.5 ]]></version>
+	<version><![CDATA[ 1.4.2 ]]></version>
 	<description>
 <![CDATA[
-Предоставляет Gibs (обломки, которые отображаются при уничтожении кораблей) для аддона "Коллекция Ренегата (TRC)" 2.3.
-В настоящее время это затрагивает более тысячи различных кораблей.
+Предоставляет Gibs (обломки, которые отображаются при уничтожении кораблей) для аддона "Коллекция Ренегата (TRC)" 2.6.
 
 Отдельное спасибо marcusian за консультационную поддержку.
 ]]>
