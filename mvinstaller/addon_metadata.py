@@ -47,9 +47,22 @@ def init_metadata(mods: list[Mod]):
         
         try:
             fn = get_cache_dir() / 'metadata' / f'{sha256(mod.id)}.xml'
+            fn_tmp = get_cache_dir() / 'metadata/_tmp_metadata.xml'
             if not fn.exists() or (fn.stat().st_mtime + 3600 < time()):
                 logger.info(f'Downloading metadata for {mod.id}...')
-                download(mod.metadata_url, fn, True)
+                download(mod.metadata_url, fn_tmp, True)
+                root = etree.parse(fn_tmp).getroot()
+                if root.tag == 'metadataList':
+                    for e in root.iterchildren():
+                        id = e.find('id').text
+                        content = e.find('metadata')
+                        with open(get_cache_dir() / 'metadata' / f'{sha256(id)}.xml', 'wb') as f:
+                            f.write(etree.tostring(content, encoding='utf-8', pretty_print=True))
+                    fn_tmp.unlink(missing_ok=True)
+                    assert fn.exists(), f'Metadata file for {mod.id} not found after downloading metadata list!'
+                else:
+                    fn_tmp.rename(fn)
+                
             metadata = read_metadata(fn)
             _cached_metadata[mod.id] = metadata
         except Exception as e:
