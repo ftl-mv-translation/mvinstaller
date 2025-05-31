@@ -1,0 +1,467 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadataList>
+  <BoonSelectorRU>
+    <id>BoonSelectorRU</id>
+    <metadata>
+  <title>Judge Boon Selector</title>
+  <threadUrl>
+     https://github.com/benediktwerner/FTL-Multiverse-Judge-Boon-Selector-Mod 
+  </threadUrl>
+  <author>1vader</author>
+  <version>1.6.0</version>
+  <description>
+     
+Позволяет выбрать любой дар от судей в начале прохождения, если вы разблокировали/получили их хотя бы раз.
+
+  </description>
+</metadata>
+  </BoonSelectorRU>
+  <GenGibsFR>
+    <id>GenGibsFR</id>
+    <metadata>
+  <title> FTL: MULTIVERSE - FORGOTTEN GIBS ADDON </title>
+  <threadUrl>https://ftlmultiverse.boards.net/thread/12/forgotten-races</threadUrl>
+  <author>Gabriel Cooper</author>
+  <version> 1.5.1 </version>
+  <description>
+ 
+PATCH AFTER FORGOTTEN RACES'S DATA FILE
+
+This Forgotten Races addon adds Generated Gibs to the forgotten races ships.
+
+Gibs were generated with the G.L.A.I.V.E. tool made by Epirasque
+
+Works with Multiverse 5.4.X
+
+  </description>
+</metadata>
+  </GenGibsFR>
+  <GenGibsFR_RU>
+    <id>GenGibsFR_RU</id>
+    <metadata>
+  <title> Forgotten Gibs </title>
+  <threadUrl>https://ftlmultiverse.boards.net/thread/12/forgotten-races</threadUrl>
+  <author>Gabriel Cooper</author>
+  <version> 1.5.1 </version>
+  <description>
+ 
+Зависимые аддоны: Fusion 0.1.0+, Forgotten Races и Коллекция Ренегата. Установщик будет автоматически их ставить если выбрали аддон Forgotten Gibs.
+
+Этот аддон для Forgotten Races. Добавляет сгенерированные Gibs на корабли забытых рас.
+
+Gibs были сгенерированы с помощью инструмента G.L.A.I.V.E., созданного Epirasque.
+
+  </description>
+</metadata>
+  </GenGibsFR_RU>
+  <GenGibsMV>
+    <id>GenGibsMV</id>
+    <metadata>
+	<title> Generated Gibs for Multiverse 5.5 </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/39/generated-gibs </threadUrl>
+	<author> Epirasque (developer), Dalvest (artist)</author>
+	<version> 1.4.2 </version>
+	<description>
+
+Provides Gibs (debris pieces that are shown whenever ships are destroyed) wherever they are missing in the Multiverse mod (Version 5.5).
+This currently affects roughly a thousand different ships.
+
+Note, that adding these Gibs will increase memory consumption for the game. It will also increase the loading time by roughly 20%.
+
+These Gibs were automatically generated using the scipy SLIC algorithm which clusters the original ship images with a trade-off between location and color.
+Proper physics behaviour for the Gibs is ensured. Weapons are attached to the matching Gibs.
+
+The intention of this addon is to provide a decent temporary solution until all remaining Gibs are manually drawn for Multiverse.
+
+This addon has to be patched after Multiverse itself and should only be used for Multiverse 5.4.
+This addon is not fully compatible with other addons that add Gibs for any ships that are currently in Multiverse, it will overwrite them.
+
+Special thanks to marcusian for consulting support.
+
+</description>
+</metadata>
+  </GenGibsMV>
+  <GenGibsMV_RU>
+    <id>GenGibsMV_RU</id>
+    <metadata>
+	<title> Generated Gibs for Multiverse 5.5 </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/39/generated-gibs </threadUrl>
+	<author> Epirasque (разработчик), Dalvest (художник)</author>
+	<version> 1.4.2 </version>
+	<description>
+
+Предоставляет Gibs (обломки, которые отображаются при уничтожении кораблей) везде, где они отсутствуют в моде Multiverse (версия 5.4).
+В настоящее время это затрагивает около тысячи различных кораблей.
+
+Обратите внимание, что добавление этих Gibs увеличит потребление памяти игрой. Это также увеличит время загрузки примерно на 20%.
+
+Эти Gibs были автоматически сгенерированы с помощью алгоритма scipy SLIC, который кластеризует исходные изображения кораблей с помощью компромисса между расположением и цветом.
+Обеспечено правильное физическое поведение гибсов. Оружие прикрепляется к соответствующим Gibs.
+
+Цель этого аддона - обеспечить достойное временное решение, пока все оставшиеся гибсы не будут нарисованы вручную для Multiverse.
+
+Этот аддон не полностью совместим с другими аддонами, которые добавляют Gibs для любых кораблей, которые в настоящее время находятся в Multiverse, он будет перезаписывать их.
+
+Отдельное спасибо marcusian за консультационную поддержку.
+
+</description>
+</metadata>
+  </GenGibsMV_RU>
+  <GenGibsTRC>
+    <id>GenGibsTRC</id>
+    <metadata>
+	<title> Generated Gibs for The Renegade Collection 2.6 </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/39/generated-gibs </threadUrl>
+	<author> Epirasque (developer), Dalvest (artist)</author>
+	<version> 1.4.2 </version>
+	<description>
+
+Provides Gibs (debris pieces that are shown whenever ships are destroyed) for the Multiverse mod The Renegade Collection 2.6.
+
+This addon has to be patched after The Renegade Collection itself and should only be used for 2.6.
+
+Special thanks to marcusian for consulting support.
+
+</description>
+</metadata>
+  </GenGibsTRC>
+  <GenGibsTRC_RU>
+    <id>GenGibsTRC_RU</id>
+    <metadata>
+	<title> Generated Gibs for The Renegade Collection 2.6 </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/39/generated-gibs </threadUrl>
+	<author> Epirasque (разработчик), Dalvest (художник)</author>
+	<version> 1.4.2 </version>
+	<description>
+
+Предоставляет Gibs (обломки, которые отображаются при уничтожении кораблей) для аддона "Коллекция Ренегата (TRC)" 2.6.
+
+Отдельное спасибо marcusian за консультационную поддержку.
+
+</description>
+</metadata>
+  </GenGibsTRC_RU>
+  <HereBeMarkersPlusRU>
+    <id>HereBeMarkersPlusRU</id>
+    <metadata>
+  <title> Here Be Markers Plus</title>
+  <threadUrl>https://ftlmultiverse.boards.net/thread/34/gabriels-small-mods-collection-markers</threadUrl>
+  <author>Gabriel Cooper</author>
+  <version> 3.1 </version>
+  <description>
+ 
+Этот небольшой мод добавляет на карту маркеры уникальных событий с эксклюзивными наградами или выгодными предложениями. Он никак не изменяет события, а лишь делает их видимыми на звездной карте, чтобы вы больше никогда их не пропустили.
+
+  </description>
+</metadata>
+  </HereBeMarkersPlusRU>
+  <HereBeMarkersRU>
+    <id>HereBeMarkersRU</id>
+    <metadata>
+  <title> Here Be Markers </title>
+  <threadUrl>https://ftlmultiverse.boards.net/thread/34/gabriels-small-mods-collection-markers</threadUrl>
+  <author>Gabriel Cooper</author>
+  <version> 3.1.1 </version>
+  <description>
+ 
+Работает с Multiverse 5.5.x
+
+Этот небольшой мод добавляет на карту маркеры на начальные события всех цепочек разблокировки кораблей, а также на некоторые другие события, такие как Канал связи Гармонии и К.У.Р.А. (делает их видимыми откуда угодно). Он никак не изменяет события, а лишь делает их видимыми на звездной карте, чтобы вы никогда больше не пропустили их.
+
+  </description>
+</metadata>
+  </HereBeMarkersRU>
+  <ItBHUD_RU>
+    <id>ItBHUD_RU</id>
+    <metadata>
+  <title> Into The Breach HUD </title>
+  <threadUrl> http://www.ftlgame.com/forum/viewtopic.php?f=11&amp;t=17187 </threadUrl>
+  <author> slowriderxcorps и Subset Games </author>
+  <version> 1.0 </version>
+  <description>
+
+Конфликтует с аддоном "Vanilla UI", не ставьте их вместе, иначе будет смешан интерфейс.
+
+Графическая переделка для FTL Multiverse, которая адаптирует как можно больше ассетов для эмуляции визуального стиля Into The Breach.
+
+Этот HUD-мод был создан специально для использования с фреймворком Hyperspace и, как таковой, не должен использоваться с другими версиями FTL, включая последнюю доступную версию. 
+
+  </description>
+</metadata>
+  </ItBHUD_RU>
+  <JBO_RU>
+    <id>JudgeBlueOptionsRU</id>
+    <metadata>
+  <title> Blue Judge Options </title>
+  <threadUrl> https://ftlmultiverse.boards.net/thread/88/multiverse-blue-judge-options </threadUrl>
+  <author> Duodecimus </author>
+  <version> MV5.4.5 v1.4 </version>
+  <description>
+ 
+Этот мод изменяет событие Судей Узла 17 таким образом, чтобы опции, которые еще не были выбраны, стали синими.
+Установщик поддерживает:
+	Multiverse (5.4.5)
+	Forgotten Diamonds (1.6.3)
+	Forgotten Races (16.27)
+	Fishier Than Light (1.2.2)
+
+
+  </description>
+</metadata>
+  </JBO_RU>
+  <LizzardAchEN>
+    <id>LizzardAchDE</id>
+    <metadata>
+	<!--
+		CDATA tags mean no need to escape special characters.
+		Don't worry about spaces at the start/end. That gets trimmed.
+	-->
+
+
+	<!-- The title of this mod. -->
+	<title> Lizzard's Achievements </title>
+
+
+	<!--
+		This mod's thread on subsetgames.com.
+		If there's no thread yet, create one to announce your upcoming mod in the
+		forum. Then paste the url here.
+	-->
+	<threadUrl> None :c </threadUrl>
+
+
+	<!-- Your forum user name. -->
+	<author> Lizzard </author>
+
+
+	<!--
+		The revision/variant of this release, preferably at least a number.
+		Examples:
+			0.3
+			2.1c Ships Only WIP
+			2.4.1 Hi-res Bkgs
+			1.0 for FTL 1.03.1
+	-->
+	<version> -0.9.9 </version>
+
+
+	<description>
+
+This mod adds achievements to all page 1 MV cruisers.
+
+Created for the 2024 achievement contest.
+
+Special thanks to:
+Arc for making the balboni sprites
+Gabriel for helping me with Lua
+Chrono for calling the conscription officers on me
+Kix for getting annoyed at those guys smoking outside xir door
+Nauter for orchestrating the JFK assasination
+And Pepson for his credit not fitting in the standard SlipStream window size
+
+	</description>
+
+	<!--
+		Suggestions for the description...
+
+		Write a short paragraph about the mod's effect first (what style ship, how
+		does it affect gameplay). No need to introduce yourself.
+
+		Optionally add a paragraph of background flavor.
+
+		Optionally list important features.
+
+		List any concerns about mod compatibility, preferred order, or requirements.
+
+		Mention "Replaces the XYZ ship." if relevant.
+			Kestrel-A, Engi-A,    Fed-A,     Zoltan-A,
+			Stealth-A, Rock-A,    Slug-A,    Mantis-A,
+			Lanius-A,  Crystal-A
+
+		Above all, keep the description general, so you won't have to edit
+		that again for each new version.
+	-->
+</metadata>
+  </LizzardAchEN>
+  <LizzardAchRU>
+    <id>LizzardAchRU</id>
+    <metadata>
+
+	<title> Lizzard's Achievements </title>
+
+	<threadUrl> https://ftlmultiverse.boards.net/thread/94/lizzards-achievements </threadUrl>
+
+	<author> Lizzard </author>
+
+	<version> -0.9.9 </version>
+
+
+	<description>
+
+Этот мод добавляет достижения для всех МВ-крейсеров на первой странице.
+
+Создан для конкурса достижений 2024 года.
+
+Особая благодарность:
+Arc за создание спрайтов балбони
+Gabriel за помощь с Lua
+Chrono за то, что вызвал ко мне офицеров срочной службы
+Kix за то, что раздражался на тех парней, курящих за дверью
+Nauter за организацию убийства Дж. Кеннеди
+И Pepson за то, что его титры не помещаются в стандартный размер окна SlipStream
+
+	</description>
+
+</metadata>
+  </LizzardAchRU>
+  <MoreManSysRU>
+    <id>MoreManSysRU</id>
+    <metadata>
+	<!--
+		CDATA tags mean no need to escape special characters.
+		Don't worry about spaces at the start/end. That gets trimmed.
+	-->
+
+
+	<!-- The title of this mod. -->
+	<title> More Mannable Systems </title>
+
+
+	<!--
+		This mod's thread on subsetgames.com. (haha, not actually)
+		If there's no thread yet, create one to announce your upcoming mod in the
+		forum. Then paste the url here.
+	-->
+	<threadUrl> https://ftlmultiverse.boards.net/thread/73 </threadUrl>
+
+
+	<!-- Your forum user name. -->
+	<author> kokoro11 </author>
+
+
+	<!--
+		The revision/variant of this release, preferably at least a number.
+		Examples:
+			0.3
+			2.1c Ships Only WIP
+			2.4.1 Hi-res Bkgs
+			1.0 for FTL 1.03.1
+	-->
+	<version> 1.5 </version>
+
+
+	<description>
+
+Этот аддон расширяет ваши стратегические возможности, позволяя членам экипажа управлять более широким спектром систем корабля, помимо стандартных шести систем. Прямой контроль над большим количеством систем дает уникальные тактические преимущества и расширяет возможности вашего корабля.
+
+Бонусы обслуживания:
+- Кислород: удваивает скорость пополнения кислорода.
+- Дроны: увеличивает скорость работы дронов на 25% (как пехотных, так и космических дронов).
+- Артиллерия: увеличивает скорость перезарядки на 25%.
+- Маскировка*: увеличивает уклонение на 40% при активной маскировке.
+- Контроль разума*: продлевает время действия контроля разума на 25%.
+- Взломщик*: ускоряет скорость взлома на 25%.
+- Временной манипулятор*: сокращает время перезарядки системы на 20%.
+*Требуется ДОП. ОБСЛУЖИВАНИЕ: чтобы включить обслуживание Маскировки, Контроля разума, Взломщика и Временного манипулятора, активируйте опцию "ДОП. ОБСЛУЖИВАНИЕ" в главном меню.
+
+	</description>
+
+	<!--
+		Suggestions for the description...
+
+		Write a short paragraph about the mod's effect first (what style ship, how
+		does it affect gameplay). No need to introduce yourself.
+
+		Optionally add a paragraph of background flavor.
+
+		Optionally list important features.
+
+		List any concerns about mod compatibility, preferred order, or requirements.
+
+		Mention "Replaces the XYZ ship." if relevant.
+			Kestrel-A, Engi-A,    Fed-A,     Zoltan-A,
+			Stealth-A, Rock-A,    Slug-A,    Mantis-A,
+			Lanius-A,  Crystal-A
+
+		Above all, keep the description general, so you won't have to edit
+		that again for each new version.
+	-->
+</metadata>
+  </MoreManSysRU>
+  <NoHardModeScrap>
+    <id>NoHardModeScrap</id>
+    <metadata>
+  <title> No Hard Mode Scrap Penalty </title>
+  <threadUrl>https://ftlmultiverse.boards.net/thread/34/gabriels-small-mods-collection-markers</threadUrl>
+  <author>Gabriel Cooper</author>
+  <version> 3.0 </version>
+  <description>
+ 
+PATCH AFTER MULTIVERSE
+
+This tiny mod alters the amount of scrap you gain in hardmode to be equal to normal mode. Doesn't change anything else besides that.
+
+Works with Multiverse 5.4.x
+
+  </description>
+</metadata>
+  </NoHardModeScrap>
+  <NoHardModeScrapRU>
+    <id>NoHardModeScrapRU</id>
+    <metadata>
+  <title> No Hard Mode Scrap Penalty </title>
+  <threadUrl>https://ftlmultiverse.boards.net/thread/34/gabriels-small-mods-collection-markers</threadUrl>
+  <author>Gabriel Cooper</author>
+  <version> 3.0 </version>
+  <description>
+ 
+Этот крошечный мод изменяет количество лома, получаемого на трудной сложности, на равное с нормальной сложностью. Больше ничего не меняет.
+
+  </description>
+</metadata>
+  </NoHardModeScrapRU>
+  <VanillaUI>
+    <id>VanUI</id>
+    <metadata>
+  <title> Vanilla UI </title>
+  <threadUrl>https://subsetgames.com/forum/viewtopic.php?f=11&amp;t=35332</threadUrl>
+  <author> Kix </author>
+  <version> 4.0 </version>
+  <description>
+ 
+Restores the vanilla UI style to the game instead of the 5.0 remade UI.
+
+  </description>
+</metadata>
+  </VanillaUI>
+  <VanUI_RU>
+    <id>VanUI_RU</id>
+    <metadata>
+  <title> Vanilla UI </title>
+  <threadUrl>https://subsetgames.com/forum/viewtopic.php?f=11&amp;t=35332</threadUrl>
+  <author> Kix </author>
+  <version> 4.0 </version>
+  <description>
+ 
+Конфликтует с аддоном "Into The Breach HUD", не ставьте их вместе, иначе будет смешан интерфейс.
+
+Возвращает в игру ванильный стиль пользовательского интерфейса вместо переделанного в 5.0.
+
+  </description>
+</metadata>
+  </VanUI_RU>
+    <VanUI_KO>
+    <id>VanUI_KO</id>
+    <metadata>
+  <title> Vanilla UI </title>
+  <threadUrl>https://subsetgames.com/forum/viewtopic.php?f=11&amp;t=35332</threadUrl>
+  <author> Kix </author>
+  <version> 4.0 </version>
+  <description>
+ 
+Restores the vanilla UI style to the game instead of the 5.0 remade UI.
+
+  </description>
+</metadata>
+  </VanUI_KO>
+</metadataList>
