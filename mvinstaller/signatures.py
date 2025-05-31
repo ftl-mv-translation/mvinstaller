@@ -396,7 +396,7 @@ class FixedAddonsList(Enum):
         },
         version='1.4.2',
         locale='en',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsMV.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
         priority=1
@@ -410,7 +410,7 @@ class FixedAddonsList(Enum):
         },
         version='1.4.2',
         locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsMV_RU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=1
@@ -425,7 +425,7 @@ class FixedAddonsList(Enum):
         },
         version='1.4.2',
         locale='en',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsTRC.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=[],
         dependent_modnames=['The-Renegade-Collection'],
         priority=101
@@ -439,7 +439,7 @@ class FixedAddonsList(Enum):
         },
         version='1.4.2',
         locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsTRC_RU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['The-Renegade-Collection'],
         priority=101
@@ -471,7 +471,7 @@ class FixedAddonsList(Enum):
         },
         version='1.4',
         locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/JBO_RU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=401
@@ -488,7 +488,7 @@ class FixedAddonsList(Enum):
         },
         version='1.5.1',
         locale='en',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=[],
         dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
         priority=501
@@ -502,7 +502,7 @@ class FixedAddonsList(Enum):
         },
         version='1.5.1',
         locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR_RU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
         priority=501
@@ -521,7 +521,7 @@ class FixedAddonsList(Enum):
         },
         version='3.0',
         locale='en',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/NoHardModeScrap.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
         priority=5003
@@ -535,7 +535,7 @@ class FixedAddonsList(Enum):
         },
         version='3.0',
         locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/NoHardModeScrapRU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=5003
@@ -549,7 +549,7 @@ class FixedAddonsList(Enum):
         },
         version='-0.9.9',
         locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/LizzardAchRU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=5004
@@ -563,7 +563,7 @@ class FixedAddonsList(Enum):
         },
         version='-0.9.9',
         locale='de',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/LizzardAchEN.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['de'],
         dependent_modnames=[],
         priority=5004
@@ -577,7 +577,7 @@ class FixedAddonsList(Enum):
         },
         version='4.0',
         locale='en',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanillaUI.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
         priority=5006
@@ -591,7 +591,7 @@ class FixedAddonsList(Enum):
         },
         version='4.0',
         locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanUI_RU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=5006
@@ -605,7 +605,7 @@ class FixedAddonsList(Enum):
         },
         version='4.0',
         locale='ko',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanillaUI.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ko'],
         dependent_modnames=[],
         priority=5006
@@ -619,7 +619,7 @@ class FixedAddonsList(Enum):
         },
         version='1.0',
         locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/ItBHUD_RU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=5007
@@ -633,7 +633,7 @@ class FixedAddonsList(Enum):
         },
         version='1.5',
         locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSysRU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=5008
@@ -647,7 +647,7 @@ class FixedAddonsList(Enum):
         },
         version='1.4.0',
         locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/BoonSelectorRU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=5009
@@ -661,7 +661,7 @@ class FixedAddonsList(Enum):
         },
         version='3.1.1',
         locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/HereBeMarkersRU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=5010
@@ -675,7 +675,7 @@ class FixedAddonsList(Enum):
         },
         version='3.1',
         locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/HereBeMarkersPlusRU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=5011
