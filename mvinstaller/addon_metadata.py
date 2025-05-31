@@ -58,9 +58,10 @@ def init_metadata(mods: list[Mod]):
                         content = e.find('metadata')
                         with open(get_cache_dir() / 'metadata' / f'{sha256(id)}.xml', 'wb') as f:
                             f.write(etree.tostring(content, encoding='utf-8', pretty_print=True))
-                    fn_tmp.unlink(missing_ok=True)
+                    fn_tmp.unlink()
                     assert fn.exists(), f'Metadata file for {mod.id} not found after downloading metadata list!'
                 else:
+                    fn.unlink(missing_ok=True)
                     fn_tmp.rename(fn)
                 
             metadata = read_metadata(fn)
