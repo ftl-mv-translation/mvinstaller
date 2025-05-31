@@ -628,7 +628,7 @@ class FixedAddonsList(Enum):
         id='MoreManSysRU',
         modname='MoreManSys',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1-bQO7-zH8OXePeOp740Ul9jpEI9dYvTF&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/u/1/uc?id=1-3-MHlG_Xn_Pufhj9zmuxamFfbltz6f6&export=download&confirm=xxx':
                 'MoreMannableSystems_PATCH_LAST.zip'
         },
         version='1.5',
