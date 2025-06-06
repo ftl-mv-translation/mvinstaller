@@ -568,6 +568,20 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=5004
     )
+    Trading = Mod(
+        id='TradingRU',
+        modname='Trading',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=19B-7wTdO4XmNQQwduafLEKg4yMNk5huJ&export=download&confirm=xxx':
+                'FTL-Trading-System.zip'
+        },
+        version='0.12',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/TradingRU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=5005
+    )
     VanUI = Mod(
         id='VanUI',
         modname='VanUI',
