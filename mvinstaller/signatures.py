@@ -386,7 +386,8 @@ LIBRARY_MODS = [
 ]
 
 class FixedAddonsList(Enum):
-    #mv, priority=0
+    #mv, priority=0  
+    #trc, priority=100
     Fusion = Mod(
         id='Fusion',
         modname='Fusion',
@@ -399,34 +400,17 @@ class FixedAddonsList(Enum):
         metadata_url=None,
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=10
+        priority=110
     )
-    
-    #trc, priority=100
     #Fishing, priority=200
     #fr, priority=300
     #fr-diamonds, priority=400
-    
-    JudgeBlueOptionsRU = Mod(
-        id='JudgeBlueOptionsRU',
-        modname='JudgeBlueOptions',
-        download_targets={
-            'https://drive.usercontent.google.com/download?id=1-88OSmVafL30rYGhRgLB13AEL_v_xems&export=download&confirm=xxx':
-                'Multiverse.-.Judge.Blue.Options.zip'
-        },
-        version='1.4',
-        locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/JBO_RU.xml',
-        compatible_mv_locale=['ru'],
-        dependent_modnames=[],
-        priority=410
-    )
-    
     #OE, priority=500
     #forgemaster, priority=600
     #PiP, priority=700
     #R&D, priority=800
     #DD, priority=900
+    
     Trading = Mod(
         id='TradingRU',
         modname='Trading',
@@ -439,7 +423,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/TradingRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=910
+        priority=920
     )
     GenGibsMV = Mod(
         id='GenGibsMV',
@@ -453,7 +437,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsMV.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=920
+        priority=930
     )
     GenGibsMV_RU = Mod(
         id='GenGibsMV_RU',
@@ -467,7 +451,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsMV_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=920
+        priority=930
     )
     GenGibsTRC = Mod(
         id='GenGibsTRC',
@@ -481,7 +465,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsTRC.xml',
         compatible_mv_locale=[],
         dependent_modnames=['The-Renegade-Collection'],
-        priority=930
+        priority=940
     )
     GenGibsTRC_RU = Mod(
         id='GenGibsTRC_RU',
@@ -495,7 +479,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsTRC_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['The-Renegade-Collection'],
-        priority=930
+        priority=940
     )
     GenGibsFR = Mod(
         id='GenGibsFR',
@@ -509,7 +493,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR.xml',
         compatible_mv_locale=[],
         dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
-        priority=940
+        priority=950
     )
     GenGibsFR_RU = Mod(
         id='GenGibsFR_RU',
@@ -523,7 +507,35 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
-        priority=940
+        priority=950
+    )
+    GenGibsDD_RU = Mod(
+        id='GenGibsDD_RU',
+        modname='GenGibsDD',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1AjgHspZ5nS29QFKUjQFi3g6OX5qwa_XB&export=download&confirm=xxx':
+                'DD Addon GenGibs.zip'
+        },
+        version='1.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsDD.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=['Darkest-Desire'],
+        priority=960
+    )
+    GenGibsDD = Mod(
+        id='GenGibsDD',
+        modname='GenGibsDD',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1AjgHspZ5nS29QFKUjQFi3g6OX5qwa_XB&export=download&confirm=xxx':
+                'DD Addon GenGibs.zip'
+        },
+        version='1.0',
+        locale='en',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsDD_RU.xml',
+        compatible_mv_locale=[],
+        dependent_modnames=['Darkest-Desire'],
+        priority=960
     )
     MoreManSysRU = Mod(
         id='MoreManSysRU',
@@ -566,6 +578,20 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=['de'],
         dependent_modnames=[],
         priority=1100
+    )
+    JudgeBlueOptionsRU = Mod(
+        id='JudgeBlueOptionsRU',
+        modname='JudgeBlueOptions',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1-88OSmVafL30rYGhRgLB13AEL_v_xems&export=download&confirm=xxx':
+                'Multiverse.-.Judge.Blue.Options.zip'
+        },
+        version='1.5',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/JBO_RU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=1150
     )
     BoonSelectorRU = Mod(
         id='BoonSelectorRU',
@@ -669,7 +695,7 @@ class FixedAddonsList(Enum):
         id='NoHardModeScrap',
         modname='NoHardModeScrap',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1-W5m78H5QESr9rvNpCJ4A11Q1sRKefgU&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/u/1/uc?id=1KFlM5ItbntkiuYZnJfkzbupnpIiaa8xc&export=download&confirm=xxx':
                 'No Hard Mode Scrap Penalty 3.0.zip'
         },
         version='3.0',
@@ -683,7 +709,7 @@ class FixedAddonsList(Enum):
         id='NoHardModeScrapRU',
         modname='NoHardModeScrap',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1-W5m78H5QESr9rvNpCJ4A11Q1sRKefgU&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/u/1/uc?id=1KFlM5ItbntkiuYZnJfkzbupnpIiaa8xc&export=download&confirm=xxx':
                 'No Hard Mode Scrap Penalty 3.0.zip'
         },
         version='3.0',

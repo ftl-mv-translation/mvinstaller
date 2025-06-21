@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<title><![CDATA[ Generated Gibs for Darkest Desire 3.4.2 ]]></title>
+	<threadUrl><![CDATA[  ]]></threadUrl>
+	<author><![CDATA[ Aleev ]]></author>
+	<version><![CDATA[ 1.0 ]]></version>
+	<description>
+<![CDATA[
+Provides Gibs (debris pieces that are shown whenever ships are destroyed) for Darkest Desire 3.4.2 by Naimeron
+
+This addon has to be patched after Darkest Desire itself
+
+Gibs were generated with the G.L.A.I.V.E. tool made by Epirasque
+]]>
+</description>
+</metadata>
