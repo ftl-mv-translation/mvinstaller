@@ -14,6 +14,7 @@ Redistribution of mods are permitted per following notice:
 - SpeedUI, provided by Chrono Vortex(fork version) and Vertaalfout(original)
 - FTL: Fishier Than Light, provided by Arc
 - FTL: Trading System, provided by Arc
+- FTL: Random Sector Start, provided by Arc
 - Judge Boon Selector Mod, provided by its authors under [MIT License](https://github.com/benediktwerner/FTL-Multiverse-Judge-Boon-Selector-Mod/blob/master/LICENSE)
 - Lizzard's Achievements, provided by Lizzard
 - More Mannable Systems, provided by kokoro

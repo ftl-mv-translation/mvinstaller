@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<title><![CDATA[ Random Starting Sector ]]></title>
+
+	<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/153/ftl-random-sector-start]]></threadUrl>
+
+	<author><![CDATA[ Arc ]]></author>
+
+	<version><![CDATA[ 1.0 ]]></version>
+
+	<description>
+<![CDATA[
+Теперь, начиная игру, вы можете выбрать направление в 1 из 6 случайных секторов, они будут такими же, что и 6 секторов, в которые вы можете прыгнуть в секторе 2. В этих секторах все еще будут некоторые события из стартового сектора, такие как снабжения, торговец и К.У.Р.А.
+]]>
+	</description>
+
+</metadata>

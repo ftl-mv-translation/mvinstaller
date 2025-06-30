@@ -392,10 +392,10 @@ class FixedAddonsList(Enum):
         id='Fusion',
         modname='Fusion',
         download_targets={
-            'https://github.com/MV-Fusion-Team/FTL-Multiverse-Fusion/releases/download/v0.1.4/Fusion.zip':
+            'https://github.com/MV-Fusion-Team/FTL-Multiverse-Fusion/releases/download/v0.1.6/Fusion.zip':
                 'Fusion.zip'
         },
-        version='0.1.4',
+        version='0.1.6',
         locale='en',
         metadata_url=None,
         compatible_mv_locale=[],
@@ -410,7 +410,6 @@ class FixedAddonsList(Enum):
     #PiP, priority=700
     #R&D, priority=800
     #DD, priority=900
-    
     Trading = Mod(
         id='TradingRU',
         modname='Trading',
@@ -418,7 +417,7 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/u/1/uc?id=19B-7wTdO4XmNQQwduafLEKg4yMNk5huJ&export=download&confirm=xxx':
                 'FTL-Trading-System.zip'
         },
-        version='0.12',
+        version='0.13',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/TradingRU.xml',
         compatible_mv_locale=['ru'],
@@ -509,20 +508,6 @@ class FixedAddonsList(Enum):
         dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
         priority=950
     )
-    GenGibsDD_RU = Mod(
-        id='GenGibsDD_RU',
-        modname='GenGibsDD',
-        download_targets={
-            'https://drive.usercontent.google.com/download?id=1AjgHspZ5nS29QFKUjQFi3g6OX5qwa_XB&export=download&confirm=xxx':
-                'DD Addon GenGibs.zip'
-        },
-        version='1.0',
-        locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsDD.xml',
-        compatible_mv_locale=['ru'],
-        dependent_modnames=['Darkest-Desire'],
-        priority=960
-    )
     GenGibsDD = Mod(
         id='GenGibsDD',
         modname='GenGibsDD',
@@ -532,8 +517,22 @@ class FixedAddonsList(Enum):
         },
         version='1.0',
         locale='en',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsDD_RU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsDD.xml',
         compatible_mv_locale=[],
+        dependent_modnames=['Darkest-Desire'],
+        priority=960
+    )
+    GenGibsDD_RU = Mod(
+        id='GenGibsDD_RU',
+        modname='GenGibsDD',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1AjgHspZ5nS29QFKUjQFi3g6OX5qwa_XB&export=download&confirm=xxx':
+                'DD Addon GenGibs.zip'
+        },
+        version='1.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsDD_RU.xml',
+        compatible_mv_locale=['ru'],
         dependent_modnames=['Darkest-Desire'],
         priority=960
     )
@@ -550,6 +549,20 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=1000
+    )
+    RandomSS_RU = Mod(
+        id='RandomSS_RU',
+        modname='RandomSS',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1xrGEfC-YEOH85oGQwzjhAz6NQyzOJKbC&export=download&confirm=xxx':
+                'FTL-Random-Starting-Sector.zip'
+        },
+        version='1.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/RSS_RU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=1050
     )
     LizzardAchRU = Mod(
         id='LizzardAchRU',
@@ -695,7 +708,7 @@ class FixedAddonsList(Enum):
         id='NoHardModeScrap',
         modname='NoHardModeScrap',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1KFlM5ItbntkiuYZnJfkzbupnpIiaa8xc&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/u/1/uc?id=1-W5m78H5QESr9rvNpCJ4A11Q1sRKefgU&export=download&confirm=xxx':
                 'No Hard Mode Scrap Penalty 3.0.zip'
         },
         version='3.0',
@@ -709,7 +722,7 @@ class FixedAddonsList(Enum):
         id='NoHardModeScrapRU',
         modname='NoHardModeScrap',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1KFlM5ItbntkiuYZnJfkzbupnpIiaa8xc&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/u/1/uc?id=1-W5m78H5QESr9rvNpCJ4A11Q1sRKefgU&export=download&confirm=xxx':
                 'No Hard Mode Scrap Penalty 3.0.zip'
         },
         version='3.0',
@@ -723,7 +736,7 @@ class FixedAddonsList(Enum):
         id='TOEPatchLast',
         modname='TOEPatchLast',
         download_targets={
-            'https://github.com/arcburnergit/FTL-Outer-Expansion/releases/download/v7.1.2/FTL-Outer-Expansion-PATCH_AFTER_ALL_OTHER_ADDONS.ftl':
+            'https://github.com/arcburnergit/FTL-Outer-Expansion/releases/download/v7.1.8/FTL-Outer-Expansion-PATCH_AFTER_ALL_OTHER_ADDONS.ftl':
                 'FTL-Outer-Expansion-PATCH_AFTER_ALL_OTHER_ADDONS.ftl'
         },
         version='1.0.0',
