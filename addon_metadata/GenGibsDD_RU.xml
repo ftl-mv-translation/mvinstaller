@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-	<title><![CDATA[ Generated Gibs for Darkest Desire 3.4.2 ]]></title>
+	<title><![CDATA[ Generated Gibs for Darkest Desire 4.0.2 ]]></title>
 	<threadUrl><![CDATA[  ]]></threadUrl>
 	<author><![CDATA[ Aleev ]]></author>
-	<version><![CDATA[ 1.0 ]]></version>
+	<version><![CDATA[ 1.1.0 ]]></version>
 	<description>
 <![CDATA[
-Предоставляет Gibs (обломки, которые отображаются при уничтожении кораблей) для аддона Darkest Desire 3.4.2 от Naimeron
+Предоставляет Gibs (обломки, которые отображаются при уничтожении кораблей) для аддона Darkest Desire от Naimeron
 
 Gibs были сгенерированы с помощью инструмента G.L.A.I.V.E., созданного Epirasque.
 ]]>
