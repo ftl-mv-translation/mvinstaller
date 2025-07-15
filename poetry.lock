@@ -83,14 +83,14 @@ dev = ["backports.zoneinfo", "freezegun (>=1.0,<2.0)", "jinja2 (>=3.0)", "pytest
 
 [[package]]
 name = "certifi"
-version = "2025.6.15"
+version = "2025.7.9"
 description = "Python package for providing Mozilla's CA Bundle."
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "certifi-2025.6.15-py3-none-any.whl", hash = "sha256:2e0c7ce7cb5d8f8634ca55d2ba7e6ec2689a2fd6537d8dec1296a477a4910057"},
-    {file = "certifi-2025.6.15.tar.gz", hash = "sha256:d747aa5a8b9bbbb1bb8c22bb13e22bd1f18e9796defa16bab421f7f7a317323b"},
+    {file = "certifi-2025.7.9-py3-none-any.whl", hash = "sha256:d842783a14f8fdd646895ac26f719a061408834473cfc10203f6a575beb15d39"},
+    {file = "certifi-2025.7.9.tar.gz", hash = "sha256:c1d2ec05395148ee10cf672ffc28cd37ea0ab0d99f9cc74c43e588cbd111b079"},
 ]
 
 [[package]]
@@ -264,14 +264,14 @@ files = [
 
 [[package]]
 name = "dunamai"
-version = "1.24.1"
+version = "1.25.0"
 description = "Dynamic version generation"
 optional = false
 python-versions = ">=3.5"
 groups = ["main"]
 files = [
-    {file = "dunamai-1.24.1-py3-none-any.whl", hash = "sha256:4370e406d8ce195fc4b066b5c326bfa9adb269c4b8719b4e4fd90b63a2144bf7"},
-    {file = "dunamai-1.24.1.tar.gz", hash = "sha256:3aa3348f77242da8628b23f11e89569343440f0f912bcef32a1fa891cf8e7215"},
+    {file = "dunamai-1.25.0-py3-none-any.whl", hash = "sha256:7f9dc687dd3256e613b6cc978d9daabfd2bb5deb8adc541fc135ee423ffa98ab"},
+    {file = "dunamai-1.25.0.tar.gz", hash = "sha256:a7f8360ea286d3dbaf0b6a1473f9253280ac93d619836ad4514facb70c0719d1"},
 ]
 
 [package.dependencies]
@@ -1316,14 +1316,14 @@ files = [
 
 [[package]]
 name = "typing-extensions"
-version = "4.14.0"
+version = "4.14.1"
 description = "Backported and Experimental Type Hints for Python 3.9+"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "typing_extensions-4.14.0-py3-none-any.whl", hash = "sha256:a1514509136dd0b477638fc68d6a91497af5076466ad0fa6c338e44e359944af"},
-    {file = "typing_extensions-4.14.0.tar.gz", hash = "sha256:8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4"},
+    {file = "typing_extensions-4.14.1-py3-none-any.whl", hash = "sha256:d1e1e3b58374dc93031d6eda2420a48ea44a36c2b4766a4fdeb3710755731d76"},
+    {file = "typing_extensions-4.14.1.tar.gz", hash = "sha256:38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"},
 ]
 
 [[package]]
