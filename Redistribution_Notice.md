@@ -18,6 +18,7 @@ Redistribution of mods are permitted per following notice:
 - Judge Boon Selector Mod, provided by its authors under [MIT License](https://github.com/benediktwerner/FTL-Multiverse-Judge-Boon-Selector-Mod/blob/master/LICENSE)
 - Lizzard's Achievements, provided by Lizzard
 - More Mannable Systems, provided by kokoro
+- Universal Weapon Modularity, provided by kokoro
 - Into The Breach HUD for FTL Hyperspace, provided by slow
 - Instant Clone and Heal after Battle, provided by Choosechee
 - Judge Blue Options, provided by Duodecimus

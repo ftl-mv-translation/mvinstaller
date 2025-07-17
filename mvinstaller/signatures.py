@@ -368,21 +368,22 @@ ADDONS_TRANSLATION_RELEASE = [
     'https://api.github.com/repos/ftl-mv-translation/forgotten-races/releases/latest', #fr, priority=300
     'https://api.github.com/repos/ftl-mv-translation/forgotten-diamonds/releases/latest', #fr-diamonds, priority=400
     'https://api.github.com/repos/ftl-mv-translation/outer-expansion/releases/latest', #OE, priority=500
-    'https://api.github.com/repos/ftl-mv-translation/forgemaster/releases/latest', #forgemaster, priority=600
-    'https://api.github.com/repos/ftl-mv-translation/piracy-is-poggers/releases/latest', #PiP, priority=700
-    'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=800
-    'https://api.github.com/repos/ftl-mv-translation/darkest-desire/releases/latest', #DD, priority=900
+    'https://api.github.com/repos/ftl-mv-translation/darkest-desire/releases/latest', #DD, priority=600
+    'https://api.github.com/repos/ftl-mv-translation/forgemaster/releases/latest', #forgemaster, priority=700
+    'https://api.github.com/repos/ftl-mv-translation/piracy-is-poggers/releases/latest', #PiP, priority=800
+    'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=900
 ]
 
 TRANSLATION_RELEASE_DEPENDENCIES = {
     'Forgemaster': ['Fusion'],
     'Forgotten-Races': ['The-Renegade-Collection', 'Fusion'],
     'Forgotten-Diamonds': ['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
-    'Outer-Expansion': ['TOEPatchLast']
+    'Outer-Expansion': ['TOEPatchLast'],
+    'Darkest-Desire': ['DDPatchLast']
 }
 
 LIBRARY_MODS = [
-    'Fusion', 'TOEPatchLast'
+    'Fusion', 'TOEPatchLast', 'DDPatchLast'
 ]
 
 class FixedAddonsList(Enum):
@@ -406,10 +407,10 @@ class FixedAddonsList(Enum):
     #fr, priority=300
     #fr-diamonds, priority=400
     #OE, priority=500
-    #forgemaster, priority=600
-    #PiP, priority=700
-    #R&D, priority=800
-    #DD, priority=900
+    #DD, priority=600
+    #forgemaster, priority=700
+    #PiP, priority=800
+    #R&D, priority=900
     Trading = Mod(
         id='TradingRU',
         modname='Trading',
@@ -564,6 +565,34 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=1050
     )
+    UniversalWeaponMod_RU = Mod(
+        id='UniversalWeaponMod_RU',
+        modname='UniversalWeaponMod',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=11ZXbm8S_VxU2PBy4viostfpYk31Apx5q&export=download&confirm=xxx':
+                'UniversalWeaponModularity.zip'
+        },
+        version='0.1',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/UniversalWeaponMod_RU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=1051
+    )
+    UniversalWeaponMod_ZH_HANS = Mod(
+        id='UniversalWeaponMod_ZH_HANS',
+        modname='UniversalWeaponMod',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=11ZXbm8S_VxU2PBy4viostfpYk31Apx5q&export=download&confirm=xxx':
+                'UniversalWeaponModularity.zip'
+        },
+        version='0.1',
+        locale='zh_Hans',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/UniversalWeaponMod.xml',
+        compatible_mv_locale=['zh_Hans'],
+        dependent_modnames=[],
+        priority=1051
+    )
     LizzardAchRU = Mod(
         id='LizzardAchRU',
         modname='LizzardAch',
@@ -619,6 +648,20 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=1200
+    )
+    BeamMasterWBH_RU = Mod(
+        id='BeamMasterWBH_RU',
+        modname='BeamMasterWBH',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1VaGU-EEJYLRLPuPXTxOiRZ2JDup8X2ck&export=download&confirm=xxx':
+                'Beam Master will be here.zip'
+        },
+        version='1.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/BeamMasterWBH_RU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=1299
     )
     HereBeMarkersRU = Mod(
         id='HereBeMarkersRU',
@@ -745,4 +788,19 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=[],
         dependent_modnames=[],
         priority=2000
+    )
+    
+    DDPatchLast = Mod(
+        id='DDPatchLast',
+        modname='DDPatchLast',
+        download_targets={
+            'https://github.com/Naimeron/Darkest-Desire-Multiverse/releases/download/DDv4.0.4/darkestdesirevSystemPatcher_PATCH_LAST.zip':
+                'darkestdesirevSystemPatcher_PATCH_LAST.zip'
+        },
+        version='1.0.0',
+        locale='en',
+        metadata_url=None,
+        compatible_mv_locale=[],
+        dependent_modnames=[],
+        priority=2010
     )

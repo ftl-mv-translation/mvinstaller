@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<title><![CDATA[ Universal Weapon Modularity ]]></title>
+	<threadUrl><![CDATA[ https://github.com/kokoro11/modular_weapons ]]></threadUrl>
+	<author><![CDATA[ kokoro11 ]]></author>
+	<version><![CDATA[ 0.1 ]]></version>
+	<description>
+<![CDATA[
+Ever wished you could slap a Hullbust Module on your trusty Burst Laser II? Or give a Pike Beam the shield-piercing power it deserves? Now you can.
+
+Universal Weapon Modularity(UWM) breaks the chains of Hektar's proprietary technology, allowing you to install their powerful weapon modules on any weapon in your arsenal, not just the designated "modular" ones.
+
+This mod fundamentally changes how you approach your ship's loadout, opening up a universe of new strategic possibilities. Turn any weapon into the perfect tool for the job.
+
+Latest Version: v0.1
+Download Link: https://github.com/kokoro11/modular_weapons/releases
+
+Cost to install a module on a non-modular weapon: 30 scrap, 3 fuel, 3 missiles, 3 drone parts.
+Note: The resources used for installation will not be refunded when you detach the module or sell the weapon. Choose your modifications wisely!
+
+Module Effects:
+Each weapon can accept one Attribute Module and one Status Module.
+
+Standard Modules:
+RAD Module: +30 crew damage
+Cooldown Module: -20% weapon charge time
+Lockdown Module: Applies lockdown effect to the target room
+Pierce Module: +1 shield pierce, +30% breach chance
+Neural Module: +100% stun chance, +10s stun duration
+Accuracy Module: +20% accuracy. For beams, this is replaced with +1 shield pierce
+Firestarter Module: +30% fire chance
+Hullbust Module: 2x damage vs. systemless rooms, +30% breach chance
+Power Module: +1 power cost, -20% weapon charge speed, +1 damage per shot
+
+Advanced Modules (Requires The Hektar Expansion mod by @RoadTrain):
+Charge Module: Reduces a weapon to a single shot but significantly cuts its charge time. The new charge time is the original charge time divided by twice the original number of shots (e.g., A 4-shot weapon becomes a 1-shot weapon with 1/8th the charge time). Incompatible with beam and single-shot weapons.
+Adaptive Module: +1 power cost, -20% weapon charge speed. Each time this weapon fires, its damage permanently increases by 1 for the rest of the combat. This effect stacks up to 3 times.
+Chain Module: Each time this weapon fires, its charge time is reduced by 10%. This effect stacks up to 3 times for a total of -30% charge time.
+]]>
+	</description>
+</metadata>
