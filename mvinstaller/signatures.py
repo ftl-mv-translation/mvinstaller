@@ -544,7 +544,7 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/u/1/uc?id=1-3-MHlG_Xn_Pufhj9zmuxamFfbltz6f6&export=download&confirm=xxx':
                 'MoreMannableSystems_PATCH_LAST.zip'
         },
-        version='1.5',
+        version='2.0',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSysRU.xml',
         compatible_mv_locale=['ru'],

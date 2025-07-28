@@ -1,72 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-	<!--
-		CDATA tags mean no need to escape special characters.
-		Don't worry about spaces at the start/end. That gets trimmed.
-	-->
-
-
-	<!-- The title of this mod. -->
 	<title><![CDATA[ More Mannable Systems ]]></title>
-
-
-	<!--
-		This mod's thread on subsetgames.com. (haha, not actually)
-		If there's no thread yet, create one to announce your upcoming mod in the
-		forum. Then paste the url here.
-	-->
 	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/73 ]]></threadUrl>
-
-
-	<!-- Your forum user name. -->
 	<author><![CDATA[ kokoro11 ]]></author>
-
-
-	<!--
-		The revision/variant of this release, preferably at least a number.
-		Examples:
-			0.3
-			2.1c Ships Only WIP
-			2.4.1 Hi-res Bkgs
-			1.0 for FTL 1.03.1
-	-->
-	<version><![CDATA[ 1.5 ]]></version>
-
-
+	<version><![CDATA[ 2.0 ]]></version>
 	<description>
 <![CDATA[
+More Mannable Systems 2.0 уже здесь, представляя прогрессию уровня навыков экипажа!
+
 Этот аддон расширяет ваши стратегические возможности, позволяя членам экипажа управлять более широким спектром систем корабля, помимо стандартных шести систем. Прямой контроль над большим количеством систем дает уникальные тактические преимущества и расширяет возможности вашего корабля.
 
+Новая функция: Уровни навыков обслуживания
+Для этой функции необходимо включить опцию «ПРОДВИНУТОЕ ОБСЛУЖИВАНИЕ».
+Члены экипажа теперь могут получать опыт и повышать свой уровень навыков обслуживания новых доступных систем. Уровень навыков члена экипажа определяет силу бонуса, который он предоставляет.
+Как получить навык: Экипаж получает опыт просто за управление системой или за нахождение на посту во время использования системы в бою. 
+Предел обучения: Один член экипажа может получить не более 2 очков навыка за одну систему закаждый прыжок.
+Исключения: Пехотные дроны не могут получать навыки.
+
 Бонусы обслуживания:
-- Кислород: удваивает скорость пополнения кислорода.
-- Дроны: увеличивает скорость работы дронов на 25% (как пехотных, так и космических дронов).
-- Артиллерия: увеличивает скорость перезарядки на 25%.
-- Маскировка*: увеличивает уклонение на 40% при активной маскировке.
-- Контроль разума*: продлевает время действия контроля разума на 25%.
-- Взломщик*: ускоряет скорость взлома на 25%.
-- Временной манипулятор*: сокращает время перезарядки системы на 20%.
-*Требуется ДОП. ОБСЛУЖИВАНИЕ: чтобы включить обслуживание Маскировки, Контроля разума, Взломщика и Временного манипулятора, активируйте опцию "ДОП. ОБСЛУЖИВАНИЕ" в главном меню.
+Бонусы теперь зависят от навыков вашего экипажа*.
+- Кислород: Увеличивает скорость пополнения кислорода на 100/200/300%.
+- Дроны: Увеличивает скорость работы дронов на 20/30/40% (для пехотных и внешних дронов).
+- Артиллерия: Увеличивает скорость перезарядки на 10/20/30%.
+- Временной манипулятор*: Уменьшает время перезарядки системы на 20/33/43%.
+- Маскировка*: Увеличивает уклонение на 40% при активной маскировке.
+  + (Уровень 1) Уменьшает время перезарядки системы на 20%.
+  + (Уровень 2) Увеличивает уклонение на 10% пока система запитана.
+- Контроль разума*: Увеличивает продолжительность контроля разума на 25%.
+  + (Уровень 1) Сокращает время перезарядки системы на 50%.
+  + (Уровень 2) Экипаж под контролем действует в два раза быстрее.
+- Взломщик*: Ускоряет скорость взлома на 25%.
+  + (Уровень 1) Уменьшает время перезарядки системы на 20%.
+  + (Уровень 2) Противодействует вражескому дрону-взломщику.
+
+*Опция игры ПРОДВИНУТОЕ ОБСЛУЖИВАНИЕ:
+Чтобы получить доступ к новым функциям, необходимо включить опцию "ПРОДВИНУТОЕ ОБСЛУЖИВАНИЕ" в главном меню. Эта опция открывает:
+- Возможность обслуживать Маскировку, Контроль разума, Взломщик и Временной манипулятор.
+- Вся прогрессия уровня навыков обслуживания и связанные с ней многоуровневые бонусы.
+
+Совместимость: 
+More Mannable Systems разработан для широкой совместимости с другими аддонами Multiverse. Подробный список совместимых аддонов см. в специальном списке совместимости ниже.
+
+
+Последняя версия: v2.0
+Ссылка для скачивания: https://github.com/kokoro11/more_mannable/releases
+
+
+Список изменений:
+v2.0:
+- Новая функция: уровни навыков обслуживания.
+- Обновлена совместимость с другими аддонами.
+v1.5:
+- Обновлено для совместимости с Multiverse 5.5.
+- Исправлена ошибка переполнения кислорода.
+v1.3:
+- Обновлено для совместимости с Federation Special Forces v1.1.
+v1.2:
+- Обновлено для совместимости с Forgemaster v0.6 и Forgotten Races v13.0.
+
+Список совместимости:
+
+THE RENEGADE COLLECTION
+FORGOTTEN RACES
+FORGOTTEN RACES - DIAMOND
+The Outer Expansion
+R&D
+Fishier Than Light
+Galaxy On Fire
+Darkest Desire
+Insurrection+ Selection (IPS)
+Cosmic Metalloid Expansion
+The Tardis
+FTLLJAMMER
+The Potential - Multiverse Edition
+FTL: FORGEMASTER
+Tradition N Experiment
+Obsidian Cruiser
+Escort Duty
+Tiberian Sun Pack
+Tantive IV
+AI Cruisers
+HEKTAR COLLECTION
+Dino's Hangar
+Faster Than Cobalt
+Lizzard's Variety
+Federation Special Forces
 ]]>
 	</description>
-
-	<!--
-		Suggestions for the description...
-
-		Write a short paragraph about the mod's effect first (what style ship, how
-		does it affect gameplay). No need to introduce yourself.
-
-		Optionally add a paragraph of background flavor.
-
-		Optionally list important features.
-
-		List any concerns about mod compatibility, preferred order, or requirements.
-
-		Mention "Replaces the XYZ ship." if relevant.
-			Kestrel-A, Engi-A,    Fed-A,     Zoltan-A,
-			Stealth-A, Rock-A,    Slug-A,    Mantis-A,
-			Lanius-A,  Crystal-A
-
-		Above all, keep the description general, so you won't have to edit
-		that again for each new version.
-	-->
 </metadata>
