@@ -544,7 +544,7 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/u/1/uc?id=1-3-MHlG_Xn_Pufhj9zmuxamFfbltz6f6&export=download&confirm=xxx':
                 'MoreMannableSystems_PATCH_LAST.zip'
         },
-        version='2.0',
+        version='2.0.1',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSysRU.xml',
         compatible_mv_locale=['ru'],
@@ -572,7 +572,7 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/u/1/uc?id=11ZXbm8S_VxU2PBy4viostfpYk31Apx5q&export=download&confirm=xxx':
                 'UniversalWeaponModularity.zip'
         },
-        version='0.1',
+        version='0.1.2',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/UniversalWeaponMod_RU.xml',
         compatible_mv_locale=['ru'],
@@ -586,7 +586,7 @@ class FixedAddonsList(Enum):
             'https://drive.usercontent.google.com/u/1/uc?id=11ZXbm8S_VxU2PBy4viostfpYk31Apx5q&export=download&confirm=xxx':
                 'UniversalWeaponModularity.zip'
         },
-        version='0.1',
+        version='0.1.2',
         locale='zh_Hans',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/UniversalWeaponMod.xml',
         compatible_mv_locale=['zh_Hans'],
