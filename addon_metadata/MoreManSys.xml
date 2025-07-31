@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<title><![CDATA[ More Mannable Systems ]]></title>
+	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/73 ]]></threadUrl>
+	<author><![CDATA[ kokoro11 ]]></author>
+	<version><![CDATA[ 2.0 ]]></version>
+	<description>
+<![CDATA[
+More Mannable Systems 2.0 is here, introducing crew manning skill level progression!
+
+This addon expands your strategic options by allowing crew members to man a wider array of ship systems beyond the standard six systems. Granting direct control over more systems provides unique tactical advantages and enhances your ship's capabilities.
+
+New Feature: Manning Skill Levels
+This feature requires the "ADVANCED MANNING" option to be enabled.
+Crew members can now gain experience and level up their proficiency at manning the newly available systems. A crew member's skill level determines the power of the bonus they provide.
+How to Gain Skill: Crew gain experience simply by manning a system or by being at the station when the system is used during combat.
+Training Limit: A single crew member can only gain up to 2 skill points for the same system per jump.
+Exclusions: Crew Drones cannot gain skills.
+
+Manning Bonuses:
+Bonuses now scale with your crew's manning skills*.
+- Oxygen: Increases oxygen refill speed by 100/200/300%.
+- Drones: Increases drone operating speed by 20/30/40% (both crew and space drones).
+- Artillery: Boosts weapon recharge speed by 10/20/30%.
+- Temporal*: Reduces system cooldown by 20/33/43%.
+- Cloaking*: Increases evasion by 40% while cloaking is active.
+  + (Level 1) Also reduces system cooldown by 20%.
+  + (Level 2) Also increases evasion by 10% while system is powered.
+- Mind Control*: Extends mind control duration by 25%.
+  + (Level 1) Also reduces system cooldown by 50%.
+  + (Level 2) Also causes the mind controlled crew to act twice as fast.
+- Hacking*: Accelerates hacking speed by 25%.
+  + (Level 1) Also reduces system cooldown by 20%.
+  + (Level 2) Also counters enemy's hacking drone.
+
+*ADVANCED MANNING Game Option:
+To access the new features, you must enable the "ADVANCED MANNING" option in the main menu. This option unlocks:
+- The ability to man the Cloaking, Mind Control, Hacking, and Temporal systems.
+- The entire Manning Skill Level progression and its associated tiered bonuses.
+
+Compatibility:
+More Mannable Systems is designed for broad compatibility with other Multiverse addons. For a detailed list of compatible addons, please see the dedicated "Compatibility List" Below.
+
+Crucial Installation Note: For seamless functionality, ensure More Mannable Systems is patched LAST after all other addons!
+
+Recommended Patch Order:
+
+1. MV Assets
+2. MV Data
+3. ... (Other Addons) ...
+4. More Mannable Systems
+
+
+Latest Version: v2.0
+Download Link: https://github.com/kokoro11/more_mannable/releases
+
+
+Changelog:
+v2.0:
+- New feature: manning skill levels.
+- Updated compatibility with other addons.
+v1.5:
+- Updated for compatibility with Multiverse 5.5.
+- Fixed an oxygen overflow bug.
+v1.3:
+- Updated for compatibility with Federation Special Forces v1.1.
+v1.2:
+- Updated for compatibility with Forgemaster v0.6 and Forgotten Races v13.0.
+
+Compatibility List:
+
+THE RENEGADE COLLECTION
+FORGOTTEN RACES
+FORGOTTEN RACES - DIAMOND
+The Outer Expansion
+R&D
+Fishier Than Light
+Galaxy On Fire
+Darkest Desire
+Insurrection+ Selection (IPS)
+Cosmic Metalloid Expansion
+The Tardis
+FTLLJAMMER
+The Potential - Multiverse Edition
+FTL: FORGEMASTER
+Tradition N Experiment
+Obsidian Cruiser
+Escort Duty
+Tiberian Sun Pack
+Tantive IV
+AI Cruisers
+HEKTAR COLLECTION
+Dino's Hangar
+Faster Than Cobalt
+Lizzard's Variety
+Federation Special Forces
+]]>
+	</description>
+</metadata>
