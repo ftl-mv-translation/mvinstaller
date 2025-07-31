@@ -411,18 +411,18 @@ class FixedAddonsList(Enum):
     #forgemaster, priority=700
     #PiP, priority=800
     #R&D, priority=900
-    Trading = Mod(
-        id='TradingRU',
-        modname='Trading',
+    Eschaton_GenesisRU = Mod(
+        id='Eschaton_GenesisRU',
+        modname='Eschaton_Genesis',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=19B-7wTdO4XmNQQwduafLEKg4yMNk5huJ&export=download&confirm=xxx':
-                'FTL-Trading-System.zip'
+            'https://drive.usercontent.google.com/u/1/uc?id=1xNLywORJcVeMPSf9EQIcpxQ83vzGCDIr&export=download&confirm=xxx':
+                'ESCHATON_GENESIS.zip'
         },
-        version='0.13',
+        version='0.1',
         locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/TradingRU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/Eschaton_GenesisRU.xml',
         compatible_mv_locale=['ru'],
-        dependent_modnames=[],
+        dependent_modnames=['Fusion'],
         priority=920
     )
     GenGibsMV = Mod(
@@ -537,19 +537,19 @@ class FixedAddonsList(Enum):
         dependent_modnames=['Darkest-Desire'],
         priority=960
     )
-    MoreManSysRU = Mod(
-        id='MoreManSysRU',
-        modname='MoreManSys',
+    Trading = Mod(
+        id='TradingRU',
+        modname='Trading',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1-3-MHlG_Xn_Pufhj9zmuxamFfbltz6f6&export=download&confirm=xxx':
-                'MoreMannableSystems_PATCH_LAST.zip'
+            'https://drive.usercontent.google.com/u/1/uc?id=19B-7wTdO4XmNQQwduafLEKg4yMNk5huJ&export=download&confirm=xxx':
+                'FTL-Trading-System.zip'
         },
-        version='2.0.1',
+        version='0.13',
         locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSysRU.xml',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/TradingRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1000
+        priority=970
     )
     RandomSS_RU = Mod(
         id='RandomSS_RU',
@@ -562,6 +562,34 @@ class FixedAddonsList(Enum):
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/RSS_RU.xml',
         compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=1000
+    )
+    MoreManSysRU = Mod(
+        id='MoreManSysRU',
+        modname='MoreManSys',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1-3-MHlG_Xn_Pufhj9zmuxamFfbltz6f6&export=download&confirm=xxx':
+                'MoreMannableSystems_PATCH_LAST.zip'
+        },
+        version='2.0.2',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSysRU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=1050
+    )
+    MoreManSys_ZH_HANS = Mod(
+        id='MoreManSys_ZH_HANS',
+        modname='MoreManSys',
+        download_targets={
+            'https://github.com/kokoro11/more_mannable//releases/download/v2.0.2/MoreMannableSystemsV2_PATCH_LAST.zip':
+                'MoreMannableSystems_PATCH_LAST.zip'
+        },
+        version='2.0.2',
+        locale='zh_Hans',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSys.xml',
+        compatible_mv_locale=['zh_Hans'],
         dependent_modnames=[],
         priority=1050
     )
@@ -577,7 +605,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/UniversalWeaponMod_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1051
+        priority=1060
     )
     UniversalWeaponMod_ZH_HANS = Mod(
         id='UniversalWeaponMod_ZH_HANS',
@@ -591,7 +619,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/UniversalWeaponMod.xml',
         compatible_mv_locale=['zh_Hans'],
         dependent_modnames=[],
-        priority=1051
+        priority=1060
     )
     LizzardAchRU = Mod(
         id='LizzardAchRU',
