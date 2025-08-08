@@ -3,7 +3,7 @@
 	<title><![CDATA[ More Mannable Systems ]]></title>
 	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/73 ]]></threadUrl>
 	<author><![CDATA[ kokoro11 ]]></author>
-	<version><![CDATA[ 2.0 ]]></version>
+	<version><![CDATA[ 2.0.3 ]]></version>
 	<description>
 <![CDATA[
 More Mannable Systems 2.0 is here, introducing crew manning skill level progression!
@@ -14,7 +14,7 @@ New Feature: Manning Skill Levels
 This feature requires the "ADVANCED MANNING" option to be enabled.
 Crew members can now gain experience and level up their proficiency at manning the newly available systems. A crew member's skill level determines the power of the bonus they provide.
 How to Gain Skill: Crew gain experience simply by manning a system or by being at the station when the system is used during combat.
-Training Limit: A single crew member can only gain up to 2 skill points for the same system per jump.
+Training Limit: A single crew member can only gain up to 3 skill points for the same system per jump.
 Exclusions: Crew Drones cannot gain skills.
 
 Manning Bonuses:
@@ -51,11 +51,19 @@ Recommended Patch Order:
 4. More Mannable Systems
 
 
-Latest Version: v2.0
+Latest Version: v2.0.3
 Download Link: https://github.com/kokoro11/more_mannable/releases
 
 
 Changelog:
+v2.0.3:
+- Exp and level information is now retained after reloading the game.
+- Balance change: reduced level up exp to 25 and increased exp limit per jump to 3
+v2.0.2:
+- Fixed system level description errors
+v2.0.1:
+- Balance change: greatly reduced skill points needed to level up
+- Fixed a potential crash causing bug when you jump away from a ship fight while still having enemy crew onboard
 v2.0:
 - New feature: manning skill levels.
 - Updated compatibility with other addons.
