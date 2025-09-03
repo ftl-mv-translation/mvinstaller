@@ -3,11 +3,9 @@
 	<title><![CDATA[ More Mannable Systems ]]></title>
 	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/73 ]]></threadUrl>
 	<author><![CDATA[ kokoro11 ]]></author>
-	<version><![CDATA[ 2.0.3 ]]></version>
+	<version><![CDATA[ 2.1 ]]></version>
 	<description>
 <![CDATA[
-More Mannable Systems 2.0 is here, introducing crew manning skill level progression!
-
 This addon expands your strategic options by allowing crew members to man a wider array of ship systems beyond the standard six systems. Granting direct control over more systems provides unique tactical advantages and enhances your ship's capabilities.
 
 New Feature: Manning Skill Levels
@@ -20,6 +18,7 @@ Exclusions: Crew Drones cannot gain skills.
 Manning Bonuses:
 Bonuses now scale with your crew's manning skills*.
 - Oxygen: Increases oxygen refill speed by 100/200/300%.
+  + (Level 1/2) Also increases repair, movement and healing speed of all aerobic crew onboard by 30/60%.
 - Drones: Increases drone operating speed by 20/30/40% (both crew and space drones).
 - Artillery: Boosts weapon recharge speed by 10/20/30%.
 - Temporal*: Reduces system cooldown by 20/33/43%.
@@ -29,7 +28,7 @@ Bonuses now scale with your crew's manning skills*.
 - Mind Control*: Extends mind control duration by 25%.
   + (Level 1) Also reduces system cooldown by 50%.
   + (Level 2) Also causes the mind controlled crew to act twice as fast.
-- Hacking*: Accelerates hacking speed by 25%.
+- Hacking*: Accelerates hacking speed by 25/50/75%.
   + (Level 1) Also reduces system cooldown by 20%.
   + (Level 2) Also counters enemy's hacking drone.
 
@@ -50,20 +49,29 @@ Recommended Patch Order:
 3. ... (Other Addons) ...
 4. More Mannable Systems
 
+Minimum Hyperspace version required: 1.19
+Recommended Hyperspace version: 1.20+
 
-Latest Version: v2.0.3
+Latest Version: v2.1
 Download Link: https://github.com/kokoro11/more_mannable/releases
 
 
 Changelog:
+v2.1:
+- Fixed a bug where exp limit per was not being saved.
+- Fixed a bug of crew not automatically going to the manning slot of temporal system.
+- Hacking system manning buff: hacking speed boost now scales with skill level.
+- Oxygen system manning buff: level 1/2 manning of oxygen system now has special effects.
+  (This feature requires HS 1.20, but the addon is still compatible with HS 1.19)
+- Minor performance improvements.
 v2.0.3:
 - Exp and level information is now retained after reloading the game.
-- Balance change: reduced level up exp to 25 and increased exp limit per jump to 3
+- Balance change: reduced level up exp to 25 and increased exp limit per jump to 3.
 v2.0.2:
-- Fixed system level description errors
+- Fixed system level description errors.
 v2.0.1:
-- Balance change: greatly reduced skill points needed to level up
-- Fixed a potential crash causing bug when you jump away from a ship fight while still having enemy crew onboard
+- Balance change: greatly reduced skill points needed to level up.
+- Fixed a potential crash causing bug when you jump away from a ship fight while still having enemy crew onboard.
 v2.0:
 - New feature: manning skill levels.
 - Updated compatibility with other addons.

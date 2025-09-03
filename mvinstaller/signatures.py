@@ -292,11 +292,19 @@ class HyperspaceType(Enum):
     )
     HS_1_19_1 = HyperspaceInfo(
         name='HS-1.19.1 cb0fe57',
-        outdated=False,
-        latest=True,
+        outdated=True,
+        latest=False,
         sha1='2b394b1b8c4e81a1a1f287b8c8adeba24e3f5003',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.19.1/FTL.Hyperspace.1.19.1.zip',
         filename='FTL.Hyperspace.1.19.1.zip'
+    )
+    HS_1_20_0 = HyperspaceInfo(
+        name='HS-1.20.0 2540d80',
+        outdated=False,
+        latest=True,
+        sha1='2462b664fe6ad17ed1d107e983dbc469e81e9acd',
+        url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.20.0/FTL.Hyperspace.1.20.0.zip',
+        filename='FTL.Hyperspace.1.20.0.zip'
     )
 
 
@@ -415,10 +423,10 @@ class FixedAddonsList(Enum):
         id='Eschaton_GenesisRU',
         modname='Eschaton_Genesis',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1xNLywORJcVeMPSf9EQIcpxQ83vzGCDIr&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/download?id=1DDtexfyJHO0iskvmM2WDdvpUvNCRTGoq&export=download&confirm=xxx':
                 'ESCHATON_GENESIS.zip'
         },
-        version='0.1',
+        version='0.2',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/Eschaton_GenesisRU.xml',
         compatible_mv_locale=['ru'],
@@ -570,9 +578,9 @@ class FixedAddonsList(Enum):
         modname='MoreManSys',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1-3-MHlG_Xn_Pufhj9zmuxamFfbltz6f6&export=download&confirm=xxx':
-                'MoreMannableSystems_PATCH_LAST.zip'
+                'MoreMannableSystemsV2_PATCH_LAST.zip'
         },
-        version='2.0.2',
+        version='2.1',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSysRU.xml',
         compatible_mv_locale=['ru'],
@@ -583,10 +591,10 @@ class FixedAddonsList(Enum):
         id='MoreManSys_ZH_HANS',
         modname='MoreManSys',
         download_targets={
-            'https://github.com/kokoro11/more_mannable//releases/download/v2.0.2/MoreMannableSystemsV2_PATCH_LAST.zip':
-                'MoreMannableSystems_PATCH_LAST.zip'
+            'https://github.com/kokoro11/more_mannable//releases/download/v2.1/MoreMannableSystemsV2_PATCH_LAST.zip':
+                'MoreMannableSystemsV2_PATCH_LAST.zip'
         },
-        version='2.0.2',
+        version='2.1',
         locale='zh_Hans',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSys.xml',
         compatible_mv_locale=['zh_Hans'],
