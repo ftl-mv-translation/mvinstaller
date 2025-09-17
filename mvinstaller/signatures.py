@@ -853,7 +853,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/ItBHUD_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1499
+        priority=1600
     )
     NoHardModeScrap = Mod(
         id='NoHardModeScrap',

@@ -22,3 +22,6 @@ Redistribution of mods are permitted per following notice:
 - Into The Breach HUD for FTL Hyperspace, provided by slow
 - Instant Clone and Heal after Battle, provided by Choosechee
 - Judge Blue Options, provided by Duodecimus
+- Lily's Extra Capacity, provided by MsBinaryLily
+- Lily's Innovations, provided by MsBinaryLily
+- Expanded Multiverse, provided by Nauter
