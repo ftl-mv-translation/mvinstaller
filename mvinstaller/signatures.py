@@ -377,6 +377,7 @@ ADDONS_TRANSLATION_RELEASE = [
     'https://api.github.com/repos/ftl-mv-translation/forgotten-diamonds/releases/latest', #fr-diamonds, priority=400
     'https://api.github.com/repos/ftl-mv-translation/outer-expansion/releases/latest', #OE, priority=500
     'https://api.github.com/repos/ftl-mv-translation/darkest-desire/releases/latest', #DD, priority=600
+    'https://api.github.com/repos/ftl-mv-translation/expanded-multiverse/releases/latest', #R&D, priority=900
     'https://api.github.com/repos/ftl-mv-translation/forgemaster/releases/latest', #forgemaster, priority=700
     'https://api.github.com/repos/ftl-mv-translation/piracy-is-poggers/releases/latest', #PiP, priority=800
     'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=900
@@ -387,11 +388,12 @@ TRANSLATION_RELEASE_DEPENDENCIES = {
     'Forgotten-Races': ['The-Renegade-Collection', 'Fusion'],
     'Forgotten-Diamonds': ['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
     'Outer-Expansion': ['TOEPatchLast'],
-    'Darkest-Desire': ['DDPatchLast']
+    'Darkest-Desire': ['DDPatchLast'],
+    'Expanded-Multiverse': ['Fusion']
 }
 
 LIBRARY_MODS = [
-    'Fusion', 'TOEPatchLast', 'DDPatchLast'
+    'Fusion', 'TOEPatchLast', 'DDPatchLast', 'VertexUtil'
 ]
 
 class FixedAddonsList(Enum):
@@ -410,6 +412,20 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=[],
         dependent_modnames=[],
         priority=110
+    )
+    VertexUtil = Mod(
+        id='VertexUtil',
+        modname='VertexUtil',
+        download_targets={
+            'https://github.com/ChronoVortex/FTL-HS-Vertex/releases/download/v6.3/Vertex-Util.ftl':
+                'VertexUtil.ftl'
+        },
+        version='6.3',
+        locale='en',
+        metadata_url=None,
+        compatible_mv_locale=[],
+        dependent_modnames=[],
+        priority=120
     )
     #Fishing, priority=200
     #fr, priority=300
@@ -432,6 +448,34 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=['ru'],
         dependent_modnames=['Fusion'],
         priority=920
+    )
+    EternalVerseRU = Mod(
+        id='EternalVerseRU',
+        modname='EternalVerse',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1zWLo-muGpaiHyyoo_PkImEU9Qi7tFAYn&export=download&confirm=xxx':
+                'EternalVerse.zip'
+        },
+        version='1.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/EternalVerseRU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=['VertexUtil'],
+        priority=921
+    )
+    LilysInnovationsRU = Mod(
+        id='LilysInnovationsRU',
+        modname='LilysInnovations',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1JgcdcEXmAu_zX8iOCRcMZcxoT6W6SXGY&export=download&confirm=xxx':
+                'lilys-innovations.ftl'
+        },
+        version='1.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/LilysInnovationsRU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=925
     )
     GenGibsMV = Mod(
         id='GenGibsMV',
@@ -521,7 +565,7 @@ class FixedAddonsList(Enum):
         id='GenGibsDD',
         modname='GenGibsDD',
         download_targets={
-            'https://drive.usercontent.google.com/download?id=1AjgHspZ5nS29QFKUjQFi3g6OX5qwa_XB&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/download?id=11w2PRVW0BRAogf-k-_eKL7gBTFJ0i_E_&export=download&confirm=xxx':
                 'DD Addon GenGibs.zip'
         },
         version='1.0',
@@ -535,7 +579,7 @@ class FixedAddonsList(Enum):
         id='GenGibsDD_RU',
         modname='GenGibsDD',
         download_targets={
-            'https://drive.usercontent.google.com/download?id=1AjgHspZ5nS29QFKUjQFi3g6OX5qwa_XB&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/download?id=11w2PRVW0BRAogf-k-_eKL7gBTFJ0i_E_&export=download&confirm=xxx':
                 'DD Addon GenGibs.zip'
         },
         version='1.0',
@@ -544,6 +588,34 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=['ru'],
         dependent_modnames=['Darkest-Desire'],
         priority=960
+    )
+    ExtraCapacity = Mod(
+        id='ExtraCapacity',
+        modname='ExtraCapacity',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=16kxLe4OlWF8qdRnfCvB1gkGa_3HMLC3P&export=download&confirm=xxx':
+                'lilys-extra-capacity.ftl'
+        },
+        version='1.0',
+        locale='en',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/ExtraCapacity.xml',
+        compatible_mv_locale=[],
+        dependent_modnames=[],
+        priority=961
+    )
+    ExtraCapacityRU = Mod(
+        id='ExtraCapacityRU',
+        modname='ExtraCapacity',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=16kxLe4OlWF8qdRnfCvB1gkGa_3HMLC3P&export=download&confirm=xxx':
+                'lilys-extra-capacity.ftl'
+        },
+        version='1.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/ExtraCapacityRU.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=961
     )
     Trading = Mod(
         id='TradingRU',
@@ -619,10 +691,10 @@ class FixedAddonsList(Enum):
         id='UniversalWeaponMod_ZH_HANS',
         modname='UniversalWeaponMod',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=11ZXbm8S_VxU2PBy4viostfpYk31Apx5q&export=download&confirm=xxx':
+            'https://github.com/kokoro11/modular_weapons/releases/download/v0.2/UniversalWeaponModularity.zip':
                 'UniversalWeaponModularity.zip'
         },
-        version='0.1.2',
+        version='0.2',
         locale='zh_Hans',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/UniversalWeaponMod.xml',
         compatible_mv_locale=['zh_Hans'],
@@ -689,7 +761,7 @@ class FixedAddonsList(Enum):
         id='BeamMasterWBH_RU',
         modname='BeamMasterWBH',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1VaGU-EEJYLRLPuPXTxOiRZ2JDup8X2ck&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/u/1/uc?id=1tQB5ZGl1UvSdfkdxvcQpja57LGP6L2Uj&export=download&confirm=xxx':
                 'Beam Master will be here.zip'
         },
         version='1.0',
@@ -781,7 +853,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/ItBHUD_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1600
+        priority=1499
     )
     NoHardModeScrap = Mod(
         id='NoHardModeScrap',
@@ -830,7 +902,7 @@ class FixedAddonsList(Enum):
         id='DDPatchLast',
         modname='DDPatchLast',
         download_targets={
-            'https://github.com/Naimeron/Darkest-Desire-Multiverse/releases/download/DDv4.0.4/darkestdesirevSystemPatcher_PATCH_LAST.zip':
+            'https://github.com/Naimeron/Darkest-Desire-Multiverse/releases/download/DDv4.0.5/darkestdesirevSystemPatcher_PATCH_LAST.zip':
                 'darkestdesirevSystemPatcher_PATCH_LAST.zip'
         },
         version='1.0.0',
