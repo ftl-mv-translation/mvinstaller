@@ -24,4 +24,5 @@ Redistribution of mods are permitted per following notice:
 - Judge Blue Options, provided by Duodecimus
 - Lily's Extra Capacity, provided by MsBinaryLily
 - Lily's Innovations, provided by MsBinaryLily
+- Lily's Beam Emporium, provided by MsBinaryLily
 - Expanded Multiverse, provided by Nauter
