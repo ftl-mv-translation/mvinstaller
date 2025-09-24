@@ -377,10 +377,11 @@ ADDONS_TRANSLATION_RELEASE = [
     'https://api.github.com/repos/ftl-mv-translation/forgotten-diamonds/releases/latest', #fr-diamonds, priority=400
     'https://api.github.com/repos/ftl-mv-translation/outer-expansion/releases/latest', #OE, priority=500
     'https://api.github.com/repos/ftl-mv-translation/darkest-desire/releases/latest', #DD, priority=600
-    'https://api.github.com/repos/ftl-mv-translation/expanded-multiverse/releases/latest', #R&D, priority=900
-    'https://api.github.com/repos/ftl-mv-translation/forgemaster/releases/latest', #forgemaster, priority=700
-    'https://api.github.com/repos/ftl-mv-translation/piracy-is-poggers/releases/latest', #PiP, priority=800
-    'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=900
+    'https://api.github.com/repos/ftl-mv-translation/expanded-multiverse/releases/latest', #EMV, priority=700
+    'https://api.github.com/repos/ftl-mv-translation/forgemaster/releases/latest', #forgemaster, priority=800
+    'https://api.github.com/repos/ftl-mv-translation/piracy-is-poggers/releases/latest', #PiP, priority=900
+    'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=1000
+    'https://api.github.com/repos/ftl-mv-translation/lilys-beam-emporium/releases/latest', #LBE, priority=1100   
 ]
 
 TRANSLATION_RELEASE_DEPENDENCIES = {
@@ -432,9 +433,11 @@ class FixedAddonsList(Enum):
     #fr-diamonds, priority=400
     #OE, priority=500
     #DD, priority=600
-    #forgemaster, priority=700
-    #PiP, priority=800
-    #R&D, priority=900
+    #EMV, priority=700
+    #FM, priority=800
+    #PiP, priority=900
+    #R&D, priority=1000
+    #LBE, priority=1100   
     Eschaton_GenesisRU = Mod(
         id='Eschaton_GenesisRU',
         modname='Eschaton_Genesis',
@@ -447,7 +450,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/Eschaton_GenesisRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['Fusion'],
-        priority=920
+        priority=1010
     )
     EternalVerseRU = Mod(
         id='EternalVerseRU',
@@ -461,7 +464,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/EternalVerseRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['VertexUtil'],
-        priority=921
+        priority=1011
     )
     LilysInnovationsRU = Mod(
         id='LilysInnovationsRU',
@@ -475,7 +478,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/LilysInnovationsRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=925
+        priority=1212
     )
     GenGibsMV = Mod(
         id='GenGibsMV',
@@ -489,7 +492,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsMV.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=930
+        priority=1110
     )
     GenGibsMV_RU = Mod(
         id='GenGibsMV_RU',
@@ -503,7 +506,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsMV_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=930
+        priority=1110
     )
     GenGibsTRC = Mod(
         id='GenGibsTRC',
@@ -517,7 +520,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsTRC.xml',
         compatible_mv_locale=[],
         dependent_modnames=['The-Renegade-Collection'],
-        priority=940
+        priority=1120
     )
     GenGibsTRC_RU = Mod(
         id='GenGibsTRC_RU',
@@ -531,7 +534,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsTRC_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['The-Renegade-Collection'],
-        priority=940
+        priority=1120
     )
     GenGibsFR = Mod(
         id='GenGibsFR',
@@ -545,7 +548,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR.xml',
         compatible_mv_locale=[],
         dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
-        priority=950
+        priority=1130
     )
     GenGibsFR_RU = Mod(
         id='GenGibsFR_RU',
@@ -559,7 +562,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsFR_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
-        priority=950
+        priority=1130
     )
     GenGibsDD = Mod(
         id='GenGibsDD',
@@ -573,7 +576,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsDD.xml',
         compatible_mv_locale=[],
         dependent_modnames=['Darkest-Desire'],
-        priority=960
+        priority=1140
     )
     GenGibsDD_RU = Mod(
         id='GenGibsDD_RU',
@@ -587,7 +590,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/GenGibsDD_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['Darkest-Desire'],
-        priority=960
+        priority=1140
     )
     ExtraCapacity = Mod(
         id='ExtraCapacity',
@@ -601,7 +604,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/ExtraCapacity.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=961
+        priority=1150
     )
     ExtraCapacityRU = Mod(
         id='ExtraCapacityRU',
@@ -615,7 +618,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/ExtraCapacityRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=961
+        priority=1150
     )
     Trading = Mod(
         id='TradingRU',
@@ -629,7 +632,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/TradingRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=970
+        priority=1160
     )
     RandomSS_RU = Mod(
         id='RandomSS_RU',
@@ -643,7 +646,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/RSS_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1000
+        priority=1170
     )
     MoreManSysRU = Mod(
         id='MoreManSysRU',
@@ -657,7 +660,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSysRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1050
+        priority=1180
     )
     MoreManSys_ZH_HANS = Mod(
         id='MoreManSys_ZH_HANS',
@@ -671,7 +674,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/MoreManSys.xml',
         compatible_mv_locale=['zh_Hans'],
         dependent_modnames=[],
-        priority=1050
+        priority=1180
     )
     UniversalWeaponMod_RU = Mod(
         id='UniversalWeaponMod_RU',
@@ -685,7 +688,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/UniversalWeaponMod_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1060
+        priority=1190
     )
     UniversalWeaponMod_ZH_HANS = Mod(
         id='UniversalWeaponMod_ZH_HANS',
@@ -699,7 +702,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/UniversalWeaponMod.xml',
         compatible_mv_locale=['zh_Hans'],
         dependent_modnames=[],
-        priority=1060
+        priority=1190
     )
     LizzardAchRU = Mod(
         id='LizzardAchRU',
@@ -713,7 +716,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/LizzardAchRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1100
+        priority=1200
     )
     LizzardAchDE = Mod(
         id='LizzardAchDE',
@@ -727,7 +730,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/LizzardAchEN.xml',
         compatible_mv_locale=['de'],
         dependent_modnames=[],
-        priority=1100
+        priority=1200
     )
     JudgeBlueOptionsRU = Mod(
         id='JudgeBlueOptionsRU',
@@ -741,7 +744,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/JBO_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1150
+        priority=1250
     )
     BoonSelectorRU = Mod(
         id='BoonSelectorRU',
@@ -755,7 +758,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/BoonSelectorRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1200
+        priority=1300
     )
     BeamMasterWBH_RU = Mod(
         id='BeamMasterWBH_RU',
@@ -769,7 +772,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/BeamMasterWBH_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1299
+        priority=1350
     )
     HereBeMarkersRU = Mod(
         id='HereBeMarkersRU',
@@ -783,7 +786,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/HereBeMarkersRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1300
+        priority=1400
     )
     HereBeMarkersPlusRU = Mod(
         id='HereBeMarkersPlusRU',
@@ -797,7 +800,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/HereBeMarkersPlusRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1400
+        priority=1500
     )
     VanUI = Mod(
         id='VanUI',
@@ -811,7 +814,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanillaUI.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=1500
+        priority=1600
     )
     VanUI_RU = Mod(
         id='VanUI_RU',
@@ -825,7 +828,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanUI_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1500
+        priority=1600
     )
     VanUI_KO = Mod(
         id='VanUI_KO',
@@ -839,7 +842,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/VanillaUI.xml',
         compatible_mv_locale=['ko'],
         dependent_modnames=[],
-        priority=1500
+        priority=1600
     )
     ItBHUD_RU = Mod(
         id='ItBHUD_RU',
@@ -853,7 +856,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/ItBHUD_RU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1600
+        priority=1700
     )
     NoHardModeScrap = Mod(
         id='NoHardModeScrap',
@@ -867,7 +870,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/NoHardModeScrap.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=1700
+        priority=1800
     )
     NoHardModeScrapRU = Mod(
         id='NoHardModeScrapRU',
@@ -881,7 +884,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/addon_metadata/NoHardModeScrapRU.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1700
+        priority=1800
     )
     TOEPatchLast = Mod(
         id='TOEPatchLast',
