@@ -1,5 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadataList>
+
+<!--  
+  <class_mode_here>
+    <id></id>
+    <metadata>
+	
+Metadata information
+
+</metadata>
+  </class_mode_here>
+  -->
+  
+  
   <BoonSelectorRU>
     <id>BoonSelectorRU</id>
     <metadata>
@@ -8,7 +21,7 @@
      https://github.com/benediktwerner/FTL-Multiverse-Judge-Boon-Selector-Mod 
   </threadUrl>
   <author>1vader</author>
-  <version>1.6.0</version>
+  <version>1.10</version>
   <description>
      
 Позволяет выбрать любой дар от судей в начале прохождения, если вы разблокировали/получили их хотя бы раз.
@@ -16,6 +29,8 @@
   </description>
 </metadata>
   </BoonSelectorRU>
+  
+  
   <GenGibsFR>
     <id>GenGibsFR</id>
     <metadata>
@@ -54,6 +69,7 @@ Gibs были сгенерированы с помощью инструмент�
   </description>
 </metadata>
   </GenGibsFR_RU>
+  
   <GenGibsMV>
     <id>GenGibsMV</id>
     <metadata>
@@ -195,15 +211,23 @@ Special thanks to marcusian for consulting support.
   <title> Blue Judge Options </title>
   <threadUrl> https://ftlmultiverse.boards.net/thread/88/multiverse-blue-judge-options </threadUrl>
   <author> Duodecimus </author>
-  <version> MV5.4.5 v1.4 </version>
+  <version> v1.6 </version>
   <description>
  
 Этот мод изменяет событие Судей Узла 17 таким образом, чтобы опции, которые еще не были выбраны, стали синими.
-Установщик поддерживает:
-	Multiverse (5.4.5)
-	Forgotten Diamonds (1.6.3)
+
+Поддерживает:
+	Multiverse (5.5.1)
+	Forgotten Diamonds (1.6.5)
 	Forgotten Races (16.27)
-	Fishier Than Light (1.2.2)
+	Forgemaster (0.6.1.2.2)
+	Insurrection + Selection (5.5.1)
+	C&C Weapons: Renegade (5.0)
+	Fishier Than Light (1.2.3)
+	Darkest Desire (4.0.2)
+	The Outer Expansion (7.1.8)
+	Lily's Innovations (1.5.0)
+	Expanded Multiverse (0.6.1)
 
 
   </description>
@@ -212,36 +236,9 @@ Special thanks to marcusian for consulting support.
   <LizzardAchEN>
     <id>LizzardAchDE</id>
     <metadata>
-	<!--
-		CDATA tags mean no need to escape special characters.
-		Don't worry about spaces at the start/end. That gets trimmed.
-	-->
-
-
-	<!-- The title of this mod. -->
 	<title> Lizzard's Achievements </title>
-
-
-	<!--
-		This mod's thread on subsetgames.com.
-		If there's no thread yet, create one to announce your upcoming mod in the
-		forum. Then paste the url here.
-	-->
 	<threadUrl> None :c </threadUrl>
-
-
-	<!-- Your forum user name. -->
 	<author> Lizzard </author>
-
-
-	<!--
-		The revision/variant of this release, preferably at least a number.
-		Examples:
-			0.3
-			2.1c Ships Only WIP
-			2.4.1 Hi-res Bkgs
-			1.0 for FTL 1.03.1
-	-->
 	<version> -0.9.9 </version>
 
 
@@ -260,27 +257,6 @@ Nauter for orchestrating the JFK assasination
 And Pepson for his credit not fitting in the standard SlipStream window size
 
 	</description>
-
-	<!--
-		Suggestions for the description...
-
-		Write a short paragraph about the mod's effect first (what style ship, how
-		does it affect gameplay). No need to introduce yourself.
-
-		Optionally add a paragraph of background flavor.
-
-		Optionally list important features.
-
-		List any concerns about mod compatibility, preferred order, or requirements.
-
-		Mention "Replaces the XYZ ship." if relevant.
-			Kestrel-A, Engi-A,    Fed-A,     Zoltan-A,
-			Stealth-A, Rock-A,    Slug-A,    Mantis-A,
-			Lanius-A,  Crystal-A
-
-		Above all, keep the description general, so you won't have to edit
-		that again for each new version.
-	-->
 </metadata>
   </LizzardAchEN>
   <LizzardAchRU>
@@ -298,7 +274,14 @@ And Pepson for his credit not fitting in the standard SlipStream window size
 
 	<description>
 
-Этот мод добавляет достижения для всех МВ-крейсеров на первой странице.
+Достижения? В МОЕЙ Мультивселенной!? Даже больше, чем вы думаете!
+
+Этот небольшой аддон представляет 30 совершенно новых достижений, по 3 за каждый крейсер МВ (корабли первой страницы).
+
+Некоторые из них забавные, некоторые трудные, некоторые вызывают глубокое беспокойство о моем психическом здоровье.
+
+Наслаждайтесь!
+
 
 Создан для конкурса достижений 2024 года.
 
@@ -317,77 +300,111 @@ Nauter за организацию убийства Дж. Кеннеди
   <MoreManSysRU>
     <id>MoreManSysRU</id>
     <metadata>
-	<!--
-		CDATA tags mean no need to escape special characters.
-		Don't worry about spaces at the start/end. That gets trimmed.
-	-->
-
-
-	<!-- The title of this mod. -->
 	<title> More Mannable Systems </title>
-
-
-	<!--
-		This mod's thread on subsetgames.com. (haha, not actually)
-		If there's no thread yet, create one to announce your upcoming mod in the
-		forum. Then paste the url here.
-	-->
 	<threadUrl> https://ftlmultiverse.boards.net/thread/73 </threadUrl>
-
-
-	<!-- Your forum user name. -->
 	<author> kokoro11 </author>
-
-
-	<!--
-		The revision/variant of this release, preferably at least a number.
-		Examples:
-			0.3
-			2.1c Ships Only WIP
-			2.4.1 Hi-res Bkgs
-			1.0 for FTL 1.03.1
-	-->
-	<version> 1.5 </version>
-
-
+	<version> 2.1 </version>
 	<description>
 
 Этот аддон расширяет ваши стратегические возможности, позволяя членам экипажа управлять более широким спектром систем корабля, помимо стандартных шести систем. Прямой контроль над большим количеством систем дает уникальные тактические преимущества и расширяет возможности вашего корабля.
 
+Новая функция: Уровни навыков обслуживания
+Для этой функции необходимо включить опцию «ПРОДВИНУТОЕ ОБСЛУЖИВАНИЕ».
+Члены экипажа теперь могут получать опыт и повышать свой уровень навыков обслуживания новых доступных систем. Уровень навыков члена экипажа определяет силу бонуса, который он предоставляет.
+Как получить навык: Экипаж получает опыт просто за управление системой или за нахождение на посту во время использования системы в бою. 
+Предел обучения: Один член экипажа может получить не более 3 очков навыка за одну систему закаждый прыжок.
+Исключения: Пехотные дроны не могут получать навыки.
+
 Бонусы обслуживания:
-- Кислород: удваивает скорость пополнения кислорода.
-- Дроны: увеличивает скорость работы дронов на 25% (как пехотных, так и космических дронов).
-- Артиллерия: увеличивает скорость перезарядки на 25%.
-- Маскировка*: увеличивает уклонение на 40% при активной маскировке.
-- Контроль разума*: продлевает время действия контроля разума на 25%.
-- Взломщик*: ускоряет скорость взлома на 25%.
-- Временной манипулятор*: сокращает время перезарядки системы на 20%.
-*Требуется ДОП. ОБСЛУЖИВАНИЕ: чтобы включить обслуживание Маскировки, Контроля разума, Взломщика и Временного манипулятора, активируйте опцию "ДОП. ОБСЛУЖИВАНИЕ" в главном меню.
+Бонусы теперь зависят от навыков вашего экипажа*.
+- Кислород: Увеличивает скорость пополнения кислорода на 100/200/300%.
+  + (Уровень 1/2) Увеличивает скорость ремонта, передвижения и исцеления всех аэробных членов экипажа на 30/60%%.
+- Дроны: Увеличивает скорость работы дронов на 20/30/40% (для пехотных и внешних дронов).
+- Артиллерия: Увеличивает скорость перезарядки на 10/20/30%.
+- Временной манипулятор*: Уменьшает время перезарядки системы на 20/33/43%.
+- Маскировка*: Увеличивает уклонение на 40% при активной маскировке.
+  + (Уровень 1) Уменьшает время перезарядки системы на 20%.
+  + (Уровень 2) Увеличивает уклонение на 10% пока система запитана.
+- Контроль разума*: Увеличивает продолжительность контроля разума на 25%.
+  + (Уровень 1) Сокращает время перезарядки системы на 50%.
+  + (Уровень 2) Экипаж под контролем действует в два раза быстрее.
+- Взломщик*: Ускоряет скорость взлома на 25/50/75%.
+  + (Уровень 1) Уменьшает время перезарядки системы на 20%.
+  + (Уровень 2) Противодействует вражескому дрону-взломщику.
+
+*Опция игры ПРОДВИНУТОЕ ОБСЛУЖИВАНИЕ:
+Чтобы получить доступ к новым функциям, необходимо включить опцию "ПРОДВИНУТОЕ ОБСЛУЖИВАНИЕ" в главном меню. Эта опция открывает:
+- Возможность обслуживать Маскировку, Контроль разума, Взломщик и Временной манипулятор.
+- Вся прогрессия уровня навыков обслуживания и связанные с ней многоуровневые бонусы.
+
+Совместимость: 
+More Mannable Systems разработан для широкой совместимости с другими аддонами Multiverse. Подробный список совместимых аддонов см. в специальном списке совместимости ниже.
+
+
+Последняя версия: v2.1
+Ссылка для скачивания: https://github.com/kokoro11/more_mannable/releases
+
+
+Список изменений:
+v2.1:
+- Исправлена ошибка, из-за которой не сохранялся лимит опыта.
+- Исправлена ошибка, из-за которой экипаж не переходил автоматически обслуживать временной манипулятор.
+- Усиление системы взлома: скорость взлома теперь зависит от уровня навыка.
+- Усиление системы кислорода: уровень 1/2 системы кислорода теперь имеет особые эффекты.
+  (Эта функция требует HS 1.20, но аддон по-прежнему совместим с HS 1.19)
+- Незначительные улучшения производительности.
+v2.0.3:
+- Информация об опыте и уровне теперь сохраняется после перезагрузки игры.
+- Изменение баланса: количество опыта за повышение уровня уменьшено до 25, а лимит опыта за прыжок увеличен до 3.
+v2.0.2:
+- Исправлены ошибки описания уровня системы.
+v2.0.1:
+- Изменение баланса: значительно уменьшено количество очков навыков, необходимых для повышения уровня.
+- Исправлена потенциальная ошибка, приводящая к сбою при прыжке с корабля во время боя, когда на борту все еще находились вражеские члены экипажа.
+v2.0:
+- Новая функция: уровни навыков обслуживания.
+- Обновлена совместимость с другими аддонами.
+v1.5:
+- Обновлено для совместимости с Multiverse 5.5.
+- Исправлена ошибка переполнения кислорода.
+v1.3:
+- Обновлено для совместимости с Federation Special Forces v1.1.
+v1.2:
+- Обновлено для совместимости с Forgemaster v0.6 и Forgotten Races v13.0.
+
+Список совместимости:
+
+THE RENEGADE COLLECTION
+FORGOTTEN RACES
+FORGOTTEN RACES - DIAMOND
+The Outer Expansion
+R&D
+Fishier Than Light
+Galaxy On Fire
+Darkest Desire
+Insurrection+ Selection (IPS)
+Cosmic Metalloid Expansion
+The Tardis
+FTLLJAMMER
+The Potential - Multiverse Edition
+FTL: FORGEMASTER
+Tradition N Experiment
+Obsidian Cruiser
+Escort Duty
+Tiberian Sun Pack
+Tantive IV
+AI Cruisers
+HEKTAR COLLECTION
+Dino's Hangar
+Faster Than Cobalt
+Lizzard's Variety
+Federation Special Forces
 
 	</description>
-
-	<!--
-		Suggestions for the description...
-
-		Write a short paragraph about the mod's effect first (what style ship, how
-		does it affect gameplay). No need to introduce yourself.
-
-		Optionally add a paragraph of background flavor.
-
-		Optionally list important features.
-
-		List any concerns about mod compatibility, preferred order, or requirements.
-
-		Mention "Replaces the XYZ ship." if relevant.
-			Kestrel-A, Engi-A,    Fed-A,     Zoltan-A,
-			Stealth-A, Rock-A,    Slug-A,    Mantis-A,
-			Lanius-A,  Crystal-A
-
-		Above all, keep the description general, so you won't have to edit
-		that again for each new version.
-	-->
 </metadata>
+
   </MoreManSysRU>
+  
   <NoHardModeScrap>
     <id>NoHardModeScrap</id>
     <metadata>
@@ -450,6 +467,8 @@ Restores the vanilla UI style to the game instead of the 5.0 remade UI.
   </description>
 </metadata>
   </VanUI_RU>
+  
+  
     <VanUI_KO>
     <id>VanUI_KO</id>
     <metadata>
@@ -460,8 +479,583 @@ Restores the vanilla UI style to the game instead of the 5.0 remade UI.
   <description>
  
 Restores the vanilla UI style to the game instead of the 5.0 remade UI.
-
+	
   </description>
 </metadata>
   </VanUI_KO>
+	
+  <BeamMasterWBH_RU>
+    <id>BeamMasterWBH_RU</id>
+	<metadata>
+  <title> Beam Master will be here </title>
+  <threadUrl> https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev </threadUrl>
+  <author> Aleev </author>
+  <version> 1.0.1 </version>
+  <description>
+ 
+Надоело встречать заклятого врага? Не беда, этот аддон добавляет маркер Мастера лучей, чтобы вы всегда могли ее пропустить (или наоборот с радостью ее встречать)
+
+Поддержка аддонов: R&D и The Outer Expansion
+
+  </description>
+	</metadata>
+  </BeamMasterWBH_RU>
+  
+  <Eschaton_GenesisRU>
+    <id>Eschaton_GenesisRU</id>
+    <metadata>
+  <title>Eschaton Genesis</title>
+  <author>Eschaton</author>
+  <version> 0.2alpha </version>
+  <description>Для тех, кто не пользуется Локализованным установщиком: Для работы аддона необходим Fusion
+
+– Всего 38 новых кораблей, включая 3 корабля уникального экипажа
+– 3 уникальных члена экипажа с полным функционалом. Подробнее о них далее
+– Много интересных механик и новых модулей, встроенных в корабли.
+– 1 новая раса
+– 4 минибосса, что оставляют после себя чертежи своих кораблей
+
+Где найти минибоссов?
+Отправляйтесь в 5 сектор. Ваш бортовой компьютер сообщит о присутствии на карте ранее невиданного разлома в пространстве, отправляющего запросы на прием сообщений. Но будьте осторожны: никто не знает, кто за этим может стоять.
+
+Где найти уникальный экипаж?
+Ваканс, престарелый золтан-отшельник, вынужденный вернуться в общество, находится с самого начала на кораблях линейки "Астра": Луноликий, Солнцеликий, Астраликий, Корабль Ваканса.
+Зеркальная, член организации Искателей Чудес и загадочная космическая аномалия, которая обрела разум. Нахождение: Стеклянный корабль тип В и Корабль Зеркальной.
+Император Белый, полубожественный монарх, который вывел человечество в космос в одной далёкой Вселенной... точнее говоря, лишь клон того Императора. Находится на кораблях линейки "Голиаф": Голиаф I, Прототип фитоценоза, Голиаф II, Корабль Императора.
+
+На данный момент уникальный экипаж можно найти только на соответствующих им кораблях, но, возможно, в будущем появятся события, которые приведут к получению этого уникального экипажа и на всех других кораблях игры
+
+Будущие обновления:
+0.2: Добавление уникальных врагов-минибоссов, битва с которыми происходит при определенных условиях. Добавление 4 играбельных кораблей и редизайн пары кораблей. (нынешний статус аддона)
+0.3: Релиз бета-версии. Добавление квестцентра Искателей Чудес, вокруг которого крутится весь сюжет аддона. Гарантированно +2-3 корабля и +1 уникальный экипаж. Добавление условий разблокировки для всех кораблей, которые ещё не имеют своих способов получения. Маяк события битвы с минибоссами станет одним из квестов, и не будет появляться просто так.
+0.4: Расширение термитов. Уникальный сектор местной колонии термитов? +1 уникальный экипаж, +2 элитные версии термтов и +3-4 корабля. Возможность встретить термитов в магазинах с очень небольшим шансом. Добавление термитам разного окраса.
+0.5-0.X: TBA
+1.0: Релизная версия. Полный функционал аддона. Новая концовка и её сектор, в котором вам будет поручено выполнить одно ОЧЕНЬ важное действие. 
+
+Больше – в будущем. Если я не перегорю, конечно! Дорожная карта может меняться, некоторые идеи могут быть не реализованы или изменены в процессе разработки.
+
+Обо всех багах прошу сообщать на форуме сервера FTL: MV на русском в определённой публикации, посвященной аддону. Там же можно высказать своё мнение по поводу аддона или его (хрупкого) баланса</description>
+</metadata>
+  </Eschaton_GenesisRU>
+  
+  <LilysInnovationsRU>
+    <id>LilysInnovationsRU</id>
+    <metadata>
+	<title> Lily's Innovations </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/167/mv-5-lilys-innovations-1 </threadUrl>
+	<author> msbinarylily </author>
+	<version> 1.6.2 </version>
+	<description>
+
+Надоели существующие системы в FTL после сотен часов игры? Хотите больше разнообразия?
+
+Тогда позвольте представить вам:
+
+Lily's Innovations
+
+Вместо добавления нового вооружения или экипажа, в игру добавляются новые кастомные СИСТЕМЫ КОРАБЛЯ.
+
+На данный момент новых систем всего 5:
+
+Абляционная броня - альтернатива щитам.
+Шоковый нейтрализатор - альтернатива батарейки.
+Инфузионный отсек - альтернатива медотсеку/клон-отсеку.
+Система наручи - новая подсистема, для нее всем кораблям добавлен 5 слот подсистем.
+Специализированное ядро целенаведения - новая система.
+
+Также этот аддон добавляет новые внутренние улучшения для ванильных систем.
+
+
+Особая благодарность: 
+Nai, за идеи и работу над спрайтами;
+Arc, sillysandvich, за помощь в написании скриптов;
+Willow, за помощь в написании текстов;
+Kix и всем, кто работал над созданием FTL: Multiverse (и Hyperspace);
+
+	</description>
+</metadata>
+  </LilysInnovationsRU>
+  
+  <MoreManSys>
+    <id>MoreManSys</id>
+    <metadata>
+	<title> More Mannable Systems </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/73 </threadUrl>
+	<author> kokoro11 </author>
+	<version> 2.1 </version>
+	<description>
+
+This addon expands your strategic options by allowing crew members to man a wider array of ship systems beyond the standard six systems. Granting direct control over more systems provides unique tactical advantages and enhances your ship's capabilities.
+
+New Feature: Manning Skill Levels
+This feature requires the "ADVANCED MANNING" option to be enabled.
+Crew members can now gain experience and level up their proficiency at manning the newly available systems. A crew member's skill level determines the power of the bonus they provide.
+How to Gain Skill: Crew gain experience simply by manning a system or by being at the station when the system is used during combat.
+Training Limit: A single crew member can only gain up to 3 skill points for the same system per jump.
+Exclusions: Crew Drones cannot gain skills.
+
+Manning Bonuses:
+Bonuses now scale with your crew's manning skills*.
+- Oxygen: Increases oxygen refill speed by 100/200/300%.
+  + (Level 1/2) Also increases repair, movement and healing speed of all aerobic crew onboard by 30/60%.
+- Drones: Increases drone operating speed by 20/30/40% (both crew and space drones).
+- Artillery: Boosts weapon recharge speed by 10/20/30%.
+- Temporal*: Reduces system cooldown by 20/33/43%.
+- Cloaking*: Increases evasion by 40% while cloaking is active.
+  + (Level 1) Also reduces system cooldown by 20%.
+  + (Level 2) Also increases evasion by 10% while system is powered.
+- Mind Control*: Extends mind control duration by 25%.
+  + (Level 1) Also reduces system cooldown by 50%.
+  + (Level 2) Also causes the mind controlled crew to act twice as fast.
+- Hacking*: Accelerates hacking speed by 25/50/75%.
+  + (Level 1) Also reduces system cooldown by 20%.
+  + (Level 2) Also counters enemy's hacking drone.
+
+*ADVANCED MANNING Game Option:
+To access the new features, you must enable the "ADVANCED MANNING" option in the main menu. This option unlocks:
+- The ability to man the Cloaking, Mind Control, Hacking, and Temporal systems.
+- The entire Manning Skill Level progression and its associated tiered bonuses.
+
+Compatibility:
+More Mannable Systems is designed for broad compatibility with other Multiverse addons. For a detailed list of compatible addons, please see the dedicated "Compatibility List" Below.
+
+Crucial Installation Note: For seamless functionality, ensure More Mannable Systems is patched LAST after all other addons!
+
+Recommended Patch Order:
+
+1. MV Assets
+2. MV Data
+3. ... (Other Addons) ...
+4. More Mannable Systems
+
+Minimum Hyperspace version required: 1.19
+Recommended Hyperspace version: 1.20+
+
+Latest Version: v2.1
+Download Link: https://github.com/kokoro11/more_mannable/releases
+
+
+Changelog:
+v2.1:
+- Fixed a bug where exp limit per was not being saved.
+- Fixed a bug of crew not automatically going to the manning slot of temporal system.
+- Hacking system manning buff: hacking speed boost now scales with skill level.
+- Oxygen system manning buff: level 1/2 manning of oxygen system now has special effects.
+  (This feature requires HS 1.20, but the addon is still compatible with HS 1.19)
+- Minor performance improvements.
+v2.0.3:
+- Exp and level information is now retained after reloading the game.
+- Balance change: reduced level up exp to 25 and increased exp limit per jump to 3.
+v2.0.2:
+- Fixed system level description errors.
+v2.0.1:
+- Balance change: greatly reduced skill points needed to level up.
+- Fixed a potential crash causing bug when you jump away from a ship fight while still having enemy crew onboard.
+v2.0:
+- New feature: manning skill levels.
+- Updated compatibility with other addons.
+v1.5:
+- Updated for compatibility with Multiverse 5.5.
+- Fixed an oxygen overflow bug.
+v1.3:
+- Updated for compatibility with Federation Special Forces v1.1.
+v1.2:
+- Updated for compatibility with Forgemaster v0.6 and Forgotten Races v13.0.
+
+Compatibility List:
+
+THE RENEGADE COLLECTION
+FORGOTTEN RACES
+FORGOTTEN RACES - DIAMOND
+The Outer Expansion
+R&D
+Fishier Than Light
+Galaxy On Fire
+Darkest Desire
+Insurrection+ Selection (IPS)
+Cosmic Metalloid Expansion
+The Tardis
+FTLLJAMMER
+The Potential - Multiverse Edition
+FTL: FORGEMASTER
+Tradition N Experiment
+Obsidian Cruiser
+Escort Duty
+Tiberian Sun Pack
+Tantive IV
+AI Cruisers
+HEKTAR COLLECTION
+Dino's Hangar
+Faster Than Cobalt
+Lizzard's Variety
+Federation Special Forces
+
+	</description>
+</metadata>
+  </MoreManSys>
+  
+  <EternalVerseRU>
+    <id>EternalVerseRU</id>
+    <metadata>
+  <title>EternalVerse</title>
+  <author>Eschaton (сбор и перевод)</author>
+  <version> 1.3 </version>
+  <description>Этот аддон добавляет несколько кораблей, сделанных разными аддоноделами. Фактически, он собирает разрозненные мини-аддоны в один большой аддон. Это удобно потому, что вам не придется загружать отдельные аддоны для того, чтобы опробовать лишь один корабль, и все корабли данного аддона будут представлены на одной странице.
+  
+Нынешний перечень переведённых и добавленных кораблей:
+  
+- Obsidian Cruiser (1 корабль, 1 вариант. Авторство: Chrono Vortex, Kieve, Felipe, ConMan, Brightlord, R4V3-0N)
+- Escort Duty (2 корабля, 4 варианта. Авторство: Chrono Vortex, DryEagle, Vertaalfout, RAD-82)
+- Tantive IV (1 корабль, 1 вариант. Авторство: Chrono Vortex, R4V3-0N, Moreorlesser)
+- Tiberian Sun Pack (3 корабля, 7 вариантов. Авторство: Chrono Vortex, Vertaalfout, R4V3-0N, Felipe, TaxiService, Azri_Apoc, SecondDatke)
+- The Tardis (2 корабля, 4 варианта. Авторство: Gencool, Chrono Vortex, voidstranger)
+- Slocknog's Flagship (1 корабль, 1 вариант. Авторство: Kix)
+- Faster Than Cobalt (1 корабль, 3 варианта. Авторство: AceKoala)
+  
+В будущем возможно добавление и других кораблей.
+
+Также аддон включает в себя иные небольшие аддоны:
+- Symbiont WonderDrone (Авторство: Evil Pepper Playz). Добавляет дополнительную опцию превращения в Чудо-дрона для Технопата-Симбионта.
+  
+Сделано специально для сервера дискорд FTL: MV на русском.</description>
+</metadata>
+  </EternalVerseRU>
+  
+  <UniversalWeaponMod>
+    <id>UniversalWeaponMod</id>
+    <metadata>
+	<title> Universal Weapon Modularity </title>
+	<threadUrl> https://github.com/kokoro11/modular_weapons </threadUrl>
+	<author> kokoro11 </author>
+	<version> 0.1 </version>
+	<description>
+
+Ever wished you could slap a Hullbust Module on your trusty Burst Laser II? Or give a Pike Beam the shield-piercing power it deserves? Now you can.
+
+Universal Weapon Modularity(UWM) breaks the chains of Hektar's proprietary technology, allowing you to install their powerful weapon modules on any weapon in your arsenal, not just the designated "modular" ones.
+
+This mod fundamentally changes how you approach your ship's loadout, opening up a universe of new strategic possibilities. Turn any weapon into the perfect tool for the job.
+
+Latest Version: v0.1
+Download Link: https://github.com/kokoro11/modular_weapons/releases
+
+Cost to install a module on a non-modular weapon: 30 scrap, 3 fuel, 3 missiles, 3 drone parts.
+Note: The resources used for installation will not be refunded when you detach the module or sell the weapon. Choose your modifications wisely!
+
+Module Effects:
+Each weapon can accept one Attribute Module and one Status Module.
+
+Standard Modules:
+RAD Module: +30 crew damage
+Cooldown Module: -20% weapon charge time
+Lockdown Module: Applies lockdown effect to the target room
+Pierce Module: +1 shield pierce, +30% breach chance
+Neural Module: +100% stun chance, +10s stun duration
+Accuracy Module: +20% accuracy. For beams, this is replaced with +1 shield pierce
+Firestarter Module: +30% fire chance
+Hullbust Module: 2x damage vs. systemless rooms, +30% breach chance
+Power Module: +1 power cost, -20% weapon charge speed, +1 damage per shot
+
+Advanced Modules (Requires The Hektar Expansion mod by @RoadTrain):
+Charge Module: Reduces a weapon to a single shot but significantly cuts its charge time. The new charge time is the original charge time divided by twice the original number of shots (e.g., A 4-shot weapon becomes a 1-shot weapon with 1/8th the charge time). Incompatible with beam and single-shot weapons.
+Adaptive Module: +1 power cost, -20% weapon charge speed. Each time this weapon fires, its damage permanently increases by 1 for the rest of the combat. This effect stacks up to 3 times.
+Chain Module: Each time this weapon fires, its charge time is reduced by 10%. This effect stacks up to 3 times for a total of -30% charge time.
+
+	</description>
+</metadata>
+  </UniversalWeaponMod>
+  
+  <UniversalWeaponMod_RU>
+    <id>UniversalWeaponMod_RU</id>
+    <metadata>
+	<title> Universal Weapon Modularity </title>
+	<threadUrl> https://github.com/kokoro11/modular_weapons </threadUrl>
+	<author> kokoro11 </author>
+	<version> 0.1.2 </version>
+	<description>
+
+Вы когда-нибудь мечтали установить Противокорпусный модуль на свой верный Импульсный лазер II? Или придать лучу "Пика" заслуженную способность пробивать щиты? Теперь это возможно.
+
+Universal Weapon Modularity(UWM) разрывает цепи запатентованной технологии "Гектар Индастриз", позволяя вам устанавливать их мощные оружейные модули на любое оружие в вашем арсенале, а не только на обозначенное "модульное" оружие.
+
+Этот мод в корне меняет подход к оснащению корабля, открывая вселенную новых стратегических возможностей. Превратите любое оружие в идеальный инструмент для работы.
+
+Стоимость установки модуля на немодульное оружие: 30 лома, 3 топлива, 3 ракеты, 3 дрон-комплекта.
+Примечание: ресурсы, потраченные на установку, не будут возвращены, когда вы снимите модуль или продадите оружие. Выбирайте модификации с умом!
+
+Эффекты модулей:
+Каждое оружие может принять 1 атрибутный и 1 статусный модуль.
+
+Рад-модуль: +30 урона экипажу
+Модуль перезарядки: -20% время перезарядки
+Модуль изоляции: запирает отсеки
+Пронзающий модуль: +1 к проникновению щитов, +30% к шансу пробоины
+Нейро-модуль: +100% шанс оглушения, +10с длительность оглушения
+Модуль точности: +20% к точности. Для лучей это заменяется на +1 к проникновению щитов
+Модуль поджога: +30% к шансу возгорания
+Противокорпусный модуль: 2х урон отсекам без систем, +30% к шансу пробоины
+Модуль мощности: +1 к потреблению энергии, +20% к скорости перезарядки, +1 ко всему урону
+
+	</description>
+</metadata>
+  </UniversalWeaponMod_RU>
+  
+  <RSS_RU>
+    <id>RSS_RU</id>
+    <metadata>
+	<title> Random Starting Sector </title>
+	<threadUrl>https://ftlmultiverse.boards.net/thread/153/ftl-random-sector-start</threadUrl>
+	<author> Arc </author>
+	<version> 1.0 </version>
+	<description>
+
+Теперь, начиная игру, вы можете выбрать направление в 1 из 6 случайных секторов, они будут такими же, что и 6 секторов, в которые вы можете прыгнуть в секторе 2. В этих секторах все еще будут некоторые события из стартового сектора, такие как снабжения, торговец и К.У.Р.А.
+
+	</description>
+</metadata>
+  </RSS_RU>
+  
+  <ExtraCapacityRU>
+    <id>ExtraCapacityRU</id>
+    <metadata>
+	<title> Lily's Extra Capacity </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/167/mv-5-lilys-innovations-1 </threadUrl>
+	<author> msbinarylily </author>
+	<version> 1.0.0 </version>
+	<description>
+
+Вы любите хранить предметы? 3 слота модулей и 4 слота груза вам не хватает?    
+
+В таком случае этот мини-аддон именно для вас!    
+
+Увеличивает количество слотов модулей на 3 и количество слотов груза на 4 - и его можно патчить несколько раз, если вам нужно еще больше! [Не в случае с локализованным установщиком]
+
+
+	</description>
+</metadata>
+  </ExtraCapacityRU>
+  
+  
+  <ExtraCapacity>
+    <id>ExtraCapacity</id>
+    <metadata>
+	<title> Lily's Extra Capacity </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/167/mv-5-lilys-innovations-1 </threadUrl>
+	<author> msbinarylily </author>
+	<version> 1.0.0 </version>
+	<description>
+
+Are you a hoarder? Is 3 augment and 4 cargo slots not enough for you.
+
+In which case this mini-addon is just for you!
+
+Increases augment slots by 3 and cargo slots by 4 - and can be patched multiple times if you want even more!
+
+Needed to be pathed after (below) mods that adds ships - otherwise ships added below this mod won't be affected!
+
+
+	</description>
+</metadata>
+  </ExtraCapacity>
+  
+  
+  <TradingRU>
+    <id>TradingRU</id>
+    <metadata>
+	<title> Trading System </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/147/ftl-trading-9 </threadUrl>
+	<author> Arc </author>
+	<version> 0.13 </version>
+	<description>
+
+Попробуйте совершенно новый способ управления финансами в FTL.
+
+Совершайте выгодные сделки и используйте возможности рынка.
+Планируйте заранее, чтобы извлечь максимальную выгоду из своих сделок.
+Узнавайте о самых прибыльных сделках.
+Оборудуйте свой корабль лучшими торговыми инструментами и выполняйте торговые миссии, чтобы заработать еще больше.
+
+	</description>
+</metadata>
+  </TradingRU>
+  
+  
+  
+  <GenGibsDD_RU>
+    <id>GenGibsDD_RU</id>
+    <metadata>
+	<title> Generated Gibs for Darkest Desire 4.0.2 </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev </threadUrl>
+	<author> Aleev </author>
+	<version> 1.1.0 </version>
+	<description>
+
+Предоставляет Gibs (обломки, которые отображаются при уничтожении кораблей) для аддона Darkest Desire от Naimeron
+
+Gibs были сгенерированы с помощью инструмента G.L.A.I.V.E., созданного Epirasque.
+
+</description>
+</metadata>
+  </GenGibsDD_RU>
+  
+  <GenGibsDD>
+    <id>GenGibsDD</id>
+    <metadata>
+	<title> Generated Gibs for Darkest Desire 4.0.2 </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev </threadUrl>
+	<author> Aleev </author>
+	<version> 1.1.0 </version>
+	<description>
+
+Provides Gibs (debris pieces that are shown whenever ships are destroyed) for Darkest Desire by Naimeron
+
+This addon has to be patched after Darkest Desire itself
+
+Gibs were generated with the G.L.A.I.V.E. tool made by Epirasque
+
+</description>
+</metadata>
+  </GenGibsDD>
+  
+  <TNE_RU>
+    <id>TNE_RU</id>
+    <metadata>
+<title>Tradition N Experiment</title>
+ <threadUrl>https://ftlmultiverse.boards.net/thread/42/mv-tradition-experiment-v1-23d</threadUrl>
+ <author>Private JJ</author>
+ <version>1.25c</version>
+ <description>
+- Аддон включает в себя более 50 новых видов оружия, более 10 дронов и 28 кораблей.
+
+Содержимое:
+
+- Замораживающий луч / точечный луч
+- Автопушки - пробивают ВСЕ щиты, но наносят урон, уменьшенный на количество пробитых щитов.
+- Рельсы - ракеты, но также наносят урон щитам.
+- Внешние заряжатели - заряжают оружие, расходуя свой собственный заряд.
+- Внешние репульсоры - отражают урон, расходуя свой собственный заряд.
+- Новый точечный луч, наносит разрушительный урон при полном заряде, но также может стрелять при меньшем заряде, нанося слабый урон.
+- Телепортационное оружие, подобно телепортационной системе, может отправлять и принимать ваших членов экипажа.
+- Ионный стабилизатор, немедленно снимает ионный эффект выбранной системы.
+
+и многое другое!
+
+Более подробную информацию можете изучить по ссылке выше.
+</description>
+</metadata>
+  </TNE_RU>
+  <TNE_ZH_HANS>
+    <id>TNE_ZH_HANS</id>
+    <metadata>
+<title>Tradition N Experiment</title>
+ <threadUrl>https://ftlmultiverse.boards.net/thread/42/mv-tradition-experiment-v1-23d</threadUrl>
+ <author>Private JJ</author>
+ <version>1.25c</version>
+ <description>
+- This addon includes 50+ new weapons, 10+ drones, and 28 ships.
+
+Contents:
+
+- Lockdown Beam / Pinpoint
+- Autocannons, pierce ALL shields but deal reduced damage by same number of shield it pierced.
+- Railguns, missile but also does shield damage.
+- External Rechargers, recharge firing weapon by draining its own charge.
+- External Repulsion Field Generators, repel damages by draining its own charge.
+- A new Pinpoint, does devastating damage on full charge, but also can be shot at lower charge to deal weak damage.
+- A teleporter weapon, like teleporter system, it can send and receive your crews.
+- Ion stabilizer, immediately remove ion effect on targeted system.
+
+and more!
+</description>
+</metadata>
+  </TNE_ZH_HANS>
+  <RainbowModeRU>
+    <id>RainbowModeRU</id>
+    <metadata>
+	<title> Rainbow Mode </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/174/rainbow-mode-v1 </threadUrl>
+	<author> Arc </author>
+	<version>1.4</version>
+	<description>
+
+Добавляет новый режим игры в ангаре.
+Случайные предметы больше не выпадают, вместо этого в начале каждого сектора можно выбрать 1 из 8 высококачественных видов оружия/дронов, а также 1 из 4 членов экипажа/один модуль.
+
+	</description>
+</metadata>
+  </RainbowModeRU>
+  <SymbiontWonderdroneRU>
+    <id>SymbiontWonderdroneRU</id>
+    <metadata>
+<title>Симбионт Чудо-Дрон</title>
+ <threadUrl>https://ftlmultiverse.boards.net/thread/173/mv-5-symbiont-wonderdrone</threadUrl>
+ <author>Evil Pepper Playz</author>
+ <version>1.1</version>
+ <description>
+
+Всегда задавался вопросом, почему нет симбиотической формы Чудо-Дрона(tm)?
+
+Я тоже задавался этим вопросом! Поэтому, увидев, как многие люди просят разработчиков добавить ее, я решил сам добавить эту новую форму!
+
+Спрайты перекрашенного Чудо-Дрона были нарисованы не мной, а Pepson'ом, и я взял их из mv assets.
+
+
+Чтобы получить этот классный дрон, вам нужно встретить контрабандиста мультивселенной в пиратском секторе, купить (или отобрать силой) у него, а затем встретить морфа-ренегата!
+
+Спасибо за спрайты симбионта Чудо-Дрона — Pepson
+Спасибо за то что жив — Lizzard
+Спасибо за существование — Bannoffepie
+</description>
+</metadata>
+  </SymbiontWonderdroneRU>
+  <TemporalMastery_ZH_HANS>
+    <id>TemporalMastery_ZH_HANS</id>
+    <metadata>
+	<title> Temporal Mastery (Temporal System Overhaul) </title>
+	<threadUrl> https://github.com/kokoro11/temporal_mastery </threadUrl>
+	<author> kokoro11 </author>
+	<version> 0.1.7 </version>
+	<description>
+
+Tired of the Temporal Manipulator being a one trick pony? While powerful for boarding strategies, its potential has always felt limited. This overhaul transforms the temporal system from a niche tool into a versatile and engaging core system that interacts with your ship in dynamic new ways.
+
+With Temporal Mastery, you can now directly manipulate the flow of time for individual ship systems. Speed up your weapons for a rapid offensive, or slow down the enemy's shields to press your advantage. The possibilities are no longer limited to just crew members.
+
+This mod introduces many internal upgrades for the temporal system, allowing you to customize and enhance the temporal system's functionality to suit your play style. You'll also discover new temporal-themed augments in stores, further expanding your strategic options.
+
+Latest Stable Version: v0.1.7
+Download Link: https://github.com/kokoro11/temporal_mastery/releases
+Forum Post Link: https://ftlmultiverse.boards.net/thread/52
+
+Installation: Must be installed after Multiverse.
+
+Highly Recommended: For the full experience, install the Playable Temporal System (https://ftlmultiverse.boards.net/thread/60) addon to add the temporal system to all ships.
+
+	</description>
+</metadata>
+  </TemporalMastery_ZH_HANS>
+  <TemporalMasteryRU>
+    <id>TemporalMasteryRU</id>
+    <metadata>
+	<title> Temporal Mastery (Переделка Временного манипулятора) </title>
+	<threadUrl> https://github.com/kokoro11/temporal_mastery </threadUrl>
+	<author> kokoro11 </author>
+	<version> 0.1.7 </version>
+	<description>
+
+Устали от того, что Временной манипулятор — это одноразовый трюк? Несмотря на его мощность в стратегиях абордажа, его потенциал всегда казался ограниченным. Эта переработка превращает временную систему из нишевого инструмента в универсальную и увлекательную основную систему, которая взаимодействует с вашим кораблем динамичными новыми способами.
+
+С помощью Temporal Mastery вы теперь можете напрямую манипулировать течением времени для отдельных систем корабля. Ускорьте свое оружие для быстрой атаки или замедлите щиты противника, чтобы усилить свое преимущество. Возможности больше не ограничиваются только членами экипажа.
+
+Этот мод вводит множество внутренних улучшений для временной системы, позволяя вам настраивать и улучшать ее функциональность в соответствии с вашим стилем игры. Вы также обнаружите в магазинах новые временные модули, которые еще больше расширят ваши стратегические возможности.
+
+Последняя стабильная версия: v0.1.7
+Ссылка для скачивания: https://github.com/kokoro11/temporal_mastery/releases
+Ссылка на форум: https://ftlmultiverse.boards.net/thread/52
+
+	</description>
+</metadata>
+  </TemporalMasteryRU>
+  
+  
 </metadataList>
