@@ -1115,34 +1115,6 @@ Recommended Hyperspace version: 1.20+
 Latest Version: v2.1
 Download Link: https://github.com/kokoro11/more_mannable/releases
 
-
-Changelog:
-v2.1:
-- Fixed a bug where exp limit per was not being saved.
-- Fixed a bug of crew not automatically going to the manning slot of temporal system.
-- Hacking system manning buff: hacking speed boost now scales with skill level.
-- Oxygen system manning buff: level 1/2 manning of oxygen system now has special effects.
-  (This feature requires HS 1.20, but the addon is still compatible with HS 1.19)
-- Minor performance improvements.
-v2.0.3:
-- Exp and level information is now retained after reloading the game.
-- Balance change: reduced level up exp to 25 and increased exp limit per jump to 3.
-v2.0.2:
-- Fixed system level description errors.
-v2.0.1:
-- Balance change: greatly reduced skill points needed to level up.
-- Fixed a potential crash causing bug when you jump away from a ship fight while still having enemy crew onboard.
-v2.0:
-- New feature: manning skill levels.
-- Updated compatibility with other addons.
-v1.5:
-- Updated for compatibility with Multiverse 5.5.
-- Fixed an oxygen overflow bug.
-v1.3:
-- Updated for compatibility with Federation Special Forces v1.1.
-v1.2:
-- Updated for compatibility with Forgemaster v0.6 and Forgotten Races v13.0.
-
 Compatibility List:
 
 THE RENEGADE COLLECTION
