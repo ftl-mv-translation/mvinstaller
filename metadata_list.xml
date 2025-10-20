@@ -800,8 +800,8 @@ Universal Weapon Modularity(UWM) разрывает цепи запатенто�
 </metadata>
   </UniversalWeaponMod_RU>
   
-  <RSS_RU>
-    <id>RSS_RU</id>
+  <RandomSS_RU>
+    <id>RandomSS_RU</id>
     <metadata>
 	<title> Random Starting Sector </title>
 	<threadUrl>https://ftlmultiverse.boards.net/thread/153/ftl-random-sector-start</threadUrl>
@@ -813,7 +813,7 @@ Universal Weapon Modularity(UWM) разрывает цепи запатенто�
 
 	</description>
 </metadata>
-  </RSS_RU>
+  </RandomSS_RU>
   
   <ExtraCapacityRU>
     <id>ExtraCapacityRU</id>
@@ -1194,5 +1194,6 @@ Chain Module: Each time this weapon fires, its charge time is reduced by 10%. Th
 	</description>
 	</metadata>
   </UniversalWeaponMod_ZH_HANS>
+  
   
 </metadataList>
