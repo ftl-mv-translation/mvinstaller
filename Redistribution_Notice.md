@@ -26,3 +26,5 @@ Redistribution of mods are permitted per following notice:
 - Lily's Innovations, provided by MsBinaryLily
 - Lily's Beam Emporium, provided by MsBinaryLily
 - Expanded Multiverse, provided by Nauter
+- Tradition N Experiment, provided by Private JJ
+- Temporal Mastery, provided by kokoro
