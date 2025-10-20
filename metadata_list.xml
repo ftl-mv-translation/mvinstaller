@@ -4,11 +4,11 @@
 <!--  
   <class_mode_here>
     <id></id>
-    <metadata>
+	<metadata>
 	
 Metadata information
 
-</metadata>
+	</metadata>
   </class_mode_here>
   -->
   
@@ -800,8 +800,8 @@ Universal Weapon Modularity(UWM) разрывает цепи запатенто�
 </metadata>
   </UniversalWeaponMod_RU>
   
-  <RSS_RU>
-    <id>RSS_RU</id>
+  <RandomSS_RU>
+    <id>RandomSS_RU</id>
     <metadata>
 	<title> Random Starting Sector </title>
 	<threadUrl>https://ftlmultiverse.boards.net/thread/153/ftl-random-sector-start</threadUrl>
@@ -813,7 +813,7 @@ Universal Weapon Modularity(UWM) разрывает цепи запатенто�
 
 	</description>
 </metadata>
-  </RSS_RU>
+  </RandomSS_RU>
   
   <ExtraCapacityRU>
     <id>ExtraCapacityRU</id>
@@ -1056,6 +1056,144 @@ Highly Recommended: For the full experience, install the Playable Temporal Syste
 	</description>
 </metadata>
   </TemporalMasteryRU>
+  
+  <MoreManSys_ZH_HANS>
+    <id>MoreManSys_ZH_HANS</id>
+	<metadata>
+	<title> More Mannable Systems </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/73 </threadUrl>
+	<author> kokoro11 </author>
+	<version> 2.1 </version>
+	<description>
+
+This addon expands your strategic options by allowing crew members to man a wider array of ship systems beyond the standard six systems. Granting direct control over more systems provides unique tactical advantages and enhances your ship's capabilities.
+
+New Feature: Manning Skill Levels
+This feature requires the "ADVANCED MANNING" option to be enabled.
+Crew members can now gain experience and level up their proficiency at manning the newly available systems. A crew member's skill level determines the power of the bonus they provide.
+How to Gain Skill: Crew gain experience simply by manning a system or by being at the station when the system is used during combat.
+Training Limit: A single crew member can only gain up to 3 skill points for the same system per jump.
+Exclusions: Crew Drones cannot gain skills.
+
+Manning Bonuses:
+Bonuses now scale with your crew's manning skills*.
+- Oxygen: Increases oxygen refill speed by 100/200/300%.
+  + (Level 1/2) Also increases repair, movement and healing speed of all aerobic crew onboard by 30/60%.
+- Drones: Increases drone operating speed by 20/30/40% (both crew and space drones).
+- Artillery: Boosts weapon recharge speed by 10/20/30%.
+- Temporal*: Reduces system cooldown by 20/33/43%.
+- Cloaking*: Increases evasion by 40% while cloaking is active.
+  + (Level 1) Also reduces system cooldown by 20%.
+  + (Level 2) Also increases evasion by 10% while system is powered.
+- Mind Control*: Extends mind control duration by 25%.
+  + (Level 1) Also reduces system cooldown by 50%.
+  + (Level 2) Also causes the mind controlled crew to act twice as fast.
+- Hacking*: Accelerates hacking speed by 25/50/75%.
+  + (Level 1) Also reduces system cooldown by 20%.
+  + (Level 2) Also counters enemy's hacking drone.
+
+*ADVANCED MANNING Game Option:
+To access the new features, you must enable the "ADVANCED MANNING" option in the main menu. This option unlocks:
+- The ability to man the Cloaking, Mind Control, Hacking, and Temporal systems.
+- The entire Manning Skill Level progression and its associated tiered bonuses.
+
+Compatibility:
+More Mannable Systems is designed for broad compatibility with other Multiverse addons. For a detailed list of compatible addons, please see the dedicated "Compatibility List" Below.
+
+Crucial Installation Note: For seamless functionality, ensure More Mannable Systems is patched LAST after all other addons!
+
+Recommended Patch Order:
+
+1. MV Assets
+2. MV Data
+3. ... (Other Addons) ...
+4. More Mannable Systems
+
+Minimum Hyperspace version required: 1.19
+Recommended Hyperspace version: 1.20+
+
+Latest Version: v2.1
+Download Link: https://github.com/kokoro11/more_mannable/releases
+
+Compatibility List:
+
+THE RENEGADE COLLECTION
+FORGOTTEN RACES
+FORGOTTEN RACES - DIAMOND
+The Outer Expansion
+R&amp;D
+Fishier Than Light
+Galaxy On Fire
+Darkest Desire
+Insurrection+ Selection (IPS)
+Cosmic Metalloid Expansion
+The Tardis
+FTLLJAMMER
+The Potential - Multiverse Edition
+FTL: FORGEMASTER
+Tradition N Experiment
+Obsidian Cruiser
+Escort Duty
+Tiberian Sun Pack
+Tantive IV
+AI Cruisers
+HEKTAR COLLECTION
+Dino's Hangar
+Faster Than Cobalt
+Lizzard's Variety
+Federation Special Forces
+
+	</description>
+	</metadata>
+  </MoreManSys_ZH_HANS>
+  
+  
+  <UniversalWeaponMod_ZH_HANS>
+    <id>UniversalWeaponMod_ZH_HANS</id>
+	<metadata>
+	<title> Universal Weapon Modularity </title>
+	<threadUrl> https://github.com/kokoro11/modular_weapons </threadUrl>
+	<author> kokoro11 </author>
+	<version> 0.2 </version>
+	<description>
+
+Ever wished you could slap a Hullbust Module on your trusty Burst Laser II? Or give a Pike Beam the shield-piercing power it deserves? Now you can.
+
+Universal Weapon Modularity(UWM) breaks the chains of Hektar's proprietary technology, allowing you to install their powerful weapon modules on any weapon in your arsenal, not just the designated "modular" ones.
+
+This mod fundamentally changes how you approach your ship's loadout, opening up a universe of new strategic possibilities. Turn any weapon into the perfect tool for the job.
+
+Latest Version: v0.2
+Download Link: https://github.com/kokoro11/modular_weapons/releases
+
+New feature in v0.2: Modular crew armory
+You can now install Hektar Modules on your crew.
+
+Cost to install a module on a non-modular weapon: 30 scrap, 3 fuel, 3 missiles, 3 drone parts.
+Note: The resources used for installation will not be refunded when you detach the module or sell the weapon. Choose your modifications wisely!
+
+Module Effects:
+Each weapon can accept one Attribute Module and one Status Module.
+
+Standard Modules:
+RAD Module: +30 crew damage
+Cooldown Module: -20% weapon charge time
+Lockdown Module: Applies lockdown effect to the target room
+Pierce Module: +1 shield pierce, +30% breach chance
+Neural Module: +100% stun chance, +10s stun duration
+Accuracy Module: +20% accuracy. For beams, this is replaced with +1 shield pierce
+Firestarter Module: +30% fire chance
+Hullbust Module: 2x damage vs. systemless rooms, +30% breach chance
+Power Module: +1 power cost, -20% weapon charge speed, +1 damage per shot
+
+Advanced Modules (Requires The Hektar Expansion mod by @RoadTrain):
+Charge Module: Reduces a weapon to a single shot but significantly cuts its charge time. The new charge time is the original charge time divided by twice the original number of shots (e.g., A 4-shot weapon becomes a 1-shot weapon with 1/8th the charge time). Incompatible with beam and single-shot weapons.
+Adaptive Module: +1 power cost, -20% weapon charge speed. Each time this weapon fires, its damage permanently increases by 1 for the rest of the combat. This effect stacks up to 3 times.
+Chain Module: Each time this weapon fires, its charge time is reduced by 10%. This effect stacks up to 3 times for a total of -30% charge time.
+
+	</description>
+	</metadata>
+  </UniversalWeaponMod_ZH_HANS>
   
   
 </metadataList>
