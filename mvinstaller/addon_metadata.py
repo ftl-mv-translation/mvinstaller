@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
 from lxml import etree
+import re
 from loguru import logger
 from mvinstaller.multiverse import get_addons, get_mv_mainmods
 from mvinstaller.signatures import Mod
@@ -38,6 +39,17 @@ def read_metadata(path, metadata_name=None):
 
 _cached_metadata = dict()
 
+def remove_comments(xml_path: Path) -> None:
+    """Remove comments from an XML file."""
+    with open(xml_path, 'r', encoding='utf-8') as file:
+        content = file.read()
+    
+    # Remove comments using regex
+    content_no_comments = re.sub(r'<!--.*?-->', '', content, flags=re.DOTALL)
+    
+    with open(xml_path, 'w', encoding='utf-8') as file:
+        file.write(content_no_comments)
+
 def init_metadata(mods: list[Mod]):
     global _cached_metadata
 
@@ -47,9 +59,24 @@ def init_metadata(mods: list[Mod]):
         
         try:
             fn = get_cache_dir() / 'metadata' / f'{sha256(mod.id)}.xml'
+            fn_tmp = get_cache_dir() / 'metadata/_tmp_metadata.xml'
             if not fn.exists() or (fn.stat().st_mtime + 3600 < time()):
                 logger.info(f'Downloading metadata for {mod.id}...')
-                download(mod.metadata_url, fn, True)
+                download(mod.metadata_url, fn_tmp, True)
+                remove_comments(fn_tmp)
+                root = etree.parse(fn_tmp).getroot()
+                if root.tag == 'metadataList':
+                    for e in root.iterchildren():
+                        id = e.find('id').text
+                        content = e.find('metadata')
+                        with open(get_cache_dir() / 'metadata' / f'{sha256(id)}.xml', 'wb') as f:
+                            f.write(etree.tostring(content, encoding='utf-8', pretty_print=True))
+                    fn_tmp.unlink()
+                    assert fn.exists(), f'Metadata file for {mod.id} not found after downloading metadata list!'
+                else:
+                    fn.unlink(missing_ok=True)
+                    fn_tmp.rename(fn)
+                
             metadata = read_metadata(fn)
             _cached_metadata[mod.id] = metadata
         except Exception as e:
