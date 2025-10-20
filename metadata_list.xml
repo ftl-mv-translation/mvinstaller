@@ -544,7 +544,7 @@ Restores the vanilla UI style to the game instead of the 5.0 remade UI.
 	<title> Lily's Innovations </title>
 	<threadUrl> https://ftlmultiverse.boards.net/thread/167/mv-5-lilys-innovations-1 </threadUrl>
 	<author> msbinarylily </author>
-	<version> 1.6.2 </version>
+	<version> 1.6.3 </version>
 	<description>
 
 Надоели существующие системы в FTL после сотен часов игры? Хотите больше разнообразия?
@@ -1037,7 +1037,7 @@ Highly Recommended: For the full experience, install the Playable Temporal Syste
   <TemporalMasteryRU>
     <id>TemporalMasteryRU</id>
     <metadata>
-	<title> Temporal Mastery (Переделка Временного манипулятора) </title>
+	<title> Temporal Mastery (Temporal System Overhaul) </title>
 	<threadUrl> https://github.com/kokoro11/temporal_mastery </threadUrl>
 	<author> kokoro11 </author>
 	<version> 0.1.7 </version>
