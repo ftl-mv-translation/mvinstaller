@@ -544,7 +544,7 @@ Restores the vanilla UI style to the game instead of the 5.0 remade UI.
 	<title> Lily's Innovations </title>
 	<threadUrl> https://ftlmultiverse.boards.net/thread/167/mv-5-lilys-innovations-1 </threadUrl>
 	<author> msbinarylily </author>
-	<version> 1.6.3 </version>
+	<version> 1.6.5 </version>
 	<description>
 
 Надоели существующие системы в FTL после сотен часов игры? Хотите больше разнообразия?
@@ -699,23 +699,21 @@ Federation Special Forces
     <metadata>
   <title>EternalVerse</title>
   <author>Eschaton (сбор и перевод)</author>
-  <version> 1.3 </version>
-  <description>Этот аддон добавляет несколько кораблей, сделанных разными аддоноделами. Фактически, он собирает разрозненные мини-аддоны в один большой аддон. Это удобно потому, что вам не придется загружать отдельные аддоны для того, чтобы опробовать лишь один корабль, и все корабли данного аддона будут представлены на одной странице.
+  <version> 1.4 </version>
+  <description>Это - сборник мини-аддонов, сделанных разными аддоноделами. Чаще всего эти аддоны добавляют пару играбельных кораблей, но в сборнике также присутствуют и аддоны, добавляющие и другой контент. Например: новое оружие, модули, членов экипажа, новые события, секторы и др.
   
-Нынешний перечень переведённых и добавленных кораблей:
+Нынешний перечень переведённых и добавленных аддонов:
   
-- Obsidian Cruiser (1 корабль, 1 вариант. Авторство: Chrono Vortex, Kieve, Felipe, ConMan, Brightlord, R4V3-0N)
-- Escort Duty (2 корабля, 4 варианта. Авторство: Chrono Vortex, DryEagle, Vertaalfout, RAD-82)
-- Tantive IV (1 корабль, 1 вариант. Авторство: Chrono Vortex, R4V3-0N, Moreorlesser)
-- Tiberian Sun Pack (3 корабля, 7 вариантов. Авторство: Chrono Vortex, Vertaalfout, R4V3-0N, Felipe, TaxiService, Azri_Apoc, SecondDatke)
-- The Tardis (2 корабля, 4 варианта. Авторство: Gencool, Chrono Vortex, voidstranger)
-- Slocknog's Flagship (1 корабль, 1 вариант. Авторство: Kix)
-- Faster Than Cobalt (1 корабль, 3 варианта. Авторство: AceKoala)
+- Obsidian Cruiser (1 корабль. Авторство: Chrono Vortex, Kieve, Felipe, ConMan, Brightlord, R4V3-0N)
+- Escort Duty (4 корабля. Авторство: Chrono Vortex, DryEagle, Vertaalfout, RAD-82). Решено большинство багов
+- Tantive IV (1 корабль. Авторство: Chrono Vortex, R4V3-0N, Moreorlesser)
+- Tiberian Sun Pack (7 кораблей. Авторство: Chrono Vortex, Vertaalfout, R4V3-0N, Felipe, TaxiService, Azri_Apoc, SecondDatke). Решено большинство багов
+- The Tardis (4 корабля, новые события. Авторство: Gencool, Chrono Vortex, voidstranger)
+- Slocknog's Flagship (1 корабль. Авторство: Kix). Упрощены условия получения корабля
+- Faster Than Cobalt (3 корабля. Авторство: AceKoala). Решено большинство багов
+- Bag of Dumb (4 корабля, новые вещи, новые события, новый секретный сектор. Авторство: Felipemello29, cgjunior, geckoindisguise, Enchanter, moreorlesser, AgentTHeKat, Laythe, MaddieDoktor, DemonFusionGamer, R4V3-0N, Vertaalfout, Chrono Vortex). Решено большинство багов
   
-В будущем возможно добавление и других кораблей.
-
-Также аддон включает в себя иные небольшие аддоны:
-- Symbiont WonderDrone (Авторство: Evil Pepper Playz). Добавляет дополнительную опцию превращения в Чудо-дрона для Технопата-Симбионта.
+В будущем возможна интеграция и других мини-аддонов.
   
 Сделано специально для сервера дискорд FTL: MV на русском.</description>
 </metadata>
