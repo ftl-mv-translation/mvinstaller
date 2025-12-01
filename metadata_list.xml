@@ -106,7 +106,7 @@ Special thanks to marcusian for consulting support.
 	<version> 1.4.2 </version>
 	<description>
 
-Предоставляет Gibs (обломки, которые отображаются при уничтожении кораблей) везде, где они отсутствуют в моде Multiverse (версия 5.4).
+Предоставляет Gibs (обломки, которые отображаются при уничтожении кораблей) везде, где они отсутствуют в моде Multiverse (версия 5.5).
 В настоящее время это затрагивает около тысячи различных кораблей.
 
 Обратите внимание, что добавление этих Gibs увеличит потребление памяти игрой. Это также увеличит время загрузки примерно на 20%.
@@ -698,6 +698,7 @@ Federation Special Forces
 - Slocknog's Flagship (1 корабль. Авторство: Kix). Упрощены условия получения корабля
 - Faster Than Cobalt (3 корабля. Авторство: AceKoala). Решено большинство багов
 - Bag of Dumb (4 корабля, новые вещи, новые события, новый секретный сектор. Авторство: Felipemello29, cgjunior, geckoindisguise, Enchanter, moreorlesser, AgentTHeKat, Laythe, MaddieDoktor, DemonFusionGamer, R4V3-0N, Vertaalfout, Chrono Vortex). Решено большинство багов
+- The Ultimate Limit (1 корабль. Авторство: Eschaton)
   
 В будущем возможна интеграция и других мини-аддонов.
   
