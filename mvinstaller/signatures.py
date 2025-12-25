@@ -929,7 +929,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1360
+        priority=1860
     )
     JudgeBlueOptionsRU = Mod(
         id='JudgeBlueOptionsRU',
