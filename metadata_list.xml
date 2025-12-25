@@ -137,7 +137,7 @@ tweaks
 - RoadTrain: оптимизация, коррек xml, адаптивный, цепной и зарядный модуль, переработка меню склада
 - Choosechee: графика и реализация изоляционных лучей
 - Duodecimus: объединение HC, HE и изоляционных лучей, а также исправление некоторых ошибок
-
+  </description>
 	</metadata>
   </HektarBundleRU>
   
@@ -146,9 +146,7 @@ tweaks
     <id>BoonSelectorRU</id>
     <metadata>
   <title>Judge Boon Selector</title>
-  <threadUrl><![CDATA[
-     https://github.com/benediktwerner/FTL-Multiverse-Judge-Boon-Selector-Mod 
-  ]]></threadUrl>
+  <threadUrl><![CDATA[https://github.com/benediktwerner/FTL-Multiverse-Judge-Boon-Selector-Mod]]></threadUrl>
   <author>1vader</author>
   <version>1.10</version>
   <description>
