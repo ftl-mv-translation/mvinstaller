@@ -1113,8 +1113,8 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=2500
     )
-    NoHardModeScrapFR = Mod(
-        id='NoHardModeScrapFR',
+    NoHardModeScrap_FR = Mod(
+        id='NoHardModeScrap_FR',
         modname='NoHardModeScrap',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1glswXprs9sRWR_9KfUPsfU6TlaqtIgtR&export=download&confirm=xxx':
