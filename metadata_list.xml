@@ -11,6 +11,135 @@ Metadata information
 	</metadata>
   </class_mode_here>
   -->
+  <StatisticRU>
+    <id>StatisticRU</id>
+<metadata>
+  <title>Статистика секторов</title>
+  <author>Aleev</author>
+  <version>1.0</version>
+  <description>
+Для тех, кто НЕ пользуется Локализованным установщиком: зависимые аддоны Brightness Particle System и Lightweight Lua
+Изначальная фишка в Arsenal+ и адаптированная для Multiverse
+
+Хотели ли вы знать как много лома вы успеваете получить за один сектор или за сколько ваш корабль можно продать? Тогда это для вас!
+
+Добавляет новую вкладку в меню корабля: Статистика
+
+Что она дает?
+
+Местный сборник информации вашего прогресса, что показывает:
+Цену вашего корабля;
+Серию побед;
+Полученный лом в текущем секторе;
+Текущий счет;
+Сколько раз посетили определенный сектор и его средний заработок лома (кроме секретных секторов);
+Шанс успеха вашего забега.
+
+Помимо этого:
++1 новое достижение на второй странице.
+По нажатию клавиши HOME покажет вам текущую стоимость корабля игрока и врага (если есть)
+
+Так как секторов в Multiverse намного больше по сравнению с Arsenal+, была сделана зависимость с библиотекой Lightweight Lua для добавления полосы прокрутки и в связи с этим может наблюдаться небольшое снижение числа кадров
+
+Сама библиотека LwL добавляет еще пару функций не связанных со статой, их вы можете посмотреть в меню переключения и в иконке справа-сверху.
+
+
+Совместить с аддонами намного сложнее, например если будут улучшения в складе или кастомные системы не добавленные в код статистики, то это снижает полученный лом в текущем секторе как будто вы потратили лом в никуда
+Поэтому сообщайте, чтобы я добавил поддержку этих аддонов!
+
+Совместимость с аддонами:
+
+Forgotten Races (16.2.11) - концовка для серии побед;
+Forgemaster - концовка для серии побед;
+The Outer Expansion (7.1.10) - сектора, системы;
+Darkest Desire (4.1.4) - сектора, системы;
+Expanded Multiverse (0.6.1) - сектор;
+Lily's Beam Emporium (1.6.1) - лабораторные улучшения;
+Lily's Innovations (1.8.2) - внутренние улучшения, системы;
+The Old Guard (1.4) - сектора, системы.
+
+Огромная благодарность:
+bamalf и KBA3u - код, помощь c совместимостью mv
+Evil PepperPlayz - тестирование
+Limrix - добавление полосы прокрутки
+MsBinaryLily - помощь c совместимостью mv
+Blizz - за помощь с переводом на английский язык
+
+  </description>
+</metadata>
+  </StatisticRU>
+  
+  <HolidaySpecialRU>
+    <id>HolidaySpecialRU</id>
+<metadata>
+  <title>The Holiday Special</title>
+  <threadUrl>https://subsetgames.com/forum/viewtopic.php?f=11&t=38203&sid=c005d289c654b4c5b2ba4447b6fe7608</threadUrl>
+  <author>Kix, MoreOrLesser, Felipemello, SallySpartan, Aleev</author>
+  <version>1.0</version>
+  <description>
+Меняется внешний вид (почти)всех уникальных членов экипажа, а также различных дронов и экипаж изменен в соответствии с праздничной тематикой. Не влияет на игровой процесс, только на внешний вид.
+
+Аддон был почти не совместим с Multiverse 5.5, Я(Aleev) сделал его более совместимым.
+Спасибо Esсhaton'у за небольшую перерисовку корабля.
+  </description>
+</metadata>
+  </HolidaySpecialRU>
+  
+  <HektarBundleRU>
+    <id>HektarBundleRU</id>
+	<metadata>
+  <title>Hektar Bundle</title>
+  <threadUrl>https://ftlmultiverse.boards.net/thread/184/mv-5-hektar-bundle</threadUrl>
+  <author>Pepson, DZenith, Chrono Vortex, RoadTrain, Choosechee и Duodecimus</author>
+  <version>0.1.7</version>
+  <description>
+Расширение, посвященное Гектар Индастриз(ТМ).
+Это слияние модов Hektar Collection и Hektar Expansion, и большая часть контента взята из этих модов.
+
+Hektar Collection: https://ftlmultiverse.boards.net/thread/62/mv-5-4-hektar-collection
+Hektar Expansion: https://ftlmultiverse.boards.net/thread/71/5-4-6-hektar-expansion
+Modular Lockdown Beams: https://ftlmultiverse.boards.net/thread/10/lockdown-modular-beams-version-multiverse
+
+
+Добавляет:
+
+- Модульное осколочное оружие
+- Модульный точечный луч
+- Модульная бомба
+- Модульный миномет
+- Совместимость с модулем изоляции для лучей
+
+- Модульный лазерный дрон
+- Модульный ионный дрон
+- Модульный лучевой дрон
+
+Каждый из них может использовать модули Гектар.
+
+Также добавлен новый крейсер и его 3 варианта, все эти варианты имеют собственную модульную артиллерию, а именно:
+
+- Модульная лучевая артиллерия
+- Модульная ракетная артиллерия
+- Модульная лазерная артиллерия
+
+Все они могут использовать модули Hektar, их эффективность значительно превосходит базовое оружие.
+
+А также добавляет три новых модуля, применимых к большинству существующего оружия:
+
+- Адаптивный модуль
+- Цепной модуль
+- Зарядный модуль
+
+Титры:
+tweaks
+- Zenith: графика модульной основы дронов, перерисовка модульных точечных и осколочных пушек
+- Chrono Vortex: рекомендации по коду, иконку корабля
+- Pepson: код, графика, дизайн
+- RoadTrain: оптимизация, коррек xml, адаптивный, цепной и зарядный модуль, переработка меню склада
+- Choosechee: графика и реализация изоляционных лучей
+- Duodecimus: объединение HC, HE и изоляционных лучей, а также исправление некоторых ошибок
+
+	</metadata>
+  </HektarBundleRU>
   
   
   <BoonSelectorRU>
@@ -506,8 +635,8 @@ Restores the vanilla UI style to the game instead of the 5.0 remade UI.
     <metadata>
   <title>Eschaton Genesis</title>
   <author>Eschaton</author>
-  <version> 0.3.1 </version>
-  <description>Для тех, кто не пользуется Локализованным установщиком: Для работы аддона необходим Fusion
+  <version> 0.3.2 </version>
+  <description>Для тех, кто НЕ пользуется Локализованным установщиком: Для работы аддона необходим Fusion
 
 – 5 квестов, ведущих к получению новых кораблей
 – Всего 24 новых корабля (учитывая варианты)
@@ -686,7 +815,8 @@ Federation Special Forces
   <title>EternalVerse</title>
   <author>Eschaton (сбор и перевод)</author>
   <version> 1.4 </version>
-  <description>Это - сборник мини-аддонов, сделанных разными аддоноделами. Чаще всего эти аддоны добавляют пару играбельных кораблей, но в сборнике также присутствуют и аддоны, добавляющие и другой контент. Например: новое оружие, модули, членов экипажа, новые события, секторы и др.
+  <description>В настоящее время конфликтует с аддоном The Old Guard, не устанавливайте их вместе!
+  Это - сборник мини-аддонов, сделанных разными аддоноделами. Чаще всего эти аддоны добавляют пару играбельных кораблей, но в сборнике также присутствуют и аддоны, добавляющие и другой контент. Например: новое оружие, модули, членов экипажа, новые события, секторы и др.
   
 Нынешний перечень переведённых и добавленных аддонов:
   
@@ -1180,5 +1310,145 @@ Chain Module: Each time this weapon fires, its charge time is reduced by 10%. Th
 	</metadata>
   </UniversalWeaponMod_ZH_HANS>
   
+  <GenGibsMV_FR>
+    <id>GenGibsMV_FR</id>
+    <metadata>
+	<title> Gibs ajoutés pour Multiverse 5.5 </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/39/generated-gibs </threadUrl>
+	<author> Epirasque (développeur), Dalvest (artiste)</auteur>
+	<version> 1.4.2 </version>
+	<description>
+
+Ajoute des Gibs (morceaux de débris affichés lorsque les vaisseaux sont détruits) là où ils sont manquants dans le mod Multiverse (version 5.5).
+Cela concerne actuellement environ un millier de vaisseaux différents.
+
+Notez que l’ajout de ces Gibs augmentera la consommation de mémoire du jeu. Le temps de chargement augmentera également d’environ 20%.
+
+Ces Gibs ont été générés automatiquement à l’aide de l’algorithme SLIC de scipy, qui segmente les images originales des vaisseaux en équilibrant la position et la couleur.
+Un comportement physique correct des Gibs est assuré. Les armes sont attachées aux Gibs correspondants.
+
+L’objectif de cet addon est de fournir une solution temporaire correcte jusqu’à ce que tous les Gibs restants soient dessinés manuellement pour Multiverse.
+
+Cet addon doit être patché après l'instalation de Multiverse et ne doit être utilisé qu’avec Multiverse 5.4.
+Cet addon n’est pas entièrement compatible avec d’autres addons ajoutant des Gibs pour des vaisseaux actuellement présents dans Multiverse ; il les écrasera.
+
+Remerciements particuliers à marcusian pour son aide et ses conseils.
+
+</description>
+</metadata>
+  </GenGibsMV_FR>
   
+  <GenGibsTRC_FR>
+    <id>GenGibsTRC_FR</id>
+    <metadata>
+	<title> Gibs ajoutés pour The Renegade Collection 2.6 </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/39/generated-gibs </threadUrl>
+	<author> Epirasque (développeur), Dalvest (artiste)</auteur>
+	<version> 1.4.2 </version>
+	<description>
+
+Ajoute des Gibs (morceaux de débris affichés lorsque les vaisseaux sont détruits) pour l'addon The Renegade Collection 2.6.
+
+Cet addon doit être patché après l'instalaltion de l'Addon The Renegade Collection et ne doit être utilisé qu’avec la version 2.6.
+
+Remerciements particuliers à marcusian pour son aide et ses conseils.
+
+</description>
+</metadata>
+  </GenGibsTRC_FR>
+  
+  <GenGibsFR_FR>
+    <id>GenGibsFR_FR</id>
+    <metadata>
+  <title> Gibs ajoutés pour Forgotten Races  </title>
+  <threadUrl>https://ftlmultiverse.boards.net/thread/12/forgotten-races</threadUrl>
+  <author>Gabriel Cooper</author>
+  <version> 1.5.1 </version>
+  <description>
+ 
+Ajoute des Gibs (morceaux de débris affichés lorsque les vaisseaux sont détruits) pour l'addon Forgotten Races
+
+Cet addon doit être patché après l'instalaltion de l'Addon Forgotten Races
+
+Les Gibs ont été générés avec l’outil G.L.A.I.V.E. créé par Epirasque.
+
+Compatible avec Multiverse 5.4.X
+
+  </description>
+</metadata>
+  </GenGibsFR_FR>
+  
+  <GenGibsDD_FR>
+    <id>GenGibsDD_FR</id>
+    <metadata>
+	<title> Gibs ajoutés pour Darkest Desire 4.0.2 </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev </threadUrl>
+	<author> Aleev </auteur>
+	<version> 1.1.0 </version>
+	<description>
+
+Ajoute des Gibs (morceaux de débris affichés lorsque les vaisseaux sont détruits) pour Darkest Desire par Naimeron.
+
+Cet addon doit être patché après l'instalation de l'addon Darkest Desire
+
+Les Gibs ont été générés avec l’outil G.L.A.I.V.E. créé par Epirasque.
+
+</description>
+</metadata>
+  </GenGibsDD_FR>
+  
+  <ExtraCapacity_FR>
+    <id>ExtraCapacity_FR</id>
+    <metadata>
+	<title> Capacité supplémentaire de Lily </title>
+	<threadUrl> https://ftlmultiverse.boards.net/thread/167/mv-5-lilys-innovations-1 </threadUrl>
+	<author> msbinarylily </auteur>
+	<version> 1.0.0 </version>
+	<description>
+
+Êtes-vous un collectionneur compulsif ? Trois emplacements d’augmentations et quatre emplacements de cargaison ne vous suffisent pas ?
+
+Alors ce mini-addon est fait pour vous !
+
+Augmente les emplacements d’augmentations de 3 et ceux de cargaison de 4 — et peut être patché plusieurs fois si vous en voulez encore plus !
+
+Doit être patché après les (en dessous des) mods ajoutant des vaisseaux, sinon les vaisseaux ajoutés après ce mod ne seront pas affectés !
+
+	</description>
+</metadata>
+  </ExtraCapacity_FR>
+  
+  <VanillaUI_FR>
+    <id>VanUI_FR</id>
+    <metadata>
+  <title> Interface Vanilla </title>
+  <threadUrl>https://subsetgames.com/forum/viewtopic.php?f=11&amp;t=35332</threadUrl>
+  <author> Kix </auteur>
+  <version> 4.0 </version>
+  <description>
+ 
+Restaure le style de l’interface utilisateur vanilla du jeu à la place de l’interface remaniée de la version 5.0.
+
+  </description>
+</metadata>
+  </VanillaUI_FR>
+  
+  <NoHardModeScrap_FR>
+    <id>NoHardModeScrap_FR</id>
+    <metadata>
+  <title> Aucune pénalité de ferraille en mode difficile </title>
+  <threadUrl>https://ftlmultiverse.boards.net/thread/34/gabriels-small-mods-collection-markers</threadUrl>
+  <author>Gabriel Cooper</auteur>
+  <version> 3.0 </version>
+  <description>
+ 
+A PATCHER APRÈS MULTIVERSE
+
+Ce petit mod modifie la quantité de ferraille gagnée en mode difficile afin qu’elle soit identique à celle du mode normal. Il ne change rien d’autre.
+
+Compatible avec Multiverse 5.4.x
+
+  </description>
+</metadata>
+  </NoHardModeScrap_FR>
 </metadataList>

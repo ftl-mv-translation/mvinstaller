@@ -381,7 +381,9 @@ ADDONS_TRANSLATION_RELEASE = [
     'https://api.github.com/repos/ftl-mv-translation/forgemaster/releases/latest', #forgemaster, priority=800
     'https://api.github.com/repos/ftl-mv-translation/piracy-is-poggers/releases/latest', #PiP, priority=900
     'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=1000
-    'https://api.github.com/repos/ftl-mv-translation/lilys-beam-emporium/releases/latest', #LBE, priority=1100   
+    'https://api.github.com/repos/ftl-mv-translation/lilys-beam-emporium/releases/latest', #LBE, priority=1100
+    'https://api.github.com/repos/ftl-mv-translation/old-guard/releases/latest', #OG, priority=1200
+    'https://api.github.com/repos/ftl-mv-translation/lilys-innovations/releases/latest', #LI, priority=1300
 ]
 
 TRANSLATION_RELEASE_DEPENDENCIES = {
@@ -394,7 +396,7 @@ TRANSLATION_RELEASE_DEPENDENCIES = {
 }
 
 LIBRARY_MODS = [
-    'Fusion', 'TOEPatchLast', 'DDPatchLast', 'VertexUtil'
+    'Fusion', 'TOEPatchLast', 'DDPatchLast', 'VertexUtil', 'Brightness_Particle_System', 'Lightweight_Lua'
 ]
 
 class FixedAddonsList(Enum):
@@ -412,7 +414,7 @@ class FixedAddonsList(Enum):
         metadata_url=None,
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=110
+        priority=101
     )
     VertexUtil = Mod(
         id='VertexUtil',
@@ -426,7 +428,35 @@ class FixedAddonsList(Enum):
         metadata_url=None,
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=120
+        priority=102
+    )
+    Brightness_Particle_System = Mod(
+        id='Brightness_Particle_System',
+        modname='Brightness_Particle_System',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1rHHtawmH0IoHnab-W1GaHrtKnhaHD2zq&export=download&confirm=xxx':
+                'Brightness Particles 1.4.1.zip'
+        },
+        version='1.4.1',
+        locale='en',
+        metadata_url=None,
+        compatible_mv_locale=[],
+        dependent_modnames=[],
+        priority=103
+    )
+    Lightweight_Lua = Mod(
+        id='Lightweight_Lua',
+        modname='Lightweight_Lua',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1jIEeIo4igYl5C3TaIEhizQ-y1FFnH_KX&export=download&confirm=xxx':
+                'Lightweight_Lua.zip'
+        },
+        version='6.3',
+        locale='en',
+        metadata_url=None,
+        compatible_mv_locale=[],
+        dependent_modnames=[],
+        priority=104
     )
     #Fishing, priority=200
     #fr, priority=300
@@ -437,12 +467,13 @@ class FixedAddonsList(Enum):
     #FM, priority=800
     #PiP, priority=900
     #R&D, priority=1000
-    #LBE, priority=1100   
+    #LBE, priority=1100
+    #OG, priority=1200
     Eschaton_GenesisRU = Mod(
         id='Eschaton_GenesisRU',
         modname='Eschaton_Genesis',
         download_targets={
-            'https://drive.usercontent.google.com/download?id=1DDtexfyJHO0iskvmM2WDdvpUvNCRTGoq&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/download?id=1qlQWUcIeltDesnYfjgnI-WFMgc_0kCr7&export=download&confirm=xxx':
                 'ESCHATON_GENESIS.zip'
         },
         version='0.2',
@@ -450,7 +481,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['Fusion'],
-        priority=1010
+        priority=1201
     )
     EternalVerseRU = Mod(
         id='EternalVerseRU',
@@ -464,7 +495,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['VertexUtil'],
-        priority=1020
+        priority=1202
     )
     TNE_RU = Mod(
         id='TNE_RU',
@@ -478,13 +509,13 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1021
+        priority=1203
     )
     TNE_ZH_HANS = Mod(
         id='TNE_ZH_HANS',
         modname='TNE',
         download_targets={
-            'https://drive.usercontent.google.com/download?id=18niicFjYarSqXHXqzHcaaZlzcCWNN0Ps&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/download?id=1WdLhAp04Hz2Ny3H7fFE4yHO7Y4l7HdCb&export=download&confirm=xxx':
                 'TNE_v1.25c.ftl'
         },
         version='1.0',
@@ -492,21 +523,21 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['zh_Hans'],
         dependent_modnames=[],
-        priority=1021
+        priority=1203
     )
-    LilysInnovationsRU = Mod(
-        id='LilysInnovationsRU',
-        modname='LilysInnovations',
+    HektarBundleRU = Mod(
+        id='HektarBundleRU',
+        modname='HektarBundle',
         download_targets={
-            'https://drive.usercontent.google.com/download?id=1JgcdcEXmAu_zX8iOCRcMZcxoT6W6SXGY&export=download&confirm=xxx':
-                'lilys-innovations.ftl'
+            'https://drive.usercontent.google.com/download?id=1I5r-jC1N-fRVYA9efuMIfoQ61_3YMez7&export=download&confirm=xxx':
+                'FTL.Multiverse.-.Hektar.Bundle.zip'
         },
-        version='1.0',
+        version='0.1.7',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1100
+        priority=901
     )
     GenGibsMV = Mod(
         id='GenGibsMV',
@@ -520,7 +551,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=1200
+        priority=1254
     )
     GenGibsMV_RU = Mod(
         id='GenGibsMV_RU',
@@ -534,7 +565,21 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1200
+        priority=1254
+    )
+    GenGibsMV_FR = Mod(
+        id='GenGibsMV_FR',
+        modname='GenGibsMV',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1-N3EAFL_E61NFs2qLFskghvKvThZqaYY&export=download&confirm=xxx':
+                'MV Addon GenGibs v1.4.2.ftl'
+        },
+        version='1.4.2',
+        locale='fr',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['fr'],
+        dependent_modnames=[],
+        priority=1254
     )
     GenGibsTRC = Mod(
         id='GenGibsTRC',
@@ -548,7 +593,21 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=[],
         dependent_modnames=['The-Renegade-Collection'],
-        priority=1210
+        priority=1255
+    )
+    GenGibsTRC_FR = Mod(
+        id='GenGibsTRC_FR',
+        modname='GenGibsTRC',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1BoYFKqPQQJ5CE9kSbufSKx9jWdyeiYRl&export=download&confirm=xxx':
+                'MV TRC GenGibs v1.4.2.ftl'
+        },
+        version='1.4.2',
+        locale='fr',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['fr'],
+        dependent_modnames=['The-Renegade-Collection'],
+        priority=1255
     )
     GenGibsTRC_RU = Mod(
         id='GenGibsTRC_RU',
@@ -562,7 +621,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['The-Renegade-Collection'],
-        priority=1210
+        priority=1255
     )
     GenGibsFR = Mod(
         id='GenGibsFR',
@@ -576,7 +635,21 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=[],
         dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
-        priority=1220
+        priority=1256
+    )
+    GenGibsFR_FR = Mod(
+        id='GenGibsFR_FR',
+        modname='GenGibsFR',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1N3OvTEnuF2SbzDWAZEbI2qGBKe1JQGCZ&export=download&confirm=xxx':
+                'Forgotten Gibs 1.5.1.zip'
+        },
+        version='1.5.1',
+        locale='fr',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['fr'],
+        dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
+        priority=1256
     )
     GenGibsFR_RU = Mod(
         id='GenGibsFR_RU',
@@ -590,7 +663,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
-        priority=1220
+        priority=1256
     )
     GenGibsDD = Mod(
         id='GenGibsDD',
@@ -604,7 +677,21 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=[],
         dependent_modnames=['Darkest-Desire'],
-        priority=1230
+        priority=1257
+    )
+    GenGibsDD_FR = Mod(
+        id='GenGibsDD_FR',
+        modname='GenGibsDD',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=11w2PRVW0BRAogf-k-_eKL7gBTFJ0i_E_&export=download&confirm=xxx':
+                'DD Addon GenGibs.zip'
+        },
+        version='1.0',
+        locale='fr',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['fr'],
+        dependent_modnames=['Darkest-Desire'],
+        priority=1257
     )
     GenGibsDD_RU = Mod(
         id='GenGibsDD_RU',
@@ -618,13 +705,13 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=['Darkest-Desire'],
-        priority=1230
+        priority=1257
     )
     ExtraCapacity = Mod(
         id='ExtraCapacity',
         modname='ExtraCapacity',
         download_targets={
-            'https://drive.usercontent.google.com/download?id=16kxLe4OlWF8qdRnfCvB1gkGa_3HMLC3P&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/download?id=1d-GXx7NiT1KfZh57HYVRjNvT-7lNLuzH&export=download&confirm=xxx':
                 'lilys-extra-capacity.ftl'
         },
         version='1.0',
@@ -638,13 +725,27 @@ class FixedAddonsList(Enum):
         id='ExtraCapacityRU',
         modname='ExtraCapacity',
         download_targets={
-            'https://drive.usercontent.google.com/download?id=16kxLe4OlWF8qdRnfCvB1gkGa_3HMLC3P&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/download?id=1d-GXx7NiT1KfZh57HYVRjNvT-7lNLuzH&export=download&confirm=xxx':
                 'lilys-extra-capacity.ftl'
         },
         version='1.0',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=1300
+    )
+    ExtraCapacity_FR = Mod(
+        id='ExtraCapacity_FR',
+        modname='ExtraCapacity',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1d-GXx7NiT1KfZh57HYVRjNvT-7lNLuzH&export=download&confirm=xxx':
+                'lilys-extra-capacity.ftl'
+        },
+        version='1.0',
+        locale='fr',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['fr'],
         dependent_modnames=[],
         priority=1300
     )
@@ -703,6 +804,20 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=1400
+    )
+    StatisticRU = Mod(
+        id='StatisticRU',
+        modname='Statistic',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1yCsQv0wKclOsynktBKWss-5Q6LemnV0o&export=download&confirm=xxx':
+                'Statistic.zip'
+        },
+        version='1.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=['Brightness_Particle_System', 'Lightweight_Lua'],
+        priority=1410
     )
     RandomSS_RU = Mod(
         id='RandomSS_RU',
@@ -914,6 +1029,20 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=2300
     )
+    VanUI_FR = Mod(
+        id='VanUI_FR',
+        modname='VanUI',
+        download_targets={
+            'https://drive.usercontent.google.com/u/0/uc?id=1-RSAqQI-2tBxDYy5SGtoctIis_vYD8KO&export=download&confirm=xxx':
+                'Multiverse - VanUI 4.0.zip'
+        },
+        version='4.0',
+        locale='fr',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['fr'],
+        dependent_modnames=[],
+        priority=2300
+    )
     VanUI_KO = Mod(
         id='VanUI_KO',
         modname='VanUI',
@@ -942,11 +1071,25 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=2400
     )
+    HolidaySpecialRU = Mod(
+        id='HolidaySpecialRU',
+        modname='HolidaySpecial',
+        download_targets={
+            'https://drive.usercontent.google.com/u/0/uc?id=1lNkZRv92sE_AwIJXTM7X573_GtHUk1M5&export=download&confirm=xxx':
+                'The Multiverse Holiday Special.zip'
+        },
+        version='1.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=2410
+    )
     NoHardModeScrap = Mod(
         id='NoHardModeScrap',
         modname='NoHardModeScrap',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1-W5m78H5QESr9rvNpCJ4A11Q1sRKefgU&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/u/1/uc?id=1glswXprs9sRWR_9KfUPsfU6TlaqtIgtR&export=download&confirm=xxx':
                 'No Hard Mode Scrap Penalty 3.0.zip'
         },
         version='3.0',
@@ -960,13 +1103,27 @@ class FixedAddonsList(Enum):
         id='NoHardModeScrapRU',
         modname='NoHardModeScrap',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1-W5m78H5QESr9rvNpCJ4A11Q1sRKefgU&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/u/1/uc?id=1glswXprs9sRWR_9KfUPsfU6TlaqtIgtR&export=download&confirm=xxx':
                 'No Hard Mode Scrap Penalty 3.0.zip'
         },
         version='3.0',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=2500
+    )
+    NoHardModeScrapFR = Mod(
+        id='NoHardModeScrapFR',
+        modname='NoHardModeScrap',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1glswXprs9sRWR_9KfUPsfU6TlaqtIgtR&export=download&confirm=xxx':
+                'No Hard Mode Scrap Penalty 3.0.zip'
+        },
+        version='3.0',
+        locale='fr',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['fr'],
         dependent_modnames=[],
         priority=2500
     )
@@ -989,7 +1146,7 @@ class FixedAddonsList(Enum):
         id='DDPatchLast',
         modname='DDPatchLast',
         download_targets={
-            'https://github.com/Naimeron/Darkest-Desire-Multiverse/releases/download/DDv4.1.2/darkestdesirevSystemPatcher_PATCH_LAST.zip':
+            'https://github.com/Naimeron/Darkest-Desire-Multiverse/releases/download/DDv4.1.4/darkestdesirevSystemPatcher_PATCH_LAST.zip':
                 'darkestdesirevSystemPatcher_PATCH_LAST.zip'
         },
         version='1.0.0',

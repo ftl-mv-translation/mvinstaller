@@ -15,6 +15,9 @@ Redistribution of mods are permitted per following notice:
 - FTL: Fishier Than Light, provided by Arc
 - FTL: Trading System, provided by Arc
 - FTL: Random Sector Start, provided by Arc
+- The Outer Expansion, provided by Arc
+- R&D, provided by Arc
+- The Old Guard, provided by Arc
 - Judge Boon Selector Mod, provided by its authors under [MIT License](https://github.com/benediktwerner/FTL-Multiverse-Judge-Boon-Selector-Mod/blob/master/LICENSE)
 - Lizzard's Achievements, provided by Lizzard
 - More Mannable Systems, provided by kokoro
@@ -28,3 +31,6 @@ Redistribution of mods are permitted per following notice:
 - Expanded Multiverse, provided by Nauter
 - Tradition N Experiment, provided by Private JJ
 - Temporal Mastery, provided by kokoro
+- Hektar Bundle, provided by Duodecimus
+- The Multiverse Holiday Special, provided by Kix
+- Lightweight Lua, provided by its authors under [MIT License](https://github.com/neopryne/lightweight-lua/blob/main/LICENSE)
