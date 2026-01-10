@@ -392,11 +392,12 @@ TRANSLATION_RELEASE_DEPENDENCIES = {
     'Forgotten-Diamonds': ['The-Renegade-Collection', 'Fusion', 'Forgotten-Races'],
     'Outer-Expansion': ['TOEPatchLast'],
     'Darkest-Desire': ['DDPatchLast'],
+    'Old-Guard': ['OGPatchLast'],
     'Expanded-Multiverse': ['Fusion']
 }
 
 LIBRARY_MODS = [
-    'Fusion', 'TOEPatchLast', 'DDPatchLast', 'VertexUtil', 'Brightness_Particle_System', 'Lightweight_Lua'
+    'Fusion', 'TOEPatchLast', 'DDPatchLast', 'VertexUtil', 'Brightness_Particle_System', 'Lightweight_Lua', 'OGPatchLast'
 ]
 
 class FixedAddonsList(Enum):
@@ -466,6 +467,20 @@ class FixedAddonsList(Enum):
     #EMV, priority=700
     #FM, priority=800
     #PiP, priority=900
+    HektarBundleRU = Mod(
+        id='HektarBundleRU',
+        modname='HektarBundle',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1I5r-jC1N-fRVYA9efuMIfoQ61_3YMez7&export=download&confirm=xxx':
+                'FTL.Multiverse.-.Hektar.Bundle.zip'
+        },
+        version='0.1.7',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=901
+    )
     #R&D, priority=1000
     #LBE, priority=1100
     #OG, priority=1200
@@ -497,6 +512,20 @@ class FixedAddonsList(Enum):
         dependent_modnames=['VertexUtil'],
         priority=1202
     )
+    UniversalThreatsRU = Mod(
+        id='UniversalThreatsRU',
+        modname='UniversalThreats',
+        download_targets={
+            'https://drive.usercontent.google.com/download?id=1Ujp1DiQ2SIZj6Nwe3FH5bu51Xz7gVBoa&export=download&confirm=xxx':
+                'Universal_Threats.zip'
+        },
+        version='1.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=1203
+    )
     TNE_RU = Mod(
         id='TNE_RU',
         modname='TNE',
@@ -509,7 +538,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1203
+        priority=1210
     )
     TNE_ZH_HANS = Mod(
         id='TNE_ZH_HANS',
@@ -523,21 +552,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['zh_Hans'],
         dependent_modnames=[],
-        priority=1203
-    )
-    HektarBundleRU = Mod(
-        id='HektarBundleRU',
-        modname='HektarBundle',
-        download_targets={
-            'https://drive.usercontent.google.com/download?id=1I5r-jC1N-fRVYA9efuMIfoQ61_3YMez7&export=download&confirm=xxx':
-                'FTL.Multiverse.-.Hektar.Bundle.zip'
-        },
-        version='0.1.7',
-        locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
-        compatible_mv_locale=['ru'],
-        dependent_modnames=[],
-        priority=901
+        priority=1210
     )
     GenGibsMV = Mod(
         id='GenGibsMV',
@@ -776,6 +791,20 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=['zh_Hans'],
         dependent_modnames=[],
         priority=1350
+    )
+    SectorMapPlusRU = Mod(
+        id='SectorMapPlusRU',
+        modname='SectorMapPlus',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1tpbtgM2ut8DNZ2oHO1MLXAH1kzim6eeP&export=download&confirm=xxx':
+                'Beacon Map Plus.zip'
+        },
+        version='1.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=1352
     )
     RainbowModeRU = Mod(
         id='RainbowModeRU',
@@ -1155,4 +1184,19 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=[],
         dependent_modnames=[],
         priority=3001
+    )
+    
+    OGPatchLast = Mod(
+        id='OGPatchLast',
+        modname='OGPatchLast',
+        download_targets={
+            'https://github.com/arcburnergit/FTL-Old-Guard/releases/download/v2.0/FTL-Old-Guard-SYSTEM-PATCH-LAST.zip':
+                'FTL-Old-Guard-SYSTEM-PATCH-LAST.zip'
+        },
+        version='1.0.0',
+        locale='en',
+        metadata_url=None,
+        compatible_mv_locale=[],
+        dependent_modnames=[],
+        priority=3002
     )

@@ -1,24 +1,54 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <metadataList>
-
-<!--  
+	<!--  
   <class_mode_here>
     <id></id>
-	<metadata>
+<metadata>
 	
 Metadata information
 
-	</metadata>
+</metadata>
   </class_mode_here>
   -->
-  <StatisticRU>
-    <id>StatisticRU</id>
-<metadata>
-  <title>Статистика забега</title>
-  <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/195/run-statistics]]></threadUrl>
-  <author>Aleev</author>
-  <version>1.0</version>
-  <description>
+	<SectorMapPlusRU>
+		<id>SectorMapPlusRU</id>
+		<metadata>
+			<title>Beacon Map Plus</title>
+			<author>Aleev</author>
+			<threadUrl>https://ftlmultiverse.boards.net/thread/200/beacon-map-plus</threadUrl>
+			<version> 1.0 </version>
+			<description>
+Изначальная фишка в Arsenal+ и адаптированная для Multiverse.
+
+Расширяет возможности на карте маяков добавляя новые механики:
+
+Возможность планирование маршрута на карте маяков.
+Возможность ожидания на маяке, даже при наличии топлива.
+			</description>
+		</metadata>
+	</SectorMapPlusRU>
+	<UniversalThreatsRU>
+		<id>UniversalThreatsRU</id>
+		<metadata>
+			<title>Universal Threats</title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/202/ship-universal-threats-playable-bosses]]></threadUrl>
+			<author>Eschaton</author>
+			<version> 1.0.1 </version>
+			<description>Когда нибудь думали о том, как классно было бы поиграть за боссов игры? Данный аддон добавляет именно такую возможность.
+	
+Сейчас он включает в себя 4 играбельных босса, таких как Дредноут Ополчения, Космический грабитель (вы могли встретить его на выходном маяке Звёздной рощи), Флагман Призраков и, внезапно, Кэлли Калькулятор. Некоторые из играбельных боссов обладают уникальными особенностями, что делают игру за них более интересной (например, вместе с Кэлли вы можете решать математические задачи за ресурсы, а Флагман Призраков имеет уникальный выброс).
+	
+В будущем также планируется добавление большего количества играбельных боссов и типы Б и В для существующих боссов.</description>
+		</metadata>
+	</UniversalThreatsRU>
+	<StatisticRU>
+		<id>StatisticRU</id>
+		<metadata>
+			<title>Статистика забега</title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/195/run-statistics]]></threadUrl>
+			<author>Aleev</author>
+			<version>1.0</version>
+			<description>
 Для тех, кто НЕ пользуется Локализованным установщиком: зависимые аддоны Brightness Particle System и Lightweight Lua.
 Изначальная фишка в Arsenal+ и адаптированная для Multiverse.
 
@@ -66,34 +96,32 @@ Metadata information
 - MsBinaryLily - помощь c совместимостью mv.
 - Blizz - за помощь с переводом на английский язык.
 
-  </description>
-</metadata>
-  </StatisticRU>
-  
-  <HolidaySpecialRU>
-    <id>HolidaySpecialRU</id>
-<metadata>
-  <title>The Holiday Special</title>
-  <threadUrl><![CDATA[https://subsetgames.com/forum/viewtopic.php?f=11&t=38203&sid=c005d289c654b4c5b2ba4447b6fe7608]]></threadUrl>
-  <author>Kix, MoreOrLesser, Felipemello, SallySpartan, Aleev</author>
-  <version>1.0</version>
-  <description>
+			</description>
+		</metadata>
+	</StatisticRU>
+	<HolidaySpecialRU>
+		<id>HolidaySpecialRU</id>
+		<metadata>
+			<title>The Holiday Special</title>
+			<threadUrl><![CDATA[https://subsetgames.com/forum/viewtopic.php?f=11&t=38203&sid=c005d289c654b4c5b2ba4447b6fe7608]]></threadUrl>
+			<author>Kix, MoreOrLesser, Felipemello, SallySpartan, Aleev</author>
+			<version>1.0</version>
+			<description>
 Меняется внешний вид (почти)всех уникальных членов экипажа, а также различных дронов и экипаж изменен в соответствии с праздничной тематикой. Не влияет на игровой процесс, только на внешний вид.
 
 Аддон был почти не совместим с Multiverse 5.5, Я(Aleev) сделал его более совместимым.
 Спасибо Esсhaton'у за небольшую перерисовку корабля.
-  </description>
-</metadata>
-  </HolidaySpecialRU>
-  
-  <HektarBundleRU>
-    <id>HektarBundleRU</id>
-	<metadata>
-  <title>Hektar Bundle</title>
-  <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/184/mv-5-hektar-bundle]]></threadUrl>
-  <author>Pepson, DZenith, Chrono Vortex, RoadTrain, Choosechee и Duodecimus</author>
-  <version>0.1.7</version>
-  <description>
+			</description>
+		</metadata>
+	</HolidaySpecialRU>
+	<HektarBundleRU>
+		<id>HektarBundleRU</id>
+		<metadata>
+			<title>Hektar Bundle</title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/184/mv-5-hektar-bundle]]></threadUrl>
+			<author>Pepson, DZenith, Chrono Vortex, RoadTrain, Choosechee и Duodecimus</author>
+			<version>0.1.7</version>
+			<description>
 Расширение, посвященное Гектар Индастриз(ТМ).
 Это слияние модов Hektar Collection и Hektar Expansion, и большая часть контента взята из этих модов.
 
@@ -140,35 +168,31 @@ Modular Lockdown Beams: https://ftlmultiverse.boards.net/thread/10/lockdown-modu
 - RoadTrain: оптимизация, коррек xml, адаптивный, цепной и зарядный модуль, переработка меню склада
 - Choosechee: графика и реализация изоляционных лучей
 - Duodecimus: объединение HC, HE и изоляционных лучей, а также исправление некоторых ошибок
-  </description>
-	</metadata>
-  </HektarBundleRU>
-  
-  
-  <BoonSelectorRU>
-    <id>BoonSelectorRU</id>
-    <metadata>
-  <title>Judge Boon Selector</title>
-  <threadUrl><![CDATA[https://github.com/benediktwerner/FTL-Multiverse-Judge-Boon-Selector-Mod]]></threadUrl>
-  <author>1vader</author>
-  <version>1.10</version>
-  <description>
-     
+			</description>
+		</metadata>
+	</HektarBundleRU>
+	<BoonSelectorRU>
+		<id>BoonSelectorRU</id>
+		<metadata>
+			<title>Judge Boon Selector</title>
+			<threadUrl><![CDATA[https://github.com/benediktwerner/FTL-Multiverse-Judge-Boon-Selector-Mod]]></threadUrl>
+			<author>1vader, Duodecimus</author>
+			<version>1.12.0</version>
+			<description>
+
 Позволяет выбрать любой дар от судей в начале прохождения, если вы разблокировали/получили их хотя бы раз.
 
-  </description>
-</metadata>
-  </BoonSelectorRU>
-  
-  
-  <GenGibsFR>
-    <id>GenGibsFR</id>
-    <metadata>
-  <title> FTL: MULTIVERSE - FORGOTTEN GIBS ADDON </title>
-  <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/12/forgotten-races]]></threadUrl>
-  <author>Gabriel Cooper</author>
-  <version> 1.5.1 </version>
-  <description>
+			</description>
+		</metadata>
+	</BoonSelectorRU>
+	<GenGibsFR>
+		<id>GenGibsFR</id>
+		<metadata>
+			<title> FTL: MULTIVERSE - FORGOTTEN GIBS ADDON </title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/12/forgotten-races]]></threadUrl>
+			<author>Gabriel Cooper</author>
+			<version> 1.5.1 </version>
+			<description>
  
 PATCH AFTER FORGOTTEN RACES'S DATA FILE
 
@@ -178,17 +202,17 @@ Gibs were generated with the G.L.A.I.V.E. tool made by Epirasque
 
 Works with Multiverse 5.4.X
 
-  </description>
-</metadata>
-  </GenGibsFR>
-  <GenGibsFR_RU>
-    <id>GenGibsFR_RU</id>
-    <metadata>
-  <title> Forgotten Gibs </title>
-  <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/12/forgotten-races]]></threadUrl>
-  <author>Gabriel Cooper</author>
-  <version> 1.5.1 </version>
-  <description>
+			</description>
+		</metadata>
+	</GenGibsFR>
+	<GenGibsFR_RU>
+		<id>GenGibsFR_RU</id>
+		<metadata>
+			<title> Forgotten Gibs </title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/12/forgotten-races]]></threadUrl>
+			<author>Gabriel Cooper</author>
+			<version> 1.5.1 </version>
+			<description>
  
 Зависимые аддоны: Fusion 0.1.0+, Forgotten Races и Коллекция Ренегата. Установщик будет автоматически их ставить если выбрали аддон Forgotten Gibs.
 
@@ -196,18 +220,17 @@ Works with Multiverse 5.4.X
 
 Gibs были сгенерированы с помощью инструмента G.L.A.I.V.E., созданного Epirasque.
 
-  </description>
-</metadata>
-  </GenGibsFR_RU>
-  
-  <GenGibsMV>
-    <id>GenGibsMV</id>
-    <metadata>
-	<title> Generated Gibs for Multiverse 5.5 </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/39/generated-gibs ]]></threadUrl>
-	<author> Epirasque (developer), Dalvest (artist)</author>
-	<version> 1.4.2 </version>
-	<description>
+			</description>
+		</metadata>
+	</GenGibsFR_RU>
+	<GenGibsMV>
+		<id>GenGibsMV</id>
+		<metadata>
+			<title> Generated Gibs for Multiverse 5.5 </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/39/generated-gibs ]]></threadUrl>
+			<author> Epirasque (developer), Dalvest (artist)</author>
+			<version> 1.4.2 </version>
+			<description>
 
 Provides Gibs (debris pieces that are shown whenever ships are destroyed) wherever they are missing in the Multiverse mod (Version 5.5).
 This currently affects roughly a thousand different ships.
@@ -225,16 +248,16 @@ This addon is not fully compatible with other addons that add Gibs for any ships
 Special thanks to marcusian for consulting support.
 
 </description>
-</metadata>
-  </GenGibsMV>
-  <GenGibsMV_RU>
-    <id>GenGibsMV_RU</id>
-    <metadata>
-	<title> Generated Gibs for Multiverse 5.5 </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/39/generated-gibs ]]></threadUrl>
-	<author> Epirasque (разработчик), Dalvest (художник)</author>
-	<version> 1.4.2 </version>
-	<description>
+		</metadata>
+	</GenGibsMV>
+	<GenGibsMV_RU>
+		<id>GenGibsMV_RU</id>
+		<metadata>
+			<title> Generated Gibs for Multiverse 5.5 </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/39/generated-gibs ]]></threadUrl>
+			<author> Epirasque (разработчик), Dalvest (художник)</author>
+			<version> 1.4.2 </version>
+			<description>
 
 Предоставляет Gibs (обломки, которые отображаются при уничтожении кораблей) везде, где они отсутствуют в моде Multiverse (версия 5.5).
 В настоящее время это затрагивает около тысячи различных кораблей.
@@ -251,16 +274,16 @@ Special thanks to marcusian for consulting support.
 Отдельное спасибо marcusian за консультационную поддержку.
 
 </description>
-</metadata>
-  </GenGibsMV_RU>
-  <GenGibsTRC>
-    <id>GenGibsTRC</id>
-    <metadata>
-	<title> Generated Gibs for The Renegade Collection 2.6 </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/39/generated-gibs ]]></threadUrl>
-	<author> Epirasque (developer), Dalvest (artist)</author>
-	<version> 1.4.2 </version>
-	<description>
+		</metadata>
+	</GenGibsMV_RU>
+	<GenGibsTRC>
+		<id>GenGibsTRC</id>
+		<metadata>
+			<title> Generated Gibs for The Renegade Collection 2.6 </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/39/generated-gibs ]]></threadUrl>
+			<author> Epirasque (developer), Dalvest (artist)</author>
+			<version> 1.4.2 </version>
+			<description>
 
 Provides Gibs (debris pieces that are shown whenever ships are destroyed) for the Multiverse mod The Renegade Collection 2.6.
 
@@ -269,62 +292,62 @@ This addon has to be patched after The Renegade Collection itself and should onl
 Special thanks to marcusian for consulting support.
 
 </description>
-</metadata>
-  </GenGibsTRC>
-  <GenGibsTRC_RU>
-    <id>GenGibsTRC_RU</id>
-    <metadata>
-	<title> Generated Gibs for The Renegade Collection 2.6 </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/39/generated-gibs ]]></threadUrl>
-	<author> Epirasque (разработчик), Dalvest (художник)</author>
-	<version> 1.4.2 </version>
-	<description>
+		</metadata>
+	</GenGibsTRC>
+	<GenGibsTRC_RU>
+		<id>GenGibsTRC_RU</id>
+		<metadata>
+			<title> Generated Gibs for The Renegade Collection 2.6 </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/39/generated-gibs ]]></threadUrl>
+			<author> Epirasque (разработчик), Dalvest (художник)</author>
+			<version> 1.4.2 </version>
+			<description>
 
 Предоставляет Gibs (обломки, которые отображаются при уничтожении кораблей) для аддона "Коллекция Ренегата (TRC)" 2.6.
 
 Отдельное спасибо marcusian за консультационную поддержку.
 
 </description>
-</metadata>
-  </GenGibsTRC_RU>
-  <HereBeMarkersPlusRU>
-    <id>HereBeMarkersPlusRU</id>
-    <metadata>
-  <title> Here Be Markers Plus</title>
-  <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/34/gabriels-small-mods-collection-markers]]></threadUrl>
-  <author>Gabriel Cooper</author>
-  <version> 3.1 </version>
-  <description>
+		</metadata>
+	</GenGibsTRC_RU>
+	<HereBeMarkersPlusRU>
+		<id>HereBeMarkersPlusRU</id>
+		<metadata>
+			<title> Here Be Markers Plus</title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/34/gabriels-small-mods-collection-markers]]></threadUrl>
+			<author>Gabriel Cooper</author>
+			<version> 3.1 </version>
+			<description>
  
 Этот небольшой мод добавляет на карту маркеры уникальных событий с эксклюзивными наградами или выгодными предложениями. Он никак не изменяет события, а лишь делает их видимыми на звездной карте, чтобы вы больше никогда их не пропустили.
 
-  </description>
-</metadata>
-  </HereBeMarkersPlusRU>
-  <HereBeMarkersRU>
-    <id>HereBeMarkersRU</id>
-    <metadata>
-  <title> Here Be Markers </title>
-  <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/34/gabriels-small-mods-collection-markers]]></threadUrl>
-  <author>Gabriel Cooper</author>
-  <version> 3.1.1 </version>
-  <description>
+			</description>
+		</metadata>
+	</HereBeMarkersPlusRU>
+	<HereBeMarkersRU>
+		<id>HereBeMarkersRU</id>
+		<metadata>
+			<title> Here Be Markers </title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/34/gabriels-small-mods-collection-markers]]></threadUrl>
+			<author>Gabriel Cooper</author>
+			<version> 3.1.1 </version>
+			<description>
  
 Работает с Multiverse 5.5.x
 
 Этот небольшой мод добавляет на карту маркеры на начальные события всех цепочек разблокировки кораблей, а также на некоторые другие события, такие как Канал связи Гармонии и К.У.Р.А. (делает их видимыми откуда угодно). Он никак не изменяет события, а лишь делает их видимыми на звездной карте, чтобы вы никогда больше не пропустили их.
 
-  </description>
-</metadata>
-  </HereBeMarkersRU>
-  <ItBHUD_RU>
-    <id>ItBHUD_RU</id>
-    <metadata>
-  <title> Into The Breach HUD </title>
-  <threadUrl><![CDATA[ http://www.ftlgame.com/forum/viewtopic.php?f=11&amp;t=17187 ]]></threadUrl>
-  <author> slowriderxcorps и Subset Games </author>
-  <version> 1.0 </version>
-  <description>
+			</description>
+		</metadata>
+	</HereBeMarkersRU>
+	<ItBHUD_RU>
+		<id>ItBHUD_RU</id>
+		<metadata>
+			<title> Into The Breach HUD </title>
+			<threadUrl><![CDATA[ http://www.ftlgame.com/forum/viewtopic.php?f=11&amp;t=17187 ]]></threadUrl>
+			<author> slowriderxcorps и Subset Games </author>
+			<version> 1.0 </version>
+			<description>
 
 Конфликтует с аддоном "Vanilla UI", не ставьте их вместе, иначе будет смешан интерфейс.
 
@@ -332,17 +355,17 @@ Special thanks to marcusian for consulting support.
 
 Этот HUD-мод был создан специально для использования с фреймворком Hyperspace и, как таковой, не должен использоваться с другими версиями FTL, включая последнюю доступную версию. 
 
-  </description>
-</metadata>
-  </ItBHUD_RU>
-  <JBO_RU>
-    <id>JudgeBlueOptionsRU</id>
-    <metadata>
-  <title> Blue Judge Options </title>
-  <threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/88/multiverse-blue-judge-options ]]></threadUrl>
-  <author> Duodecimus </author>
-  <version> v1.6 </version>
-  <description>
+			</description>
+		</metadata>
+	</ItBHUD_RU>
+	<JBO_RU>
+		<id>JudgeBlueOptionsRU</id>
+		<metadata>
+			<title> Blue Judge Options </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/88/multiverse-blue-judge-options ]]></threadUrl>
+			<author> Duodecimus </author>
+			<version> v1.6 </version>
+			<description>
  
 Этот мод изменяет событие Судей Узла 17 таким образом, чтобы опции, которые еще не были выбраны, стали синими.
 
@@ -360,19 +383,17 @@ Special thanks to marcusian for consulting support.
 	Expanded Multiverse (0.6.1)
 
 
-  </description>
-</metadata>
-  </JBO_RU>
-  <LizzardAchEN>
-    <id>LizzardAchDE</id>
-    <metadata>
-	<title> Lizzard's Achievements </title>
-	<threadUrl><![CDATA[ None :c ]]></threadUrl>
-	<author> Lizzard </author>
-	<version> -0.9.9 </version>
-
-
-	<description>
+			</description>
+		</metadata>
+	</JBO_RU>
+	<LizzardAchEN>
+		<id>LizzardAchDE</id>
+		<metadata>
+			<title> Lizzard's Achievements </title>
+			<threadUrl><![CDATA[ None :c ]]></threadUrl>
+			<author> Lizzard </author>
+			<version> -0.9.9 </version>
+			<description>
 
 This mod adds achievements to all page 1 MV cruisers.
 
@@ -387,22 +408,16 @@ Nauter for orchestrating the JFK assasination
 And Pepson for his credit not fitting in the standard SlipStream window size
 
 	</description>
-</metadata>
-  </LizzardAchEN>
-  <LizzardAchRU>
-    <id>LizzardAchRU</id>
-    <metadata>
-
-	<title> Lizzard's Achievements </title>
-
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/94/lizzards-achievements ]]></threadUrl>
-
-	<author> Lizzard </author>
-
-	<version> -0.9.9 </version>
-
-
-	<description>
+		</metadata>
+	</LizzardAchEN>
+	<LizzardAchRU>
+		<id>LizzardAchRU</id>
+		<metadata>
+			<title> Lizzard's Achievements </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/94/lizzards-achievements ]]></threadUrl>
+			<author> Lizzard </author>
+			<version> -0.9.9 </version>
+			<description>
 
 Достижения? В МОЕЙ Мультивселенной!? Даже больше, чем вы думаете!
 
@@ -424,17 +439,16 @@ Nauter за организацию убийства Дж. Кеннеди
 И Pepson за то, что его титры не помещаются в стандартный размер окна SlipStream
 
 	</description>
-
-</metadata>
-  </LizzardAchRU>
-  <MoreManSysRU>
-    <id>MoreManSysRU</id>
-    <metadata>
-	<title> More Mannable Systems </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/73 ]]></threadUrl>
-	<author> kokoro11 </author>
-	<version> 2.1 </version>
-	<description>
+		</metadata>
+	</LizzardAchRU>
+	<MoreManSysRU>
+		<id>MoreManSysRU</id>
+		<metadata>
+			<title> More Mannable Systems </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/73 ]]></threadUrl>
+			<author> kokoro11 </author>
+			<version> 2.1 </version>
+			<description>
 
 Этот аддон расширяет ваши стратегические возможности, позволяя членам экипажа управлять более широким спектром систем корабля, помимо стандартных шести систем. Прямой контроль над большим количеством систем дает уникальные тактические преимущества и расширяет возможности вашего корабля.
 
@@ -531,18 +545,16 @@ Lizzard's Variety
 Federation Special Forces
 
 	</description>
-</metadata>
-
-  </MoreManSysRU>
-  
-  <NoHardModeScrap>
-    <id>NoHardModeScrap</id>
-    <metadata>
-  <title> No Hard Mode Scrap Penalty </title>
-  <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/34/gabriels-small-mods-collection-markers]]></threadUrl>
-  <author>Gabriel Cooper</author>
-  <version> 3.0 </version>
-  <description>
+		</metadata>
+	</MoreManSysRU>
+	<NoHardModeScrap>
+		<id>NoHardModeScrap</id>
+		<metadata>
+			<title> No Hard Mode Scrap Penalty </title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/34/gabriels-small-mods-collection-markers]]></threadUrl>
+			<author>Gabriel Cooper</author>
+			<version> 3.0 </version>
+			<description>
  
 PATCH AFTER MULTIVERSE
 
@@ -550,94 +562,90 @@ This tiny mod alters the amount of scrap you gain in hardmode to be equal to nor
 
 Works with Multiverse 5.4.x
 
-  </description>
-</metadata>
-  </NoHardModeScrap>
-  <NoHardModeScrapRU>
-    <id>NoHardModeScrapRU</id>
-    <metadata>
-  <title> No Hard Mode Scrap Penalty </title>
-  <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/34/gabriels-small-mods-collection-markers]]></threadUrl>
-  <author>Gabriel Cooper</author>
-  <version> 3.0 </version>
-  <description>
+			</description>
+		</metadata>
+	</NoHardModeScrap>
+	<NoHardModeScrapRU>
+		<id>NoHardModeScrapRU</id>
+		<metadata>
+			<title> No Hard Mode Scrap Penalty </title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/34/gabriels-small-mods-collection-markers]]></threadUrl>
+			<author>Gabriel Cooper</author>
+			<version> 3.0 </version>
+			<description>
  
 Этот крошечный мод изменяет количество лома, получаемого на трудной сложности, на равное с нормальной сложностью. Больше ничего не меняет.
 
-  </description>
-</metadata>
-  </NoHardModeScrapRU>
-  <VanillaUI>
-    <id>VanUI</id>
-    <metadata>
-  <title> Vanilla UI </title>
-  <threadUrl><![CDATA[https://subsetgames.com/forum/viewtopic.php?f=11&amp;t=35332]]></threadUrl>
-  <author> Kix </author>
-  <version> 4.0 </version>
-  <description>
+			</description>
+		</metadata>
+	</NoHardModeScrapRU>
+	<VanillaUI>
+		<id>VanUI</id>
+		<metadata>
+			<title> Vanilla UI </title>
+			<threadUrl><![CDATA[https://subsetgames.com/forum/viewtopic.php?f=11&amp;t=35332]]></threadUrl>
+			<author> Kix </author>
+			<version> 4.0 </version>
+			<description>
  
 Restores the vanilla UI style to the game instead of the 5.0 remade UI.
 
-  </description>
-</metadata>
-  </VanillaUI>
-  <VanUI_RU>
-    <id>VanUI_RU</id>
-    <metadata>
-  <title> Vanilla UI </title>
-  <threadUrl><![CDATA[https://subsetgames.com/forum/viewtopic.php?f=11&amp;t=35332]]></threadUrl>
-  <author> Kix </author>
-  <version> 4.0 </version>
-  <description>
+			</description>
+		</metadata>
+	</VanillaUI>
+	<VanUI_RU>
+		<id>VanUI_RU</id>
+		<metadata>
+			<title> Vanilla UI </title>
+			<threadUrl><![CDATA[https://subsetgames.com/forum/viewtopic.php?f=11&amp;t=35332]]></threadUrl>
+			<author> Kix </author>
+			<version> 4.0 </version>
+			<description>
  
 Конфликтует с аддоном "Into The Breach HUD", не ставьте их вместе, иначе будет смешан интерфейс.
 
 Возвращает в игру ванильный стиль пользовательского интерфейса вместо переделанного в 5.0.
 
-  </description>
-</metadata>
-  </VanUI_RU>
-  
-  
-    <VanUI_KO>
-    <id>VanUI_KO</id>
-    <metadata>
-  <title> Vanilla UI </title>
-  <threadUrl><![CDATA[https://subsetgames.com/forum/viewtopic.php?f=11&amp;t=35332]]></threadUrl>
-  <author> Kix </author>
-  <version> 4.0 </version>
-  <description>
+			</description>
+		</metadata>
+	</VanUI_RU>
+	<VanUI_KO>
+		<id>VanUI_KO</id>
+		<metadata>
+			<title> Vanilla UI </title>
+			<threadUrl><![CDATA[https://subsetgames.com/forum/viewtopic.php?f=11&amp;t=35332]]></threadUrl>
+			<author> Kix </author>
+			<version> 4.0 </version>
+			<description>
  
 Restores the vanilla UI style to the game instead of the 5.0 remade UI.
 	
-  </description>
-</metadata>
-  </VanUI_KO>
-	
-  <BeamMasterWBH_RU>
-    <id>BeamMasterWBH_RU</id>
-	<metadata>
-  <title> Beam Master will be here </title>
-  <threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev ]]></threadUrl>
-  <author> Aleev </author>
-  <version> 1.0.1 </version>
-  <description>
+			</description>
+		</metadata>
+	</VanUI_KO>
+	<BeamMasterWBH_RU>
+		<id>BeamMasterWBH_RU</id>
+		<metadata>
+			<title> Beam Master will be here </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev ]]></threadUrl>
+			<author> Aleev </author>
+			<version> 1.0.1 </version>
+			<description>
  
 Надоело встречать заклятого врага? Не беда, этот аддон добавляет маркер Мастера лучей, чтобы вы всегда могли ее пропустить (или наоборот с радостью ее встречать)
 
 Поддержка аддонов: R&amp;D и The Outer Expansion
 
-  </description>
-	</metadata>
-  </BeamMasterWBH_RU>
-  
-  <Eschaton_GenesisRU>
-    <id>Eschaton_GenesisRU</id>
-    <metadata>
-  <title>Eschaton Genesis</title>
-  <author>Eschaton</author>
-  <version> 0.3.2 </version>
-  <description>Для тех, кто НЕ пользуется Локализованным установщиком: Для работы аддона необходим Fusion
+			</description>
+		</metadata>
+	</BeamMasterWBH_RU>
+	<Eschaton_GenesisRU>
+		<id>Eschaton_GenesisRU</id>
+		<metadata>
+			<title>Eschaton Genesis</title>
+			<author>Eschaton</author>
+			<version> 0.3.2 </version>
+			<description>Для тех, кто НЕ пользуется Локализованным установщиком: Для работы аддона необходим Fusion
 
 – 5 квестов, ведущих к получению новых кораблей
 – Всего 24 новых корабля (учитывая варианты)
@@ -651,17 +659,16 @@ Restores the vanilla UI style to the game instead of the 5.0 remade UI.
 Система метарепутации позволит вам подружиться с Искателями Чудес, каждый раз при выполнении их поручений вы будете получать новые возможности на их станции - от получения некоторой информации об их родной Вселенной, до получения от них стабильных подарков в благодарность за долгую дружбу. 
 
 Обо всех багах прошу сообщать на форуме сервера FTL: MV на русском в определённой публикации, посвященной аддону. Там же можно высказать своё мнение по поводу аддона или его баланса.</description>
-</metadata>
-  </Eschaton_GenesisRU>
-  
-  <LilysInnovationsRU>
-    <id>LilysInnovationsRU</id>
-    <metadata>
-	<title> Lily's Innovations </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/167/mv-5-lilys-innovations-1 ]]></threadUrl>
-	<author> msbinarylily </author>
-	<version> 1.6.5 </version>
-	<description>
+		</metadata>
+	</Eschaton_GenesisRU>
+	<LilysInnovationsRU>
+		<id>LilysInnovationsRU</id>
+		<metadata>
+			<title> Lily's Innovations </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/167/mv-5-lilys-innovations-1 ]]></threadUrl>
+			<author> msbinarylily </author>
+			<version> 1.6.5 </version>
+			<description>
 
 Надоели существующие системы в FTL после сотен часов игры? Хотите больше разнообразия?
 
@@ -689,17 +696,16 @@ Willow, за помощь в написании текстов;
 Kix и всем, кто работал над созданием FTL: Multiverse (и Hyperspace);
 
 	</description>
-</metadata>
-  </LilysInnovationsRU>
-  
-  <MoreManSys>
-    <id>MoreManSys</id>
-    <metadata>
-	<title> More Mannable Systems </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/73 ]]></threadUrl>
-	<author> kokoro11 </author>
-	<version> 2.1 </version>
-	<description>
+		</metadata>
+	</LilysInnovationsRU>
+	<MoreManSys>
+		<id>MoreManSys</id>
+		<metadata>
+			<title> More Mannable Systems </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/73 ]]></threadUrl>
+			<author> kokoro11 </author>
+			<version> 2.1 </version>
+			<description>
 
 This addon expands your strategic options by allowing crew members to man a wider array of ship systems beyond the standard six systems. Granting direct control over more systems provides unique tactical advantages and enhances your ship's capabilities.
 
@@ -807,16 +813,15 @@ Lizzard's Variety
 Federation Special Forces
 
 	</description>
-</metadata>
-  </MoreManSys>
-  
-  <EternalVerseRU>
-    <id>EternalVerseRU</id>
-    <metadata>
-  <title>EternalVerse</title>
-  <author>Eschaton (сбор и перевод)</author>
-  <version> 1.5.2 </version>
-  <description>Это - сборник мини-аддонов, сделанных разными аддоноделами. Чаще всего эти аддоны добавляют пару играбельных кораблей, но в сборнике также присутствуют и аддоны, добавляющие и другой контент. Например: новое оружие, модули, членов экипажа, новые события, секторы и др.
+		</metadata>
+	</MoreManSys>
+	<EternalVerseRU>
+		<id>EternalVerseRU</id>
+		<metadata>
+			<title>EternalVerse</title>
+			<author>Eschaton (сбор и перевод)</author>
+			<version> 1.5.2 </version>
+			<description>Это - сборник мини-аддонов, сделанных разными аддоноделами. Чаще всего эти аддоны добавляют пару играбельных кораблей, но в сборнике также присутствуют и аддоны, добавляющие и другой контент. Например: новое оружие, модули, членов экипажа, новые события, секторы и др.
   
 Нынешний перечень переведённых и добавленных аддонов:
   
@@ -833,17 +838,16 @@ Federation Special Forces
 В будущем возможна интеграция и других мини-аддонов.
   
 Сделано специально для сервера дискорд FTL: MV на русском.</description>
-</metadata>
-  </EternalVerseRU>
-  
-  <UniversalWeaponMod>
-    <id>UniversalWeaponMod</id>
-    <metadata>
-	<title> Universal Weapon Modularity </title>
-	<threadUrl><![CDATA[ https://github.com/kokoro11/modular_weapons ]]></threadUrl>
-	<author> kokoro11 </author>
-	<version> 0.1 </version>
-	<description>
+		</metadata>
+	</EternalVerseRU>
+	<UniversalWeaponMod>
+		<id>UniversalWeaponMod</id>
+		<metadata>
+			<title> Universal Weapon Modularity </title>
+			<threadUrl><![CDATA[ https://github.com/kokoro11/modular_weapons ]]></threadUrl>
+			<author> kokoro11 </author>
+			<version> 0.1 </version>
+			<description>
 
 Ever wished you could slap a Hullbust Module on your trusty Burst Laser II? Or give a Pike Beam the shield-piercing power it deserves? Now you can.
 
@@ -877,17 +881,16 @@ Adaptive Module: +1 power cost, -20% weapon charge speed. Each time this weapon 
 Chain Module: Each time this weapon fires, its charge time is reduced by 10%. This effect stacks up to 3 times for a total of -30% charge time.
 
 	</description>
-</metadata>
-  </UniversalWeaponMod>
-  
-  <UniversalWeaponMod_RU>
-    <id>UniversalWeaponMod_RU</id>
-    <metadata>
-	<title> Universal Weapon Modularity </title>
-	<threadUrl><![CDATA[ https://github.com/kokoro11/modular_weapons ]]></threadUrl>
-	<author> kokoro11 </author>
-	<version> 0.1.2 </version>
-	<description>
+		</metadata>
+	</UniversalWeaponMod>
+	<UniversalWeaponMod_RU>
+		<id>UniversalWeaponMod_RU</id>
+		<metadata>
+			<title> Universal Weapon Modularity </title>
+			<threadUrl><![CDATA[ https://github.com/kokoro11/modular_weapons ]]></threadUrl>
+			<author> kokoro11 </author>
+			<version> 0.1.2 </version>
+			<description>
 
 Вы когда-нибудь мечтали установить Противокорпусный модуль на свой верный Импульсный лазер II? Или придать лучу "Пика" заслуженную способность пробивать щиты? Теперь это возможно.
 
@@ -912,32 +915,30 @@ Universal Weapon Modularity(UWM) разрывает цепи запатенто�
 Модуль мощности: +1 к потреблению энергии, +20% к скорости перезарядки, +1 ко всему урону
 
 	</description>
-</metadata>
-  </UniversalWeaponMod_RU>
-  
-  <RandomSS_RU>
-    <id>RandomSS_RU</id>
-    <metadata>
-	<title> Random Starting Sector </title>
-	<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/153/ftl-random-sector-start]]></threadUrl>
-	<author> Arc </author>
-	<version> 1.0 </version>
-	<description>
+		</metadata>
+	</UniversalWeaponMod_RU>
+	<RandomSS_RU>
+		<id>RandomSS_RU</id>
+		<metadata>
+			<title> Random Starting Sector </title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/153/ftl-random-sector-start]]></threadUrl>
+			<author> Arc </author>
+			<version> 1.0 </version>
+			<description>
 
 Теперь, начиная игру, вы можете выбрать направление в 1 из 6 случайных секторов, они будут такими же, что и 6 секторов, в которые вы можете прыгнуть в секторе 2. В этих секторах все еще будут некоторые события из стартового сектора, такие как снабжения, торговец и К.У.Р.А.
 
 	</description>
-</metadata>
-  </RandomSS_RU>
-  
-  <ExtraCapacityRU>
-    <id>ExtraCapacityRU</id>
-    <metadata>
-	<title> Lily's Extra Capacity </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/167/mv-5-lilys-innovations-1 ]]></threadUrl>
-	<author> msbinarylily </author>
-	<version> 1.0.0 </version>
-	<description>
+		</metadata>
+	</RandomSS_RU>
+	<ExtraCapacityRU>
+		<id>ExtraCapacityRU</id>
+		<metadata>
+			<title> Lily's Extra Capacity </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/167/mv-5-lilys-innovations-1 ]]></threadUrl>
+			<author> msbinarylily </author>
+			<version> 1.0.0 </version>
+			<description>
 
 Вы любите хранить предметы? 3 слота модулей и 4 слота груза вам не хватает?    
 
@@ -947,18 +948,16 @@ Universal Weapon Modularity(UWM) разрывает цепи запатенто�
 
 
 	</description>
-</metadata>
-  </ExtraCapacityRU>
-  
-  
-  <ExtraCapacity>
-    <id>ExtraCapacity</id>
-    <metadata>
-	<title> Lily's Extra Capacity </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/167/mv-5-lilys-innovations-1 ]]></threadUrl>
-	<author> msbinarylily </author>
-	<version> 1.0.0 </version>
-	<description>
+		</metadata>
+	</ExtraCapacityRU>
+	<ExtraCapacity>
+		<id>ExtraCapacity</id>
+		<metadata>
+			<title> Lily's Extra Capacity </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/167/mv-5-lilys-innovations-1 ]]></threadUrl>
+			<author> msbinarylily </author>
+			<version> 1.0.0 </version>
+			<description>
 
 Are you a hoarder? Is 3 augment and 4 cargo slots not enough for you.
 
@@ -970,18 +969,16 @@ Needed to be pathed after (below) mods that adds ships - otherwise ships added b
 
 
 	</description>
-</metadata>
-  </ExtraCapacity>
-  
-  
-  <TradingRU>
-    <id>TradingRU</id>
-    <metadata>
-	<title> Trading System </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/147/ftl-trading-9 ]]></threadUrl>
-	<author> Arc </author>
-	<version> 0.13 </version>
-	<description>
+		</metadata>
+	</ExtraCapacity>
+	<TradingRU>
+		<id>TradingRU</id>
+		<metadata>
+			<title> Trading System </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/147/ftl-trading-9 ]]></threadUrl>
+			<author> Arc </author>
+			<version> 0.13 </version>
+			<description>
 
 Попробуйте совершенно новый способ управления финансами в FTL.
 
@@ -991,36 +988,32 @@ Needed to be pathed after (below) mods that adds ships - otherwise ships added b
 Оборудуйте свой корабль лучшими торговыми инструментами и выполняйте торговые миссии, чтобы заработать еще больше.
 
 	</description>
-</metadata>
-  </TradingRU>
-  
-  
-  
-  <GenGibsDD_RU>
-    <id>GenGibsDD_RU</id>
-    <metadata>
-	<title> Generated Gibs for Darkest Desire 4.0.2 </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev ]]></threadUrl>
-	<author> Aleev </author>
-	<version> 1.1.0 </version>
-	<description>
+		</metadata>
+	</TradingRU>
+	<GenGibsDD_RU>
+		<id>GenGibsDD_RU</id>
+		<metadata>
+			<title> Generated Gibs for Darkest Desire 4.0.2 </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev ]]></threadUrl>
+			<author> Aleev </author>
+			<version> 1.1.0 </version>
+			<description>
 
 Предоставляет Gibs (обломки, которые отображаются при уничтожении кораблей) для аддона Darkest Desire от Naimeron
 
 Gibs были сгенерированы с помощью инструмента G.L.A.I.V.E., созданного Epirasque.
 
 </description>
-</metadata>
-  </GenGibsDD_RU>
-  
-  <GenGibsDD>
-    <id>GenGibsDD</id>
-    <metadata>
-	<title> Generated Gibs for Darkest Desire 4.0.2 </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev ]]></threadUrl>
-	<author> Aleev </author>
-	<version> 1.1.0 </version>
-	<description>
+		</metadata>
+	</GenGibsDD_RU>
+	<GenGibsDD>
+		<id>GenGibsDD</id>
+		<metadata>
+			<title> Generated Gibs for Darkest Desire 4.0.2 </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev ]]></threadUrl>
+			<author> Aleev </author>
+			<version> 1.1.0 </version>
+			<description>
 
 Provides Gibs (debris pieces that are shown whenever ships are destroyed) for Darkest Desire by Naimeron
 
@@ -1029,17 +1022,16 @@ This addon has to be patched after Darkest Desire itself
 Gibs were generated with the G.L.A.I.V.E. tool made by Epirasque
 
 </description>
-</metadata>
-  </GenGibsDD>
-  
-  <TNE_RU>
-    <id>TNE_RU</id>
-    <metadata>
-<title>Tradition N Experiment</title>
- <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/42/mv-tradition-experiment-v1-23d]]></threadUrl>
- <author>Private JJ</author>
- <version>1.25c</version>
- <description>
+		</metadata>
+	</GenGibsDD>
+	<TNE_RU>
+		<id>TNE_RU</id>
+		<metadata>
+			<title>Tradition N Experiment</title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/42/mv-tradition-experiment-v1-23d]]></threadUrl>
+			<author>Private JJ</author>
+			<version>1.25c</version>
+			<description>
 - Аддон включает в себя более 50 новых видов оружия, более 10 дронов и 28 кораблей.
 
 Содержимое:
@@ -1057,16 +1049,16 @@ Gibs were generated with the G.L.A.I.V.E. tool made by Epirasque
 
 Более подробную информацию можете изучить по ссылке выше.
 </description>
-</metadata>
-  </TNE_RU>
-  <TNE_ZH_HANS>
-    <id>TNE_ZH_HANS</id>
-    <metadata>
-<title>Tradition N Experiment</title>
- <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/42/mv-tradition-experiment-v1-23d]]></threadUrl>
- <author>Private JJ</author>
- <version>1.25c</version>
- <description>
+		</metadata>
+	</TNE_RU>
+	<TNE_ZH_HANS>
+		<id>TNE_ZH_HANS</id>
+		<metadata>
+			<title>Tradition N Experiment</title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/42/mv-tradition-experiment-v1-23d]]></threadUrl>
+			<author>Private JJ</author>
+			<version>1.25c</version>
+			<description>
 - This addon includes 50+ new weapons, 10+ drones, and 28 ships.
 
 Contents:
@@ -1082,31 +1074,31 @@ Contents:
 
 and more!
 </description>
-</metadata>
-  </TNE_ZH_HANS>
-  <RainbowModeRU>
-    <id>RainbowModeRU</id>
-    <metadata>
-	<title> Rainbow Mode </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/174/rainbow-mode-v1 ]]></threadUrl>
-	<author> Arc </author>
-	<version>1.4</version>
-	<description>
+		</metadata>
+	</TNE_ZH_HANS>
+	<RainbowModeRU>
+		<id>RainbowModeRU</id>
+		<metadata>
+			<title> Rainbow Mode </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/174/rainbow-mode-v1 ]]></threadUrl>
+			<author> Arc </author>
+			<version>1.4</version>
+			<description>
 
 Добавляет новый режим игры в ангаре.
 Случайные предметы больше не выпадают, вместо этого в начале каждого сектора можно выбрать 1 из 8 высококачественных видов оружия/дронов, а также 1 из 4 членов экипажа/один модуль.
 
 	</description>
-</metadata>
-  </RainbowModeRU>
-  <SymbiontWonderdroneRU>
-    <id>SymbiontWonderdroneRU</id>
-    <metadata>
-<title>Симбионт Чудо-Дрон</title>
- <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/173/mv-5-symbiont-wonderdrone]]></threadUrl>
- <author>Evil Pepper Playz</author>
- <version>1.1</version>
- <description>
+		</metadata>
+	</RainbowModeRU>
+	<SymbiontWonderdroneRU>
+		<id>SymbiontWonderdroneRU</id>
+		<metadata>
+			<title>Симбионт Чудо-Дрон</title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/173/mv-5-symbiont-wonderdrone]]></threadUrl>
+			<author>Evil Pepper Playz</author>
+			<version>1.1</version>
+			<description>
 
 Всегда задавался вопросом, почему нет симбиотической формы Чудо-Дрона(tm)?
 
@@ -1121,16 +1113,16 @@ and more!
 Спасибо за то что жив — Lizzard
 Спасибо за существование — Bannoffepie
 </description>
-</metadata>
-  </SymbiontWonderdroneRU>
-  <TemporalMastery_ZH_HANS>
-    <id>TemporalMastery_ZH_HANS</id>
-    <metadata>
-	<title> Temporal Mastery (Temporal System Overhaul) </title>
-	<threadUrl><![CDATA[ https://github.com/kokoro11/temporal_mastery ]]></threadUrl>
-	<author> kokoro11 </author>
-	<version> 0.1.7 </version>
-	<description>
+		</metadata>
+	</SymbiontWonderdroneRU>
+	<TemporalMastery_ZH_HANS>
+		<id>TemporalMastery_ZH_HANS</id>
+		<metadata>
+			<title> Temporal Mastery (Temporal System Overhaul) </title>
+			<threadUrl><![CDATA[ https://github.com/kokoro11/temporal_mastery ]]></threadUrl>
+			<author> kokoro11 </author>
+			<version> 0.1.7 </version>
+			<description>
 
 Tired of the Temporal Manipulator being a one trick pony? While powerful for boarding strategies, its potential has always felt limited. This overhaul transforms the temporal system from a niche tool into a versatile and engaging core system that interacts with your ship in dynamic new ways.
 
@@ -1147,16 +1139,16 @@ Installation: Must be installed after Multiverse.
 Highly Recommended: For the full experience, install the Playable Temporal System (https://ftlmultiverse.boards.net/thread/60) addon to add the temporal system to all ships.
 
 	</description>
-</metadata>
-  </TemporalMastery_ZH_HANS>
-  <TemporalMasteryRU>
-    <id>TemporalMasteryRU</id>
-    <metadata>
-	<title> Temporal Mastery (Temporal System Overhaul) </title>
-	<threadUrl><![CDATA[ https://github.com/kokoro11/temporal_mastery ]]></threadUrl>
-	<author> kokoro11 </author>
-	<version> 0.1.7 </version>
-	<description>
+		</metadata>
+	</TemporalMastery_ZH_HANS>
+	<TemporalMasteryRU>
+		<id>TemporalMasteryRU</id>
+		<metadata>
+			<title> Temporal Mastery (Temporal System Overhaul) </title>
+			<threadUrl><![CDATA[ https://github.com/kokoro11/temporal_mastery ]]></threadUrl>
+			<author> kokoro11 </author>
+			<version> 0.1.7 </version>
+			<description>
 
 Устали от того, что Временной манипулятор — это одноразовый трюк? Несмотря на его мощность в стратегиях абордажа, его потенциал всегда казался ограниченным. Эта переработка превращает временную систему из нишевого инструмента в универсальную и увлекательную основную систему, которая взаимодействует с вашим кораблем динамичными новыми способами.
 
@@ -1169,17 +1161,16 @@ Highly Recommended: For the full experience, install the Playable Temporal Syste
 Ссылка на форум: https://ftlmultiverse.boards.net/thread/52
 
 	</description>
-</metadata>
-  </TemporalMasteryRU>
-  
-  <MoreManSys_ZH_HANS>
-    <id>MoreManSys_ZH_HANS</id>
-	<metadata>
-	<title> More Mannable Systems </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/73 ]]></threadUrl>
-	<author> kokoro11 </author>
-	<version> 2.1 </version>
-	<description>
+		</metadata>
+	</TemporalMasteryRU>
+	<MoreManSys_ZH_HANS>
+		<id>MoreManSys_ZH_HANS</id>
+		<metadata>
+			<title> More Mannable Systems </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/73 ]]></threadUrl>
+			<author> kokoro11 </author>
+			<version> 2.1 </version>
+			<description>
 
 This addon expands your strategic options by allowing crew members to man a wider array of ship systems beyond the standard six systems. Granting direct control over more systems provides unique tactical advantages and enhances your ship's capabilities.
 
@@ -1259,18 +1250,16 @@ Lizzard's Variety
 Federation Special Forces
 
 	</description>
-	</metadata>
-  </MoreManSys_ZH_HANS>
-  
-  
-  <UniversalWeaponMod_ZH_HANS>
-    <id>UniversalWeaponMod_ZH_HANS</id>
-	<metadata>
-	<title> Universal Weapon Modularity </title>
-	<threadUrl><![CDATA[ https://github.com/kokoro11/modular_weapons ]]></threadUrl>
-	<author> kokoro11 </author>
-	<version> 0.2 </version>
-	<description>
+		</metadata>
+	</MoreManSys_ZH_HANS>
+	<UniversalWeaponMod_ZH_HANS>
+		<id>UniversalWeaponMod_ZH_HANS</id>
+		<metadata>
+			<title> Universal Weapon Modularity </title>
+			<threadUrl><![CDATA[ https://github.com/kokoro11/modular_weapons ]]></threadUrl>
+			<author> kokoro11 </author>
+			<version> 0.2 </version>
+			<description>
 
 Ever wished you could slap a Hullbust Module on your trusty Burst Laser II? Or give a Pike Beam the shield-piercing power it deserves? Now you can.
 
@@ -1307,17 +1296,16 @@ Adaptive Module: +1 power cost, -20% weapon charge speed. Each time this weapon 
 Chain Module: Each time this weapon fires, its charge time is reduced by 10%. This effect stacks up to 3 times for a total of -30% charge time.
 
 	</description>
-	</metadata>
-  </UniversalWeaponMod_ZH_HANS>
-  
-  <GenGibsMV_FR>
-    <id>GenGibsMV_FR</id>
-    <metadata>
-	<title> Gibs ajoutés pour Multiverse 5.5 </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/39/generated-gibs ]]></threadUrl>
-	<author> Epirasque (développeur), Dalvest (artiste)</author>
-	<version> 1.4.2 </version>
-	<description>
+		</metadata>
+	</UniversalWeaponMod_ZH_HANS>
+	<GenGibsMV_FR>
+		<id>GenGibsMV_FR</id>
+		<metadata>
+			<title> Gibs ajoutés pour Multiverse 5.5 </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/39/generated-gibs ]]></threadUrl>
+			<author> Epirasque (développeur), Dalvest (artiste)</author>
+			<version> 1.4.2 </version>
+			<description>
 
 Ajoute des Gibs (morceaux de débris affichés lorsque les vaisseaux sont détruits) là où ils sont manquants dans le mod Multiverse (version 5.5).
 Cela concerne actuellement environ un millier de vaisseaux différents.
@@ -1335,17 +1323,16 @@ Cet addon n’est pas entièrement compatible avec d’autres addons ajoutant de
 Remerciements particuliers à marcusian pour son aide et ses conseils.
 
 </description>
-</metadata>
-  </GenGibsMV_FR>
-  
-  <GenGibsTRC_FR>
-    <id>GenGibsTRC_FR</id>
-    <metadata>
-	<title> Gibs ajoutés pour The Renegade Collection 2.6 </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/39/generated-gibs ]]></threadUrl>
-	<author> Epirasque (développeur), Dalvest (artiste)</author>
-	<version> 1.4.2 </version>
-	<description>
+		</metadata>
+	</GenGibsMV_FR>
+	<GenGibsTRC_FR>
+		<id>GenGibsTRC_FR</id>
+		<metadata>
+			<title> Gibs ajoutés pour The Renegade Collection 2.6 </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/39/generated-gibs ]]></threadUrl>
+			<author> Epirasque (développeur), Dalvest (artiste)</author>
+			<version> 1.4.2 </version>
+			<description>
 
 Ajoute des Gibs (morceaux de débris affichés lorsque les vaisseaux sont détruits) pour l'addon The Renegade Collection 2.6.
 
@@ -1354,17 +1341,16 @@ Cet addon doit être patché après l'instalaltion de l'Addon The Renegade Colle
 Remerciements particuliers à marcusian pour son aide et ses conseils.
 
 </description>
-</metadata>
-  </GenGibsTRC_FR>
-  
-  <GenGibsFR_FR>
-    <id>GenGibsFR_FR</id>
-    <metadata>
-  <title> Gibs ajoutés pour Forgotten Races  </title>
-  <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/12/forgotten-races]]></threadUrl>
-  <author>Gabriel Cooper</author>
-  <version> 1.5.1 </version>
-  <description>
+		</metadata>
+	</GenGibsTRC_FR>
+	<GenGibsFR_FR>
+		<id>GenGibsFR_FR</id>
+		<metadata>
+			<title> Gibs ajoutés pour Forgotten Races  </title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/12/forgotten-races]]></threadUrl>
+			<author>Gabriel Cooper</author>
+			<version> 1.5.1 </version>
+			<description>
  
 Ajoute des Gibs (morceaux de débris affichés lorsque les vaisseaux sont détruits) pour l'addon Forgotten Races
 
@@ -1374,18 +1360,17 @@ Les Gibs ont été générés avec l’outil G.L.A.I.V.E. créé par Epirasque.
 
 Compatible avec Multiverse 5.4.X
 
-  </description>
-</metadata>
-  </GenGibsFR_FR>
-  
-  <GenGibsDD_FR>
-    <id>GenGibsDD_FR</id>
-    <metadata>
-	<title> Gibs ajoutés pour Darkest Desire 4.0.2 </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev ]]></threadUrl>
-	<author> Aleev </author>
-	<version> 1.1.0 </version>
-	<description>
+			</description>
+		</metadata>
+	</GenGibsFR_FR>
+	<GenGibsDD_FR>
+		<id>GenGibsDD_FR</id>
+		<metadata>
+			<title> Gibs ajoutés pour Darkest Desire 4.0.2 </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev ]]></threadUrl>
+			<author> Aleev </author>
+			<version> 1.1.0 </version>
+			<description>
 
 Ajoute des Gibs (morceaux de débris affichés lorsque les vaisseaux sont détruits) pour Darkest Desire par Naimeron.
 
@@ -1394,17 +1379,16 @@ Cet addon doit être patché après l'instalation de l'addon Darkest Desire
 Les Gibs ont été générés avec l’outil G.L.A.I.V.E. créé par Epirasque.
 
 </description>
-</metadata>
-  </GenGibsDD_FR>
-  
-  <ExtraCapacity_FR>
-    <id>ExtraCapacity_FR</id>
-    <metadata>
-	<title> Capacité supplémentaire de Lily </title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/167/mv-5-lilys-innovations-1 ]]></threadUrl>
-	<author> msbinarylily </author>
-	<version> 1.0.0 </version>
-	<description>
+		</metadata>
+	</GenGibsDD_FR>
+	<ExtraCapacity_FR>
+		<id>ExtraCapacity_FR</id>
+		<metadata>
+			<title> Capacité supplémentaire de Lily </title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/167/mv-5-lilys-innovations-1 ]]></threadUrl>
+			<author> msbinarylily </author>
+			<version> 1.0.0 </version>
+			<description>
 
 Êtes-vous un collectionneur compulsif ? Trois emplacements d’augmentations et quatre emplacements de cargaison ne vous suffisent pas ?
 
@@ -1415,32 +1399,30 @@ Augmente les emplacements d’augmentations de 3 et ceux de cargaison de 4 — e
 Doit être patché après les (en dessous des) mods ajoutant des vaisseaux, sinon les vaisseaux ajoutés après ce mod ne seront pas affectés !
 
 	</description>
-</metadata>
-  </ExtraCapacity_FR>
-  
-  <VanillaUI_FR>
-    <id>VanUI_FR</id>
-    <metadata>
-  <title> Interface Vanilla </title>
-  <threadUrl><![CDATA[https://subsetgames.com/forum/viewtopic.php?f=11&amp;t=35332]]></threadUrl>
-  <author> Kix </author>
-  <version> 4.0 </version>
-  <description>
+		</metadata>
+	</ExtraCapacity_FR>
+	<VanillaUI_FR>
+		<id>VanUI_FR</id>
+		<metadata>
+			<title> Interface Vanilla </title>
+			<threadUrl><![CDATA[https://subsetgames.com/forum/viewtopic.php?f=11&amp;t=35332]]></threadUrl>
+			<author> Kix </author>
+			<version> 4.0 </version>
+			<description>
  
 Restaure le style de l’interface utilisateur vanilla du jeu à la place de l’interface remaniée de la version 5.0.
 
-  </description>
-</metadata>
-  </VanillaUI_FR>
-  
-  <NoHardModeScrap_FR>
-    <id>NoHardModeScrap_FR</id>
-    <metadata>
-  <title> Aucune pénalité de ferraille en mode difficile </title>
-  <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/34/gabriels-small-mods-collection-markers]]></threadUrl>
-  <author>Gabriel Cooper</author>
-  <version> 3.0 </version>
-  <description>
+			</description>
+		</metadata>
+	</VanillaUI_FR>
+	<NoHardModeScrap_FR>
+		<id>NoHardModeScrap_FR</id>
+		<metadata>
+			<title> Aucune pénalité de ferraille en mode difficile </title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/34/gabriels-small-mods-collection-markers]]></threadUrl>
+			<author>Gabriel Cooper</author>
+			<version> 3.0 </version>
+			<description>
  
 A PATCHER APRÈS MULTIVERSE
 
@@ -1448,7 +1430,7 @@ Ce petit mod modifie la quantité de ferraille gagnée en mode difficile afin qu
 
 Compatible avec Multiverse 5.4.x
 
-  </description>
-</metadata>
-  </NoHardModeScrap_FR>
+			</description>
+		</metadata>
+	</NoHardModeScrap_FR>
 </metadataList>
