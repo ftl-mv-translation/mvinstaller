@@ -820,7 +820,7 @@ Federation Special Forces
 		<metadata>
 			<title>EternalVerse</title>
 			<author>Eschaton (сбор и перевод)</author>
-			<version> 1.5.2 </version>
+			<version> 1.6 </version>
 			<description>Это - сборник мини-аддонов, сделанных разными аддоноделами. Чаще всего эти аддоны добавляют пару играбельных кораблей, но в сборнике также присутствуют и аддоны, добавляющие и другой контент. Например: новое оружие, модули, членов экипажа, новые события, секторы и др.
   
 Нынешний перечень переведённых и добавленных аддонов:
@@ -834,7 +834,8 @@ Federation Special Forces
 - Faster Than Cobalt (3 корабля. Авторство: AceKoala). Решено большинство багов
 - Bag of Dumb (4 корабля, новые вещи, новые события, новый секретный сектор. Авторство: Felipemello29, cgjunior, geckoindisguise, Enchanter, moreorlesser, AgentTHeKat, Laythe, MaddieDoktor, DemonFusionGamer, R4V3-0N, Vertaalfout, Chrono Vortex). Решено большинство багов
 - The Ultimate Limit (1 корабль. Авторство: Eschaton)
-  
+- Конкурсные корабли AceKoala (3 корабля. Авторство: AceKoala). Добавлены условия для получения типов Б и В слота под корабль для повышения интереса
+
 В будущем возможна интеграция и других мини-аддонов.
   
 Сделано специально для сервера дискорд FTL: MV на русском.</description>
