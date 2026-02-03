@@ -300,16 +300,25 @@ class HyperspaceType(Enum):
     )
     HS_1_20_0 = HyperspaceInfo(
         name='HS-1.20.0 2540d80',
-        outdated=False,
-        latest=True,
+        outdated=True,
+        latest=False,
         sha1='2462b664fe6ad17ed1d107e983dbc469e81e9acd',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.20.0/FTL.Hyperspace.1.20.0.zip',
         filename='FTL.Hyperspace.1.20.0.zip'
     )
-
+    HS_1_21_1 = HyperspaceInfo(
+        name='HS-1.21.1 e4a5c18',
+        outdated=False,
+        latest=True,
+        #sha1='f0bcf23ec6ba018d53d2c88933a0b5cdde653c25',
+        sha1='fbdc72256f7942ad067a0a16e11ac665e4bd5c75',
+        url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.21.1/FTL.Hyperspace.1.21.1.zip',
+        filename='FTL.Hyperspace.1.21.1.zip'
+    )
 
 # SHA1 hash value of unmodded ftl.dat files
 DAT_VANILLA_SHA1 = [
+    #'', # Steam 1.6.22
     'a0ecc84f16302b8851eff98ab3e01e2f376152d7', # Steam 1.6.14
     '2b81ef942c56fd4025ba11eecfd8ac6100de206f', # GOG 1.6.13b
     'b7c923866726607d172461454b8904b6d3dfb811', # GOG 1.6.9
@@ -383,7 +392,8 @@ ADDONS_TRANSLATION_RELEASE = [
     'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=1000
     'https://api.github.com/repos/ftl-mv-translation/lilys-beam-emporium/releases/latest', #LBE, priority=1100
     'https://api.github.com/repos/ftl-mv-translation/old-guard/releases/latest', #OG, priority=1200
-    'https://api.github.com/repos/ftl-mv-translation/lilys-innovations/releases/latest', #LI, priority=1300
+    'https://api.github.com/repos/ftl-mv-translation/Eschaton-Genesis/releases/latest', #EG, priority=1300
+    'https://api.github.com/repos/ftl-mv-translation/lilys-innovations/releases/latest', #LI, priority=1400
 ]
 
 TRANSLATION_RELEASE_DEPENDENCIES = {
@@ -393,7 +403,8 @@ TRANSLATION_RELEASE_DEPENDENCIES = {
     'Outer-Expansion': ['TOEPatchLast'],
     'Darkest-Desire': ['DDPatchLast'],
     'Old-Guard': ['OGPatchLast'],
-    'Expanded-Multiverse': ['Fusion']
+    'Expanded-Multiverse': ['Fusion'],
+    'Eschaton-Genesis': ['Fusion']
 }
 
 LIBRARY_MODS = [
@@ -495,7 +506,7 @@ class FixedAddonsList(Enum):
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
-        dependent_modnames=['Fusion'],
+        dependent_modnames=[],
         priority=1201
     )
     EternalVerseRU = Mod(
@@ -734,7 +745,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=[],
         dependent_modnames=[],
-        priority=1300
+        priority=1349
     )
     ExtraCapacityRU = Mod(
         id='ExtraCapacityRU',
@@ -748,7 +759,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1300
+        priority=1349
     )
     ExtraCapacity_FR = Mod(
         id='ExtraCapacity_FR',
@@ -762,7 +773,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['fr'],
         dependent_modnames=[],
-        priority=1300
+        priority=1349
     )
     TemporalMasteryRU = Mod(
         id='TemporalMasteryRU',
