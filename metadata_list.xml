@@ -10,8 +10,25 @@ Metadata information
 		</metadata>
 	</class_mode_here>
 -->
-	<SystemDeleter>
-		<id>SystemDeleter</id>
+	<FM_Tweaks_RU>
+		<id>FM_Tweaks_RU</id>
+<metadata>
+  <title><![CDATA[ Forgemaster Tweaks lite]]></title>
+  <threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev ]]></threadUrl>
+  <author><![CDATA[ Aleev, Duodecimus, Limrix ]]></author>
+  <version><![CDATA[ 1.2 ]]></version>
+  <description>
+
+Улучшает аддон Forgemaster, внося незначительные изменения:
+
+Улучшает меню кузнеца. Теперь перед крафтом вы можете увидеть характеристики будущего оружия.
+Удаляет внутреннее улучшение для Кислородной установки, чтобы отобразить более интересные улучшения в Lily's Innovations
+  </description>
+</metadata>
+	</FM_Tweaks_RU>
+	
+	<SystemDeleter_RU>
+		<id>SystemDeleter_RU</id>
   <metadata>
   <title>System Deleter</title>
   <author>Aleev</author>
@@ -23,10 +40,10 @@ Metadata information
 Добавляет возможность удалять систему в любое время в меню склада практически без последствий.
   </description>
 </metadata>
-	</SystemDeleter>
+	</SystemDeleter_RU>
 	
-	<InitialTipsMV>
-		<id>InitialTipsMV</id>
+	<InitialTipsMV_RU>
+		<id>InitialTipsMV_RU</id>
 <metadata>
   <title>Начальные советы МВ</title>
   <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev]]></threadUrl>
@@ -38,7 +55,7 @@ Metadata information
 
   </description>
 </metadata>
-	</InitialTipsMV>
+	</InitialTipsMV_RU>
 	
 	<SectorMapPlusRU>
 		<id>SectorMapPlusRU</id>

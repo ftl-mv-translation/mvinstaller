@@ -1010,13 +1010,13 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=2100
+        priority=2101
     )
-    InitialTipsMV = Mod(
+    InitialTipsMV_RU = Mod(
         id='InitialTipsMV_RU',
         modname='InitialTipsMV',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1yJSn3g7pjvlwsNml07ZMTy86APbSzWjc&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/u/1/uc?id=1FDVoTVkKEnXJqp0u6gJTkLCzI_spaR2D&export=download&confirm=xxx':
                 'Initial tips MV.zip'
         },
         version='1.0',
@@ -1024,9 +1024,9 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=2101
+        priority=2102
     )
-    SystemDeleter = Mod(
+    SystemDeleter_RU = Mod(
         id='SystemDeleter_RU',
         modname='SystemDeleter',
         download_targets={
@@ -1038,7 +1038,21 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=2102
+        priority=2103
+    )
+    FM_Tweaks_RU = Mod(
+        id='FM_Tweaks_RU',
+        modname='FM_Tweaks',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=11AYp1AcVrmQ-59EVHKXh_D4LCFAmDsRG&export=download&confirm=xxx':
+                'FM Tweaks lite.zip'
+        },
+        version='1.2',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=['Forgemaster', 'Fusion'],
+        priority=2104
     )
     HereBeMarkersRU = Mod(
         id='HereBeMarkersRU',
