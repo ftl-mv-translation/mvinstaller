@@ -310,7 +310,6 @@ class HyperspaceType(Enum):
         name='HS-1.21.1 e4a5c18',
         outdated=False,
         latest=True,
-        #sha1='f0bcf23ec6ba018d53d2c88933a0b5cdde653c25',
         sha1='fbdc72256f7942ad067a0a16e11ac665e4bd5c75',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.21.1/FTL.Hyperspace.1.21.1.zip',
         filename='FTL.Hyperspace.1.21.1.zip'
@@ -1012,6 +1011,34 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=2100
+    )
+    InitialTipsMV = Mod(
+        id='InitialTipsMV_RU',
+        modname='InitialTipsMV',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1yJSn3g7pjvlwsNml07ZMTy86APbSzWjc&export=download&confirm=xxx':
+                'Initial tips MV.zip'
+        },
+        version='1.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=2101
+    )
+    SystemDeleter = Mod(
+        id='SystemDeleter_RU',
+        modname='SystemDeleter',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1ecZTfb4qANafJd2fTLmu5wbrTwVTDoM3&export=download&confirm=xxx':
+                'System Deleter.zip'
+        },
+        version='1.1',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=2102
     )
     HereBeMarkersRU = Mod(
         id='HereBeMarkersRU',

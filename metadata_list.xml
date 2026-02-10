@@ -10,6 +10,36 @@ Metadata information
 		</metadata>
 	</class_mode_here>
 -->
+	<SystemDeleter>
+		<id>SystemDeleter</id>
+  <metadata>
+  <title>System Deleter</title>
+  <author>Aleev</author>
+  <threadUrl>https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev</threadUrl>
+  <version> 1.1 </version>
+  <description>
+Случайно купили ненужную систему или не хотите иметь абордажить на абордажном корабле? Просто демонтируйте систему!
+
+Добавляет возможность удалять систему в любое время в меню склада практически без последствий.
+  </description>
+</metadata>
+	</SystemDeleter>
+	
+	<InitialTipsMV>
+		<id>InitialTipsMV</id>
+<metadata>
+  <title>Начальные советы МВ</title>
+  <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev]]></threadUrl>
+  <author>Aleev</author>
+  <version>1.0</version>
+  <description>
+
+Возвращает МВ советы в начале забега, что будут полезны для начинающих игроков
+
+  </description>
+</metadata>
+	</InitialTipsMV>
+	
 	<SectorMapPlusRU>
 		<id>SectorMapPlusRU</id>
 		<metadata>

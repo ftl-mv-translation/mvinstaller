@@ -52,13 +52,13 @@ def downgrade_ftl(ftl_path, downgrader):
         archive_filename = latest_hyperspace.filename
         extract_paths = [
             'Windows - Extract these files into where FTLGame.exe is/patch/flips.exe',
-            'Windows - Extract these files into where FTLGame.exe is/patch/patch.bps'
+            'Windows - Extract these files into where FTLGame.exe is/patch/patch-1.6.14.bps'
         ]
     else:
         archive_url, archive_filename = DOWNGRADERS[downgrader]
         extract_paths = [
             'patch/flips.exe',
-            'patch/patch.bps'
+            'patch/patch-1.6.14.bps'
         ]
 
     downgrader_extract_dir = cache_dir / 'downgraders' / downgrader
@@ -77,7 +77,7 @@ def downgrade_ftl(ftl_path, downgrader):
         [
             str(downgrader_extract_dir / 'flips.exe'),
             '-a',
-            str(downgrader_extract_dir / 'patch.bps'),
+            str(downgrader_extract_dir / 'patch-1.6.14.bps'),
             str(ftl_path / 'FTLGame.exe')
         ]
     )
