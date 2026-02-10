@@ -732,6 +732,7 @@ class FixedAddonsList(Enum):
         dependent_modnames=['Darkest-Desire'],
         priority=1257
     )
+    #EG, priority=1300
     ExtraCapacity = Mod(
         id='ExtraCapacity',
         modname='ExtraCapacity',
@@ -830,6 +831,22 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=1360
     )
+    FM_Tweaks_RU = Mod(
+        id='FM_Tweaks_RU',
+        modname='FM_Tweaks',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=11AYp1AcVrmQ-59EVHKXh_D4LCFAmDsRG&export=download&confirm=xxx':
+                'FM Tweaks lite.zip'
+        },
+        version='1.2',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=['Forgemaster', 'Fusion'],
+        priority=1399
+    )
+
+    #LI, priority=1400
     TradingRU = Mod(
         id='TradingRU',
         modname='Trading',
@@ -842,7 +859,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1400
+        priority=1401
     )
     StatisticRU = Mod(
         id='StatisticRU',
@@ -870,7 +887,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1500
+        priority=1501
     )
     MoreManSysRU = Mod(
         id='MoreManSysRU',
@@ -884,7 +901,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1600
+        priority=1601
     )
     MoreManSys_ZH_HANS = Mod(
         id='MoreManSys_ZH_HANS',
@@ -898,7 +915,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['zh_Hans'],
         dependent_modnames=[],
-        priority=1600
+        priority=1601
     )
     UniversalWeaponMod_RU = Mod(
         id='UniversalWeaponMod_RU',
@@ -912,7 +929,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1700
+        priority=1701
     )
     UniversalWeaponMod_ZH_HANS = Mod(
         id='UniversalWeaponMod_ZH_HANS',
@@ -926,7 +943,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['zh_Hans'],
         dependent_modnames=[],
-        priority=1700
+        priority=1701
     )
     LizzardAchRU = Mod(
         id='LizzardAchRU',
@@ -940,7 +957,7 @@ class FixedAddonsList(Enum):
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
-        priority=1800
+        priority=1801
     )
     LizzardAchDE = Mod(
         id='LizzardAchDE',
@@ -1039,20 +1056,6 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=2103
-    )
-    FM_Tweaks_RU = Mod(
-        id='FM_Tweaks_RU',
-        modname='FM_Tweaks',
-        download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=11AYp1AcVrmQ-59EVHKXh_D4LCFAmDsRG&export=download&confirm=xxx':
-                'FM Tweaks lite.zip'
-        },
-        version='1.2',
-        locale='ru',
-        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
-        compatible_mv_locale=['ru'],
-        dependent_modnames=['Forgemaster', 'Fusion'],
-        priority=2104
     )
     HereBeMarkersRU = Mod(
         id='HereBeMarkersRU',
