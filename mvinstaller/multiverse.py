@@ -17,7 +17,7 @@ from mvinstaller.signatures import (
 )
 
 _TRANSLATION_FN_PATTERN = re.compile(
-    r'^(?P<id>.+)-(?P<version>v?[0-9\.]+(?:-.*)?)-(?P<locale>[a-zA-Z_]+)(?P<machine>\.machine)?\+(?P<commitid>[a-fA-F0-9xX]+)\.ftl$',
+    r'^(?P<id>.+)-(?P<version>v?[0-9\.]+(?:.*)(?:-.*)?)-(?P<locale>[a-zA-Z_]+)(?P<machine>\.machine)?\+(?P<commitid>[a-fA-F0-9xX]+)\.ftl$',
     re.IGNORECASE
 )
 
@@ -56,6 +56,8 @@ def _parse_release(path, priority):
             mods.append(mod)
         except Exception:
             continue
+    if len(mods) == 0:
+        logger.warning(f'No valid mod found in release file: {path}')
     return created_time, mods
 
 def from_github_release(url, priority) -> list[Mod]:

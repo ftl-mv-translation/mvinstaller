@@ -64,7 +64,7 @@ class FTLPathFinderDialog(UserControl):
                 disabled = False
                 icon = icons.RADIO_BUTTON_CHECKED if path == current_path else icons.RADIO_BUTTON_UNCHECKED
                 tooltip = None
-                if state is None:
+                if state is None or state.ftl_executable_info is None:
                     infoscheme = InfoSchemeType.Unknown
                     name = f'{_("unknown-version")} | {path}'
                 else:
