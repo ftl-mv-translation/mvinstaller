@@ -926,8 +926,8 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=1501 #Random-Starting-Sector
     )
-    QoL_ArsPlus = Mod(
-        id='QoL_ArsPlus',
+    QoL_ArsPlusRU = Mod(
+        id='QoL_ArsPlusRU',
         modname='QoL_ArsPlus',
         download_targets={
             'https://drive.usercontent.google.com/u/1/uc?id=1nOHoV9s16QEmBbfFajQp05n3eJ1tNrEu&export=download&confirm=xxx':

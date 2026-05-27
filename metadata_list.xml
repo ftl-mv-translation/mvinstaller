@@ -28,6 +28,8 @@ Metadata information
 Уведомление о ближайших магазинах: если у ближайшего маяка есть магазин, вы получите уведомление, чтобы не потратить лом раньше времени
 Значок половины щита: если у противника нечетный уровень щита, а у вас сенсоры 2-го уровня, появляется значок щита
 
+Перейдите по ссылке выше, чтобы увидеть, как это выглядит
+
 В будущем может добавлю что-то еще
 
   </description>
@@ -89,7 +91,6 @@ Metadata information
 	
 	<VaultRU>
 		<id>VaultRU</id>
-<?xml version="1.0" encoding="UTF-8"?>
 <metadata>
 	<title>The Vault</title>
 	<threadUrl>https://ftlmultiverse.boards.net/thread/227/vault</threadUrl>
