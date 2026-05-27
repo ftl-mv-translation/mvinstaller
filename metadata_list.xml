@@ -10,6 +10,170 @@ Metadata information
 		</metadata>
 	</class_mode_here>
 -->
+	<QoL_ArsPlusRU>
+		<id>QoL_ArsPlusRU</id>
+<metadata>
+  <title>QoL Arsenal+</title>
+  <threadUrl>https://ftlmultiverse.boards.net/thread/229/qol-arsenal</threadUrl>
+  <author>Aleev</author>
+  <version>1.1</version>
+  <description>
+Добавляет некоторые QoL элементы прямиком из мода Arsenal+, а именно:
+
+Визуальная прочность огня: теперь при тушении отображается визуально, как скоро огонь потухнет
+Отмена Контроля разума: вы можете отменить действие КР досрочно
+Взрыв Дрона взломщика: если вы хотите поменять цель взлома, то теперь вы можете его взорвать и затем направить на другую цель
+Анимация ангара: теперь на фоне будут пролетать корабли в начале забега.
+Упоминание сканер секторов: что у вас есть активный сканер секторов
+Уведомление о ближайших магазинах: если у ближайшего маяка есть магазин, вы получите уведомление, чтобы не потратить лом раньше времени
+Значок половины щита: если у противника нечетный уровень щита, а у вас сенсоры 2-го уровня, появляется значок щита
+
+В будущем может добавлю что-то еще
+
+  </description>
+</metadata>
+	</QoL_ArsPlusRU>
+	
+	<ArsPlusChallRU>
+		<id>ArsPlusChallRU</id>
+  <metadata>
+  <title>Ars+ Challenges</title>
+  <author>Aleev</author>
+  <threadUrl>https://ftlmultiverse.boards.net/thread/220/ars-challenges</threadUrl>
+  <version> 1.0 </version>
+  <description>
+
+Изначальная фишка в Arsenal+ и адаптированная для Multiverse.
+  
+Вам играется слишком просто даже поставив Трудно/Экстрим? Как насчет некоторых элементов усложняющих игру?
+
+Представляю вам новую вкладку - Испытания!
+
+Испытания добавляют различные усложняющие механизмы в игру, которые можно активировать в начале игры на первом маяке. Если пройти игру с активным испытанием, оно будет считаться пройденным, и в последующих играх это принесёт дополнительные 10 лома в начале 8 сектора за каждое пройденное испытание (100 лома максимум). Этот бонус будет перманентным, даже если лететь без испытаний
+
+Этот аддон мог бы только добавить испытания, но ESCHATON предложил мне еще набор кораблей за успешное прохождение испытаний, за что ему спасибо. Помимо этого вы сможете встретить особое оружие прямиком из Arsenal+ и получить 8 достижений.
+
+Желаю удачи пройти как можно больше испытаний!
+
+
+Огромная благодарность:
+- bamalf и KBA3u - код.
+- Evil PepperPlayz - помощь с луа кодингом.
+- ESCHATON - пак коллекционных кораблей и флагман 4 фазы.
+  </description>
+</metadata>
+	</ArsPlusChallRU>
+	
+	<UltraConsoleRU>
+		<id>UltraConsoleRU</id>
+<metadata>
+  <title>Ultra Console</title>
+  <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/215/mv-5-console]]></threadUrl>
+  <author>EvilPepperPlayz</author>
+  <version>2.0.0 </version>
+  <description>
+
+Устали искать ID, чтобы разблокировать корабль или получить оружие/экипаж/модуль? Теперь вам это не нужно!
+
+При нажатии клавиши Tab (по умолчанию, можно потом поменять в самом меню) появляется набор кнопок, нажатие на которые открывает меню для взаимодействия с различными аспектами игры.
+
+Огромное спасибо Arc и MsBinaryLily, у которых я украл (адаптировал) код для смены максимального корпуса и других чрезвычайно полезных функций.
+
+Особая благодарность Limrix, который ввел меня в мир создания интерфейса, кнопок и меню (посмотрите нашу библиотеку lightweight lua, она очень классная).
+
+Также спасибо моим тестерам, Aleev, Eschaton, Aramorf_45 и Dj0z, за полезные отзывы.
+  </description>
+</metadata>
+
+	</UltraConsoleRU>
+	
+	<VaultRU>
+		<id>VaultRU</id>
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<title>The Vault</title>
+	<threadUrl>https://ftlmultiverse.boards.net/thread/227/vault</threadUrl>
+	<author>Zuggo</author>
+	<version>1.0</version>
+	<description>
+
+Добавляет хранилище, в которое можно складировать ресурсы, чтобы разблокировать перманентные бонусы для всех прохождений!
+
+Бонусы, которые можно разблокировать:
+- +5 к начальному запасу топлива, ракет и дрон-комплектов
+- +50 к начальному запасу лома
+- Синие варианты ответов в некоторых событиях, требующих чтения
+- Возможность вызывать магазины у пустых маяков
+- Возможность поговорить с любым из судьей в каждом прохождении
+- +1 к начальному запасу реактора
+- Постоянное наличие благословения ренегатов
+- Лаборатория всегда бесплатна
+- Одноразовое пополнение запасов за прохождение
+- 2 миссии по сбору припасов на сектор
+- Удалены системные требования для некоторых внутренних улучшений
+- Улучшение лаборатории всегда бесплатно
+- Нет ограничения на перенаправление в узле 17
+- Выбираемый магазин Сильвана
+- Разблокировано меню внутренних эфирных улучшений 
+- Дополнительное стартовое снаряжение
+- Задержка флота в гиперскорости
+- Сканирование сектора в гиперскорости
+- Улучшенная волшебная шляпа
+- С Ренегатов и транспортов с прототипами всегда выпадают уникальные предметы
+- Отметка уникальных членов экипажа на карте сектора
+- Начало с суперщитом в целостностью 1, который можно накапливать
+- Начало с любым уникальным членом экипажа
+- Начало с Убийцой богов и Первым
+
+Обратите внимание, что эти бонусы не повлияют на контент других аддонов.
+
+Спасибо Rare за тестирование.
+	</description>
+</metadata>
+	</VaultRU>
+	<FoxyJumpscare>
+		<id>FoxyJumpscare</id>
+<metadata>
+	<title>ZRT - Withered Foxy Jumpscare</title>
+	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/230/zuggos-random-trash ]]></threadUrl>
+	<author>Zuggo</author>
+	<version>1.0</version>
+	<description>
+
+Adds a 1/10000 chance for Withered Foxy Jumpscare Every Second
+
+	</description>
+</metadata>
+	</FoxyJumpscare>
+	<FoxyJumpscareRU>
+		<id>FoxyJumpscareRU</id>
+<metadata>
+	<title>ZRT - Withered Foxy Jumpscare</title>
+	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/230/zuggos-random-trash ]]></threadUrl>
+	<author>Zuggo</author>
+	<version>1.0</version>
+	<description>
+
+Добавляет шанс появления скримера сломанного Фокси, который составляет 1/10000 каждую секунду.
+
+	</description>
+</metadata>
+	</FoxyJumpscareRU>
+	<FoxyJumpscareFR>
+		<id>FoxyJumpscareFR</id>
+<metadata>
+	<title>ZRT - Jumpscare de Foxy Flétri</title>
+	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/230/zuggos-random-trash ]]></threadUrl>
+	<author>Zuggo</author>
+	<version>1.0</version>
+	<description>
+
+Ajoute une chance de 1 sur 10 000 d’un jumpscare de Foxy Flétri chaque seconde
+
+	</description>
+</metadata>
+	</FoxyJumpscareFR>
+
 	<FM_Tweaks_RU>
 		<id>FM_Tweaks_RU</id>
 <metadata>
@@ -22,7 +186,7 @@ Metadata information
 
 Улучшает аддон Forgemaster, внося незначительные изменения:
 
-Улучшает меню кузнеца. Теперь перед крафтом вы можете увидеть характеристики будущего оружия.
+Улучшает меню кузнеца. Теперь перед крафтом вы можете увидеть чертежи будущего оружия.
 Удаляет внутреннее улучшение для Кислородной установки, чтобы отобразить более интересные улучшения в Lily's Innovations.
   </description>
 </metadata>
