@@ -386,6 +386,7 @@ ADDONS_TRANSLATION_RELEASE = [
     'https://api.github.com/repos/ftl-mv-translation/outer-expansion/releases/latest', #OE, priority=500
     'https://api.github.com/repos/ftl-mv-translation/darkest-desire/releases/latest', #DD, priority=600
     'https://api.github.com/repos/ftl-mv-translation/expanded-multiverse/releases/latest', #EMV, priority=700
+    'https://api.github.com/repos/ftl-mv-translation/trash-compactor-collection/releases/latest', #TCC, priority=1500
     'https://api.github.com/repos/ftl-mv-translation/forgemaster/releases/latest', #forgemaster, priority=800
     'https://api.github.com/repos/ftl-mv-translation/piracy-is-poggers/releases/latest', #PiP, priority=900
     'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=1000
@@ -393,7 +394,6 @@ ADDONS_TRANSLATION_RELEASE = [
     'https://api.github.com/repos/ftl-mv-translation/old-guard/releases/latest', #OG, priority=1200
     'https://api.github.com/repos/ftl-mv-translation/radikal-sector/releases/latest', #RK, priority=1300
     'https://api.github.com/repos/ftl-mv-translation/Eschaton-Genesis/releases/latest', #EG, priority=1400
-    'https://api.github.com/repos/ftl-mv-translation/trash-compactor-collection/releases/latest', #TCC, priority=1500
     'https://api.github.com/repos/ftl-mv-translation/lilys-innovations/releases/latest', #LI, priority=1600
 ]
 
