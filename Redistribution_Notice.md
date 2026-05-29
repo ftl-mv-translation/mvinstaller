@@ -34,3 +34,10 @@ Redistribution of mods are permitted per following notice:
 - Hektar Bundle, provided by Duodecimus
 - The Multiverse Holiday Special, provided by Kix
 - Lightweight Lua, provided by its authors under [MIT License](https://github.com/neopryne/lightweight-lua/blob/main/LICENSE)
+- RadiKal Sector, provided by Dj0z 
+- Trash Compactor Collection, provided by Zuggo
+- ZRT - Withered Foxy Jumpscare, provided by Zuggo
+- MultiShipFix, provided by Zuggo
+- The Vault, provided by Zuggo
+- Ultra Console, provided by EvilPepperPlayz
+

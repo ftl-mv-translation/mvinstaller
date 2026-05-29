@@ -404,7 +404,6 @@ TRANSLATION_RELEASE_DEPENDENCIES = {
     'Outer-Expansion': ['TOEPatchLast'],
     'Darkest-Desire': ['DDPatchLast'],
     'Old-Guard': ['OGPatchLast'],
-    'Expanded-Multiverse': ['Fusion'],
     'Radikal-sector': ['MultiShipFix']
     
 }
@@ -420,8 +419,8 @@ class FixedAddonsList(Enum):
         id='Fusion',
         modname='Fusion',
         download_targets={
-            'https://github.com/MV-Fusion-Team/FTL-Multiverse-Fusion/releases/download/v0.1.6/Fusion.zip':
-                'Fusion.zip'
+            'https://drive.usercontent.google.com/download?id=1uZc_RgeWMLz-0Fa4sjN6NeU_5Z14EMO-&export=download&confirm=xxx':
+                'FusionFix.zip'
         },
         version='0.1.6',
         locale='en',
@@ -658,7 +657,7 @@ class FixedAddonsList(Enum):
         modname='GenGibsFR',
         download_targets={
             'https://drive.usercontent.google.com/download?id=1N3OvTEnuF2SbzDWAZEbI2qGBKe1JQGCZ&export=download&confirm=xxx':
-                'Forgotten Gibs 1.5.1.zip'
+                'Forgotten Gibs 1.6.1.zip'
         },
         version='1.5.1',
         locale='en',
@@ -672,7 +671,7 @@ class FixedAddonsList(Enum):
         modname='GenGibsFR',
         download_targets={
             'https://drive.usercontent.google.com/download?id=1N3OvTEnuF2SbzDWAZEbI2qGBKe1JQGCZ&export=download&confirm=xxx':
-                'Forgotten Gibs 1.5.1.zip'
+                'Forgotten Gibs 1.6.1.zip'
         },
         version='1.5.1',
         locale='fr',
@@ -686,7 +685,7 @@ class FixedAddonsList(Enum):
         modname='GenGibsFR',
         download_targets={
             'https://drive.usercontent.google.com/download?id=1N3OvTEnuF2SbzDWAZEbI2qGBKe1JQGCZ&export=download&confirm=xxx':
-                'Forgotten Gibs 1.5.1.zip'
+                'Forgotten Gibs 1.6.1.zip'
         },
         version='1.5.1',
         locale='ru',
@@ -1286,7 +1285,7 @@ class FixedAddonsList(Enum):
         version='3.0',
         locale='en',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
-        compatible_mv_locale=[''],
+        compatible_mv_locale=[],
         dependent_modnames=[],
         priority=2501 #FoxyJumpscare
     )

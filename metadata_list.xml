@@ -44,8 +44,7 @@ Metadata information
   <threadUrl>https://ftlmultiverse.boards.net/thread/220/ars-challenges</threadUrl>
   <version> 1.0 </version>
   <description>
-
-Изначальная фишка в Arsenal+ и адаптированная для Multiverse.
+Перенесеннная механика из мода Arsenal+ в Multiverse.
   
 Вам играется слишком просто даже поставив Трудно/Экстрим? Как насчет некоторых элементов усложняющих игру?
 
@@ -183,12 +182,15 @@ Ajoute une chance de 1 sur 10 000 d’un jumpscare de Foxy Flétri chaque second
   <author><![CDATA[ Aleev, Duodecimus, Limrix ]]></author>
   <version><![CDATA[ 1.2 ]]></version>
   <description>
-Это облегченная версия Forgemaster Tweaks, т.к. некоторые исправления встроены в переведенный FM.
+Это облегченная версия аддона Forgemaster Tweaks (смотрите по ссылке выше), т.к. некоторые исправления встроены в переведенный FM.
 
 Улучшает аддон Forgemaster, внося незначительные изменения:
 
 Улучшает меню кузнеца. Теперь перед крафтом вы можете увидеть чертежи будущего оружия.
 Удаляет внутреннее улучшение для Кислородной установки, чтобы отобразить более интересные улучшения в Lily's Innovations.
+Добавляет 3 искаженных Ренегатов, что забыли добавить в ангар
+
+
   </description>
 </metadata>
 	</FM_Tweaks_RU>
@@ -231,12 +233,13 @@ Ajoute une chance de 1 sur 10 000 d’un jumpscare de Foxy Flétri chaque second
 			<threadUrl>https://ftlmultiverse.boards.net/thread/200/beacon-map-plus</threadUrl>
 			<version> 1.0 </version>
 			<description>
-Изначальная фишка в Arsenal+ и адаптированная для Multiverse.
+Перенесеннная механика из мода Arsenal+ в Multiverse.
 
 Расширяет возможности на карте маяков добавляя новые механики:
 
 Возможность планирование маршрута на карте маяков.
 Возможность ожидания на маяке, даже при наличии топлива.
+Предметы, брошенные в космос, теперь можно забрать при повторном посещении маяка (не более 1 предмета на каждый маяк)
 			</description>
 		</metadata>
 	</SectorMapPlusRU>
@@ -262,10 +265,7 @@ Ajoute une chance de 1 sur 10 000 d’un jumpscare de Foxy Flétri chaque second
 			<author>Aleev</author>
 			<version>1.3</version>
 			<description>
-Зависимые аддоны: Brightness Particle System и Lightweight Lua.
-Локализованный установщик их поставит автоматически при установке.
-
-Изначальная фишка в Arsenal+ и адаптированная для Multiverse.
+Перенесеннная механика из мода Arsenal+ в Multiverse.
 
 Хотели ли вы знать как много лома вы успеваете получить за один сектор или за сколько ваш корабль можно продать? Тогда это для вас!
 
@@ -292,7 +292,7 @@ Ajoute une chance de 1 sur 10 000 d’un jumpscare de Foxy Flétri chaque second
 
 Совместимость с аддонами:
 
-- Forgotten Races (16.2.11) - концовка для серии побед;
+- Forgotten Races (17.0) - концовка для серии побед, система, сектор;
 - Forgemaster - концовка для серии побед;
 - The Outer Expansion (7.1.10) - сектора, системы, внутренние и системные улучшения;
 - Darkest Desire (4.1.4) - сектора, системы;
