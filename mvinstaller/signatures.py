@@ -43,6 +43,12 @@ class FtlExecutableType(Enum):
         downgrader='steam',
         sha1='c58e5283b2c1996fa36158265423f8c94f3a8954',
     )
+    STEAM_WINDOWS_1_6_22 = FtlExecutableInfo(
+        name='Steam, version 1.6.22 (latest)',
+        downgraded=False,
+        downgrader='steam',
+        sha1='aadfbb3d2597ed5b1b2bd01d19569334842210da',
+    )
     STEAM_WINDOWS_1_6_9 = FtlExecutableInfo(
         name='Steam, version 1.6.9 (downgraded)',
         downgraded=True,
