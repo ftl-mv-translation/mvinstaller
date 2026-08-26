@@ -308,16 +308,24 @@ class HyperspaceType(Enum):
     )
     HS_1_21_1 = HyperspaceInfo(
         name='HS-1.21.1 e4a5c18',
-        outdated=False,
-        latest=True,
+        outdated=True,
+        latest=False,
         sha1='fbdc72256f7942ad067a0a16e11ac665e4bd5c75',
         url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.21.1/FTL.Hyperspace.1.21.1.zip',
         filename='FTL.Hyperspace.1.21.1.zip'
     )
+    HS_1_23_1 = HyperspaceInfo(
+        name='HS-1.23.1 39d0eea',
+        outdated=False,
+        latest=True,
+        sha1='9c6fff5c4a796a6ecf5e718f57b3e58a3040cda6',
+        url='https://github.com/FTL-Hyperspace/FTL-Hyperspace/releases/download/v1.23.1/FTL.Hyperspace.1.23.1-Windows.zip',
+        filename='FTL.Hyperspace.1.23.1-Windows.zip'
+    )
 
 # SHA1 hash value of unmodded ftl.dat files
 DAT_VANILLA_SHA1 = [
-    #'', # Steam 1.6.22
+    '6c56a471f8c391ab3f58a5a149bf04b71fe1e4f9', # Steam 1.6.22
     'a0ecc84f16302b8851eff98ab3e01e2f376152d7', # Steam 1.6.14
     '2b81ef942c56fd4025ba11eecfd8ac6100de206f', # GOG 1.6.13b
     'b7c923866726607d172461454b8904b6d3dfb811', # GOG 1.6.9
@@ -386,14 +394,14 @@ ADDONS_TRANSLATION_RELEASE = [
     'https://api.github.com/repos/ftl-mv-translation/outer-expansion/releases/latest', #OE, priority=500
     'https://api.github.com/repos/ftl-mv-translation/darkest-desire/releases/latest', #DD, priority=600
     'https://api.github.com/repos/ftl-mv-translation/expanded-multiverse/releases/latest', #EMV, priority=700
-    'https://api.github.com/repos/ftl-mv-translation/trash-compactor-collection/releases/latest', #TCC, priority=1500
-    'https://api.github.com/repos/ftl-mv-translation/forgemaster/releases/latest', #forgemaster, priority=800
-    'https://api.github.com/repos/ftl-mv-translation/piracy-is-poggers/releases/latest', #PiP, priority=900
-    'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=1000
-    'https://api.github.com/repos/ftl-mv-translation/lilys-beam-emporium/releases/latest', #LBE, priority=1100
-    'https://api.github.com/repos/ftl-mv-translation/old-guard/releases/latest', #OG, priority=1200
-    'https://api.github.com/repos/ftl-mv-translation/radikal-sector/releases/latest', #RK, priority=1300
-    'https://api.github.com/repos/ftl-mv-translation/Eschaton-Genesis/releases/latest', #EG, priority=1400
+    'https://api.github.com/repos/ftl-mv-translation/trash-compactor-collection/releases/latest', #TCC, priority=800
+    'https://api.github.com/repos/ftl-mv-translation/forgemaster/releases/latest', #forgemaster, priority=900
+    'https://api.github.com/repos/ftl-mv-translation/piracy-is-poggers/releases/latest', #PiP, priority=1000
+    'https://api.github.com/repos/ftl-mv-translation/RAD/releases/latest', #R&D, priority=1100
+    'https://api.github.com/repos/ftl-mv-translation/lilys-beam-emporium/releases/latest', #LBE, priority=1200
+    'https://api.github.com/repos/ftl-mv-translation/old-guard/releases/latest', #OG, priority=1300
+    'https://api.github.com/repos/ftl-mv-translation/radikal-sector/releases/latest', #RK, priority=1400
+    'https://api.github.com/repos/ftl-mv-translation/Eschaton-Genesis/releases/latest', #EG, priority=1500
     'https://api.github.com/repos/ftl-mv-translation/lilys-innovations/releases/latest', #LI, priority=1600
 ]
 
@@ -568,6 +576,9 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=1210 #Tradition N Experiment
     )
+    
+    
+    
     GenGibsMV = Mod(
         id='GenGibsMV',
         modname='GenGibsMV',
@@ -810,6 +821,7 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=1350 #TemporalMastery
     )
+    """
     SectorMapPlusRU = Mod(
         id='SectorMapPlusRU',
         modname='SectorMapPlus',
@@ -838,6 +850,8 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=1352 #Ars+ Challenges
     )
+    """
+
     UltraConsoleRU = Mod(
         id='UltraConsoleRU',
         modname='UltraConsole',
@@ -897,6 +911,7 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=1401 #Trading-System
     )
+    """
     StatisticRU = Mod(
         id='StatisticRU',
         modname='Statistic',
@@ -911,6 +926,7 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=1410 #Statistic
     )
+    """
     RandomSS_RU = Mod(
         id='RandomSS_RU',
         modname='RandomSS',
@@ -925,6 +941,7 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=1501 #Random-Starting-Sector
     )
+    """
     QoL_ArsPlusRU = Mod(
         id='QoL_ArsPlusRU',
         modname='QoL_ArsPlus',
@@ -939,6 +956,7 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=1511 #QoL_ArsPlus
     )
+    """
     VaultRU = Mod(
         id='VaultRU',
         modname='Vault',
@@ -952,6 +970,36 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=1521 #Vault
+    )
+    
+    ArsenalPlusLiteRU = Mod(
+        id='ArsenalPlusLiteRU',
+        modname='ArsenalPlusLite',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1kIeorNqZ5ohzJofCcWpMWNVz48qDkhBh&export=download&confirm=xxx':
+                'ArsenalPlus lite.zip'
+        },
+        version='1.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=1523 #Arsenal+ Lite
+    )
+    #рандом флагман пепреписать
+    RandomFlagshipRU = Mod(
+        id='RandomFlagshipRU',
+        modname='RandomFlagship',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1zwY71Vul0Qab0YzkoWJAjSo4JrAP5lh_&export=download&confirm=xxx':
+                'Flagship Randomiser.zip'
+        },
+        version='1.0',
+        locale='ru',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['ru'],
+        dependent_modnames=[],
+        priority=1524 #Flagship Randomiser
     )
     MoreManSysRU = Mod(
         id='MoreManSysRU',
@@ -1107,6 +1155,7 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=2102 #Initial tips MV
     )
+    """
     SystemDeleter_RU = Mod(
         id='SystemDeleter_RU',
         modname='SystemDeleter',
@@ -1121,6 +1170,7 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=2103 #System Deleter
     )
+    """
     HereBeMarkersRU = Mod(
         id='HereBeMarkersRU',
         modname='HereBeMarkers',
