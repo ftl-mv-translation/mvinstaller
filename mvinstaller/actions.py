@@ -83,6 +83,8 @@ def install_hyperspace(ftl_path):
         FILES = ['Hyperspace.dll', 'xinput1_4.dll']
         for fn in FILES:
             extract_without_path(zipf, f'Windows - Extract these files into where FTLGame.exe is/{fn}', ftl_path)
+        # Extract Hyperspace.ftl
+        extract_without_path(zipf, 'Hyperspace.ftl', cache_dir)
 
 def install_mods(locale_mv, addons_name, ftl_path):
     ftl_path = Path(ftl_path)
@@ -115,6 +117,13 @@ def install_mods(locale_mv, addons_name, ftl_path):
     
     def patch_mods(smmbase):
         clear_expired_mods(glob_posix(str(smmbase / 'mods/*')))
+        
+        if not (cache_dir / 'Hyperspace.ftl').exists():
+            logger.info('Could not find Hyperspace.ftl in cache. Downloading...')
+            install_hyperspace(ftl_path)
+        
+        logger.info('[Base mod] Hyperspace')
+        shutil.copy(cache_dir / 'Hyperspace.ftl', smmbase / 'mods' / 'Hyperspace.ftl')
 
         mainmods = get_mv_mainmods()
         mainmod = next(mainmod for mainmod in mainmods if mainmod.locale == locale_mv)
@@ -155,6 +164,7 @@ def install_mods(locale_mv, addons_name, ftl_path):
             [
                 smmbase / 'ftlman.exe',
                 'patch',
+                'Hyperspace.ftl',
                 *(
                     download_target
                     for mod in mods
