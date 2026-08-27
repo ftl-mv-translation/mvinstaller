@@ -14,7 +14,7 @@ from mvinstaller.util import get_cache_dir, run_checked_subprocess_with_logging_
 from mvinstaller.ftlpath import get_ftl_installation_state, get_latest_hyperspace
 from mvinstaller.localetools import get_locale_name
 from mvinstaller.signatures import (
-    DOWNGRADERS, SMM_URL, SMM_FILENAME, SMM_ROOT_DIR
+    DOWNGRADE_PATCHER_URL, DOWNGRADERS, SMM_URL, SMM_FILENAME, SMM_ROOT_DIR
 )
 
 def is_java_installed():
@@ -45,29 +45,18 @@ def downgrade_ftl(ftl_path, downgrader):
     ftl_path = Path(ftl_path)
     cache_dir = get_cache_dir()
 
-    if downgrader == 'steam':
-        latest_hyperspace = get_latest_hyperspace()
-
-        archive_url = latest_hyperspace.url
-        archive_filename = latest_hyperspace.filename
-        extract_paths = [
-            'Windows - Extract these files into where FTLGame.exe is/patch/flips.exe',
-            'Windows - Extract these files into where FTLGame.exe is/patch/patch-1.6.14.bps'
-        ]
-    else:
-        archive_url, archive_filename = DOWNGRADERS[downgrader]
-        extract_paths = [
-            'patch/flips.exe',
-            'patch/patch-1.6.14.bps'
-        ]
-
+    download(DOWNGRADE_PATCHER_URL, cache_dir / 'flips.zip', False)
+    logger.info('Extracting patcher file...')
+    with zipfile.ZipFile(cache_dir / 'flips.zip') as zipf:
+        extract_without_path(zipf, 'flips.exe', cache_dir)
+    
+    archive_url, archive_filename = DOWNGRADERS[downgrader]
     downgrader_extract_dir = cache_dir / 'downgraders' / downgrader
     download(archive_url, cache_dir / archive_filename, False)
 
-    logger.info('Extracting archive...')
+    logger.info('Extracting patch file...')
     with zipfile.ZipFile(cache_dir / archive_filename) as zipf:
-        for path in extract_paths:
-            extract_without_path(zipf, path, downgrader_extract_dir)
+        extract_without_path(zipf, 'patch.bps', downgrader_extract_dir)
     
     logger.info('Backing up original EXE in FTLGame_orig.exe...')
     shutil.copyfile(ftl_path / 'FTLGame.exe', ftl_path / 'FTLGame_orig.exe')
@@ -75,9 +64,9 @@ def downgrade_ftl(ftl_path, downgrader):
     logger.info('Patching...')
     run_checked_subprocess_with_logging_output(
         [
-            str(downgrader_extract_dir / 'flips.exe'),
+            str(cache_dir / 'flips.exe'),
             '-a',
-            str(downgrader_extract_dir / 'patch-1.6.14.bps'),
+            str(downgrader_extract_dir / 'patch.bps'),
             str(ftl_path / 'FTLGame.exe')
         ]
     )

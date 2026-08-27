@@ -40,13 +40,13 @@ class FtlExecutableType(Enum):
     STEAM_WINDOWS_1_6_14 = FtlExecutableInfo(
         name='Steam, version 1.6.14 (latest)',
         downgraded=False,
-        downgrader='steam',
+        downgrader='steam-1.6.14',
         sha1='c58e5283b2c1996fa36158265423f8c94f3a8954',
     )
     STEAM_WINDOWS_1_6_22 = FtlExecutableInfo(
         name='Steam, version 1.6.22 (latest)',
         downgraded=False,
-        downgrader='steam',
+        downgrader='steam-1.6.22',
         sha1='aadfbb3d2597ed5b1b2bd01d19569334842210da',
     )
     STEAM_WINDOWS_1_6_9 = FtlExecutableInfo(
@@ -356,14 +356,24 @@ FIXED_PATHS = [
 
 ########## Downgraders
 
+DOWNGRADE_PATCHER_URL = 'https://raw.githubusercontent.com/ftl-mv-translation/ftl-rollback/main/flips.zip'
+
 DOWNGRADERS = {
+    'steam-1.6.14': (
+        'https://raw.githubusercontent.com/ftl-mv-translation/ftl-rollback/main/Steam-1.6.14.zip',
+        'Steam-1.6.14.zip'
+    ),
+    'steam-1.6.22': (
+        'https://raw.githubusercontent.com/ftl-mv-translation/ftl-rollback/main/Steam-1.6.22.zip',
+        'Steam-1.6.22.zip'
+    ),
     'epic': (
-        'https://drive.google.com/uc?id=1wM4Lb1ADy3PHay5sNuWpQOTnWbpIOGQ1&confirm=t',
-        'Epic Games Downgrade Patcher (1.6.12 to 1.6.9).zip'
+        'https://raw.githubusercontent.com/ftl-mv-translation/ftl-rollback/main/Epic-1.6.12.zip',
+        'Epic-1.6.12.zip'
     ),
     'origin': (
-        'https://drive.google.com/uc?id=1GTxiidyp0o5D1HBMrT0XprstVmPwvuqo&confirm=t',
-        'Origin Downgrade Patcher (1.6.12 to 1.6.9).zip'
+        'https://raw.githubusercontent.com/ftl-mv-translation/ftl-rollback/main/Origin-1.6.12.zip',
+        'Origin-1.6.12.zip'
     )
 }
 

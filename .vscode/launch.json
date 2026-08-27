@@ -6,10 +6,11 @@
     "configurations": [
         {
             "name": "Installer Debug",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "module": "mvinstaller",
-            "justMyCode": false
+            "justMyCode": false,
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe"
         }
     ]
 }
