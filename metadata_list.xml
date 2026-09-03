@@ -12,12 +12,12 @@ Metadata information
 -->
 	<RandomFlagshipRU>
 		<id>RandomFlagshipRU</id>
-<metadata>
-	<title>Randomised Flagship</title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/235/randomised-flagship ]]></threadUrl>
-	<author>Zuggo</author>
-	<version>2.1</version>
-	<description>
+		<metadata>
+			<title>Randomised Flagship</title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/235/randomised-flagship ]]></threadUrl>
+			<author>Zuggo</author>
+			<version>2.1</version>
+			<description>
 Рандомизирует все 3 фазы Флагмана Мультивселенной.
 
 Подробнее можете посмотреть по ссылке выше
@@ -26,17 +26,16 @@ Metadata information
 Код Lua переписал Arc.
 Различные спрайты создал R4V3-0N.
 	</description>
-</metadata>
+		</metadata>
 	</RandomFlagshipRU>
-	
 	<ArsenalPlusLiteRU>
 		<id>ArsenalPlusLiteRU</id>
-  <metadata>
-  <title>Arsenal+ Lite</title>
-  <author>Aleev</author>
-  <threadUrl>https://ftlmultiverse.boards.net/thread/238/arsenal-lite</threadUrl>
-  <version> 0.1.2 </version>
-  <description>
+		<metadata>
+			<title>Arsenal+ Lite</title>
+			<author>Aleev</author>
+			<threadUrl>https://ftlmultiverse.boards.net/thread/238/arsenal-lite</threadUrl>
+			<version> 0.1.2 </version>
+			<description>
 
 Переносит контент из мода Arsenal+
 
@@ -99,18 +98,18 @@ bamalf, KBA3u и AL'Hazrad - за чудесный мод и помощь с к�
 Evil PepperPlayz, Limrix и MsBinaryLily - помощь с lua кодом
 - ESCHATON - пак коллекционных кораблей за испытания и Флагман 4 фазы
 Blizz - за позаимственный английский перевод Arsenal+
+	
+		</description>
+		</metadata>
 	</ArsenalPlusLiteRU>
-  </description>
-</metadata>
-
 	<QoL_ArsPlusRU>
 		<id>QoL_ArsPlusRU</id>
-<metadata>
-  <title>QoL Arsenal+</title>
-  <threadUrl>https://ftlmultiverse.boards.net/thread/229/qol-arsenal</threadUrl>
-  <author>Aleev</author>
-  <version>1.1</version>
-  <description>
+		<metadata>
+			<title>QoL Arsenal+</title>
+			<threadUrl>https://ftlmultiverse.boards.net/thread/229/qol-arsenal</threadUrl>
+			<author>Aleev</author>
+			<version>1.1</version>
+			<description>
 Добавляет некоторые QoL элементы прямиком из мода Arsenal+, а именно:
 
 Визуальная прочность огня: теперь при тушении отображается визуально, как скоро огонь потухнет
@@ -126,17 +125,16 @@ Blizz - за позаимственный английский перевод Ar
 В будущем может добавлю что-то еще
 
   </description>
-</metadata>
+		</metadata>
 	</QoL_ArsPlusRU>
-	
 	<ArsPlusChallRU>
 		<id>ArsPlusChallRU</id>
-  <metadata>
-  <title>Ars+ Challenges</title>
-  <author>Aleev</author>
-  <threadUrl>https://ftlmultiverse.boards.net/thread/220/ars-challenges</threadUrl>
-  <version> 1.0 </version>
-  <description>
+		<metadata>
+			<title>Ars+ Challenges</title>
+			<author>Aleev</author>
+			<threadUrl>https://ftlmultiverse.boards.net/thread/220/ars-challenges</threadUrl>
+			<version> 1.0 </version>
+			<description>
 Перенесеннная механика из мода Arsenal+ в Multiverse.
   
 Вам играется слишком просто даже поставив Трудно/Экстрим? Как насчет некоторых элементов усложняющих игру?
@@ -155,17 +153,16 @@ Blizz - за позаимственный английский перевод Ar
 - Evil PepperPlayz - помощь с луа кодингом.
 - ESCHATON - пак коллекционных кораблей и флагман 4 фазы.
   </description>
-</metadata>
+		</metadata>
 	</ArsPlusChallRU>
-	
 	<UltraConsoleRU>
 		<id>UltraConsoleRU</id>
-<metadata>
-  <title>Ultra Console</title>
-  <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/215/mv-5-console]]></threadUrl>
-  <author>EvilPepperPlayz</author>
-  <version>2.0.0 </version>
-  <description>
+		<metadata>
+			<title>Ultra Console</title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/215/mv-5-console]]></threadUrl>
+			<author>EvilPepperPlayz</author>
+			<version>2.0.0 </version>
+			<description>
 
 Устали искать ID, чтобы разблокировать корабль или получить оружие/экипаж/модуль? Теперь вам это не нужно!
 
@@ -177,18 +174,16 @@ Blizz - за позаимственный английский перевод Ar
 
 Также спасибо моим тестерам, Aleev, Eschaton, Aramorf_45 и Dj0z, за полезные отзывы.
   </description>
-</metadata>
-
+		</metadata>
 	</UltraConsoleRU>
-	
 	<VaultRU>
 		<id>VaultRU</id>
-<metadata>
-	<title>The Vault</title>
-	<threadUrl>https://ftlmultiverse.boards.net/thread/227/vault</threadUrl>
-	<author>Zuggo</author>
-	<version>1.0</version>
-	<description>
+		<metadata>
+			<title>The Vault</title>
+			<threadUrl>https://ftlmultiverse.boards.net/thread/227/vault</threadUrl>
+			<author>Zuggo</author>
+			<version>1.0</version>
+			<description>
 
 Добавляет хранилище, в которое можно складировать ресурсы, чтобы разблокировать пермаментные бонусы для всех прохождений!
 
@@ -222,59 +217,58 @@ Blizz - за позаимственный английский перевод Ar
 
 Спасибо Rare за тестирование.
 	</description>
-</metadata>
+		</metadata>
 	</VaultRU>
 	<FoxyJumpscare>
 		<id>FoxyJumpscare</id>
-<metadata>
-	<title>ZRT - Withered Foxy Jumpscare</title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/230/zuggos-random-trash ]]></threadUrl>
-	<author>Zuggo</author>
-	<version>1.0</version>
-	<description>
+		<metadata>
+			<title>ZRT - Withered Foxy Jumpscare</title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/230/zuggos-random-trash ]]></threadUrl>
+			<author>Zuggo</author>
+			<version>1.0</version>
+			<description>
 
 Adds a 1/10000 chance for Withered Foxy Jumpscare Every Second
 
 	</description>
-</metadata>
+		</metadata>
 	</FoxyJumpscare>
 	<FoxyJumpscareRU>
 		<id>FoxyJumpscareRU</id>
-<metadata>
-	<title>ZRT - Withered Foxy Jumpscare</title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/230/zuggos-random-trash ]]></threadUrl>
-	<author>Zuggo</author>
-	<version>1.0</version>
-	<description>
+		<metadata>
+			<title>ZRT - Withered Foxy Jumpscare</title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/230/zuggos-random-trash ]]></threadUrl>
+			<author>Zuggo</author>
+			<version>1.0</version>
+			<description>
 
 Добавляет шанс появления скримера сломанного Фокси, который составляет 1/10000 каждую секунду.
 
 	</description>
-</metadata>
+		</metadata>
 	</FoxyJumpscareRU>
 	<FoxyJumpscareFR>
 		<id>FoxyJumpscareFR</id>
-<metadata>
-	<title>ZRT - Jumpscare de Foxy délabré</title>
-	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/230/zuggos-random-trash ]]></threadUrl>
-	<author>Zuggo</author>
-	<version>1.0</version>
-	<description>
+		<metadata>
+			<title>ZRT - Jumpscare de Foxy délabré</title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/230/zuggos-random-trash ]]></threadUrl>
+			<author>Zuggo</author>
+			<version>1.0</version>
+			<description>
 
 Ajoute une chance de 1 sur 10 000 d’un jumpscare de Foxy délabré (Withered Foxy dans FNAF) chaque seconde
 
 	</description>
-</metadata>
+		</metadata>
 	</FoxyJumpscareFR>
-
 	<FM_Tweaks_RU>
 		<id>FM_Tweaks_RU</id>
-<metadata>
-  <title><![CDATA[ Forgemaster Tweaks lite]]></title>
-  <threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev ]]></threadUrl>
-  <author><![CDATA[ Aleev, Duodecimus, Limrix ]]></author>
-  <version><![CDATA[ 1.2 ]]></version>
-  <description>
+		<metadata>
+			<title><![CDATA[ Forgemaster Tweaks lite]]></title>
+			<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev ]]></threadUrl>
+			<author><![CDATA[ Aleev, Duodecimus, Limrix ]]></author>
+			<version><![CDATA[ 1.2 ]]></version>
+			<description>
 Это облегченная версия аддона Forgemaster Tweaks (смотрите по ссылке выше), т.к. некоторые исправления встроены в переведенный FM.
 
 Улучшает аддон Forgemaster, внося незначительные изменения:
@@ -285,39 +279,36 @@ Ajoute une chance de 1 sur 10 000 d’un jumpscare de Foxy délabré (Withered F
 
 
   </description>
-</metadata>
+		</metadata>
 	</FM_Tweaks_RU>
-	
 	<SystemDeleter_RU>
 		<id>SystemDeleter_RU</id>
-  <metadata>
-  <title>System Deleter</title>
-  <author>Aleev</author>
-  <threadUrl>https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev</threadUrl>
-  <version> 1.1 </version>
-  <description>
+		<metadata>
+			<title>System Deleter</title>
+			<author>Aleev</author>
+			<threadUrl>https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev</threadUrl>
+			<version> 1.1 </version>
+			<description>
 Случайно купили ненужную систему или не хотите абордажить на абордажном корабле? Просто демонтируйте систему!
 
 Добавляет возможность удалять систему в любое время в меню склада практически без последствий.
   </description>
-</metadata>
+		</metadata>
 	</SystemDeleter_RU>
-	
 	<InitialTipsMV_RU>
 		<id>InitialTipsMV_RU</id>
-<metadata>
-  <title>Начальные советы МВ</title>
-  <threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev]]></threadUrl>
-  <author>Aleev</author>
-  <version>1.0</version>
-  <description>
+		<metadata>
+			<title>Начальные советы МВ</title>
+			<threadUrl><![CDATA[https://ftlmultiverse.boards.net/thread/169/mini-addons-aleev]]></threadUrl>
+			<author>Aleev</author>
+			<version>1.0</version>
+			<description>
 
 Возвращает МВ советы в начале забега, что будут полезны для начинающих игроков.
 
   </description>
-</metadata>
+		</metadata>
 	</InitialTipsMV_RU>
-	
 	<SectorMapPlusRU>
 		<id>SectorMapPlusRU</id>
 		<metadata>
