@@ -1143,6 +1143,20 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=2000 #Boon.Selector
     )
+    BoonSelectorKR = Mod(
+        id='BoonSelectorKR',
+        modname='BoonSelector',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1nEbNnMrncoaOcSgfzy5K40grsLrwPSkN&export=download&confirm=xxx':
+                'Multiverse.Judge.Boon.Selector.ftl'
+        },
+        version='1.4.0',
+        locale='ko',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['ko'],
+        dependent_modnames=[],
+        priority=2000 #Boon.Selector KR
+    )
     BeamMasterWBH_RU = Mod(
         id='BeamMasterWBH_RU',
         modname='BeamMasterWBH',
@@ -1156,6 +1170,20 @@ class FixedAddonsList(Enum):
         compatible_mv_locale=['ru'],
         dependent_modnames=[],
         priority=2101 #Beam Master will be here
+    )
+    BeamMasterWBH_KR = Mod(
+        id='BeamMasterWBH_KR',
+        modname='BeamMasterWBH',
+        download_targets={
+            'https://drive.usercontent.google.com/u/1/uc?id=1tQB5ZGl1UvSdfkdxvcQpja57LGP6L2Uj&export=download&confirm=xxx':
+                'Beam Master will be here KR.zip'
+        },
+        version='1.0',
+        locale='ko',
+        metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
+        compatible_mv_locale=['ko'],
+        dependent_modnames=[],
+        priority=2101 #Beam Master will be here KR
     )
     InitialTipsMV_RU = Mod(
         id='InitialTipsMV_RU',
