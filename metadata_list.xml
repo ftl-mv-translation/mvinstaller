@@ -1931,23 +1931,23 @@ Changes from the original mod:
 	<Aest_UI_FR>
 		<id>Aest_UI_FR</id>
 <metadata>
-  <title>MV Aesthetic UI Tweaks</title>
+  <title>Ajustements esthétiques de l’interface MV</title>
   <threadUrl>https://ftlmultiverse.boards.net/thread/178/mv-5-aesthetic-ui-tweaks</threadUrl>
   <author>Auspex (Ruben Moreno)</author>
   <version>1.1</version>
 
 
   <description>
-Makes a number of adjustments to improve visual polish and correct visual errors for the default Multiverse UI elements:
+Apporte plusieurs ajustements afin d’améliorer le rendu visuel et de corriger les erreurs d’affichage des éléments par défaut de l’interface Multiverse :
 
-- NEW in Version 1.1: Widens the small-sized stopwatch timer UI box so that longer numbers don't poke outside the box.
-- Revises the Storage button design to look better alongside the Ship button (matching the stroke around the graphic as well as the spacing between the graphic and the edges of the button).
-- Standardizes the stroke around the speed control buttons to match other game buttons.
-- Changes the deep medium blue button and interface frame color to a more subtle pale blue.
-- Fixes a misaligned transparency mask on the normal sized enemy targeting window, which would become conspicuous when displaying very large shield bubbles on regular-sized (non-boss) ships.
-- Fixes a misaligned enemy hull point number on the boss-sized targeting window.
-- Adjusts boss-sized targeting window art to create more room for the hull bar and shield pips.
-- Adds a subtle off-white to white gradient to all targeting frames to correct a color mismatch with the base game's "hull" and "shields" text label overlays.
+- NOUVEAU dans la version 1.1 : Élargit le cadre du chronomètre en petit format afin que les nombres plus longs ne dépassent plus de celui-ci..
+- Modifie le design du bouton "Stockage" pour mieux l’harmoniser avec celui du bouton "Vaisseau" (en uniformisant le contour du visuel ainsi que l’espacement entre le visuel et les bords du bouton).
+- Uniformise le contour des boutons de réglage de la vitesse afin qu’il corresponde à celui des autres boutons du jeu.
+- Remplace le bleu moyen foncé des boutons et des cadres de l’interface par un bleu pâle plus discret.
+- Corrige un problème d’alignement du masque de transparence de la fenêtre de ciblage ennemie au format standard. Ce défaut devenait particulièrement visible lorsque de très grandes bulles de bouclier étaient affichées sur des vaisseaux de taille normale (hors boss).
+- Corrige le mauvais alignement du nombre de points de coque ennemis dans la fenêtre de ciblage au format boss.
+- Modifie les éléments graphiques de la fenêtre de ciblage au format boss afin de libérer davantage d’espace pour la barre de coque et les indicateurs de bouclier.
+- Ajoute un léger dégradé allant du blanc cassé au blanc sur tous les cadres de ciblage afin de corriger une différence de couleur avec les libellés "Coque" et "Bouclier" du jeu de base.
 
 
   </description>
@@ -1959,16 +1959,16 @@ Makes a number of adjustments to improve visual polish and correct visual errors
 	<Aest_HS_FR>
 		<id>Aest_HS_FR</id>
 <metadata>
-  <title>MV Hyperspeed Backgrounds</title>
+  <title>Arrière-plans Hypervitesse MV</title>
   <threadUrl>https://ftlmultiverse.boards.net/thread/181/hyperspeed-backgrounds-all-new-art</threadUrl>
   <author>Auspex (Ruben Moreno)</author>
   <version>1.1</version>
 
   <description>
 
-This mod replaces Multiverse's 1st-person hyperspeed background with a selection of 16 new side-view star-streaked backgrounds that better match the top-down perspective of your ship. A background is chosen at random each time your ship jumps between sectors.
+Ce mod remplace l’arrière-plan en vue à la première personne du mode hypervitesse de Multiverse par une sélection de 16 nouveaux arrière-plans en vue latérale, représentant des traînées d’étoiles et mieux adaptés à la perspective en vue de dessus de votre vaisseau. Un arrière-plan est choisi aléatoirement à chaque fois que votre vaisseau passe d’un secteur à un autre.
 
-(Images are created entirely in Photoshop, either from scratch or using some of MV's plain star backgrounds as a starting point. Additional star elements are taken from a few of the Hubble MV backgrounds and hand-edited with additional motion blur and color treatments.)
+(Les images sont entièrement réalisées sous Photoshop, soit en partant de zéro, soit en utilisant certains des arrière-plans étoilés simples de MV comme base de travail. Des éléments stellaires supplémentaires proviennent de quelques arrière-plans de Hubble MV. Ils ont ensuite été retouchés manuellement avec des effets de flou directionnel et des traitements colorimétriques supplémentaires.)
   </description>
 
 </metadata>
@@ -1979,21 +1979,21 @@ This mod replaces Multiverse's 1st-person hyperspeed background with a selection
 	<Aest_Shield_FR>
 		<id>Aest_Shield_FR</id>
 <metadata>
-  <title>MV Pretty Shields Redux</title>
+  <title>Boucliers sublimés Redux MV</title>
   <threadUrl>https://ftlmultiverse.boards.net/thread/179/mv-5-pretty-shields-redux</threadUrl>
   <author>Auspex (Ruben Moreno)</author>
   <version>1.0</version>
 
   <description>
-Updates 3D shield graphics for Multiverse based on Mike Hopley's original mod for vanilla FTL (used with permission). Includes all player and enemy shields.
+Actualise les graphismes 3D des boucliers de Multiverse, en se basant sur le mod original de Mike Hopley pour FTL vanilla (utilisé avec son autorisation). Inclut les boucliers de tous les vaisseaux, qu'ils soient alliés ou ennemis.
 
-Original vanilla FTL mod can be found here: https://subsetgames.com/forum/viewtopic.php?t=32736
+Le mod original pour FTL vanilla est disponible ici : https://subsetgames.com/forum/viewtopic.php?t=32736
 
-Changes from the original mod:
+Modifications apportées par rapport au mod original :
 
-- Increased size of shield graphics to fill out the entire shield mask for each shield type. While this removes the soft edges from vanilla Pretty Shields 1.2, it prevents MV ship graphics from extending beyond the boundaries of the shields, respecting MV's overall shield sizing.
-- Adjusted levels (brightness, black levels, saturation, etc.) to make sure the shields aren't too dark against some of the brighter Multiverse backgrounds.
-- Added colored versions to match all Multiverse shield variants.
+- Augmente la taille des graphismes des boucliers afin qu’ils remplissent entièrement le masque correspondant à chaque type de bouclier. Bien que cela supprime les contours floutés présents dans la version 1.2 de Pretty Shields (Boucliers sublimés) pour FTL vanilla, cela empêche les graphismes des vaisseaux de MV de dépasser des limites des boucliers, respectant ainsi les dimensions globales définies par Multiverse.
+- Ajuste les niveaux de luminosité, les noirs, la saturation, etc., afin que les boucliers ne paraissent pas trop sombres sur certains des arrière-plans les plus lumineux de Multiverse.
+- Ajoute des versions colorées correspondant à toutes les variantes de boucliers de Multiverse.
 
 
   </description>
