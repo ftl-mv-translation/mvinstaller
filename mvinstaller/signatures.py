@@ -427,12 +427,11 @@ TRANSLATION_RELEASE_DEPENDENCIES = {
     'Forgemaster': ['Fusion'],
     'Forgotten-Races': ['The-Renegade-Collection', 'Fusion', 'MultiShipFix'],
     'Forgotten-Diamonds': ['The-Renegade-Collection', 'Fusion', 'Forgotten-Races', 'MultiShipFix'],
-    'Outer-Expansion': ['TOEPatchLast'],
     'Darkest-Desire': ['DDPatchLast'],
     'Old-Guard': ['OGPatchLast'],
     'Radikal-sector': ['MultiShipFix'],
-    'Outer-Expansion-Systems': ['Outer-Expansion-Core'],
-    'Outer-Expansion-Growth': ['Outer-Expansion-Core', 'Outer-Expansion-Systems']
+    'Outer-Expansion-systems': ['Outer-Expansion-core'],
+    'Outer-Expansion-growth': ['Outer-Expansion-core', 'Outer-Expansion-systems']
 }
 
 LIBRARY_MODS = [
@@ -877,10 +876,10 @@ class FixedAddonsList(Enum):
         id='ArsenalPlusLiteRU',
         modname='ArsenalPlusLite',
         download_targets={
-            'https://drive.usercontent.google.com/u/1/uc?id=1kIeorNqZ5ohzJofCcWpMWNVz48qDkhBh&export=download&confirm=xxx':
+            'https://drive.usercontent.google.com/download?id=18ii_LfQconBYgxIh1Uq7g0i_jOYmzVNi&export=download&confirm=xxx':
                 'ArsenalPlus lite.zip'
         },
-        version='1.0',
+        version='2.1',
         locale='ru',
         metadata_url='https://raw.githubusercontent.com/ftl-mv-translation/mvinstaller/main/metadata_list.xml',
         compatible_mv_locale=['ru'],
@@ -1479,21 +1478,6 @@ class FixedAddonsList(Enum):
         dependent_modnames=[],
         priority=2501 #FoxyJumpscare
     )
-    TOEPatchLast = Mod(
-        id='TOEPatchLast',
-        modname='TOEPatchLast',
-        download_targets={
-            'https://github.com/arcburnergit/FTL-Outer-Expansion/releases/download/v7.1.8/FTL-Outer-Expansion-PATCH_AFTER_ALL_OTHER_ADDONS.ftl':
-                'FTL-Outer-Expansion-PATCH_AFTER_ALL_OTHER_ADDONS.ftl'
-        },
-        version='1.0.0',
-        locale='en',
-        metadata_url=None,
-        compatible_mv_locale=[],
-        dependent_modnames=[],
-        priority=3000
-    )
-    
     DDPatchLast = Mod(
         id='DDPatchLast',
         modname='DDPatchLast',
